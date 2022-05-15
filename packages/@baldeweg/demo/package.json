@@ -13,22 +13,22 @@
   },
   "dependencies": {
     "@baldeweg/ui": "^0.0",
-    "vue": "^3.2.33",
-    "vue-router": "^4.0.14"
+    "vue": "3.2.33",
+    "vue-router": "4.0.15"
   },
   "devDependencies": {
-    "@cypress/vite-dev-server": "^2.2.2",
-    "@cypress/vue": "^3.1.1",
-    "@rushstack/eslint-patch": "^1.1.0",
-    "@vitejs/plugin-vue": "^2.3.1",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "cypress": "^9.5.4",
-    "eslint": "^8.5.0",
-    "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-vue": "^8.2.0",
-    "prettier": "^2.5.1",
-    "start-server-and-test": "^1.14.0",
-    "vite": "^2.9.5"
+    "@cypress/vite-dev-server": "2.2.3",
+    "@cypress/vue": "3.1.2",
+    "@rushstack/eslint-patch": "1.1.3",
+    "@vitejs/plugin-vue": "2.3.3",
+    "@vue/eslint-config-prettier": "7.0.0",
+    "cypress": "9.6.1",
+    "eslint": "8.15.0",
+    "eslint-plugin-cypress": "2.12.1",
+    "eslint-plugin-vue": "8.7.1",
+    "prettier": "2.6.2",
+    "start-server-and-test": "1.14.0",
+    "vite": "2.9.9"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
