@@ -11,7 +11,7 @@
         <b-container>
           <b-list :route="{ name: 'index' }">
             <template #image>
-              <img src="@/assets/placeholder.jpg" width="25" alt="Icon" />
+              <img src="@/assets/placeholder_1x1.jpg" width="25" alt="Icon" />
             </template>
             <template #title> Item 1 </template>
           </b-list>

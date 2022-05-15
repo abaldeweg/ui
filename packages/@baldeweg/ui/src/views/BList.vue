@@ -13,7 +13,7 @@
       :subgroup-indent="subgroupIndent"
     >
       <template #image v-if="image">
-        <img src="@/assets/placeholder.jpg" alt="Icon" />
+        <img src="@/assets/placeholder_1x1.jpg" alt="Icon" />
       </template>
 
       <template #title>
