@@ -5,30 +5,26 @@
 const ejs = require('ejs')
 const fs = require('fs')
 const mkdirp = require('mkdirp')
-const { kebabCase, camelCase, upperFirst, snakeCase } = require('lodash')
+const { camelCase, upperFirst, snakeCase } = require('lodash')
 
-const name = kebabCase(process.argv[2]) || 'component'
+const name = process.argv[2] || 'component'
+
 const component = 'B' + upperFirst(camelCase(name))
-const filename = 'B' + upperFirst(camelCase(name)) + '.vue'
-const data = {
-  name: name,
-  cssClass: snakeCase(name),
-  component: component,
-}
+const className = snakeCase(name)
 
 const renderFile = (source, dir) => {
-  ejs.renderFile(source, data, {}, (_err, str) => {
+  ejs.renderFile(source, {className, component}, {}, (_err, str) => {
     mkdirp(dir).then(() => {
-      fs.writeFile(dir + '/' + filename, str, (error) => {
-        if (error) console.error(error)
+      fs.writeFile(dir + '/' + component + '.vue', str, (err) => {
+        if (err) console.error(err)
       })
     })
   })
 }
 
-renderFile(__dirname + '/templates/component', './src/components/' + component)
-renderFile(__dirname + '/templates/view', './src/views')
+renderFile(__dirname + '/templates/component.ejs', './src/components/' + component)
+renderFile(__dirname + '/templates/view.ejs', './src/views')
 
 console.log('Add the new component to the Index view.')
 console.log('Add the new component to the router')
-console.log('Export and register the component in index.js.')
+console.log('Export and register the component in components/index.js.')
