@@ -1,7 +1,7 @@
 import { ref, onMounted, watchEffect } from 'vue'
 
 export function useTheme() {
-  const theme = ref(localStorage.getItem('theme') || '')
+  const theme = ref(localStorage.getItem('theme') || 'light')
 
   onMounted(() => {
     document.documentElement.setAttribute('data-theme', theme.value)
