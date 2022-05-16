@@ -36,11 +36,11 @@ Currently available composables:
 Example Layout
 
 ```js
-<b-app>
-  <b-container size="m">
+<BApp>
+  <BContainer size="m">
     <p>Content</p>
-  </b-container>
-</b-app>
+  </BContainer>
+</BApp>
 ```
 
 Now, you can choose from the components.
