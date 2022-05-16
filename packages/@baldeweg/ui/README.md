@@ -19,7 +19,7 @@ Then you can add this to your `main.js`.
 
 ```js
 import { createUi } from 'ui'
-import '@baldeweg/ui/dist/style.css'
+import '@baldeweg/ui/styles'
 
 const ui = createUi()
 
