@@ -12,10 +12,10 @@ const name = process.argv[2] || 'component'
 const component = 'B' + upperFirst(camelCase(name))
 const className = snakeCase(name)
 
-const renderFile = (source, dir) => {
+const renderFile = (source, dir, extension) => {
   ejs.renderFile(source, { className, component }, {}, (_err, str) => {
     mkdirp(dir).then(() => {
-      fs.writeFile(dir + '/' + component + '.vue', str, (err) => {
+      fs.writeFile(dir + '/' + component + extension, str, (err) => {
         if (err) console.error(err)
       })
     })
@@ -23,10 +23,16 @@ const renderFile = (source, dir) => {
 }
 
 renderFile(
-  __dirname + '/templates/component.ejs',
-  './src/components/' + component
+  __dirname + '/templates/Component.ejs',
+  './src/components/' + component,
+  '.vue'
 )
-renderFile(__dirname + '/templates/view.ejs', './src/views')
+renderFile(__dirname + '/templates/View.ejs', './src/views', '.vue')
+renderFile(
+  __dirname + '/templates/Test.ejs',
+  './src/components/__tests__/',
+  '.spec.js'
+)
 
 console.log('Add the new component to the Index view.')
 console.log('Add the new component to the router')

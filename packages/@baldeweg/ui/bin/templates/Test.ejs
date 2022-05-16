@@ -1,0 +1,9 @@
+import { describe, it, expect } from 'vitest'
+
+import <%= component %> from '../<%= component %>/<%= component %>.vue'
+
+describe('<%= component %>', () => {
+  it('shows <%= component %>', () => {
+    expect(<%= component %>).toBeTruthy()
+  })
+})
