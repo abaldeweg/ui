@@ -1,7 +1,7 @@
 <template>
   <select
     class="form-select"
-    :modelValue="modelValue"
+    :value="modelValue"
     :autofocus="focus"
     @input="$emit('update:modelValue', $event.target.value)"
   >
