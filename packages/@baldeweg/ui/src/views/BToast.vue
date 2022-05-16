@@ -155,7 +155,7 @@
 
 <script>
 import BToast from '../components/BToast/BToast.vue'
-import useToast from '@/composables/useToast.js'
+import { useToast } from '@/composables/useToast.js'
 
 export default {
   name: 'b-toast-view',

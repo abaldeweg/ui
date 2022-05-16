@@ -1,8 +1,7 @@
 import { ref } from 'vue'
 
-export const messages = ref([])
-
-export const current = ref(null)
+const messages = ref([])
+const current = ref(null)
 
 const show = () => {
   current.value = messages.value[0]
@@ -19,7 +18,7 @@ setInterval(() => {
   }
 }, 1000)
 
-export default function useToast() {
+export function useToast() {
   const add = (msg) => {
     messages.value.push(msg)
   }
