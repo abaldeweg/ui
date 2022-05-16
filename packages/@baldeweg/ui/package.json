@@ -41,7 +41,8 @@
     ".": {
       "import": "./dist/ui.es.js",
       "require": "./dist/ui.umd.js"
-    }
+    },
+    "./styles": "./dist/style.css"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
