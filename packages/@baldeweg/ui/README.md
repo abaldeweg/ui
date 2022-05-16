@@ -26,6 +26,13 @@ const ui = createUi()
 app.use(ui)
 ```
 
+You can import composables from `@baldeweg/ui/composables/[NAME]`.
+
+Currently available composables:
+
+- useToast
+- useTheme
+
 Example Layout
 
 ```js

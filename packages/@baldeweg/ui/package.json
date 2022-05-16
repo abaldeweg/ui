@@ -42,7 +42,8 @@
       "import": "./dist/ui.es.js",
       "require": "./dist/ui.umd.js"
     },
-    "./styles": "./dist/style.css"
+    "./styles": "./dist/style.css",
+    "./composables/*": "./src/composables/*.js"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
