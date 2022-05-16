@@ -1,8 +1,8 @@
 import App from './App.vue'
-import { createUi } from 'ui'
+import { createUi } from '@baldeweg/ui'
 import { createApp } from 'vue'
 import router from './router'
-import './../node_modules/ui/dist/style.css'
+import '@baldeweg/ui/styles'
 
 const app = createApp(App)
 const ui = createUi()
