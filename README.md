@@ -4,5 +4,5 @@ UI Components
 
 ## Packages
 
-[UI](/packages/@baldeweg/ui/README.md)
-[UI](/packages/@baldeweg/web-demo/README.md)
+- [ui](/packages/@baldeweg/ui/README.md)
+- [web-demo](/packages/@baldeweg/web-demo/README.md)
