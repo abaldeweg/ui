@@ -13,7 +13,7 @@ const component = 'B' + upperFirst(camelCase(name))
 const className = snakeCase(name)
 
 const renderFile = (source, dir) => {
-  ejs.renderFile(source, {className, component}, {}, (_err, str) => {
+  ejs.renderFile(source, { className, component }, {}, (_err, str) => {
     mkdirp(dir).then(() => {
       fs.writeFile(dir + '/' + component + '.vue', str, (err) => {
         if (err) console.error(err)
@@ -22,7 +22,10 @@ const renderFile = (source, dir) => {
   })
 }
 
-renderFile(__dirname + '/templates/component.ejs', './src/components/' + component)
+renderFile(
+  __dirname + '/templates/component.ejs',
+  './src/components/' + component
+)
 renderFile(__dirname + '/templates/view.ejs', './src/views')
 
 console.log('Add the new component to the Index view.')
