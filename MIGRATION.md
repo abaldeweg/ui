@@ -20,3 +20,5 @@ import { useLocale } from '@baldeweg/ui/composables/useLocale'
 
 useLocale()
 ```
+
+- BToast does not expose a `show` method
