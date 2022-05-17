@@ -4,5 +4,19 @@
 
 - Remove @baldeweg/components
 - Install @baldeweg/ui
-- Custom `<title>`'s aren't supported anymore
-- Theming is activated by default, new `useTheme` composable exporting `theme` property
+- For custom `<title>`'s use `useTitle` composable
+- Theming needs to be activated
+
+```js
+import { useTheme } from '@baldeweg/ui/composables/useTheme'
+
+useTheme()
+```
+
+- Locale needs to be activated
+
+```js
+import { useLocale } from '@baldeweg/ui/composables/useLocale'
+
+useLocale()
+```

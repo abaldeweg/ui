@@ -3,7 +3,9 @@ import { useTheme } from './composables/useTheme.js'
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useDraggable } from '@vueuse/core'
+import { useLocale } from './composables/useLocale.js'
 
+useLocale()
 const { theme } = useTheme()
 
 const el = ref(null)

@@ -33,6 +33,7 @@ Currently available composables:
 - useToast
 - useTheme
 - useTitle
+- useLocale
 
 Example Layout
 
