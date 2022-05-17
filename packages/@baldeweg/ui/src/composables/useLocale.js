@@ -1,6 +1,11 @@
+import { ref, watchEffect } from 'vue'
+
 export function useLocale() {
-  document.documentElement.setAttribute(
-    'lang',
-    import.meta.env.VUE_APP_LOCALE ?? 'en-US'
-  )
+  const locale = ref(import.meta.env.VUE_APP_LOCALE ?? 'en-US')
+
+  watchEffect(() => {
+    document.documentElement.setAttribute('lang', locale.value)
+  })
+
+  return { locale }
 }

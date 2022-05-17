@@ -3,7 +3,7 @@ import { ref } from 'vue'
 const messages = ref([])
 const current = ref(null)
 
-const show = () => {
+const list = () => {
   current.value = messages.value[0]
 
   setTimeout(() => {
@@ -14,7 +14,7 @@ const show = () => {
 
 setInterval(() => {
   if (messages.value.length >= 1 && current.value === null) {
-    show()
+    list()
   }
 }, 1000)
 

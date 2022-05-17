@@ -7,5 +7,5 @@ export function useTitle(options) {
     document.title = title.value ?? null
   })
 
-  return title
+  return { options }
 }
