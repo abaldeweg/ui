@@ -163,6 +163,10 @@ const router = createRouter({
       name: 'flex',
       component: () => import('../views/BFlexView.vue'),
     },
+    {
+      path: '/:pathMatch(.*)',
+      redirect: { name: 'index' },
+    },
   ],
 })
 
