@@ -35,5 +35,6 @@
     "type": "git",
     "url": "https://github.com/abaldeweg/ui.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "private": true
 }
