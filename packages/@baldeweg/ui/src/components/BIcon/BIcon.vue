@@ -15,34 +15,9 @@
 </template>
 
 <script>
-import icon from '../../services/icons'
+import { useIcon } from './../../composables/useIcon.js'
 
-const icons = [
-  'apps',
-  'bin',
-  'star',
-  'close',
-  'check',
-  'download',
-  'filter',
-  'hamburger',
-  'minus',
-  'pause',
-  'pencil',
-  'play',
-  'plus',
-  'profile',
-  'kebab',
-  'meatballs',
-  'moon',
-  'dollar',
-  'search',
-  'euro',
-  'cart',
-  'directory',
-  'file',
-  'clipboard',
-]
+const { get, has } = useIcon()
 
 export default {
   name: 'b-icon',
@@ -50,7 +25,7 @@ export default {
     type: {
       type: String,
       validator(value) {
-        return icons.indexOf(value) !== -1
+        return has(value)
       },
     },
     size: {
@@ -67,7 +42,7 @@ export default {
   },
   setup(props) {
     const path = () => {
-      return icon(props.type)
+      return get(props.type)
     }
 
     return { path }
