@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BTable - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <b-table hover>
@@ -62,18 +68,3 @@
     </b-table>
   </article>
 </template>
-
-<script>
-import BTable from '../components/BTable/BTable.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-table-view',
-  components: {
-    BTable,
-  },
-  setup() {
-    useTitle({ title: 'BTable - @baldeweg/ui' })
-  },
-}
-</script>

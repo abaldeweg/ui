@@ -1,3 +1,16 @@
+<script setup>
+import { ref } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BForm - @baldeweg/ui' })
+
+const log = (msg) => {
+  console.log(msg)
+}
+
+const selectedOption = ref('3')
+</script>
+
 <template>
   <b-form @submit.prevent="log('send')">
     <b-form-group>
@@ -195,47 +208,3 @@
     </b-form-group>
   </b-form>
 </template>
-
-<script>
-import BForm from '../components/BForm/BForm.vue'
-import BButton from '../components/BButton/BButton.vue'
-import BFormGroup from '../components/BForm/BFormGroup.vue'
-import BFormFieldset from '../components/BForm/BFormFieldset.vue'
-import BFormLegend from '../components/BForm/BFormLegend.vue'
-import BFormItem from '../components/BForm/BFormItem.vue'
-import BFormLabel from '../components/BForm/BFormLabel.vue'
-import BFormTextarea from '../components/BForm/BFormTextarea.vue'
-import BFormInput from '../components/BForm/BFormInput.vue'
-import BFormSelect from '../components/BForm/BFormSelect.vue'
-import BFormHelpline from '../components/BForm/BFormHelpline.vue'
-import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-form-view',
-  components: {
-    BForm,
-    BButton,
-    BFormGroup,
-    BFormFieldset,
-    BFormLegend,
-    BFormItem,
-    BFormLabel,
-    BFormTextarea,
-    BFormInput,
-    BFormSelect,
-    BFormHelpline,
-  },
-  setup() {
-    useTitle({ title: 'BForm - @baldeweg/ui' })
-
-    const log = (msg) => {
-      console.log(msg)
-    }
-
-    const selectedOption = ref('3')
-
-    return { log, selectedOption }
-  },
-}
-</script>

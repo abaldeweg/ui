@@ -1,3 +1,13 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BDropdown - @baldeweg/ui' })
+
+const log = (msg) => {
+  console.log(msg)
+}
+</script>
+
 <template>
   <article>
     <b-dropdown keep-open>
@@ -322,28 +332,3 @@
     </div>
   </article>
 </template>
-
-<script>
-import BDropdown from '../components/BDropdown/BDropdown.vue'
-import BDropdownItem from '../components/BDropdown/BDropdownItem.vue'
-import BDropdownDivider from '../components/BDropdown/BDropdownDivider.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-dropdown-view',
-  components: {
-    BDropdown,
-    BDropdownItem,
-    BDropdownDivider,
-  },
-  setup() {
-    useTitle({ title: 'BDropdown - @baldeweg/ui' })
-
-    const log = (msg) => {
-      console.log(msg)
-    }
-
-    return { log }
-  },
-}
-</script>

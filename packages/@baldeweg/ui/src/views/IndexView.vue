@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'Home - @baldeweg/ui' })
+</script>
+
 <template>
   <b-container size="s">
     <h1>@baldeweg/ui</h1>
@@ -103,18 +109,3 @@
     </ul>
   </b-container>
 </template>
-
-<script>
-import BContainer from './../components/BContainer/BContainer.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'index-view',
-  components: {
-    BContainer,
-  },
-  setup() {
-    useTitle({ title: 'Home - @baldeweg/ui' })
-  },
-}
-</script>

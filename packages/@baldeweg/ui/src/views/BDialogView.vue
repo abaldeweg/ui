@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BDialog - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <b-dialog>
@@ -117,20 +123,3 @@
     </section>
   </article>
 </template>
-
-<script>
-import BDialog from '../components/BDialog/BDialog.vue'
-import BButton from '../components/BButton/BButton.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-dialog-view',
-  components: {
-    BDialog,
-    BButton,
-  },
-  setup() {
-    useTitle({ title: 'BDialog - @baldeweg/ui' })
-  },
-}
-</script>

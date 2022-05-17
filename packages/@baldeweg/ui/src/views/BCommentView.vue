@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BComment - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <b-comment author="Author" date="01.01.2021 20:00">
@@ -13,18 +19,3 @@
     </b-comment>
   </article>
 </template>
-
-<script>
-import BComment from '../components/BComment/BComment.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-comment-view',
-  components: {
-    BComment,
-  },
-  setup() {
-    useTitle({ title: 'BComment - @baldeweg/ui' })
-  },
-}
-</script>

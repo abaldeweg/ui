@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BDivider - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <b-divider size="l" />
@@ -6,18 +12,3 @@
     <b-divider size="xs" />
   </article>
 </template>
-
-<script>
-import BDivider from '../components/BDivider/BDivider.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-divider-view',
-  components: {
-    BDivider,
-  },
-  setup() {
-    useTitle({ title: 'BDivider - @baldeweg/ui' })
-  },
-}
-</script>

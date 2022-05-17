@@ -1,3 +1,19 @@
+<script setup>
+import { reactive } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BModal - @baldeweg/ui' })
+
+const state = reactive({
+  show: true,
+})
+
+const closeModal = (type) => {
+  state.show = !state.show
+  console.log(type)
+}
+</script>
+
 <template>
   <article>
     <section>
@@ -212,32 +228,3 @@
     </b-modal>
   </article>
 </template>
-
-<script>
-import BModal from '../components/BModal/BModal.vue'
-import BContainer from '../components/BContainer/BContainer.vue'
-import { reactive } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-modal-view',
-  components: {
-    BModal,
-    BContainer,
-  },
-  setup() {
-    useTitle({ title: 'BModal - @baldeweg/ui' })
-
-    const state = reactive({
-      show: true,
-    })
-
-    const closeModal = (type) => {
-      state.show = !state.show
-      console.log(type)
-    }
-
-    return { state, closeModal }
-  },
-}
-</script>

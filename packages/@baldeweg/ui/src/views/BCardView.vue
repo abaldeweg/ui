@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BCard - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <b-card title="Title" route="index">
@@ -27,18 +33,3 @@
     </b-card>
   </article>
 </template>
-
-<script>
-import BCard from '../components/BCard/BCard.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-card-view',
-  components: {
-    BCard,
-  },
-  setup() {
-    useTitle({ title: 'BCard - @baldeweg/ui' })
-  },
-}
-</script>

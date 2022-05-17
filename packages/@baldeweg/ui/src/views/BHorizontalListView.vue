@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BHorizontalList - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <b-horizontal-list>
@@ -72,22 +78,3 @@
     </b-horizontal-list>
   </article>
 </template>
-
-<script>
-import BHorizontalList from '../components/BHorizontalList/BHorizontalList.vue'
-import BHorizontalListItem from '../components/BHorizontalList/BHorizontalListItem.vue'
-import BDivider from '../components/BDivider/BDivider.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-horizontal-list-view',
-  components: {
-    BHorizontalList,
-    BHorizontalListItem,
-    BDivider,
-  },
-  setup() {
-    useTitle({ title: 'BHorizontalList - @baldeweg/ui' })
-  },
-}
-</script>

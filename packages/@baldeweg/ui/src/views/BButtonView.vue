@@ -1,3 +1,13 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BButton - @baldeweg/ui' })
+
+const log = (msg) => {
+  console.log(msg)
+}
+</script>
+
 <template>
   <article>
     <h2>Primary</h2>
@@ -30,24 +40,3 @@
     <b-button design="text" disabled>Button Disabled</b-button>
   </article>
 </template>
-
-<script>
-import BButton from '../components/BButton/BButton.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-button-view',
-  components: {
-    BButton,
-  },
-  setup() {
-    useTitle({ title: 'BButton - @baldeweg/ui' })
-
-    const log = (msg) => {
-      console.log(msg)
-    }
-
-    return { log }
-  },
-}
-</script>

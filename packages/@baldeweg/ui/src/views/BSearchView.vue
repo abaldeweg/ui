@@ -1,3 +1,19 @@
+<script setup>
+import { reactive } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BSearch - @baldeweg/ui' })
+
+const state = reactive({
+  term: null,
+  branded: false,
+})
+
+const log = (msg) => {
+  console.log(msg)
+}
+</script>
+
 <template>
   <article>
     <b-search
@@ -15,30 +31,3 @@
     <button @click="state.branded = !state.branded">Toggle Styling</button>
   </article>
 </template>
-
-<script>
-import { reactive } from 'vue'
-import BSearch from '../components/BSearch/BSearch.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-search-view',
-  components: {
-    BSearch,
-  },
-  setup() {
-    useTitle({ title: 'BSearch - @baldeweg/ui' })
-
-    const state = reactive({
-      term: null,
-      branded: false,
-    })
-
-    const log = (msg) => {
-      console.log(msg)
-    }
-
-    return { state, log }
-  },
-}
-</script>

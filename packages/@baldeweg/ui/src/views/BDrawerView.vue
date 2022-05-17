@@ -1,3 +1,16 @@
+<script setup>
+import { reactive } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BDrawer - @baldeweg/ui' })
+
+const state = reactive({
+  show: false,
+  collapsable: true,
+  inline: false,
+})
+</script>
+
 <template>
   <div class="layout">
     <div class="layout_drawer" v-if="state.show">
@@ -55,36 +68,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import BDrawer from '../components/BDrawer/BDrawer.vue'
-import BDivider from '../components/BDivider/BDivider.vue'
-import BContainer from '../components/BContainer/BContainer.vue'
-import BList from '../components/BList/BList.vue'
-import { reactive } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-drawer-view',
-  components: {
-    BDrawer,
-    BDivider,
-    BContainer,
-    BList,
-  },
-  setup() {
-    useTitle({ title: 'BDrawer - @baldeweg/ui' })
-
-    const state = reactive({
-      show: false,
-      collapsable: true,
-      inline: false,
-    })
-
-    return { state }
-  },
-}
-</script>
 
 <style>
 @media all and (min-width: 900px) {

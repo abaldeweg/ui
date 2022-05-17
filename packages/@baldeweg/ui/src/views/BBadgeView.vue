@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BBadge - @baldeweg/ui' })
+</script>
+
 <template>
   <section>
     <p>
@@ -12,20 +18,3 @@
     </p>
   </section>
 </template>
-
-<script>
-import BBadge from '../components/BBadge/BBadge.vue'
-import BIcon from '../components/BIcon/BIcon.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-badge-view',
-  components: {
-    BBadge,
-    BIcon,
-  },
-  setup() {
-    useTitle({ title: 'BBadge - @baldeweg/ui' })
-  },
-}
-</script>

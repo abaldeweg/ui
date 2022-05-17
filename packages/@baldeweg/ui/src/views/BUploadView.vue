@@ -1,3 +1,13 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BUpload - @baldeweg/ui' })
+
+const upload = (file) => {
+  console.log(file)
+}
+</script>
+
 <template>
   <b-form enctype="multipart/form-data" class="upload" @submit.prevent>
     <b-upload
@@ -8,26 +18,3 @@
     />
   </b-form>
 </template>
-
-<script>
-import BUpload from '../components/BUpload/BUpload.vue'
-import BForm from '@/components/BForm/BForm.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-upload-view',
-  components: {
-    BUpload,
-    BForm,
-  },
-  setup() {
-    useTitle({ title: 'BUpload - @baldeweg/ui' })
-
-    const upload = (file) => {
-      console.log(file)
-    }
-
-    return { upload }
-  },
-}
-</script>

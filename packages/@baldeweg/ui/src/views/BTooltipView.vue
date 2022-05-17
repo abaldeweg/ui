@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BTooltip - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <b-tooltip position="top" text="Text">
@@ -64,18 +70,3 @@
     </b-tooltip>
   </article>
 </template>
-
-<script>
-import BTooltip from '../components/BTooltip/BTooltip.vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-tooltip-view',
-  components: {
-    BTooltip,
-  },
-  setup() {
-    useTitle({ title: 'BTooltip - @baldeweg/ui' })
-  },
-}
-</script>

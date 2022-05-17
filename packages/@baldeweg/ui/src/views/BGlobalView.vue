@@ -1,3 +1,9 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BGlobal - @baldeweg/ui' })
+</script>
+
 <template>
   <article>
     <section>
@@ -71,14 +77,3 @@
     </section>
   </article>
 </template>
-
-<script>
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-global-view',
-  setup() {
-    useTitle({ title: 'BGlobal - @baldeweg/ui' })
-  },
-}
-</script>

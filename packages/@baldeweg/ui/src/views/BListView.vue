@@ -1,3 +1,25 @@
+<script setup>
+import { ref } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
+
+useTitle({ title: 'BList - @baldeweg/ui' })
+
+const bold = ref(false)
+const divider = ref(false)
+const meta = ref(false)
+const subtitle = ref(true)
+const options = ref(true)
+const image = ref(true)
+const imageSize = ref('m')
+const imagePosition = ref('center')
+const actionsPosition = ref('center')
+const reverse = ref(false)
+const disabled = ref(false)
+const active = ref(false)
+const subgroup = ref(true)
+const subgroupIndent = ref('20px')
+</script>
+
 <template>
   <article>
     <b-list
@@ -206,53 +228,3 @@
     </b-form-group>
   </article>
 </template>
-
-<script>
-import BList from '../components/BList/BList.vue'
-import BIcon from '../components/BIcon/BIcon.vue'
-import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-list-view',
-  components: {
-    BList,
-    BIcon,
-  },
-  setup() {
-    useTitle({ title: 'BList - @baldeweg/ui' })
-
-    const bold = ref(false)
-    const divider = ref(false)
-    const meta = ref(false)
-    const subtitle = ref(true)
-    const options = ref(true)
-    const image = ref(true)
-    const imageSize = ref('m')
-    const imagePosition = ref('center')
-    const actionsPosition = ref('center')
-    const reverse = ref(false)
-    const disabled = ref(false)
-    const active = ref(false)
-    const subgroup = ref(true)
-    const subgroupIndent = ref('20px')
-
-    return {
-      bold,
-      divider,
-      meta,
-      subtitle,
-      options,
-      image,
-      imageSize,
-      imagePosition,
-      actionsPosition,
-      reverse,
-      disabled,
-      active,
-      subgroup,
-      subgroupIndent,
-    }
-  },
-}
-</script>

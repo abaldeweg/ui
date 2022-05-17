@@ -1,3 +1,12 @@
+<script setup>
+import { useTitle } from './../composables/useTitle.js'
+import { useToast } from '@/composables/useToast.js'
+
+useTitle({ title: 'BToast - @baldeweg/ui' })
+
+const { current, add } = useToast()
+</script>
+
 <template>
   <article>
     <b-toast v-if="current" :type="current.type" :visible="true">{{
@@ -152,23 +161,3 @@
     </section>
   </article>
 </template>
-
-<script>
-import BToast from '../components/BToast/BToast.vue'
-import { useToast } from '@/composables/useToast.js'
-import { useTitle } from './../composables/useTitle.js'
-
-export default {
-  name: 'b-toast-view',
-  components: {
-    BToast,
-  },
-  setup() {
-    useTitle({ title: 'BToast - @baldeweg/ui' })
-
-    const { current, add } = useToast()
-
-    return { current, add }
-  },
-}
-</script>
