@@ -27,4 +27,5 @@ export default defineConfig({
       },
     },
   },
+  envPrefix: ['VITE_', 'VUE_APP_'],
 })
