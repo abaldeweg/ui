@@ -1,3 +1,10 @@
+<script setup>
+defineProps({
+  author: String,
+  date: String,
+})
+</script>
+
 <template>
   <div class="comment">
     <div class="comment_actions" v-if="$slots.actions">
@@ -10,22 +17,10 @@
     </div>
 
     <div class="comment_body">
-      <p>
-        <slot />
-      </p>
+      <p><slot /></p>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'b-comment',
-  props: {
-    author: String,
-    date: String,
-  },
-}
-</script>
 
 <style scoped>
 .comment {

@@ -1,3 +1,40 @@
+<script setup>
+import { ref } from 'vue'
+
+defineProps({
+  route: Object,
+  bold: Boolean,
+  divider: Boolean,
+  imageSize: {
+    type: String,
+    validator(value) {
+      return ['xs', 's', 'm', 'l', 'xl'].includes(value)
+    },
+  },
+  imagePosition: {
+    type: String,
+    validator(value) {
+      return ['start', 'center', 'end'].includes(value)
+    },
+  },
+  actionsPosition: {
+    type: String,
+    validator(value) {
+      return ['start', 'center', 'end'].includes(value)
+    },
+  },
+  reverse: Boolean,
+  disabled: Boolean,
+  active: Boolean,
+  subgroupIndent: {
+    type: String,
+    default: '20px',
+  },
+})
+
+const showSubgroup = ref(false)
+</script>
+
 <template>
   <div
     class="list"
@@ -23,17 +60,17 @@
         }"
         v-if="$slots.image"
       >
-        <router-link :to="route" v-if="route">
+        <RouterLink :to="route" v-if="route">
           <slot name="image" />
-        </router-link>
+        </RouterLink>
         <slot name="image" v-else />
       </div>
 
       <div class="list_body">
         <h3 class="list_title" :class="{ isBold: bold }">
-          <router-link :to="route" v-if="route">
+          <RouterLink :to="route" v-if="route">
             <slot name="title" />
-          </router-link>
+          </RouterLink>
           <slot name="title" v-else />
         </h3>
 
@@ -54,11 +91,11 @@
         }"
         v-if="$slots.subgroup"
       >
-        <span @click="toggleSubgroup">
-          <b-icon type="plus" v-if="!showSubgroup" />
+        <span @click="showSubgroup = true">
+          <BIcon type="plus" v-if="!showSubgroup" />
         </span>
-        <span @click="toggleSubgroup">
-          <b-icon type="minus" v-if="showSubgroup" />
+        <span @click="showSubgroup = false">
+          <BIcon type="minus" v-if="showSubgroup" />
         </span>
       </div>
 
@@ -83,70 +120,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { ref } from 'vue'
-
-export default {
-  name: 'b-list',
-  props: {
-    route: {
-      type: Object,
-    },
-    bold: {
-      type: Boolean,
-      default: false,
-    },
-    divider: {
-      type: Boolean,
-      default: false,
-    },
-    imageSize: {
-      type: String,
-      validator(value) {
-        return ['xs', 's', 'm', 'l', 'xl'].indexOf(value) !== -1
-      },
-    },
-    imagePosition: {
-      type: String,
-      validator(value) {
-        return ['start', 'center', 'end'].indexOf(value) !== -1
-      },
-    },
-    actionsPosition: {
-      type: String,
-      validator(value) {
-        return ['start', 'center', 'end'].indexOf(value) !== -1
-      },
-    },
-    reverse: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    active: {
-      type: Boolean,
-      default: false,
-    },
-    subgroupIndent: {
-      type: String,
-      default: '20px',
-    },
-  },
-  setup() {
-    const showSubgroup = ref(false)
-
-    const toggleSubgroup = () => {
-      showSubgroup.value = !showSubgroup.value
-    }
-
-    return { showSubgroup, toggleSubgroup }
-  },
-}
-</script>
 
 <style scoped>
 .list {

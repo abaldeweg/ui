@@ -1,3 +1,30 @@
+<script setup>
+import { onBeforeUnmount, onMounted } from 'vue'
+
+defineProps({
+  width: {
+    type: Number,
+    default: 600,
+  },
+  closeButton: Boolean,
+})
+
+const emit = defineEmits(['close'])
+
+const close = (type) => {
+  emit('close', type)
+  document.body.classList.remove('isModalOpen')
+}
+
+onMounted(() => {
+  document.body.classList.add('isModalOpen')
+})
+
+onBeforeUnmount(() => {
+  document.body.classList.remove('isModalOpen')
+})
+</script>
+
 <template>
   <div class="modal">
     <div class="modal_overlay" @click.prevent="close('overlay')" />
@@ -6,7 +33,7 @@
       <div class="modal_header">
         <h2 class="modal_title" v-if="$slots.title"><slot name="title" /></h2>
         <span class="modal_close" @click="close('button')" v-if="closeButton">
-          <b-icon type="close" :size="15" />
+          <BIcon type="close" :size="15" />
         </span>
       </div>
 
@@ -20,44 +47,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { onBeforeUnmount, onMounted } from 'vue'
-import BIcon from '../BIcon/BIcon.vue'
-
-export default {
-  name: 'b-modal',
-  props: {
-    width: {
-      type: Number,
-      default: 600,
-    },
-    closeButton: {
-      type: Boolean,
-      default: true,
-    },
-  },
-  components: {
-    BIcon,
-  },
-  setup(_props, { emit }) {
-    const close = (type) => {
-      emit('close', type)
-      document.body.classList.remove('isModalOpen')
-    }
-
-    onMounted(() => {
-      document.body.classList.add('isModalOpen')
-    })
-
-    onBeforeUnmount(() => {
-      document.body.classList.remove('isModalOpen')
-    })
-
-    return { close }
-  },
-}
-</script>
 
 <style scoped>
 .modal {

@@ -4,12 +4,6 @@
   </main>
 </template>
 
-<script>
-export default {
-  name: 'b-app',
-}
-</script>
-
 <style scoped>
 .content {
   display: block;

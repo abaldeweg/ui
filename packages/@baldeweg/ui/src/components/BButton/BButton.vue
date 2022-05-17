@@ -1,3 +1,47 @@
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  design: {
+    type: String,
+    default: 'primary',
+  },
+  ripple: {
+    type: Boolean,
+  },
+})
+
+const emit = defineEmits(['click'])
+
+const el = ref(null)
+const el2 = ref(null)
+const isRippleActive = ref(false)
+
+const click = (event) => {
+  emit('click', event)
+  startRipple()
+}
+
+const startRipple = () => {
+  if (!props.ripple) return
+
+  isRippleActive.value = true
+
+  const width = el.value.offsetWidth
+  const height = el.value.offsetHeight
+  const top = height / 2 - width / 2
+
+  el2.value.style.top = top + 'px'
+  el2.value.style.left = '0'
+  el2.value.style.width = width + 'px'
+  el2.value.style.height = width + 'px'
+
+  setTimeout(() => {
+    isRippleActive.value = false
+  }, 500)
+}
+</script>
+
 <template>
   <button
     class="btn"
@@ -20,59 +64,10 @@
     @click="click($event)"
     ref="el"
   >
-    <span class="ripple" v-show="state.hasRipple" ref="el2" />
+    <span class="ripple" v-show="isRippleActive" ref="el2" />
     <slot />
   </button>
 </template>
-
-<script>
-import { reactive, ref } from 'vue'
-
-export default {
-  name: 'b-button',
-  props: {
-    design: {
-      type: String,
-      default: 'primary',
-    },
-    ripple: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  setup(props, { emit }) {
-    const state = reactive({
-      hasRipple: false,
-    })
-
-    const el = ref(null)
-    const el2 = ref(null)
-
-    const click = (event) => {
-      emit('click', event)
-      if (props.ripple) {
-        startRipple()
-      }
-    }
-
-    const startRipple = () => {
-      state.hasRipple = true
-      const width = el.value.offsetWidth
-      const height = el.value.offsetHeight
-      const top = height / 2 - width / 2
-      el2.value.style.top = top + 'px'
-      el2.value.style.left = '0'
-      el2.value.style.width = width + 'px'
-      el2.value.style.height = width + 'px'
-      setTimeout(() => {
-        state.hasRipple = false
-      }, 500)
-    }
-
-    return { state, el, el2, click, startRipple }
-  },
-}
-</script>
 
 <style scoped>
 .btn {

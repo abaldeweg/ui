@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'b-tabs',
-}
-</script>
-
 <style scoped>
 .tabs {
   display: flex;

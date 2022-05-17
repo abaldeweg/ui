@@ -1,20 +1,14 @@
+<script setup>
+defineProps({
+  buttons: Boolean,
+})
+</script>
+
 <template>
   <div class="form-group" :class="{ hasButtons: buttons }">
     <slot />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'b-form-group',
-  props: {
-    buttons: {
-      type: Boolean,
-      default: false,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .form-group {

@@ -1,5 +1,18 @@
+<script setup>
+defineProps({
+  type: {
+    type: String,
+    default: 'neutral',
+    validator: (value) => {
+      return ['neutral', 'error', 'warning', 'success'].includes(value)
+    },
+  },
+  visible: Boolean,
+})
+</script>
+
 <template>
-  <div class="toast" v-if="state.isVisible || visible">
+  <div class="toast" v-if="visible">
     <div
       class="toast_inner"
       :class="{
@@ -9,58 +22,9 @@
       }"
     >
       <slot />
-
-      <!-- <span class="toast_close" @click="close"><b-icon type="close" /></span> -->
     </div>
   </div>
 </template>
-
-<script>
-import { reactive, watch } from 'vue'
-
-export default {
-  name: 'b-toast',
-  props: {
-    type: {
-      type: String,
-      validator: (value) => {
-        return ['neutral', 'error', 'warning', 'success'].indexOf(value) !== -1
-      },
-      default: 'neutral',
-    },
-    visible: Boolean,
-  },
-  setup(props, { emit }) {
-    const state = reactive({
-      isVisible: false,
-    })
-
-    const show = () => {
-      state.isVisible = true
-      window.setTimeout(() => {
-        state.isVisible = false
-      }, 5000)
-    }
-
-    watch(
-      () => props.visible,
-      (val) => {
-        if (!val) return
-        window.setTimeout(() => {
-          emit('hide')
-        }, 3000)
-      }
-    )
-
-    const close = () => {
-      state.isVisible = false
-      emit('hide')
-    }
-
-    return { state, show, close }
-  },
-}
-</script>
 
 <style scoped>
 .toast {
@@ -89,8 +53,5 @@ export default {
 }
 .toast_success {
   border-left: 5px solid var(--color-accent-green-10);
-}
-.toast_close {
-  float: right;
 }
 </style>

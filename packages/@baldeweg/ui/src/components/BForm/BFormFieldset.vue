@@ -4,12 +4,6 @@
   </fieldset>
 </template>
 
-<script>
-export default {
-  name: 'b-form-fieldset',
-}
-</script>
-
 <style scoped>
 .form-fieldset {
   clear: both;

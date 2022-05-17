@@ -1,3 +1,12 @@
+<script setup>
+defineProps({
+  modelValue: null,
+  noStyling: Boolean,
+  event: Boolean,
+  focus: Boolean,
+})
+</script>
+
 <template>
   <input
     :class="{ 'form-input': !noStyling }"
@@ -6,27 +15,6 @@
     @input="$emit('update:modelValue', event ? $event : $event.target.value)"
   />
 </template>
-
-<script>
-export default {
-  name: 'b-form-input',
-  props: {
-    noStyling: {
-      type: Boolean,
-      default: false,
-    },
-    modelValue: null,
-    event: {
-      type: Boolean,
-      default: false,
-    },
-    focus: {
-      type: Boolean,
-      default: false,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .form-input {

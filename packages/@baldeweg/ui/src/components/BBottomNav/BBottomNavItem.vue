@@ -1,3 +1,9 @@
+<script setup>
+defineProps({
+  title: String,
+})
+</script>
+
 <template>
   <div class="bottom-nav-item" @click="$emit('click', $event)">
     <div class="bottom-nav-item_icon">
@@ -6,15 +12,6 @@
     <p class="bottom-nav-item_title">{{ title }}</p>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'bottom-nav-item',
-  props: {
-    title: String,
-  },
-}
-</script>
 
 <style scoped>
 .bottom-nav-item {

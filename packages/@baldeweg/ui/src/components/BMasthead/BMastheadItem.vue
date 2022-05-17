@@ -1,30 +1,27 @@
+<script setup>
+defineProps({
+  type: {
+    type: String,
+    default: 'start',
+    validator(value) {
+      return ['start', 'center', 'end'].includes(value)
+    },
+  },
+})
+</script>
+
 <template>
   <div
     class="masthead-item"
     :class="{
-      'masthead-item_start': 'start' === type,
-      'masthead-item_center': 'center' === type,
-      'masthead-item_end': 'end' === type,
+      'masthead-item_start': type === 'start',
+      'masthead-item_center': type === 'center',
+      'masthead-item_end': type === 'end',
     }"
   >
     <slot />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'b-masthead-item',
-  props: {
-    type: {
-      type: String,
-      default: 'start',
-      validator(value) {
-        return ['start', 'center', 'end'].indexOf(value) !== -1
-      },
-    },
-  },
-}
-</script>
 
 <style scoped>
 .masthead-item:first-child {

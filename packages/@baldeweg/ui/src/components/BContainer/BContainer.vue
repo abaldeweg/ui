@@ -1,3 +1,26 @@
+<script setup>
+defineProps({
+  size: {
+    type: String,
+    default: 'l',
+    validator(value) {
+      return ['l', 'm', 's'].includes(value)
+    },
+  },
+  align: {
+    type: String,
+    default: 'left',
+    validator(value) {
+      return ['left', 'right', 'center'].includes(value)
+    },
+  },
+  highlight: {
+    type: Boolean,
+    default: false,
+  },
+})
+</script>
+
 <template>
   <section
     class="container"
@@ -13,32 +36,6 @@
     <slot />
   </section>
 </template>
-
-<script>
-export default {
-  name: 'b-container',
-  props: {
-    size: {
-      type: String,
-      default: 'l',
-      validator(value) {
-        return ['l', 'm', 's'].indexOf(value) !== -1
-      },
-    },
-    align: {
-      type: String,
-      default: 'left',
-      validator(value) {
-        return ['left', 'right', 'center'].indexOf(value) !== -1
-      },
-    },
-    highlight: {
-      type: Boolean,
-      default: false,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .container {

@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'b-horizontal-list',
-}
-</script>
-
 <style scoped>
 .horizontal-list {
   display: flex;

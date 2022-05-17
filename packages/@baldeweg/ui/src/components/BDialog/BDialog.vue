@@ -13,12 +13,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'b-dialog',
-}
-</script>
-
 <style scoped>
 .dialog {
   position: fixed;

@@ -4,12 +4,6 @@
   </p>
 </template>
 
-<script>
-export default {
-  name: 'b-form-helpline',
-}
-</script>
-
 <style scoped>
 .form_helpline {
   font-size: 0.8rem;

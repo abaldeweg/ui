@@ -1,3 +1,77 @@
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  position: {
+    type: String,
+    default: 'selector',
+    validator(value) {
+      return ['selector', 'mouse', 'bottom'].includes(value)
+    },
+  },
+  keepOpen: Boolean,
+})
+
+const show = ref(false)
+const top = ref(0)
+const left = ref(0)
+
+const selector = ref(null)
+const dropdown = ref(null)
+
+const showDropdown = (event) => {
+  show.value = true
+  dropdown.value.style.display = 'block'
+
+  const position = selector.value.getBoundingClientRect()
+  const selectorY = position.y
+  const selectorX = position.x
+  const selectorWidth = selector.value.offsetWidth
+  const selectorHeight = selector.value.offsetHeight
+  const clickY = event.clientY
+  const clickX = event.clientX
+  const clientWidth = window.innerWidth
+  const clientHeight = window.innerHeight
+  const dimensionWidth = dropdown.value.offsetWidth
+  const dimensionHeight = dropdown.value.offsetHeight
+
+  dropdown.value.style.display = null
+
+  if ('mouse' === props.position) {
+    left.value = clickX + 'px'
+    if (clickX + dimensionWidth > clientWidth) {
+      left.value = clickX - dimensionWidth + 'px'
+    }
+    top.value = clickY + 'px'
+    if (clickY + dimensionHeight > clientHeight) {
+      top.value = clickY - dimensionHeight + 'px'
+    }
+    return
+  }
+
+  if ('bottom' === props.position) {
+    left.value = selectorX + 'px'
+    if (selectorX + dimensionWidth > clientWidth) {
+      left.value = selectorX - dimensionWidth + selectorWidth + 'px'
+    }
+    top.value = selectorY + selectorHeight + 'px'
+    if (selectorY + dimensionHeight > clientHeight) {
+      top.value = selectorY - dimensionHeight + 'px'
+    }
+    return
+  }
+
+  left.value = selectorX + 'px'
+  if (selectorX + dimensionWidth > clientWidth) {
+    left.value = selectorX - dimensionWidth + selectorWidth + 'px'
+  }
+  top.value = selectorY + 'px'
+  if (selectorY + dimensionHeight > clientHeight) {
+    top.value = selectorY - dimensionHeight + selectorHeight + 'px'
+  }
+}
+</script>
+
 <template>
   <article>
     <span @click="showDropdown" v-if="$slots.selector" ref="selector">
@@ -7,116 +81,27 @@
     <div
       class="dropdown_overlay"
       :class="{
-        isActive: state.show,
+        isActive: show,
       }"
-      @click="hideDropdown"
+      @click="show = false"
     />
 
     <ul
       class="dropdown"
       :class="{
-        isActive: state.show,
+        isActive: show,
       }"
       :style="{
-        top: state.top,
-        left: state.left,
+        top: top,
+        left: left,
       }"
-      @click="!keepOpen ? hideDropdown() : null"
+      @click="!keepOpen ? (show = false) : null"
       ref="dropdown"
     >
       <slot />
     </ul>
   </article>
 </template>
-
-<script>
-import { reactive, ref } from 'vue'
-
-export default {
-  name: 'b-dropdown',
-  props: {
-    position: {
-      type: String,
-      default: 'selector',
-      validator(value) {
-        return ['selector', 'mouse', 'bottom'].indexOf(value) !== -1
-      },
-    },
-    keepOpen: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  setup(props) {
-    const state = reactive({
-      show: false,
-      top: 0,
-      left: 0,
-    })
-
-    const selector = ref(null)
-    const dropdown = ref(null)
-
-    const showDropdown = (event) => {
-      state.show = true
-      dropdown.value.style.display = 'block'
-
-      const position = selector.value.getBoundingClientRect()
-      const selectorY = position.y
-      const selectorX = position.x
-      const selectorWidth = selector.value.offsetWidth
-      const selectorHeight = selector.value.offsetHeight
-      const clickY = event.clientY
-      const clickX = event.clientX
-      const clientWidth = window.innerWidth
-      const clientHeight = window.innerHeight
-      const dimensionWidth = dropdown.value.offsetWidth
-      const dimensionHeight = dropdown.value.offsetHeight
-
-      dropdown.value.style.display = null
-
-      if ('mouse' === props.position) {
-        state.left = clickX + 'px'
-        if (clickX + dimensionWidth > clientWidth) {
-          state.left = clickX - dimensionWidth + 'px'
-        }
-        state.top = clickY + 'px'
-        if (clickY + dimensionHeight > clientHeight) {
-          state.top = clickY - dimensionHeight + 'px'
-        }
-        return
-      }
-
-      if ('bottom' === props.position) {
-        state.left = selectorX + 'px'
-        if (selectorX + dimensionWidth > clientWidth) {
-          state.left = selectorX - dimensionWidth + selectorWidth + 'px'
-        }
-        state.top = selectorY + selectorHeight + 'px'
-        if (selectorY + dimensionHeight > clientHeight) {
-          state.top = selectorY - dimensionHeight + 'px'
-        }
-        return
-      }
-
-      state.left = selectorX + 'px'
-      if (selectorX + dimensionWidth > clientWidth) {
-        state.left = selectorX - dimensionWidth + selectorWidth + 'px'
-      }
-      state.top = selectorY + 'px'
-      if (selectorY + dimensionHeight > clientHeight) {
-        state.top = selectorY - dimensionHeight + selectorHeight + 'px'
-      }
-    }
-
-    const hideDropdown = () => {
-      state.show = false
-    }
-
-    return { state, selector, dropdown, showDropdown, hideDropdown }
-  },
-}
-</script>
 
 <style scoped>
 .dropdown {

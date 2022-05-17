@@ -1,3 +1,15 @@
+<script setup>
+defineProps({
+  size: {
+    type: String,
+    default: 'l',
+    validator(value) {
+      return ['l', 'm', 's', 'xs'].includes(value)
+    },
+  },
+})
+</script>
+
 <template>
   <hr
     class="divider"
@@ -9,21 +21,6 @@
     }"
   />
 </template>
-
-<script>
-export default {
-  name: 'b-divider',
-  props: {
-    size: {
-      type: String,
-      default: 'l',
-      validator(value) {
-        return ['l', 'm', 's', 'xs'].indexOf(value) !== -1
-      },
-    },
-  },
-}
-</script>
 
 <style scoped>
 .divider {

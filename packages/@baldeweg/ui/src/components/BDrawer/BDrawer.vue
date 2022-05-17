@@ -1,9 +1,38 @@
+<script setup>
+import { onMounted, toRefs, watch } from 'vue'
+
+const props = defineProps({
+  active: Boolean,
+  collapsable: Boolean,
+  inline: Boolean,
+})
+
+const emit = defineEmits(['open-menu', 'close-menu'])
+
+const { active } = toRefs(props)
+
+watch(
+  () => active,
+  () => {
+    active.value ? emit('open-menu') : emit('close-menu')
+  }
+)
+
+onMounted(() => {
+  if (!props.collapsable) {
+    if (window.screen.availWidth >= 768) {
+      emit('open-menu')
+    }
+  }
+})
+</script>
+
 <template>
   <div class="drawer">
     <div
       class="drawer_overlay"
       :class="{ isActive: active, isInline: inline }"
-      @click="closeMenu"
+      @click="$emit('close-menu')"
       v-if="collapsable"
     />
 
@@ -12,8 +41,12 @@
       :class="{ isActive: active, isInline: inline }"
     >
       <div class="drawer_header">
-        <span class="drawer_close" @click="closeMenu" v-if="collapsable">
-          <b-icon type="close" />
+        <span
+          class="drawer_close"
+          @click="$emit('close-menu')"
+          v-if="collapsable"
+        >
+          <BIcon type="close" />
         </span>
       </div>
 
@@ -21,65 +54,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { onMounted, reactive, toRefs, watch } from 'vue'
-import BIcon from '../BIcon/BIcon.vue'
-
-export default {
-  name: 'b-drawer',
-  props: {
-    active: {
-      type: Boolean,
-      default: false,
-    },
-    collapsable: {
-      type: Boolean,
-      default: false,
-    },
-    inline: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  components: {
-    BIcon,
-  },
-  setup(props, { emit }) {
-    const state = reactive({
-      x: null,
-      y: null,
-    })
-
-    const { active } = toRefs(props)
-
-    const openMenu = () => {
-      emit('open-menu')
-    }
-
-    const closeMenu = () => {
-      emit('close-menu')
-    }
-
-    watch(
-      () => active,
-      () => {
-        active.value ? openMenu() : closeMenu()
-      }
-    )
-
-    onMounted(() => {
-      if (!props.collapsable) {
-        if (window.screen.availWidth >= 768) {
-          openMenu()
-        }
-      }
-    })
-
-    return { state, openMenu, closeMenu }
-  },
-}
-</script>
 
 <style scoped>
 .drawer_overlay {

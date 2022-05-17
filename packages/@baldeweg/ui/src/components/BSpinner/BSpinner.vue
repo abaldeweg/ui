@@ -1,3 +1,14 @@
+<script setup>
+defineProps({
+  size: {
+    default: 'l',
+    validator(value) {
+      return ['l', 'm', 's'].includes(value)
+    },
+  },
+})
+</script>
+
 <template>
   <div
     class="spinner"
@@ -8,20 +19,6 @@
     }"
   />
 </template>
-
-<script>
-export default {
-  name: 'b-spinner',
-  props: {
-    size: {
-      default: 'l',
-      validator(value) {
-        return ['l', 'm', 's'].indexOf(value) !== -1
-      },
-    },
-  },
-}
-</script>
 
 <style scoped>
 .spinner {

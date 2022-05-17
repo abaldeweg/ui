@@ -1,15 +1,28 @@
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  route: {
+    type: String,
+    required: true,
+  },
+})
+</script>
+
 <template>
   <div class="card">
     <div class="card_image" v-if="$slots.image">
-      <router-link :to="{ name: route }">
+      <RouterLink :to="{ name: route }">
         <slot name="image" />
-      </router-link>
+      </RouterLink>
     </div>
 
     <h2 class="card_title">
-      <router-link :to="{ name: route }">
+      <RouterLink :to="{ name: route }">
         {{ title }}
-      </router-link>
+      </RouterLink>
     </h2>
 
     <div class="card_meta" v-if="$slots.meta">
@@ -17,28 +30,12 @@
     </div>
 
     <p class="card_body">
-      <router-link :to="{ name: route }">
+      <RouterLink :to="{ name: route }">
         <slot name="content" />
-      </router-link>
+      </RouterLink>
     </p>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'b-card',
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    route: {
-      type: String,
-      required: true,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .card {

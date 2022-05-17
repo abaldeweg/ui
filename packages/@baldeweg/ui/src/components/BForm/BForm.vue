@@ -1,23 +1,20 @@
+<script setup>
+defineProps({
+  noMargin: Boolean,
+})
+</script>
+
 <template>
   <form
     method="post"
     enctype="multipart/form-data"
     class="form"
-    :class="{ noMargin: noMargin }"
+    :class="{ noMargin }"
     @submit="$emit('submit', $event)"
   >
     <slot />
   </form>
 </template>
-
-<script>
-export default {
-  name: 'b-form',
-  props: {
-    noMargin: Boolean,
-  },
-}
-</script>
 
 <style scoped>
 .form {

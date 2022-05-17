@@ -1,3 +1,20 @@
+<script setup>
+defineProps({
+  placeholder: String,
+  value: String,
+  filter: Boolean,
+  branded: Boolean,
+  focus: Boolean,
+})
+
+const emit = defineEmits(['reset', 'input'])
+
+const reset = () => {
+  emit('reset')
+  emit('input', null)
+}
+</script>
+
 <template>
   <form
     class="search"
@@ -13,7 +30,7 @@
       @input="$emit('input', $event.target.value)"
     />
     <button type="reset" class="search_btn" @click="reset">
-      <b-icon type="close" :size="18" />
+      <BIcon type="close" :size="18" />
     </button>
     <button
       type="button"
@@ -21,48 +38,13 @@
       @click="$emit('filter')"
       v-if="filter"
     >
-      <b-icon type="filter" :size="18" />
+      <BIcon type="filter" :size="18" />
     </button>
     <button class="search_btn">
-      <b-icon type="search" :size="18" :isPrimary="branded" />
+      <BIcon type="search" :size="18" :isPrimary="branded" />
     </button>
   </form>
 </template>
-
-<script>
-import BIcon from '../BIcon/BIcon.vue'
-
-export default {
-  name: 'b-search',
-  props: {
-    placeholder: String,
-    value: String,
-    filter: {
-      type: Boolean,
-      default: false,
-    },
-    branded: {
-      type: Boolean,
-      default: false,
-    },
-    focus: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  components: {
-    BIcon,
-  },
-  setup(_props, { emit }) {
-    const reset = () => {
-      emit('reset')
-      emit('input', null)
-    }
-
-    return { reset }
-  },
-}
-</script>
 
 <style scoped>
 .search {

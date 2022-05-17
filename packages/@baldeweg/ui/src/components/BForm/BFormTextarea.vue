@@ -1,3 +1,10 @@
+<script setup>
+defineProps({
+  value: String,
+  focus: Boolean,
+})
+</script>
+
 <template>
   <textarea
     class="form-textarea"
@@ -9,19 +16,6 @@
     @contextmenu="$emit('contextmenu', $event)"
   />
 </template>
-
-<script>
-export default {
-  name: 'b-form-textarea',
-  props: {
-    value: String,
-    focus: {
-      type: Boolean,
-      default: false,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .form-textarea {

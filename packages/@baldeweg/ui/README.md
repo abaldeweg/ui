@@ -97,6 +97,7 @@ html {
 Props
 
 - type - neutral, error, warning, success - default: neutral
+- canHide - Bool, default: false
 
 Slots
 

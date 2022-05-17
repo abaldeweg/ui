@@ -1,3 +1,11 @@
+<script setup>
+defineProps({
+  bold: Boolean,
+  noHover: Boolean,
+  icon: String,
+})
+</script>
+
 <template>
   <li
     class="dropdown-item"
@@ -5,38 +13,13 @@
     @click="$emit('click', $event)"
   >
     <div class="dropdown-item_icon" v-if="icon">
-      <b-icon :type="icon" :size="15" no-hover />
+      <BIcon :type="icon" :size="15" no-hover />
     </div>
     <div class="dropdown-item_title">
       <slot />
     </div>
   </li>
 </template>
-
-<script>
-import BIcon from '../BIcon/BIcon.vue'
-
-export default {
-  name: 'b-dropdown-item',
-  props: {
-    bold: {
-      type: Boolean,
-      default: false,
-    },
-    noHover: {
-      type: Boolean,
-      default: false,
-    },
-    icon: {
-      type: String,
-      default: null,
-    },
-  },
-  components: {
-    BIcon,
-  },
-}
-</script>
 
 <style scoped>
 .dropdown-item {

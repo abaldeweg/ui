@@ -1,3 +1,20 @@
+<script setup>
+defineProps({
+  items: Array,
+  itemKey: {
+    type: String,
+    default: 'key',
+  },
+  itemValue: {
+    type: String,
+    default: 'value',
+  },
+  modelValue: [Number, String],
+  focus: Boolean,
+  allowEmpty: Boolean,
+})
+</script>
+
 <template>
   <select
     class="form-select"
@@ -11,34 +28,6 @@
     </option>
   </select>
 </template>
-
-<script>
-export default {
-  name: 'b-form-select',
-  props: {
-    items: {
-      type: Array,
-    },
-    itemKey: {
-      type: String,
-      default: 'key',
-    },
-    itemValue: {
-      type: String,
-      default: 'value',
-    },
-    modelValue: [Number, String],
-    focus: {
-      type: Boolean,
-      default: false,
-    },
-    allowEmpty: {
-      type: Boolean,
-      default: false,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .form-select {

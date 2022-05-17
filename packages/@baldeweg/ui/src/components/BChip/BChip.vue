@@ -11,12 +11,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'b-chip',
-}
-</script>
-
 <style scoped>
 .chip {
   display: inline-block;

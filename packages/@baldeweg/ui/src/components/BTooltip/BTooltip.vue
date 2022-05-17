@@ -1,3 +1,68 @@
+<script setup>
+import { onMounted, ref } from 'vue'
+
+const props = defineProps({
+  position: {
+    type: String,
+    validator(value) {
+      return ['top', 'bottom', 'left', 'right'].includes(value)
+    },
+  },
+  text: String,
+})
+
+const spacing = ref(10)
+const tooltip = ref(null)
+const container = ref(null)
+
+const calcTop = () => {
+  let top = container.value.getBoundingClientRect().y
+  const position = props.position
+
+  tooltip.value.style.display = 'block'
+  const tooltipHeight = tooltip.value.offsetHeight
+  tooltip.value.style.display = null
+
+  if ('top' === position) {
+    return top - spacing.value - tooltipHeight
+  }
+  if ('bottom' === position) {
+    return top + spacing.value + container.value.offsetHeight
+  }
+  if ('left' === position || 'right' === position) {
+    return top + container.value.offsetHeight / 2 - tooltipHeight / 2
+  }
+
+  return top
+}
+
+const calcLeft = () => {
+  let left = container.value.getBoundingClientRect().x
+  const position = props.position
+
+  tooltip.value.style.display = 'block'
+  const tooltipWidth = tooltip.value.offsetWidth
+  tooltip.value.style.display = null
+
+  if ('top' === position || 'bottom' === position) {
+    return left + container.value.offsetWidth / 2 - tooltipWidth / 2
+  }
+  if ('left' === position) {
+    return left - spacing.value - tooltipWidth
+  }
+  if ('right' === position) {
+    return left + spacing.value + container.value.offsetWidth
+  }
+
+  return left
+}
+
+onMounted(() => {
+  tooltip.value.style.top = calcTop() + 'px'
+  tooltip.value.style.left = calcLeft() + 'px'
+})
+</script>
+
 <template>
   <span class="tooltip" ref="container">
     <div class="tooltip_item" ref="tooltip">
@@ -6,80 +71,6 @@
     <slot />
   </span>
 </template>
-
-<script>
-import { onMounted, reactive, ref } from 'vue'
-
-export default {
-  name: 'b-tooltip',
-  props: {
-    position: {
-      type: String,
-      validator(value) {
-        return ['top', 'bottom', 'left', 'right'].indexOf(value) !== -1
-      },
-    },
-    text: String,
-  },
-  setup(props) {
-    const state = reactive({
-      spacing: 10,
-    })
-
-    const tooltip = ref(null)
-    const container = ref(null)
-
-    const calcTop = () => {
-      let top = container.value.getBoundingClientRect().y
-      const position = props.position
-
-      tooltip.value.style.display = 'block'
-      const tooltipHeight = tooltip.value.offsetHeight
-      tooltip.value.style.display = null
-
-      if ('top' === position) {
-        return top - state.spacing - tooltipHeight
-      }
-      if ('bottom' === position) {
-        return top + state.spacing + container.value.offsetHeight
-      }
-      if ('left' === position || 'right' === position) {
-        return top + container.value.offsetHeight / 2 - tooltipHeight / 2
-      }
-
-      return top
-    }
-
-    const calcLeft = () => {
-      let left = container.value.getBoundingClientRect().x
-      const position = props.position
-
-      tooltip.value.style.display = 'block'
-      const tooltipWidth = tooltip.value.offsetWidth
-      tooltip.value.style.display = null
-
-      if ('top' === position || 'bottom' === position) {
-        return left + container.value.offsetWidth / 2 - tooltipWidth / 2
-      }
-      if ('left' === position) {
-        return left - state.spacing - tooltipWidth
-      }
-      if ('right' === position) {
-        return left + state.spacing + container.value.offsetWidth
-      }
-
-      return left
-    }
-
-    onMounted(() => {
-      tooltip.value.style.top = calcTop() + 'px'
-      tooltip.value.style.left = calcLeft() + 'px'
-    })
-
-    return { state, container, tooltip }
-  },
-}
-</script>
 
 <style scoped>
 .tooltip_item {

@@ -1,17 +1,11 @@
 <template>
-  <div class="form-item">
+  <div class="form_item">
     <slot />
   </div>
 </template>
 
-<script>
-export default {
-  name: 'b-form-item',
-}
-</script>
-
 <style scoped>
-.form-item {
+.form_item {
   clear: both;
   overflow: auto;
 }

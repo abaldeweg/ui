@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'b-tabs-link',
-}
-</script>
-
 <style scoped>
 .tabs-link {
   border-radius: 3px;

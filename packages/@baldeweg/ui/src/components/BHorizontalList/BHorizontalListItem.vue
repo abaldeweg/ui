@@ -1,3 +1,15 @@
+<script setup>
+defineProps({
+  size: {
+    type: String,
+    default: 'm',
+    validator(value) {
+      return ['xs', 's', 'm', 'l', 'xl'].includes(value)
+    },
+  },
+})
+</script>
+
 <template>
   <div
     class="horizontal-list-item"
@@ -12,21 +24,6 @@
     <slot />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'b-horizontal-list-item',
-  props: {
-    size: {
-      type: String,
-      default: 'm',
-      validator(value) {
-        return ['xs', 's', 'm', 'l', 'xl'].indexOf(value) !== -1
-      },
-    },
-  },
-}
-</script>
 
 <style scoped>
 .horizontal-list-item {

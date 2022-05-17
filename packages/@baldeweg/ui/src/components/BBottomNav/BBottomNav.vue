@@ -4,12 +4,6 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: 'bottom-nav',
-}
-</script>
-
 <style scoped>
 .bottom-nav {
   display: flex;

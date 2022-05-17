@@ -1,3 +1,25 @@
+<script setup>
+import { useIcon } from './../../composables/useIcon.js'
+
+const props = defineProps({
+  type: {
+    type: String,
+    validator(value) {
+      const { has } = useIcon()
+      return has(value)
+    },
+  },
+  size: {
+    type: Number,
+    default: 25,
+  },
+  noHover: Boolean,
+  color: String,
+})
+
+const { get } = useIcon()
+</script>
+
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -5,50 +27,14 @@
     :height="size"
     viewBox="0 0 50 50"
     class="icon"
-    :class="{ noHover: noHover }"
+    :class="{ noHover }"
     :style="{
       fill: color ? color : undefined,
     }"
   >
-    <path :d="path()" />
+    <path :d="get(props.type)" />
   </svg>
 </template>
-
-<script>
-import { useIcon } from './../../composables/useIcon.js'
-
-const { get, has } = useIcon()
-
-export default {
-  name: 'b-icon',
-  props: {
-    type: {
-      type: String,
-      validator(value) {
-        return has(value)
-      },
-    },
-    size: {
-      type: Number,
-      default: 25,
-    },
-    noHover: {
-      type: Boolean,
-      default: false,
-    },
-    color: {
-      type: String,
-    },
-  },
-  setup(props) {
-    const path = () => {
-      return get(props.type)
-    }
-
-    return { path }
-  },
-}
-</script>
 
 <style scoped>
 .icon {

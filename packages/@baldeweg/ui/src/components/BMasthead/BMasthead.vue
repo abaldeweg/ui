@@ -4,12 +4,6 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: 'b-masthead',
-}
-</script>
-
 <style scoped>
 .masthead {
   display: grid;

@@ -1,5 +1,17 @@
+<script setup>
+import { ref } from 'vue'
+
+defineProps({
+  id: String,
+  text: String,
+  accept: String,
+})
+
+var isDragging = ref(false)
+</script>
+
 <template>
-  <div class="upload" :class="{ isDragging: isDragging }">
+  <div class="upload" :class="{ isDragging }">
     <p class="upload_text">{{ text }}</p>
     <div
       class="upload_dropzone"
@@ -15,31 +27,11 @@
         event
         :id="id"
         :accept="accept"
-        @change="upload($event)"
+        @change="$emit('file', $event.target.files[0])"
       />
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'b-upload',
-  props: {
-    id: String,
-    text: String,
-    accept: String,
-  },
-  setup(_props, { emit }) {
-    var isDragging = false
-
-    const upload = (event) => {
-      emit('file', event.target.files[0])
-    }
-
-    return { isDragging, upload }
-  },
-}
-</script>
 
 <style scoped>
 .upload {

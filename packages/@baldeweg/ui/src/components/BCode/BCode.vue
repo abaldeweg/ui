@@ -6,12 +6,6 @@
   </pre>
 </template>
 
-<script>
-export default {
-  name: 'b-code',
-}
-</script>
-
 <style scoped>
 .code {
   background: var(--color-neutral-02);
