@@ -77,6 +77,7 @@
 import BHorizontalList from '../components/BHorizontalList/BHorizontalList.vue'
 import BHorizontalListItem from '../components/BHorizontalList/BHorizontalListItem.vue'
 import BDivider from '../components/BDivider/BDivider.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-horizontal-list-view',
@@ -84,6 +85,9 @@ export default {
     BHorizontalList,
     BHorizontalListItem,
     BDivider,
+  },
+  setup() {
+    useTitle({ title: 'BHorizontalList - @baldeweg/ui' })
   },
 }
 </script>

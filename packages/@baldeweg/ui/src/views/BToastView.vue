@@ -156,6 +156,7 @@
 <script>
 import BToast from '../components/BToast/BToast.vue'
 import { useToast } from '@/composables/useToast.js'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-toast-view',
@@ -163,6 +164,8 @@ export default {
     BToast,
   },
   setup() {
+    useTitle({ title: 'BToast - @baldeweg/ui' })
+
     const { current, add } = useToast()
 
     return { current, add }

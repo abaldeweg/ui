@@ -11,6 +11,7 @@
 import BFlex from '../components/BFlex/BFlex.vue'
 import BFlexRow from '../components/BFlex/BFlexRow.vue'
 import BFlexCol from '../components/BFlex/BFlexCol.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-flex-view',
@@ -18,6 +19,9 @@ export default {
     BFlex,
     BFlexRow,
     BFlexCol,
+  },
+  setup() {
+    useTitle({ title: 'BFlex - @baldeweg/ui' })
   },
 }
 </script>

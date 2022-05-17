@@ -11,12 +11,16 @@
 <script>
 import BMasthead from '../components/BMasthead/BMasthead.vue'
 import BMastheadItem from '../components/BMasthead/BMastheadItem.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-masthead-view',
   components: {
     BMasthead,
     BMastheadItem,
+  },
+  setup() {
+    useTitle({ title: 'BMasthead - @baldeweg/ui' })
   },
 }
 </script>

@@ -8,6 +8,7 @@
 <script>
 import BSwitch from '../components/BSwitch/BSwitch.vue'
 import { ref, watch } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-switch-view',
@@ -15,6 +16,8 @@ export default {
     BSwitch,
   },
   setup() {
+    useTitle({ title: 'BSwitch - @baldeweg/ui' })
+
     const switch1 = ref(false)
     const switch2 = ref(false)
 

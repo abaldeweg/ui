@@ -33,6 +33,7 @@
 
 <script>
 import BButton from '../components/BButton/BButton.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-button-view',
@@ -40,6 +41,8 @@ export default {
     BButton,
   },
   setup() {
+    useTitle({ title: 'BButton - @baldeweg/ui' })
+
     const log = (msg) => {
       console.log(msg)
     }

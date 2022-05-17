@@ -211,6 +211,7 @@
 import BList from '../components/BList/BList.vue'
 import BIcon from '../components/BIcon/BIcon.vue'
 import { ref } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-list-view',
@@ -219,6 +220,8 @@ export default {
     BIcon,
   },
   setup() {
+    useTitle({ title: 'BList - @baldeweg/ui' })
+
     const bold = ref(false)
     const divider = ref(false)
     const meta = ref(false)

@@ -67,11 +67,15 @@
 
 <script>
 import BTooltip from '../components/BTooltip/BTooltip.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-tooltip-view',
   components: {
     BTooltip,
+  },
+  setup() {
+    useTitle({ title: 'BTooltip - @baldeweg/ui' })
   },
 }
 </script>

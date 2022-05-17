@@ -30,11 +30,15 @@
 
 <script>
 import BCard from '../components/BCard/BCard.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-card-view',
   components: {
     BCard,
+  },
+  setup() {
+    useTitle({ title: 'BCard - @baldeweg/ui' })
   },
 }
 </script>

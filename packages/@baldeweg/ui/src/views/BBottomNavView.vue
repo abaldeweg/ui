@@ -22,6 +22,7 @@
 import BBottomNav from '../components/BBottomNav/BBottomNav.vue'
 import BBottomNavItem from '../components/BBottomNav/BBottomNavItem.vue'
 import BIcon from '../components/BIcon/BIcon.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-bottom-nav-view',
@@ -31,6 +32,7 @@ export default {
     BIcon,
   },
   setup() {
+    useTitle({ title: 'BBottomNavItem - @baldeweg/ui' })
     const log = (msg) => {
       console.log(msg)
     }

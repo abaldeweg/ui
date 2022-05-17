@@ -85,11 +85,15 @@
 
 <script>
 import BIcon from '../components/BIcon/BIcon.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-icon-view',
   components: {
     BIcon,
+  },
+  setup() {
+    useTitle({ title: 'BIcon - @baldeweg/ui' })
   },
 }
 </script>

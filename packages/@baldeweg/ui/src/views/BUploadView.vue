@@ -12,6 +12,7 @@
 <script>
 import BUpload from '../components/BUpload/BUpload.vue'
 import BForm from '@/components/BForm/BForm.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-upload-view',
@@ -20,6 +21,8 @@ export default {
     BForm,
   },
   setup() {
+    useTitle({ title: 'BUpload - @baldeweg/ui' })
+
     const upload = (file) => {
       console.log(file)
     }

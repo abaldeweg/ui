@@ -16,11 +16,15 @@
 
 <script>
 import BComment from '../components/BComment/BComment.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-comment-view',
   components: {
     BComment,
+  },
+  setup() {
+    useTitle({ title: 'BComment - @baldeweg/ui' })
   },
 }
 </script>

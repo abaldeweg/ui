@@ -65,11 +65,15 @@
 
 <script>
 import BTable from '../components/BTable/BTable.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-table-view',
   components: {
     BTable,
+  },
+  setup() {
+    useTitle({ title: 'BTable - @baldeweg/ui' })
   },
 }
 </script>

@@ -9,11 +9,15 @@
 
 <script>
 import BAlert from '../components/BAlert/BAlert.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-alert-view',
   components: {
     BAlert,
+  },
+  setup() {
+    useTitle({ title: 'BAlert - @baldeweg/ui' })
   },
 }
 </script>

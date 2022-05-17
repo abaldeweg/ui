@@ -9,11 +9,15 @@
 
 <script>
 import BDivider from '../components/BDivider/BDivider.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-divider-view',
   components: {
     BDivider,
+  },
+  setup() {
+    useTitle({ title: 'BDivider - @baldeweg/ui' })
   },
 }
 </script>

@@ -79,11 +79,15 @@
 
 <script>
 import BContainer from '../components/BContainer/BContainer.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-container-view',
   components: {
     BContainer,
+  },
+  setup() {
+    useTitle({ title: 'BContainer - @baldeweg/ui' })
   },
 }
 </script>

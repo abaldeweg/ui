@@ -19,6 +19,7 @@
 <script>
 import { reactive } from 'vue'
 import BSearch from '../components/BSearch/BSearch.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-search-view',
@@ -26,6 +27,8 @@ export default {
     BSearch,
   },
   setup() {
+    useTitle({ title: 'BSearch - @baldeweg/ui' })
+
     const state = reactive({
       term: null,
       branded: false,

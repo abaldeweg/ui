@@ -11,6 +11,7 @@
 <script>
 import { onMounted, ref } from 'vue'
 import BScrollToBottom from '../components/BScrollToBottom/BScrollToBottom.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'scroll-to-bottom-view',
@@ -18,6 +19,8 @@ export default {
     BScrollToBottom,
   },
   setup() {
+    useTitle({ title: 'BScrollToBottom - @baldeweg/ui' })
+
     let list = ref([
       { id: 1, name: 'entry 1' },
       { id: 2, name: 'entry 2' },

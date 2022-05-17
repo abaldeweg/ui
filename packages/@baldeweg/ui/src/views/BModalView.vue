@@ -217,6 +217,7 @@
 import BModal from '../components/BModal/BModal.vue'
 import BContainer from '../components/BContainer/BContainer.vue'
 import { reactive } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-modal-view',
@@ -225,6 +226,8 @@ export default {
     BContainer,
   },
   setup() {
+    useTitle({ title: 'BModal - @baldeweg/ui' })
+
     const state = reactive({
       show: true,
     })

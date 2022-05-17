@@ -32,6 +32,7 @@ Currently available composables:
 
 - useToast
 - useTheme
+- useTitle
 
 Example Layout
 

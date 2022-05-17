@@ -62,6 +62,7 @@ import BDivider from '../components/BDivider/BDivider.vue'
 import BContainer from '../components/BContainer/BContainer.vue'
 import BList from '../components/BList/BList.vue'
 import { reactive } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-drawer-view',
@@ -72,6 +73,8 @@ export default {
     BList,
   },
   setup() {
+    useTitle({ title: 'BDrawer - @baldeweg/ui' })
+
     const state = reactive({
       show: false,
       collapsable: true,

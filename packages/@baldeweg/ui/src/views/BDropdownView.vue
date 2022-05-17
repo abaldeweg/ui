@@ -327,6 +327,7 @@
 import BDropdown from '../components/BDropdown/BDropdown.vue'
 import BDropdownItem from '../components/BDropdown/BDropdownItem.vue'
 import BDropdownDivider from '../components/BDropdown/BDropdownDivider.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-dropdown-view',
@@ -336,6 +337,8 @@ export default {
     BDropdownDivider,
   },
   setup() {
+    useTitle({ title: 'BDropdown - @baldeweg/ui' })
+
     const log = (msg) => {
       console.log(msg)
     }

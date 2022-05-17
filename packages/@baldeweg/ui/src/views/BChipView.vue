@@ -11,11 +11,15 @@
 
 <script>
 import BChip from '../components/BChip/BChip.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-chip-view',
   components: {
     BChip,
+  },
+  setup() {
+    useTitle({ title: 'BChip - @baldeweg/ui' })
   },
 }
 </script>

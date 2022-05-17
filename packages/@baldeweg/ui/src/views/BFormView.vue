@@ -209,6 +209,7 @@ import BFormInput from '../components/BForm/BFormInput.vue'
 import BFormSelect from '../components/BForm/BFormSelect.vue'
 import BFormHelpline from '../components/BForm/BFormHelpline.vue'
 import { ref } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-form-view',
@@ -226,6 +227,8 @@ export default {
     BFormHelpline,
   },
   setup() {
+    useTitle({ title: 'BForm - @baldeweg/ui' })
+
     const log = (msg) => {
       console.log(msg)
     }

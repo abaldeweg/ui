@@ -9,12 +9,16 @@
 <script>
 import BTabs from '../components/BTabs/BTabs.vue'
 import BTabsLink from '../components/BTabs/BTabsLink.vue'
+import { useTitle } from './../composables/useTitle.js'
 
 export default {
   name: 'b-tabs-view',
   components: {
     BTabs,
     BTabsLink,
+  },
+  setup() {
+    useTitle({ title: 'BTabs - @baldeweg/ui' })
   },
 }
 </script>
