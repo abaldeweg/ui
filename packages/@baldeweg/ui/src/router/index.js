@@ -168,6 +168,9 @@ const router = createRouter({
       redirect: { name: 'index' },
     },
   ],
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router
