@@ -1,15 +1,13 @@
 <script setup>
-import { reactive } from 'vue'
+import { ref } from 'vue'
 import { useTitle } from './../composables/useTitle.js'
 
 useTitle({ title: 'BModal - @baldeweg/ui' })
 
-const state = reactive({
-  show: true,
-})
+const show = ref(true)
 
 const closeModal = (type) => {
-  state.show = !state.show
+  show.value = !show.value
   console.log(type)
 }
 </script>
@@ -119,8 +117,8 @@ const closeModal = (type) => {
       </p>
     </section>
 
-    <button @click="state.show = !state.show">Show Modal</button>
-    <b-modal :width="600" @close="closeModal" v-if="state.show">
+    <button @click="show = !show">Show Modal</button>
+    <b-modal :width="600" @close="closeModal" v-if="show">
       <template #title><b-icon type="plus" :size="16" /> Modal</template>
       <template #footer>Footer</template>
       <b-container>

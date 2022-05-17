@@ -1,13 +1,11 @@
 <script setup>
-import { reactive } from 'vue'
 import { useTitle } from './../composables/useTitle.js'
+import { ref } from 'vue'
 
 useTitle({ title: 'BSearch - @baldeweg/ui' })
 
-const state = reactive({
-  term: null,
-  branded: false,
-})
+const term = ref(null)
+const branded = ref(false)
 
 const log = (msg) => {
   console.log(msg)
@@ -19,15 +17,15 @@ const log = (msg) => {
     <b-search
       placeholder="Search"
       filter
-      :branded="state.branded"
+      :branded="branded"
       focus
-      v-model="state.term"
+      v-model="term"
       @input="log('search')"
       @submit.prevent="log('submit')"
       @filter="log('filter')"
       @reset="log('reset')"
     />
-    <p>{{ state.term }}</p>
-    <button @click="state.branded = !state.branded">Toggle Styling</button>
+    <p>{{ term }}</p>
+    <button @click="branded = !branded">Toggle Styling</button>
   </article>
 </template>

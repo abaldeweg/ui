@@ -1,25 +1,23 @@
 <script setup>
-import { reactive } from 'vue'
 import { useTitle } from './../composables/useTitle.js'
+import { ref } from 'vue'
 
 useTitle({ title: 'BDrawer - @baldeweg/ui' })
 
-const state = reactive({
-  show: false,
-  collapsable: true,
-  inline: false,
-})
+const show = ref(false)
+const collapsable = ref(true)
+const inline = ref(false)
 </script>
 
 <template>
   <div class="layout">
-    <div class="layout_drawer" v-if="state.show">
+    <div class="layout_drawer" v-if="show">
       <b-drawer
-        :active="state.show"
-        :collapsable="state.collapsable"
-        :inline="state.inline"
-        @open-menu="state.show = true"
-        @close-menu="state.show = false"
+        :active="show"
+        :collapsable="collapsable"
+        :inline="inline"
+        @open-menu="show = true"
+        @close-menu="show = false"
       >
         <b-container>
           <b-list :route="{ name: 'index' }">
@@ -53,15 +51,15 @@ const state = reactive({
         </p>
 
         <p>
-          <input type="checkbox" id="show" v-model="state.show" />
+          <input type="checkbox" id="show" v-model="show" />
           <label for="show">show</label>
         </p>
         <p>
-          <input type="checkbox" id="collapsable" v-model="state.collapsable" />
+          <input type="checkbox" id="collapsable" v-model="collapsable" />
           <label for="collapsable">collapsable</label>
         </p>
         <p>
-          <input type="checkbox" id="inline" v-model="state.inline" />
+          <input type="checkbox" id="inline" v-model="inline" />
           <label for="inline">inline</label>
         </p>
       </b-container>

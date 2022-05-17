@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
 import { useTitle } from './../composables/useTitle.js'
+import { ref } from 'vue'
 
 useTitle({ title: 'BList - @baldeweg/ui' })
 

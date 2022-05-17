@@ -1,6 +1,6 @@
 <script setup>
-import { ref, watch } from 'vue'
 import { useTitle } from './../composables/useTitle.js'
+import { ref, watch } from 'vue'
 
 useTitle({ title: 'BSwitch - @baldeweg/ui' })
 
