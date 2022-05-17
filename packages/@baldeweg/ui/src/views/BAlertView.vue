@@ -6,9 +6,9 @@ useTitle({ title: 'BAlert - @baldeweg/ui' })
 
 <template>
   <article :style="{ margin: '20px' }">
-    <b-alert>Alert</b-alert>
-    <b-alert type="error">Alert</b-alert>
-    <b-alert type="warning">Alert</b-alert>
-    <b-alert type="success">Alert</b-alert>
+    <BAlert>Alert</BAlert>
+    <BAlert type="error">Alert</BAlert>
+    <BAlert type="warning">Alert</BAlert>
+    <BAlert type="success">Alert</BAlert>
   </article>
 </template>

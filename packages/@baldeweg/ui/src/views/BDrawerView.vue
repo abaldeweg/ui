@@ -12,37 +12,37 @@ const inline = ref(false)
 <template>
   <div class="layout">
     <div class="layout_drawer" v-if="show">
-      <b-drawer
+      <BDrawer
         :active="show"
         :collapsable="collapsable"
         :inline="inline"
         @open-menu="show = true"
         @close-menu="show = false"
       >
-        <b-container>
-          <b-list :route="{ name: 'index' }">
+        <BContainer>
+          <BList :route="{ name: 'index' }">
             <template #image>
               <img src="@/assets/placeholder_1x1.jpg" width="25" alt="Icon" />
             </template>
             <template #title> Item 1 </template>
-          </b-list>
-        </b-container>
+          </BList>
+        </BContainer>
 
-        <b-divider />
+        <BDivider />
 
-        <b-container>
-          <b-list :route="{ name: 'index' }">
+        <BContainer>
+          <BList :route="{ name: 'index' }">
             <template #title>Item 1</template>
-          </b-list>
-          <b-list :route="{ name: 'index' }">
+          </BList>
+          <BList :route="{ name: 'index' }">
             <template #title>Item 2</template>
-          </b-list>
-        </b-container>
-      </b-drawer>
+          </BList>
+        </BContainer>
+      </BDrawer>
     </div>
 
     <div class="layout_body">
-      <b-container size="m">
+      <BContainer size="m">
         <p>
           text text text text text text text text text text text text text text
           text text text text text text text text text text text text text text
@@ -62,7 +62,7 @@ const inline = ref(false)
           <input type="checkbox" id="inline" v-model="inline" />
           <label for="inline">inline</label>
         </p>
-      </b-container>
+      </BContainer>
     </div>
   </div>
 </template>

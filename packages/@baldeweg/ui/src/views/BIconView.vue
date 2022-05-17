@@ -7,84 +7,84 @@ useTitle({ title: 'BIcon - @baldeweg/ui' })
 <template>
   <article>
     <section>
-      <b-icon type="apps" :size="15" />
-      <b-icon type="bin" :size="15" />
-      <b-icon type="star" :size="15" />
-      <b-icon type="close" :size="15" />
-      <b-icon type="check" :size="15" />
-      <b-icon type="download" :size="15" />
-      <b-icon type="filter" :size="15" />
-      <b-icon type="hamburger" :size="15" />
-      <b-icon type="minus" :size="15" />
-      <b-icon type="pause" :size="15" />
-      <b-icon type="pencil" :size="15" />
-      <b-icon type="play" :size="15" />
-      <b-icon type="plus" :size="15" />
-      <b-icon type="profile" :size="15" />
-      <b-icon type="kebab" :size="15" />
-      <b-icon type="meatballs" :size="15" />
-      <b-icon type="moon" :size="15" />
-      <b-icon type="dollar" :size="15" />
-      <b-icon type="search" :size="15" />
-      <b-icon type="euro" :size="15" />
-      <b-icon type="cart" :size="15" />
-      <b-icon type="directory" :size="15" />
-      <b-icon type="file" :size="15" />
-      <b-icon type="clipboard" :size="15" />
+      <BIcon type="apps" :size="15" />
+      <BIcon type="bin" :size="15" />
+      <BIcon type="star" :size="15" />
+      <BIcon type="close" :size="15" />
+      <BIcon type="check" :size="15" />
+      <BIcon type="download" :size="15" />
+      <BIcon type="filter" :size="15" />
+      <BIcon type="hamburger" :size="15" />
+      <BIcon type="minus" :size="15" />
+      <BIcon type="pause" :size="15" />
+      <BIcon type="pencil" :size="15" />
+      <BIcon type="play" :size="15" />
+      <BIcon type="plus" :size="15" />
+      <BIcon type="profile" :size="15" />
+      <BIcon type="kebab" :size="15" />
+      <BIcon type="meatballs" :size="15" />
+      <BIcon type="moon" :size="15" />
+      <BIcon type="dollar" :size="15" />
+      <BIcon type="search" :size="15" />
+      <BIcon type="euro" :size="15" />
+      <BIcon type="cart" :size="15" />
+      <BIcon type="directory" :size="15" />
+      <BIcon type="file" :size="15" />
+      <BIcon type="clipboard" :size="15" />
     </section>
 
     <section>
-      <b-icon type="apps" />
-      <b-icon type="bin" />
-      <b-icon type="star" />
-      <b-icon type="close" />
-      <b-icon type="check" />
-      <b-icon type="download" />
-      <b-icon type="filter" />
-      <b-icon type="hamburger" />
-      <b-icon type="minus" />
-      <b-icon type="pause" />
-      <b-icon type="pencil" />
-      <b-icon type="play" />
-      <b-icon type="plus" />
-      <b-icon type="profile" />
-      <b-icon type="kebab" />
-      <b-icon type="meatballs" />
-      <b-icon type="moon" />
-      <b-icon type="dollar" />
-      <b-icon type="search" />
-      <b-icon type="euro" />
-      <b-icon type="cart" />
-      <b-icon type="directory" />
-      <b-icon type="file" />
-      <b-icon type="clipboard" />
+      <BIcon type="apps" />
+      <BIcon type="bin" />
+      <BIcon type="star" />
+      <BIcon type="close" />
+      <BIcon type="check" />
+      <BIcon type="download" />
+      <BIcon type="filter" />
+      <BIcon type="hamburger" />
+      <BIcon type="minus" />
+      <BIcon type="pause" />
+      <BIcon type="pencil" />
+      <BIcon type="play" />
+      <BIcon type="plus" />
+      <BIcon type="profile" />
+      <BIcon type="kebab" />
+      <BIcon type="meatballs" />
+      <BIcon type="moon" />
+      <BIcon type="dollar" />
+      <BIcon type="search" />
+      <BIcon type="euro" />
+      <BIcon type="cart" />
+      <BIcon type="directory" />
+      <BIcon type="file" />
+      <BIcon type="clipboard" />
     </section>
 
     <section>
-      <b-icon type="apps" :size="50" no-hover />
-      <b-icon type="bin" :size="50" color="var(--color-primary-10)" />
-      <b-icon type="star" :size="50" />
-      <b-icon type="close" :size="50" />
-      <b-icon type="check" :size="50" />
-      <b-icon type="download" :size="50" />
-      <b-icon type="filter" :size="50" />
-      <b-icon type="hamburger" :size="50" />
-      <b-icon type="minus" :size="50" />
-      <b-icon type="pause" :size="50" />
-      <b-icon type="pencil" :size="50" />
-      <b-icon type="play" :size="50" />
-      <b-icon type="plus" :size="50" />
-      <b-icon type="profile" :size="50" />
-      <b-icon type="kebab" :size="50" />
-      <b-icon type="meatballs" :size="50" />
-      <b-icon type="moon" :size="50" />
-      <b-icon type="dollar" :size="50" />
-      <b-icon type="search" :size="50" />
-      <b-icon type="euro" :size="50" />
-      <b-icon type="cart" :size="50" />
-      <b-icon type="directory" :size="50" />
-      <b-icon type="file" :size="50" />
-      <b-icon type="clipboard" :size="50" />
+      <BIcon type="apps" :size="50" no-hover />
+      <BIcon type="bin" :size="50" color="var(--color-primary-10)" />
+      <BIcon type="star" :size="50" />
+      <BIcon type="close" :size="50" />
+      <BIcon type="check" :size="50" />
+      <BIcon type="download" :size="50" />
+      <BIcon type="filter" :size="50" />
+      <BIcon type="hamburger" :size="50" />
+      <BIcon type="minus" :size="50" />
+      <BIcon type="pause" :size="50" />
+      <BIcon type="pencil" :size="50" />
+      <BIcon type="play" :size="50" />
+      <BIcon type="plus" :size="50" />
+      <BIcon type="profile" :size="50" />
+      <BIcon type="kebab" :size="50" />
+      <BIcon type="meatballs" :size="50" />
+      <BIcon type="moon" :size="50" />
+      <BIcon type="dollar" :size="50" />
+      <BIcon type="search" :size="50" />
+      <BIcon type="euro" :size="50" />
+      <BIcon type="cart" :size="50" />
+      <BIcon type="directory" :size="50" />
+      <BIcon type="file" :size="50" />
+      <BIcon type="clipboard" :size="50" />
     </section>
   </article>
 </template>

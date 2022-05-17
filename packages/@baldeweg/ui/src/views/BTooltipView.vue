@@ -6,18 +6,18 @@ useTitle({ title: 'BTooltip - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-tooltip position="top" text="Text">
+    <BTooltip position="top" text="Text">
       <button style="width: 300px">Tooltip Top</button>
-    </b-tooltip>
-    <b-tooltip position="bottom" text="Text">
+    </BTooltip>
+    <BTooltip position="bottom" text="Text">
       <button style="width: 300px">Tooltip Bottom</button>
-    </b-tooltip>
-    <b-tooltip position="left" text="Text">
+    </BTooltip>
+    <BTooltip position="left" text="Text">
       <button style="width: 300px">Tooltip Left</button>
-    </b-tooltip>
-    <b-tooltip position="right" text="Text">
+    </BTooltip>
+    <BTooltip position="right" text="Text">
       <button style="width: 300px">Tooltip Right</button>
-    </b-tooltip>
+    </BTooltip>
 
     <p>
       Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
@@ -56,17 +56,17 @@ useTitle({ title: 'BTooltip - @baldeweg/ui' })
       Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
     </p>
 
-    <b-tooltip position="top" text="Text">
+    <BTooltip position="top" text="Text">
       <button style="width: 300px">Tooltip Top</button>
-    </b-tooltip>
-    <b-tooltip position="bottom" text="Text">
+    </BTooltip>
+    <BTooltip position="bottom" text="Text">
       <button style="width: 300px">Tooltip Bottom</button>
-    </b-tooltip>
-    <b-tooltip position="left" text="Text">
+    </BTooltip>
+    <BTooltip position="left" text="Text">
       <button style="width: 300px">Tooltip Left</button>
-    </b-tooltip>
-    <b-tooltip position="right" text="Text">
+    </BTooltip>
+    <BTooltip position="right" text="Text">
       <button style="width: 300px">Tooltip Right</button>
-    </b-tooltip>
+    </BTooltip>
   </article>
 </template>

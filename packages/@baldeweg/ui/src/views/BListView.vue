@@ -22,7 +22,7 @@ const subgroupIndent = ref('20px')
 
 <template>
   <article>
-    <b-list
+    <BList
       :route="{ name: 'index' }"
       :bold="bold"
       :divider="divider"
@@ -43,15 +43,15 @@ const subgroupIndent = ref('20px')
       </template>
 
       <template #options v-if="options">
-        <b-icon type="kebab" />
+        <BIcon type="kebab" />
       </template>
 
       <template #meta v-if="meta">
-        <router-link :to="{ name: 'index' }">Meta</router-link> &bull; Meta
+        <RouterLink :to="{ name: 'index' }">Meta</RouterLink> &bull; Meta
       </template>
 
       <template #subtitle v-if="subtitle">
-        <router-link :to="{ name: 'index' }">Subtitle</router-link> &bull; Text
+        <RouterLink :to="{ name: 'index' }">Subtitle</RouterLink> &bull; Text
         Text Text Text Text Text Text Text Text Text Text Text Text Text Text
         Text Text Text Text Text Text Text Text Text Text Text Text Text Text
         Text Text Text Text Text Text Text Text Text Text Text Text Text Text
@@ -60,7 +60,7 @@ const subgroupIndent = ref('20px')
       </template>
 
       <template #subgroup v-if="subgroup">
-        <b-list
+        <BList
           :route="{ name: 'index' }"
           :bold="bold"
           :divider="divider"
@@ -71,67 +71,67 @@ const subgroupIndent = ref('20px')
           :subgroup-indent="subgroupIndent"
         >
           <template #title>Subgroup</template>
-        </b-list>
+        </BList>
       </template>
-    </b-list>
+    </BList>
 
     <b-divider />
 
     <!-- bold -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="bold" v-model="bold" />
-        <b-form-label for="bold">Bold</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="bold">Bold</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- divider -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="divider" v-model="divider" />
-        <b-form-label for="divider">Divider</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="divider">Divider</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- meta -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="meta" v-model="meta" />
-        <b-form-label for="meta">Meta</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="meta">Meta</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- subtitle -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="subtitle" v-model="subtitle" />
-        <b-form-label for="subtitle">Subtitle</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="subtitle">Subtitle</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- options -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="options" v-model="options" />
-        <b-form-label for="options">Options</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="options">Options</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- image -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="image" v-model="image" />
-        <b-form-label for="image">Image</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="image">Image</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- image size -->
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="image-size">Image Size</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-select
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="image-size">Image Size</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormSelect
           id="image-size"
           v-model="imageSize"
           :items="[
@@ -142,16 +142,16 @@ const subgroupIndent = ref('20px')
             { key: 'xl', value: 'xl' },
           ]"
         />
-      </b-form-item>
-    </b-form-group>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- image position -->
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="image-position">Image Position</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-select
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="image-position">Image Position</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormSelect
           id="image-position"
           v-model="imagePosition"
           :items="[
@@ -160,16 +160,16 @@ const subgroupIndent = ref('20px')
             { key: 'end', value: 'end' },
           ]"
         />
-      </b-form-item>
-    </b-form-group>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- actions position -->
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="actions-position">Actions Position</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-select
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="actions-position">Actions Position</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormSelect
           id="actions-position"
           v-model="actionsPosition"
           :items="[
@@ -178,53 +178,49 @@ const subgroupIndent = ref('20px')
             { key: 'end', value: 'end' },
           ]"
         />
-      </b-form-item>
-    </b-form-group>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- reverse -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="reverse" v-model="reverse" />
-        <b-form-label for="reverse">Reverse</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="reverse">Reverse</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- disabled -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="disabled" v-model="disabled" />
-        <b-form-label for="disabled">Disabled</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="disabled">Disabled</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- active -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="active" v-model="active" />
-        <b-form-label for="active">Active</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="active">Active</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- subgroup -->
-    <b-form-group>
-      <b-form-item>
+    <BFormGroup>
+      <BFormItem>
         <input type="checkbox" id="subgroup" v-model="subgroup" />
-        <b-form-label for="subgroup">Activate Subgroup</b-form-label>
-      </b-form-item>
-    </b-form-group>
+        <BFormLabel for="subgroup">Activate Subgroup</BFormLabel>
+      </BFormItem>
+    </BFormGroup>
 
     <!-- subgroup indent -->
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="subgroup-indent">Subgroup Indent</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input
-          type="text"
-          id="subgroup-indent"
-          v-model="subgroupIndent"
-        />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="subgroup-indent">Subgroup Indent</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="text" id="subgroup-indent" v-model="subgroupIndent" />
+      </BFormItem>
+    </BFormGroup>
   </article>
 </template>

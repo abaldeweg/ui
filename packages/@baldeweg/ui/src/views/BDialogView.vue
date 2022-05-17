@@ -6,18 +6,14 @@ useTitle({ title: 'BDialog - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-dialog>
+    <BDialog>
       <p>Dialog</p>
 
       <template #actions>
-        <b-button design="outline" :style="{ marginRight: '10px' }"
-          >No</b-button
-        >
-        <b-button design="primary" :style="{ marginRight: '10px' }"
-          >Yes</b-button
-        >
+        <BButton design="outline" :style="{ marginRight: '10px' }">No</BButton>
+        <BButton design="primary" :style="{ marginRight: '10px' }">Yes</BButton>
       </template>
-    </b-dialog>
+    </BDialog>
 
     <section>
       <p>

@@ -7,13 +7,13 @@ useTitle({ title: 'BBadge - @baldeweg/ui' })
 <template>
   <section>
     <p>
-      <b-badge content="1"><b-icon type="cart" /></b-badge>text text text
+      <BBadge content="1"><BIcon type="cart" /></BBadge>text text text
     </p>
     <p>
-      <b-badge content="99"><b-icon type="cart" /></b-badge>text text text
+      <BBadge content="99"><BIcon type="cart" /></BBadge>text text text
     </p>
     <p>
-      <b-badge :content="0" hide-empty><b-icon type="cart" /></b-badge>text text
+      <BBadge :content="0" hide-empty><BIcon type="cart" /></BBadge>text text
       text
     </p>
   </section>

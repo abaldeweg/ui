@@ -6,7 +6,7 @@ useTitle({ title: 'BTable - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-table hover>
+    <BTable hover>
       <table aria-label="Test">
         <thead>
           <tr>
@@ -43,12 +43,12 @@ useTitle({ title: 'BTable - @baldeweg/ui' })
           </tr>
         </tfoot>
       </table>
-    </b-table>
+    </BTable>
 
     <br />
     <br />
 
-    <b-table>
+    <BTable>
       <table class="table" aria-label="Test">
         <tbody>
           <tr>
@@ -65,6 +65,6 @@ useTitle({ title: 'BTable - @baldeweg/ui' })
           </tr>
         </tbody>
       </table>
-    </b-table>
+    </BTable>
   </article>
 </template>

@@ -6,75 +6,75 @@ useTitle({ title: 'BHorizontalList - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-horizontal-list>
-      <b-horizontal-list-item size="l">
-        <b-divider />
+    <BHorizontalList>
+      <BHorizontalListItem size="l">
+        <BDivider />
         <p>Item 1</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item size="s">
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem size="s">
+        <BDivider />
         <p>Item 2</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item size="m">
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem size="m">
+        <BDivider />
         <p>Item 3</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item size="xs">
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem size="xs">
+        <BDivider />
         <p>Item 4</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item size="xl">
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem size="xl">
+        <BDivider />
         <p>Item 5</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item>
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem>
+        <BDivider />
         <p>Item 6</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item>
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem>
+        <BDivider />
         <p>Item 7</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item>
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem>
+        <BDivider />
         <p>Item 8</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item>
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem>
+        <BDivider />
         <p>Item 9</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item>
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem>
+        <BDivider />
         <p>Item 10</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-    </b-horizontal-list>
+      </BHorizontalListItem>
+    </BHorizontalList>
 
-    <b-horizontal-list>
-      <b-horizontal-list-item size="m">
-        <b-divider />
+    <BHorizontalList>
+      <BHorizontalListItem size="m">
+        <BDivider />
         <p>Item 1</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item size="m">
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem size="m">
+        <BDivider />
         <p>Item Item Item Item Item Item Item Item Item Item</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-      <b-horizontal-list-item size="m">
-        <b-divider />
+      </BHorizontalListItem>
+      <BHorizontalListItem size="m">
+        <BDivider />
         <p>Item 3</p>
         <p>Description</p>
-      </b-horizontal-list-item>
-    </b-horizontal-list>
+      </BHorizontalListItem>
+    </BHorizontalList>
   </article>
 </template>

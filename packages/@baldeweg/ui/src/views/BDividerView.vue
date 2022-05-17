@@ -6,9 +6,9 @@ useTitle({ title: 'BDivider - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-divider size="l" />
-    <b-divider size="m" />
-    <b-divider size="s" />
-    <b-divider size="xs" />
+    <BDivider size="l" />
+    <BDivider size="m" />
+    <BDivider size="s" />
+    <BDivider size="xs" />
   </article>
 </template>

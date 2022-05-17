@@ -30,11 +30,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <b-scroll-to-bottom :width="0" :height="500">
+  <BScrollToBottom :width="0" :height="500">
     <ul>
       <li v-for="entry in list" :key="entry.id">
         {{ entry.name }}
       </li>
     </ul>
-  </b-scroll-to-bottom>
+  </BScrollToBottom>
 </template>

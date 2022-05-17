@@ -5,9 +5,9 @@ useTitle({ title: 'BTabs - @baldeweg/ui' })
 </script>
 
 <template>
-  <b-tabs>
-    <b-tabs-link v-for="n in 10" :key="n">
-      <router-link :to="{ name: 'index' }">Item {{ n }}</router-link>
-    </b-tabs-link>
-  </b-tabs>
+  <BTabs>
+    <BTabsLink v-for="n in 10" :key="n">
+      <RouterLink :to="{ name: 'index' }">Item {{ n }}</RouterLink>
+    </BTabsLink>
+  </BTabs>
 </template>

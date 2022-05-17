@@ -6,8 +6,8 @@ useTitle({ title: 'BSpinner - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-spinner size="l" />
-    <b-spinner size="m" />
-    <b-spinner size="s" />
+    <BSpinner size="l" />
+    <BSpinner size="m" />
+    <BSpinner size="s" />
   </article>
 </template>

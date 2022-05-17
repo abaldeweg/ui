@@ -118,10 +118,10 @@ const closeModal = (type) => {
     </section>
 
     <button @click="show = !show">Show Modal</button>
-    <b-modal :width="600" @close="closeModal" v-if="show">
-      <template #title><b-icon type="plus" :size="16" /> Modal</template>
+    <BModal :width="600" @close="closeModal" v-if="show">
+      <template #title><BIcon type="plus" :size="16" /> Modal</template>
       <template #footer>Footer</template>
-      <b-container>
+      <BContainer>
         <p>
           Text Text Text Text Text Text Text Text Text Text Text Text Text Text
           Text Text Text Text Text Text
@@ -222,7 +222,7 @@ const closeModal = (type) => {
           Text Text Text Text Text Text Text Text Text Text Text Text Text Text
           Text Text Text Text Text Text
         </p>
-      </b-container>
-    </b-modal>
+      </BContainer>
+    </BModal>
   </article>
 </template>

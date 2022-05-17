@@ -5,5 +5,5 @@ useTitle({ title: 'BCode - @baldeweg/ui' })
 </script>
 
 <template>
-  <b-code>function helper() { return = htmlspecialchars('Content'); }</b-code>
+  <BCode>function helper() { return = htmlspecialchars('Content'); }</BCode>
 </template>

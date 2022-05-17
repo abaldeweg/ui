@@ -10,101 +10,101 @@ useTitle({ title: 'Home - @baldeweg/ui' })
 
     <ul>
       <li>
-        <router-link :to="{ name: 'alert' }">Alert</router-link>
+        <RouterLink :to="{ name: 'alert' }">Alert</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'badge' }">Badge</router-link>
+        <RouterLink :to="{ name: 'badge' }">Badge</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'bottom-nav' }">Bottom Nav</router-link>
+        <RouterLink :to="{ name: 'bottom-nav' }">Bottom Nav</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'button' }">Button</router-link>
+        <RouterLink :to="{ name: 'button' }">Button</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'card' }">Card</router-link>
+        <RouterLink :to="{ name: 'card' }">Card</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'chip' }">Chip</router-link>
+        <RouterLink :to="{ name: 'chip' }">Chip</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'code' }">Code</router-link>
+        <RouterLink :to="{ name: 'code' }">Code</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'comment' }">Comment</router-link>
+        <RouterLink :to="{ name: 'comment' }">Comment</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'container' }">Container</router-link>
+        <RouterLink :to="{ name: 'container' }">Container</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'dialog' }">Dialog</router-link>
+        <RouterLink :to="{ name: 'dialog' }">Dialog</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'divider' }">Divider</router-link>
+        <RouterLink :to="{ name: 'divider' }">Divider</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'drawer' }">Drawer</router-link>
+        <RouterLink :to="{ name: 'drawer' }">Drawer</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'dropdown' }">Dropdown</router-link>
+        <RouterLink :to="{ name: 'dropdown' }">Dropdown</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'flex' }">Flex</router-link>
+        <RouterLink :to="{ name: 'flex' }">Flex</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'form' }">Form</router-link>
+        <RouterLink :to="{ name: 'form' }">Form</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'global' }">Global</router-link>
+        <RouterLink :to="{ name: 'global' }">Global</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'horizontalList' }">
+        <RouterLink :to="{ name: 'horizontalList' }">
           Horizontal List
-        </router-link>
+        </RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'icon' }">Icon</router-link>
+        <RouterLink :to="{ name: 'icon' }">Icon</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'list' }">List</router-link>
+        <RouterLink :to="{ name: 'list' }">List</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'masthead' }">Masthead</router-link>
+        <RouterLink :to="{ name: 'masthead' }">Masthead</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'modal' }">Modal</router-link>
+        <RouterLink :to="{ name: 'modal' }">Modal</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'scrollToBottom' }">
+        <RouterLink :to="{ name: 'scrollToBottom' }">
           Scroll to Bottom
-        </router-link>
+        </RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'search' }">Search</router-link>
+        <RouterLink :to="{ name: 'search' }">Search</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'spinner' }">Spinner</router-link>
+        <RouterLink :to="{ name: 'spinner' }">Spinner</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'subheader' }">Subheader</router-link>
+        <RouterLink :to="{ name: 'subheader' }">Subheader</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'switch' }">Switch</router-link>
+        <RouterLink :to="{ name: 'switch' }">Switch</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'table' }">Table</router-link>
+        <RouterLink :to="{ name: 'table' }">Table</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'tabs' }">Tabs</router-link>
+        <RouterLink :to="{ name: 'tabs' }">Tabs</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'toast' }">Toast</router-link>
+        <RouterLink :to="{ name: 'toast' }">Toast</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'tooltip' }">Tooltip</router-link>
+        <RouterLink :to="{ name: 'tooltip' }">Tooltip</RouterLink>
       </li>
       <li>
-        <router-link :to="{ name: 'upload' }">Upload</router-link>
+        <RouterLink :to="{ name: 'upload' }">Upload</RouterLink>
       </li>
     </ul>
   </b-container>

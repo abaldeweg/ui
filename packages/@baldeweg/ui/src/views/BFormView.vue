@@ -12,42 +12,36 @@ const selectedOption = ref('3')
 </script>
 
 <template>
-  <b-form @submit.prevent="log('send')">
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="text">Text</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-helpline>
+  <BForm @submit.prevent="log('send')">
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="text">Text</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormHelpline>
           This is a helpline that describes what the entry is about.
-        </b-form-helpline>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="text" id="text" @input="log" event focus />
-      </b-form-item>
-    </b-form-group>
+        </BFormHelpline>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="text" id="text" @input="log" event focus />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="textarea">Textarea</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-textarea
-          rows="5"
-          cols="20"
-          id="textarea"
-          required
-          @input="log"
-        />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="textarea">Textarea</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormTextarea rows="5" cols="20" id="textarea" required @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="select_element">Options</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-select
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="select_element">Options</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormSelect
           id="select_element"
           v-model="selectedOption"
           allow-empty
@@ -59,110 +53,110 @@ const selectedOption = ref('3')
           item-key="id"
           item-value="name"
         />
-      </b-form-item>
+      </BFormItem>
       {{ selectedOption }}
-    </b-form-group>
+    </BFormGroup>
 
-    <b-form-fieldset>
-      <b-form-legend>Checkbox</b-form-legend>
-      <b-form-item>
-        <b-form-item>
+    <BFormFieldset>
+      <BFormLegend>Checkbox</BFormLegend>
+      <BFormItem>
+        <BFormItem>
           <input
             type="checkbox"
             value="checkbox1"
             id="checkbox1"
             @input="log"
           />
-          <b-form-label for="checkbox1">Checkbox 1</b-form-label>
-        </b-form-item>
-      </b-form-item>
-      <b-form-item>
-        <b-form-item>
+          <BFormLabel for="checkbox1">Checkbox 1</BFormLabel>
+        </BFormItem>
+      </BFormItem>
+      <BFormItem>
+        <BFormItem>
           <input
             type="checkbox"
             value="checkbox2"
             id="checkbox2"
             @input="log"
           />
-          <b-form-label for="checkbox2">Checkbox 2</b-form-label>
-        </b-form-item>
-      </b-form-item>
-      <b-form-item>
-        <b-form-item>
+          <BFormLabel for="checkbox2">Checkbox 2</BFormLabel>
+        </BFormItem>
+      </BFormItem>
+      <BFormItem>
+        <BFormItem>
           <input
             type="checkbox"
             value="checkbox3"
             id="checkbox3"
             @input="log"
           />
-          <b-form-label for="checkbox3">Checkbox 3</b-form-label>
-        </b-form-item>
-      </b-form-item>
-    </b-form-fieldset>
+          <BFormLabel for="checkbox3">Checkbox 3</BFormLabel>
+        </BFormItem>
+      </BFormItem>
+    </BFormFieldset>
 
-    <b-form-fieldset>
-      <b-form-legend>Radio</b-form-legend>
-      <b-form-item>
+    <BFormFieldset>
+      <BFormLegend>Radio</BFormLegend>
+      <BFormItem>
         <input type="radio" value="radio1" id="radio1" @input="log" />
-        <b-form-label for="radio1">Radio 1</b-form-label>
-      </b-form-item>
-      <b-form-item>
+        <BFormLabel for="radio1">Radio 1</BFormLabel>
+      </BFormItem>
+      <BFormItem>
         <input type="radio" value="radio2" id="radio2" @input="log" />
-        <b-form-label for="radio2">Radio 2</b-form-label>
-      </b-form-item>
-    </b-form-fieldset>
+        <BFormLabel for="radio2">Radio 2</BFormLabel>
+      </BFormItem>
+    </BFormFieldset>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="password">Password</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="password" id="password" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="password">Password</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="password" id="password" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="file">File</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="file" id="file" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="file">File</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="file" id="file" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="email">Email</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="email" id="email" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="email">Email</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="email" id="email" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="url">URL</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="url" id="url" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="url">URL</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="url" id="url" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="tel">Phone</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="tel" id="tel" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="tel">Phone</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="tel" id="tel" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="number">Number</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="number">Number</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput
           type="number"
           value="5"
           step="1"
@@ -171,40 +165,40 @@ const selectedOption = ref('3')
           id="number"
           @input="log"
         />
-      </b-form-item>
-    </b-form-group>
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="search">Search</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="search" id="search" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="search">Search</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="search" id="search" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="date">Date</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="date" id="date" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="date">Date</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="date" id="date" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="time">Time</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-input type="time" id="time" @input="log" />
-      </b-form-item>
-    </b-form-group>
+    <BFormGroup>
+      <BFormItem>
+        <BFormLabel for="time">Time</BFormLabel>
+      </BFormItem>
+      <BFormItem>
+        <BFormInput type="time" id="time" @input="log" />
+      </BFormItem>
+    </BFormGroup>
 
-    <b-form-group buttons>
-      <b-form-item>
-        <b-button design="primary">Save</b-button>
-      </b-form-item>
-    </b-form-group>
-  </b-form>
+    <BFormGroup buttons>
+      <BFormItem>
+        <BButton design="primary">Save</BButton>
+      </BFormItem>
+    </BFormGroup>
+  </BForm>
 </template>

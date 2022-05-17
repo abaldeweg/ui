@@ -9,9 +9,9 @@ const { current, add } = useToast()
 
 <template>
   <article>
-    <b-toast v-if="current" :type="current.type" :visible="true">{{
+    <BToast v-if="current" :type="current.type" :visible="true">{{
       current.body
-    }}</b-toast>
+    }}</BToast>
 
     <button
       @click="

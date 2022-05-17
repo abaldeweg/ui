@@ -10,116 +10,112 @@ const log = (msg) => {
 
 <template>
   <article>
-    <b-dropdown keep-open>
+    <BDropdown keep-open>
       <template #selector>
         <button>Dropdown</button>
       </template>
-      <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-      <b-dropdown-item @click.prevent="log(1)">Item 1</b-dropdown-item>
-      <b-dropdown-item @click.prevent="log(2)">Item 2</b-dropdown-item>
-      <b-dropdown-item no-hover @click.prevent="log(3)">Item 3</b-dropdown-item>
-      <b-dropdown-item @click.prevent="log(4)">Item 4</b-dropdown-item>
-    </b-dropdown>
+      <BDropdownItem bold no-hover>Title</BDropdownItem>
+      <BDropdownItem @click.prevent="log(1)">Item 1</BDropdownItem>
+      <BDropdownItem @click.prevent="log(2)">Item 2</BDropdownItem>
+      <BDropdownItem no-hover @click.prevent="log(3)">Item 3</BDropdownItem>
+      <BDropdownItem @click.prevent="log(4)">Item 4</BDropdownItem>
+    </BDropdown>
 
     <div style="float: right">
-      <b-dropdown>
+      <BDropdown>
         <template #selector>
           <button>Dropdown</button>
         </template>
-        <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(1)">Item 1</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(2)">Item 2</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(3)">Item 3</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(4)">Item 4</b-dropdown-item>
-      </b-dropdown>
+        <BDropdownItem bold no-hover>Title</BDropdownItem>
+        <BDropdownItem @click.prevent="log(1)">Item 1</BDropdownItem>
+        <BDropdownItem @click.prevent="log(2)">Item 2</BDropdownItem>
+        <BDropdownItem @click.prevent="log(3)">Item 3</BDropdownItem>
+        <BDropdownItem @click.prevent="log(4)">Item 4</BDropdownItem>
+      </BDropdown>
     </div>
 
-    <b-dropdown position="mouse">
+    <BDropdown position="mouse">
       <template #selector>
         <button>Dropdown</button>
       </template>
-      <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="bin" @click.prevent="log(1)">
-        Item 1
-      </b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="plus" @click.prevent="log(2)">
+      <BDropdownItem bold no-hover>Title</BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="bin" @click.prevent="log(1)"> Item 1 </BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="plus" @click.prevent="log(2)">
         Item 2
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(3)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(3)">
         Item 3
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(4)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(4)">
         Item 4
-      </b-dropdown-item>
-    </b-dropdown>
+      </BDropdownItem>
+    </BDropdown>
 
     <div style="float: right">
-      <b-dropdown position="mouse">
+      <BDropdown position="mouse">
         <template #selector>
           <button>Dropdown</button>
         </template>
-        <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="bin" @click.prevent="log(1)">
+        <BDropdownItem bold no-hover>Title</BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="bin" @click.prevent="log(1)">
           Item 1
-        </b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="plus" @click.prevent="log(2)">
+        </BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="plus" @click.prevent="log(2)">
           Item 2
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(3)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(3)">
           Item 3
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(4)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(4)">
           Item 4
-        </b-dropdown-item>
-      </b-dropdown>
+        </BDropdownItem>
+      </BDropdown>
     </div>
 
-    <b-dropdown position="bottom">
+    <BDropdown position="bottom">
       <template #selector>
         <button>Dropdown</button>
       </template>
-      <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="bin" @click.prevent="log(1)">
-        Item 1
-      </b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="plus" @click.prevent="log(2)">
+      <BDropdownItem bold no-hover>Title</BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="bin" @click.prevent="log(1)"> Item 1 </BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="plus" @click.prevent="log(2)">
         Item 2
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(3)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(3)">
         Item 3
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(4)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(4)">
         Item 4
-      </b-dropdown-item>
-    </b-dropdown>
+      </BDropdownItem>
+    </BDropdown>
 
     <div style="float: right">
-      <b-dropdown position="bottom">
+      <BDropdown position="bottom">
         <template #selector>
           <button>Dropdown</button>
         </template>
-        <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="bin" @click.prevent="log(1)">
+        <BDropdownItem bold no-hover>Title</BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="bin" @click.prevent="log(1)">
           Item 1
-        </b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="plus" @click.prevent="log(2)">
+        </BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="plus" @click.prevent="log(2)">
           Item 2
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(3)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(3)">
           Item 3
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(4)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(4)">
           Item 4
-        </b-dropdown-item>
-      </b-dropdown>
+        </BDropdownItem>
+      </BDropdown>
     </div>
 
     <p>
@@ -219,116 +215,112 @@ const log = (msg) => {
       text text text text text
     </p>
 
-    <b-dropdown>
+    <BDropdown>
       <template #selector>
         <button>Dropdown</button>
       </template>
-      <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-      <b-dropdown-item @click.prevent="log(1)">Item 1</b-dropdown-item>
-      <b-dropdown-item @click.prevent="log(2)">Item 2</b-dropdown-item>
-      <b-dropdown-item @click.prevent="log(3)">Item 3</b-dropdown-item>
-      <b-dropdown-item @click.prevent="log(4)">Item 4</b-dropdown-item>
-    </b-dropdown>
+      <BDropdownItem bold no-hover>Title</BDropdownItem>
+      <BDropdownItem @click.prevent="log(1)">Item 1</BDropdownItem>
+      <BDropdownItem @click.prevent="log(2)">Item 2</BDropdownItem>
+      <BDropdownItem @click.prevent="log(3)">Item 3</BDropdownItem>
+      <BDropdownItem @click.prevent="log(4)">Item 4</BDropdownItem>
+    </BDropdown>
 
     <div style="float: right">
-      <b-dropdown>
+      <BDropdown>
         <template #selector>
           <button>Dropdown</button>
         </template>
-        <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(1)">Item 1</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(2)">Item 2</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(3)">Item 3</b-dropdown-item>
-        <b-dropdown-item @click.prevent="log(4)">Item 4</b-dropdown-item>
-      </b-dropdown>
+        <BDropdownItem bold no-hover>Title</BDropdownItem>
+        <BDropdownItem @click.prevent="log(1)">Item 1</BDropdownItem>
+        <BDropdownItem @click.prevent="log(2)">Item 2</BDropdownItem>
+        <BDropdownItem @click.prevent="log(3)">Item 3</BDropdownItem>
+        <BDropdownItem @click.prevent="log(4)">Item 4</BDropdownItem>
+      </BDropdown>
     </div>
 
-    <b-dropdown position="mouse">
+    <BDropdown position="mouse">
       <template #selector>
         <button>Dropdown</button>
       </template>
-      <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="bin" @click.prevent="log(1)">
-        Item 1
-      </b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="plus" @click.prevent="log(2)">
+      <BDropdownItem bold no-hover>Title</BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="bin" @click.prevent="log(1)"> Item 1 </BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="plus" @click.prevent="log(2)">
         Item 2
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(3)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(3)">
         Item 3
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(4)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(4)">
         Item 4
-      </b-dropdown-item>
-    </b-dropdown>
+      </BDropdownItem>
+    </BDropdown>
 
     <div style="float: right">
-      <b-dropdown position="mouse">
+      <BDropdown position="mouse">
         <template #selector>
           <button>Dropdown</button>
         </template>
-        <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="bin" @click.prevent="log(1)">
+        <BDropdownItem bold no-hover>Title</BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="bin" @click.prevent="log(1)">
           Item 1
-        </b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="plus" @click.prevent="log(2)">
+        </BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="plus" @click.prevent="log(2)">
           Item 2
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(3)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(3)">
           Item 3
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(4)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(4)">
           Item 4
-        </b-dropdown-item>
-      </b-dropdown>
+        </BDropdownItem>
+      </BDropdown>
     </div>
 
-    <b-dropdown position="bottom">
+    <BDropdown position="bottom">
       <template #selector>
         <button>Dropdown</button>
       </template>
-      <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="bin" @click.prevent="log(1)">
-        Item 1
-      </b-dropdown-item>
-      <b-dropdown-divider />
-      <b-dropdown-item icon="plus" @click.prevent="log(2)">
+      <BDropdownItem bold no-hover>Title</BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="bin" @click.prevent="log(1)"> Item 1 </BDropdownItem>
+      <BDropdownDivider />
+      <BDropdownItem icon="plus" @click.prevent="log(2)">
         Item 2
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(3)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(3)">
         Item 3
-      </b-dropdown-item>
-      <b-dropdown-item icon="plus" @click.prevent="log(4)">
+      </BDropdownItem>
+      <BDropdownItem icon="plus" @click.prevent="log(4)">
         Item 4
-      </b-dropdown-item>
-    </b-dropdown>
+      </BDropdownItem>
+    </BDropdown>
 
     <div style="float: right">
-      <b-dropdown position="bottom">
+      <BDropdown position="bottom">
         <template #selector>
           <button>Dropdown</button>
         </template>
-        <b-dropdown-item bold no-hover>Title</b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="bin" @click.prevent="log(1)">
+        <BDropdownItem bold no-hover>Title</BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="bin" @click.prevent="log(1)">
           Item 1
-        </b-dropdown-item>
-        <b-dropdown-divider />
-        <b-dropdown-item icon="plus" @click.prevent="log(2)">
+        </BDropdownItem>
+        <BDropdownDivider />
+        <BDropdownItem icon="plus" @click.prevent="log(2)">
           Item 2
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(3)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(3)">
           Item 3
-        </b-dropdown-item>
-        <b-dropdown-item icon="plus" @click.prevent="log(4)">
+        </BDropdownItem>
+        <BDropdownItem icon="plus" @click.prevent="log(4)">
           Item 4
-        </b-dropdown-item>
-      </b-dropdown>
+        </BDropdownItem>
+      </BDropdown>
     </div>
   </article>
 </template>

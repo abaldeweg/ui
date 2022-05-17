@@ -15,7 +15,7 @@ watch([switch1, switch2], (elements) => {
 
 <template>
   <article>
-    <b-switch label="Archive" v-model="switch1" />
-    <b-switch v-model="switch2" />
+    <BSwitch label="Archive" v-model="switch1" />
+    <BSwitch v-model="switch2" />
   </article>
 </template>

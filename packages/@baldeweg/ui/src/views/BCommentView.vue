@@ -6,16 +6,16 @@ useTitle({ title: 'BComment - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-comment author="Author" date="01.01.2021 20:00">
+    <BComment author="Author" date="01.01.2021 20:00">
       <template #actions>Edit</template>
       Comment Comment Comment Comment
-    </b-comment>
+    </BComment>
 
-    <b-comment author="Author" date="01.01.2021 21:00">
+    <BComment author="Author" date="01.01.2021 21:00">
       Comment Comment Comment Comment Comment Comment Comment Comment Comment
       Comment Comment Comment Comment Comment Comment Comment Comment Comment
       Comment Comment Comment Comment Comment Comment
       CommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentComment
-    </b-comment>
+    </BComment>
   </article>
 </template>

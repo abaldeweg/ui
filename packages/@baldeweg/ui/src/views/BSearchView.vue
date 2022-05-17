@@ -14,7 +14,7 @@ const log = (msg) => {
 
 <template>
   <article>
-    <b-search
+    <BSearch
       placeholder="Search"
       filter
       :branded="branded"

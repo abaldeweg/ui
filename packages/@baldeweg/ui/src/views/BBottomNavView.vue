@@ -9,21 +9,21 @@ const log = (msg) => {
 </script>
 
 <template>
-  <b-bottom-nav>
-    <b-bottom-nav-item @click="log('profile')" title="Profile">
-      <b-icon type="profile" :size="35" />
-    </b-bottom-nav-item>
-    <b-bottom-nav-item @click="log('profile')" title="Profile">
-      <b-icon type="profile" :size="35" />
-    </b-bottom-nav-item>
-    <b-bottom-nav-item @click="log('profile')" title="Profile">
-      <b-icon type="profile" :size="35" />
-    </b-bottom-nav-item>
-    <b-bottom-nav-item @click="log('profile')" title="Profile">
-      <b-icon type="profile" :size="35" />
-    </b-bottom-nav-item>
-    <b-bottom-nav-item @click="log('profile')" title="Profile">
-      <b-icon type="profile" :size="35" />
-    </b-bottom-nav-item>
-  </b-bottom-nav>
+  <BBottomNav>
+    <BBottomNavItem @click="log('profile')" title="Profile">
+      <BIcon type="profile" :size="35" />
+    </BBottomNavItem>
+    <BBottomNavItem @click="log('profile')" title="Profile">
+      <BIcon type="profile" :size="35" />
+    </BBottomNavItem>
+    <BBottomNavItem @click="log('profile')" title="Profile">
+      <BIcon type="profile" :size="35" />
+    </BBottomNavItem>
+    <BBottomNavItem @click="log('profile')" title="Profile">
+      <BIcon type="profile" :size="35" />
+    </BBottomNavItem>
+    <BBottomNavItem @click="log('profile')" title="Profile">
+      <BIcon type="profile" :size="35" />
+    </BBottomNavItem>
+  </BBottomNav>
 </template>

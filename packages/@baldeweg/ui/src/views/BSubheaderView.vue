@@ -5,5 +5,5 @@ useTitle({ title: 'BSubheader - @baldeweg/ui' })
 </script>
 
 <template>
-  <b-subheader>Subheader</b-subheader>
+  <BSubheader>Subheader</BSubheader>
 </template>

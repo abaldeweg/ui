@@ -11,32 +11,32 @@ const log = (msg) => {
 <template>
   <article>
     <h2>Primary</h2>
-    <b-button design="primary" type="submit" ripple @click="log">
+    <BButton design="primary" type="submit" ripple @click="log">
       Button Primary
-    </b-button>
-    <b-button design="primary_danger" ripple>Button Danger</b-button>
-    <b-button design="primary" disabled>Button Disabled</b-button>
+    </BButton>
+    <BButton design="primary_danger" ripple>Button Danger</BButton>
+    <BButton design="primary" disabled>Button Disabled</BButton>
     <br />
     <br />
-    <b-button design="primary_wide" ripple>Button Wide</b-button>
+    <BButton design="primary_wide" ripple>Button Wide</BButton>
     <br />
     <br />
-    <b-button design="primary_wide" disabled>Button Disabled Wide</b-button>
+    <BButton design="primary_wide" disabled>Button Disabled Wide</BButton>
 
     <h2>Outline</h2>
-    <b-button design="outline" ripple>Button Outline</b-button>
-    <b-button design="outline_danger" ripple>Button Danger</b-button>
-    <b-button design="outline" disabled>Button Disabled</b-button>
+    <BButton design="outline" ripple>Button Outline</BButton>
+    <BButton design="outline_danger" ripple>Button Danger</BButton>
+    <BButton design="outline" disabled>Button Disabled</BButton>
     <br />
     <br />
-    <b-button design="outline_wide" ripple>Button Wide</b-button>
+    <BButton design="outline_wide" ripple>Button Wide</BButton>
     <br />
     <br />
-    <b-button design="outline_wide" disabled>Button Disabled Wide</b-button>
+    <BButton design="outline_wide" disabled>Button Disabled Wide</BButton>
 
     <h2>Text</h2>
-    <b-button design="text" ripple>Button Text</b-button>
-    <b-button design="text_danger" ripple>Button Danger</b-button>
-    <b-button design="text" disabled>Button Disabled</b-button>
+    <BButton design="text" ripple>Button Text</BButton>
+    <BButton design="text_danger" ripple>Button Danger</BButton>
+    <BButton design="text" disabled>Button Disabled</BButton>
   </article>
 </template>

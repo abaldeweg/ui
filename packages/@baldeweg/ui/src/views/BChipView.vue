@@ -6,11 +6,11 @@ useTitle({ title: 'BChip - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-chip>
+    <BChip>
       Label 1
       <template #action>X</template>
-    </b-chip>
+    </BChip>
 
-    <b-chip>Label 2</b-chip>
+    <BChip>Label 2</BChip>
   </article>
 </template>

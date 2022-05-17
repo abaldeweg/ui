@@ -6,13 +6,13 @@ useTitle({ title: 'BCard - @baldeweg/ui' })
 
 <template>
   <article>
-    <b-card title="Title" route="index">
+    <BCard title="Title" route="index">
       <template #image>
         <img src="@/assets/placeholder_16x9.jpg" alt="Image" />
       </template>
 
       <template #meta>
-        <router-link :to="{ name: 'index' }">Meta</router-link> &bull; Meta
+        <RouterLink :to="{ name: 'index' }">Meta</RouterLink> &bull; Meta
       </template>
 
       <template #content>
@@ -21,15 +21,15 @@ useTitle({ title: 'BCard - @baldeweg/ui' })
         text text text text text text text text text text text text text text
         text text text text text text text text
       </template>
-    </b-card>
+    </BCard>
 
-    <b-card title="Title" route="index">
+    <BCard title="Title" route="index">
       <template #content>
         text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text
         text text text text text text text text
       </template>
-    </b-card>
+    </BCard>
   </article>
 </template>

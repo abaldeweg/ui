@@ -5,11 +5,11 @@ useTitle({ title: 'BMasthead - @baldeweg/ui' })
 </script>
 
 <template>
-  <b-masthead>
-    <b-masthead-item type="start">start</b-masthead-item>
+  <BMasthead>
+    <BMastheadItem type="start">start</BMastheadItem>
 
-    <b-masthead-item type="center">center</b-masthead-item>
+    <BMastheadItem type="center">center</BMastheadItem>
 
-    <b-masthead-item type="end">end</b-masthead-item>
-  </b-masthead>
+    <BMastheadItem type="end">end</BMastheadItem>
+  </BMasthead>
 </template>
