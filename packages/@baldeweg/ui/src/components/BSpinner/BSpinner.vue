@@ -13,9 +13,9 @@ defineProps({
   <div
     class="spinner"
     :class="{
-      size_l: this.size === 'l',
-      size_m: this.size === 'm',
-      size_s: this.size === 's',
+      size_l: size === 'l',
+      size_m: size === 'm',
+      size_s: size === 's',
     }"
   />
 </template>

@@ -22,12 +22,12 @@ defineProps({
   <section
     class="container"
     :class="{
-      size_l: this.size === 'l',
-      size_m: this.size === 'm',
-      size_s: this.size === 's',
-      align_right: this.align === 'right',
-      align_center: this.align === 'center',
-      hasHighlight: this.highlight,
+      size_l: size === 'l',
+      size_m: size === 'm',
+      size_s: size === 's',
+      align_right: align === 'right',
+      align_center: align === 'center',
+      hasHighlight: highlight,
     }"
   >
     <slot />
