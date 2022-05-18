@@ -79,7 +79,7 @@ const showDropdown = (event) => {
     </span>
 
     <div
-      class="dropdown_overlay"
+      class="overlay"
       :class="{
         isActive: show,
       }"
@@ -111,7 +111,7 @@ const showDropdown = (event) => {
   left: 0;
   min-width: 200px;
   max-width: 90%;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid var(--color-neutral-02);
   background: var(--color-neutral-00);
   padding: 0;
@@ -121,19 +121,19 @@ const showDropdown = (event) => {
   max-height: 300px;
   overflow: auto;
 }
-.dropdown_overlay {
+.dropdown.isActive {
+  display: block;
+}
+.overlay {
   display: none;
 }
-.dropdown_overlay.isActive {
+.overlay.isActive {
   position: fixed;
   top: 0;
   left: 0;
   display: block;
   width: 100%;
   height: 100%;
-}
-.dropdown.isActive {
-  display: block;
 }
 
 @media all and (min-width: 400px) {

@@ -6,9 +6,11 @@ useTitle({ title: 'BChip - @baldeweg/ui' })
 
 <template>
   <article>
-    <BChip>
+    <BChip hover>
       Label 1
-      <template #action>X</template>
+      <template #action
+        ><BIcon type="close" :size="10" color="var(--color-neutral-08)"
+      /></template>
     </BChip>
 
     <BChip>Label 2</BChip>

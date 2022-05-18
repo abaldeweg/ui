@@ -14,10 +14,7 @@ defineProps({
       return ['left', 'right', 'center'].includes(value)
     },
   },
-  highlight: {
-    type: Boolean,
-    default: false,
-  },
+  highlight: Boolean,
 })
 </script>
 
@@ -25,12 +22,12 @@ defineProps({
   <section
     class="container"
     :class="{
-      container_l: this.size === 'l',
-      container_m: this.size === 'm',
-      container_s: this.size === 's',
-      container_right: this.align === 'right',
-      container_center: this.align === 'center',
-      isHighlight: this.highlight,
+      size_l: this.size === 'l',
+      size_m: this.size === 'm',
+      size_s: this.size === 's',
+      align_right: this.align === 'right',
+      align_center: this.align === 'center',
+      hasHighlight: this.highlight,
     }"
   >
     <slot />
@@ -50,22 +47,22 @@ defineProps({
   display: table;
   clear: both;
 }
-.container_l {
+.size_l {
   width: 100%;
 }
-.container_m {
+.size_m {
   max-width: 1160px;
 }
-.container_s {
+.size_s {
   max-width: 600px;
 }
-.container_right {
+.align_right {
   text-align: right;
 }
-.container_center {
+.align_center {
   text-align: center;
 }
-.isHighlight {
+.hasHighlight {
   background: var(--color-neutral-02);
 }
 </style>

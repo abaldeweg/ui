@@ -12,11 +12,11 @@ defineProps({
 
 <template>
   <div
-    class="masthead-item"
+    class="item"
     :class="{
-      'masthead-item_start': type === 'start',
-      'masthead-item_center': type === 'center',
-      'masthead-item_end': type === 'end',
+      position_start: type === 'start',
+      position_center: type === 'center',
+      position_end: type === 'end',
     }"
   >
     <slot />
@@ -24,21 +24,21 @@ defineProps({
 </template>
 
 <style scoped>
-.masthead-item:first-child {
+.item:first-child {
   margin-left: 20px;
 }
-.masthead-item:last-child {
+.item:last-child {
   margin-right: 20px;
 }
-.masthead-item_start {
+.position_start {
   text-align: left;
   grid-column-start: 1;
 }
-.masthead-item_center {
+.position_center {
   text-align: center;
   grid-column: 2 / span 2;
 }
-.masthead-item_end {
+.position_end {
   text-align: right;
   grid-column-start: 4;
 }

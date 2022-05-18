@@ -45,18 +45,18 @@ const showSubgroup = ref(false)
       isActive: active,
     }"
   >
-    <div class="list_container">
+    <div class="container">
       <div
-        class="list_image"
+        class="image"
         :class="{
-          list_image_xs: imageSize === 'xs',
-          list_image_s: imageSize === 's',
-          list_image_m: imageSize === 'm',
-          list_image_l: imageSize === 'l',
-          list_image_xl: imageSize === 'xl',
+          size_image_xs: imageSize === 'xs',
+          size_image_s: imageSize === 's',
+          size_image_m: imageSize === 'm',
+          size_image_l: imageSize === 'l',
+          size_image_xl: imageSize === 'xl',
 
-          list_image_start: imagePosition === 'start',
-          list_image_end: imagePosition === 'end',
+          position_image_start: imagePosition === 'start',
+          position_image_end: imagePosition === 'end',
         }"
         v-if="$slots.image"
       >
@@ -66,8 +66,8 @@ const showSubgroup = ref(false)
         <slot name="image" v-else />
       </div>
 
-      <div class="list_body">
-        <h3 class="list_title" :class="{ isBold: bold }">
+      <div class="body">
+        <h3 class="title" :class="{ isBold: bold }">
           <RouterLink :to="route" v-if="route">
             <slot name="title" />
           </RouterLink>
@@ -84,10 +84,10 @@ const showSubgroup = ref(false)
       </div>
 
       <div
-        class="list_action"
+        class="action"
         :class="{
-          list_action_start: actionsPosition === 'start',
-          list_action_end: actionsPosition === 'end',
+          position_action_start: actionsPosition === 'start',
+          position_action_end: actionsPosition === 'end',
         }"
         v-if="$slots.subgroup"
       >
@@ -100,10 +100,10 @@ const showSubgroup = ref(false)
       </div>
 
       <div
-        class="list_action"
+        class="action"
         :class="{
-          list_action_start: actionsPosition === 'start',
-          list_action_end: actionsPosition === 'end',
+          position_action_start: actionsPosition === 'start',
+          position_action_end: actionsPosition === 'end',
         }"
         v-if="$slots.options"
       >
@@ -125,12 +125,12 @@ const showSubgroup = ref(false)
 .list {
   clear: both;
 }
-.list_container {
+.container {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.isReverse .list_container {
+.isReverse .container {
   flex-direction: row-reverse;
 }
 .list.hasDivider {
@@ -138,72 +138,72 @@ const showSubgroup = ref(false)
   padding-bottom: 10px;
   border-bottom: 1px solid var(--color-neutral-02);
 }
-.list_image {
+.image {
   margin-right: 20px;
   margin-left: 0;
   line-height: 0;
   flex-shrink: 0;
 }
-.isReverse .list_image {
+.isReverse .image {
   margin-right: 0;
   margin-left: 20px;
 }
-.list_image_xs {
+.size_image_xs {
   width: 25px;
 }
-.list_image_s {
+.size_image_s {
   width: 50px;
 }
-.list_image_m {
+.size_image_m {
   width: 100px;
 }
-.list_image_l {
+.size_image_l {
   width: 150px;
 }
-.list_image_xl {
+.size_image_xl {
   width: 200px;
 }
-.list_image_start {
+.position_image_start {
   align-self: start;
 }
-.list_image_end {
+.position_image_end {
   align-self: end;
 }
-.list_body {
+.body {
   flex-grow: 1;
 }
-.list_title {
+.title {
   font-family: var(--font-sans);
   font-size: 1.2em;
   font-weight: normal;
   cursor: pointer;
   margin: 0;
 }
-.list_title.isBold {
+.title.isBold {
   font-weight: bold;
 }
-.list_title,
-.list_title a {
+.title,
+.title a {
   color: var(--color-neutral-10);
 }
-.isActive .list_title,
-.isActive .list_title a {
+.isActive .title,
+.isActive .title a {
   color: var(--color-primary-10);
 }
-.list_title:hover,
-.list_title a:hover {
+.title:hover,
+.title a:hover {
   color: var(--color-neutral-06);
 }
-.isActive .list_title:hover,
-.isActive .list_title a:hover {
+.isActive .title:hover,
+.isActive .title a:hover {
   color: var(--color-primary-05);
 }
-.isDisabled .list_title:hover,
-.isDisabled .list_title a:hover {
+.isDisabled .title:hover,
+.isDisabled .title a:hover {
   color: var(--color-neutral-10);
 }
-.isDisabled.isActive .list_title:hover,
-.isDisabled.isActive .list_title a:hover {
+.isDisabled.isActive .title:hover,
+.isDisabled.isActive .title a:hover {
   color: var(--color-primary-10);
 }
 .list_subtitle,
@@ -213,19 +213,19 @@ const showSubgroup = ref(false)
 .list_subtitle a:hover {
   text-decoration: underline;
 }
-.list_action {
+.action {
   padding-right: 0;
   padding-left: 20px;
   cursor: pointer;
 }
-.isReverse .list_action {
+.isReverse .action {
   padding-right: 20px;
   padding-left: 0;
 }
-.list_action_start {
+.position_action_start {
   align-self: start;
 }
-.list_action_end {
+.position_action_end {
   align-self: end;
 }
 </style>

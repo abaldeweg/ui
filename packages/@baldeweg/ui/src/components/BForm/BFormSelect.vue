@@ -17,7 +17,7 @@ defineProps({
 
 <template>
   <select
-    class="form-select"
+    class="select"
     :value="modelValue"
     :autofocus="focus"
     @input="$emit('update:modelValue', $event.target.value)"
@@ -30,18 +30,19 @@ defineProps({
 </template>
 
 <style scoped>
-.form-select {
+.select {
   border: 1px solid var(--color-neutral-04);
   background: var(--color-neutral-00);
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
+  padding: 5px 10px;
   margin: 0;
   font-size: 1em;
   color: var(--color-neutral-10);
 }
-.form-select:hover,
-.form-select:focus {
+.select:hover,
+.select:focus {
   border: 1px solid var(--color-primary-10);
   outline: none;
 }

@@ -1,16 +1,18 @@
 <template>
-  <div class="dialog">
-    <div class="dialog_overlay" />
+  <Teleport to="body">
+    <div class="dialog">
+      <div class="overlay" />
 
-    <div class="dialog_body">
-      <div class="dialog_content">
-        <slot />
-      </div>
-      <div class="dialog_footer">
-        <slot name="actions" />
+      <div class="body">
+        <div class="content">
+          <slot />
+        </div>
+        <div class="footer">
+          <slot name="actions" />
+        </div>
       </div>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <style scoped>
@@ -21,7 +23,7 @@
   width: 100%;
   z-index: 5;
 }
-.dialog_overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,19 +32,19 @@
   height: 100%;
   opacity: 0.8;
 }
-.dialog_body {
+.body {
   position: relative;
   border: 1px solid var(--color-neutral-02);
-  border-radius: 5px;
+  border-radius: 10px;
   background: var(--color-neutral-00);
   max-width: 600px;
   margin: 60px auto;
   box-sizing: border-box;
 }
-.dialog_content {
+.content {
   padding: 20px;
 }
-.dialog_footer {
+.footer {
   padding: 20px;
   text-align: right;
 }

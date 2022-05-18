@@ -20,12 +20,12 @@ const log = (msg) => {
       :branded="branded"
       focus
       v-model="term"
-      @input="log('search')"
+      @update:modelValue="log('search')"
       @submit.prevent="log('submit')"
       @filter="log('filter')"
       @reset="log('reset')"
     />
-    <p>{{ term }}</p>
+    <p>Term: {{ term }}</p>
     <button @click="branded = !branded">Toggle Styling</button>
   </article>
 </template>

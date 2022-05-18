@@ -1,11 +1,11 @@
 <template>
-  <header class="bottom-nav">
+  <header class="bottom_nav">
     <slot />
   </header>
 </template>
 
 <style scoped>
-.bottom-nav {
+.bottom_nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -22,7 +22,7 @@
 }
 
 @media print {
-  .bottom-nav {
+  .bottom_nav {
     display: none;
   }
 }

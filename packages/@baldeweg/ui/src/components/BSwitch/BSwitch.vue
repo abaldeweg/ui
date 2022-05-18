@@ -12,14 +12,11 @@ defineProps({
 
 <template>
   <div class="switch">
-    <label
-      class="switch_label"
-      @click="$emit('update:modelValue', !modelValue)"
-    >
+    <label class="label" @click="$emit('update:modelValue', !modelValue)">
       {{ label }}
     </label>
     <button
-      class="switch_indicator"
+      class="indicator"
       :class="{ isActive: modelValue }"
       @click="$emit('update:modelValue', !modelValue)"
     />
@@ -30,12 +27,12 @@ defineProps({
 .switch {
   display: flex;
 }
-.switch_label {
+.label {
   display: block;
   margin-right: 10px;
   cursor: pointer;
 }
-.switch_indicator {
+.indicator {
   position: relative;
   border: 0 hidden;
   border-radius: 50px;
@@ -45,7 +42,7 @@ defineProps({
   padding: 0;
   cursor: pointer;
 }
-.switch_indicator::after {
+.indicator::after {
   content: '';
   position: absolute;
   top: 5px;
@@ -56,10 +53,10 @@ defineProps({
   height: 20px;
   transition: 0.2s;
 }
-.switch_indicator.isActive {
+.indicator.isActive {
   background: var(--color-primary-10);
 }
-.switch_indicator.isActive::after {
+.indicator.isActive::after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }

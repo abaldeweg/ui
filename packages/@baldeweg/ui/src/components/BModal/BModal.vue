@@ -26,26 +26,28 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="modal">
-    <div class="modal_overlay" @click.prevent="close('overlay')" />
+  <Teleport to="body">
+    <div class="modal">
+      <div class="overlay" @click.prevent="close('overlay')" />
 
-    <div class="modal_inner" :style="{ maxWidth: width + 'px' }">
-      <div class="modal_header">
-        <h2 class="modal_title" v-if="$slots.title"><slot name="title" /></h2>
-        <span class="modal_close" @click="close('button')" v-if="closeButton">
-          <BIcon type="close" :size="15" />
-        </span>
-      </div>
+      <div class="inner" :style="{ maxWidth: width + 'px' }">
+        <div class="header">
+          <h2 class="title" v-if="$slots.title"><slot name="title" /></h2>
+          <span class="close" @click="close('button')" v-if="closeButton">
+            <BIcon type="close" :size="15" />
+          </span>
+        </div>
 
-      <div class="modal_body">
-        <slot />
-      </div>
+        <div class="body">
+          <slot />
+        </div>
 
-      <div class="modal_footer" v-if="$slots.footer">
-        <slot name="footer" />
+        <div class="footer" v-if="$slots.footer">
+          <slot name="footer" />
+        </div>
       </div>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <style scoped>
@@ -56,7 +58,7 @@ onBeforeUnmount(() => {
   width: 100%;
   z-index: 4;
 }
-.modal_overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -65,39 +67,39 @@ onBeforeUnmount(() => {
   height: 100%;
   opacity: 0.8;
 }
-.modal_inner {
+.inner {
   display: flex;
   flex-direction: column;
   position: relative;
   border: 1px solid var(--color-neutral-02);
-  border-radius: 5px;
+  border-radius: 10px;
   background: var(--color-neutral-00);
   height: calc(100vh - 120px);
   margin: 60px auto;
   box-sizing: border-box;
 }
-.modal_header {
+.header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-neutral-02);
   padding: 5px 20px;
 }
-.modal_title {
+.title {
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: normal;
   flex-grow: 1;
   margin: 0;
 }
-.modal_close {
+.close {
   float: right;
 }
-.modal_body {
+.body {
   flex-grow: 1;
   height: calc(100vh - 90px);
   overflow-y: auto;
 }
-.modal_footer {
+.footer {
   border-top: 1px solid var(--color-neutral-02);
   padding: 20px;
 }

@@ -8,6 +8,8 @@ const log = (msg) => {
   console.log(msg)
 }
 
+const input = ref(null)
+const textarea = ref(null)
 const selectedOption = ref('3')
 </script>
 
@@ -23,8 +25,9 @@ const selectedOption = ref('3')
         </BFormHelpline>
       </BFormItem>
       <BFormItem>
-        <BFormInput type="text" id="text" @input="log" event focus />
+        <BFormInput type="text" id="text" @input="log" focus v-model="input" />
       </BFormItem>
+      Value: {{ input }}
     </BFormGroup>
 
     <BFormGroup>
@@ -32,8 +35,16 @@ const selectedOption = ref('3')
         <BFormLabel for="textarea">Textarea</BFormLabel>
       </BFormItem>
       <BFormItem>
-        <BFormTextarea rows="5" cols="20" id="textarea" required @input="log" />
+        <BFormTextarea
+          rows="5"
+          cols="20"
+          id="textarea"
+          required
+          @input="log"
+          v-model="textarea"
+        />
       </BFormItem>
+      Value: {{ textarea }}
     </BFormGroup>
 
     <BFormGroup>
@@ -54,7 +65,7 @@ const selectedOption = ref('3')
           item-value="name"
         />
       </BFormItem>
-      {{ selectedOption }}
+      Value: {{ selectedOption }}
     </BFormGroup>
 
     <BFormFieldset>

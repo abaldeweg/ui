@@ -30,22 +30,15 @@ onMounted(() => {
 <template>
   <div class="drawer">
     <div
-      class="drawer_overlay"
+      class="overlay"
       :class="{ isActive: active, isInline: inline }"
       @click="$emit('close-menu')"
       v-if="collapsable"
     />
 
-    <div
-      class="drawer_container"
-      :class="{ isActive: active, isInline: inline }"
-    >
-      <div class="drawer_header">
-        <span
-          class="drawer_close"
-          @click="$emit('close-menu')"
-          v-if="collapsable"
-        >
+    <div class="container" :class="{ isActive: active, isInline: inline }">
+      <div class="header">
+        <span class="close" @click="$emit('close-menu')" v-if="collapsable">
           <BIcon type="close" />
         </span>
       </div>
@@ -56,7 +49,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.drawer_overlay {
+.overlay {
   visibility: hidden;
   position: absolute;
   top: 0;
@@ -68,15 +61,15 @@ onMounted(() => {
   transition: visibility 0.2s, opacity 0.2s;
   z-index: 3;
 }
-.drawer_overlay.isActive {
+.overlay.isActive {
   visibility: visible;
   opacity: 0.7;
 }
-.drawer_overlay.isInline {
+.overlay.isInline {
   visibility: hidden;
   opacity: 0;
 }
-.drawer_container {
+.container {
   display: block;
   visibility: hidden;
   position: fixed;
@@ -89,22 +82,22 @@ onMounted(() => {
   transition: visibility 0.2s, left 0.2s;
   z-index: 3;
 }
-.drawer_container.isActive {
+.container.isActive {
   visibility: visible;
   left: 0;
 }
-.drawer_container.isInline {
+.container.isInline {
   left: 0;
   width: 100%;
   height: 100vh;
   position: relative;
 }
-.drawer_header {
+.header {
   border-bottom: 1px solid var(--color-neutral-02);
   height: var(--masthead-height);
   box-sizing: border-box;
 }
-.drawer_close {
+.close {
   display: inline-block;
   border: 0;
   background: transparent;
@@ -113,8 +106,8 @@ onMounted(() => {
 }
 
 @media print {
-  .drawer_overlay,
-  .drawer_container {
+  .overlay,
+  .container {
     display: none;
   }
 }

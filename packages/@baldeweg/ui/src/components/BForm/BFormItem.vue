@@ -1,11 +1,11 @@
 <template>
-  <div class="form_item">
+  <div class="item">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.form_item {
+.item {
   clear: both;
   overflow: auto;
 }

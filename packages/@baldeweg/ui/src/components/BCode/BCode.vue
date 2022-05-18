@@ -1,6 +1,6 @@
 <template>
   <pre class="code">
-    <code class="code_inner">
+    <code class="body">
       <slot/>
     </code>
   </pre>
@@ -9,10 +9,11 @@
 <style scoped>
 .code {
   background: var(--color-neutral-02);
+  border-radius: 10px;
   padding: 20px;
   overflow: auto;
 }
-.code_inner {
+.body {
   font-family: var(--font-monospace);
 }
 </style>

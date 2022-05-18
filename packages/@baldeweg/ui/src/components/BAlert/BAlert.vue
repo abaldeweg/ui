@@ -19,9 +19,9 @@ const hide = ref(false)
   <div
     class="alert"
     :class="{
-      alert_error: type === 'error',
-      alert_warning: type === 'warning',
-      alert_success: type === 'success',
+      type_error: type === 'error',
+      type_warning: type === 'warning',
+      type_success: type === 'success',
     }"
     v-if="!hide"
   >
@@ -44,13 +44,13 @@ const hide = ref(false)
   padding: 20px;
   margin: 20px 0;
 }
-.alert_error {
+.type_error {
   border: 1px solid var(--color-accent-red-10);
 }
-.alert_warning {
+.type_warning {
   border: 1px solid var(--color-accent-yellow-10);
 }
-.alert_success {
+.type_success {
   border: 1px solid var(--color-accent-green-10);
 }
 </style>

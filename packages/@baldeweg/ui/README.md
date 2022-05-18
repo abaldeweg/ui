@@ -135,6 +135,10 @@ Slots
 
 ### b-chip
 
+Props
+
+- hover - Bool, default: false
+
 Slots
 
 - default

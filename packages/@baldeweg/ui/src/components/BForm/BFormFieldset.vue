@@ -1,11 +1,11 @@
 <template>
-  <fieldset class="form-fieldset">
+  <fieldset class="fieldset">
     <slot />
   </fieldset>
 </template>
 
 <style scoped>
-.form-fieldset {
+.fieldset {
   clear: both;
   border: 0 hidden;
   padding: 0;
@@ -13,7 +13,7 @@
   margin-bottom: 20px;
   overflow: auto;
 }
-.form-fieldset:last-child {
+.fieldset:last-child {
   margin-bottom: 0;
 }
 </style>

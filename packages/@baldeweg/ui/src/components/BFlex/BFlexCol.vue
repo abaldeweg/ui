@@ -1,9 +1,9 @@
 <template>
-  <div class="flex_col"><slot /></div>
+  <div class="col"><slot /></div>
 </template>
 
 <style scoped>
-.flex_col {
+.col {
   width: 100%;
 }
 </style>

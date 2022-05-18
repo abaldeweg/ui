@@ -23,15 +23,16 @@ const show = computed(() => {
 <template>
   <div class="badge">
     <slot />
-    <div class="badge_content" v-if="show">{{ content }}</div>
+    <div class="content" v-if="show">{{ content }}</div>
   </div>
 </template>
 
 <style scoped>
 .badge {
   display: inline-block;
+  margin: 0 10px;
 }
-.badge_content {
+.content {
   position: relative;
   display: inline-block;
   background: var(--color-primary-10);

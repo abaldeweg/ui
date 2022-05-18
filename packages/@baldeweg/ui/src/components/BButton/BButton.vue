@@ -73,7 +73,7 @@ const startRipple = () => {
 .btn {
   display: inline-block;
   position: relative;
-  border-radius: 3px;
+  border-radius: 10px;
   font-family: var(--font-sans);
   font-size: 1em;
   margin: 0;

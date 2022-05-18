@@ -5,23 +5,23 @@ defineProps({
 </script>
 
 <template>
-  <div class="bottom-nav-item" @click="$emit('click', $event)">
-    <div class="bottom-nav-item_icon">
+  <div class="item">
+    <div class="icon">
       <slot />
     </div>
-    <p class="bottom-nav-item_title">{{ title }}</p>
+    <p class="title">{{ title }}</p>
   </div>
 </template>
 
 <style scoped>
-.bottom-nav-item {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 35px;
   cursor: pointer;
 }
-.bottom-nav-item_title {
+.title {
   font-size: 10px;
   letter-spacing: 1px;
 }

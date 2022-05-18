@@ -7,14 +7,14 @@ defineProps({
   accept: String,
 })
 
-var isDragging = ref(false)
+const isDragging = ref(false)
 </script>
 
 <template>
   <div class="upload" :class="{ isDragging }">
-    <p class="upload_text">{{ text }}</p>
+    <p class="text">{{ text }}</p>
     <div
-      class="upload_dropzone"
+      class="dropzone"
       @dragover="isDragging = true"
       @dragenter="isDragging = true"
       @dragleave="isDragging = false"
@@ -23,7 +23,7 @@ var isDragging = ref(false)
     >
       <b-form-input
         type="file"
-        class="upload_input"
+        class="input"
         event
         :id="id"
         :accept="accept"
@@ -38,24 +38,25 @@ var isDragging = ref(false)
   position: relative;
   height: 300px;
   border: 1px solid var(--color-neutral-02);
-  border-radius: 5px;
+  border-radius: 10px;
 }
+.upload:hover,
 .upload.isDragging {
   border: 1px solid var(--color-primary-10);
 }
-.upload_text {
+.text {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
 }
-.upload_dropzone {
+.dropzone {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.upload_input {
+.input {
   position: absolute;
   width: 100%;
   height: 100%;

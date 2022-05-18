@@ -1,35 +1,35 @@
 <script setup>
 defineProps({
-  value: String,
+  modelValue: String,
   focus: Boolean,
 })
 </script>
 
 <template>
   <textarea
-    class="form-textarea"
-    :value="value"
+    class="textarea"
+    :value="modelValue"
     :autofocus="focus"
-    @input="$emit('input', $event.target.value)"
-    @change="$emit('change', $event.target.value)"
+    @input="$emit('update:modelValue', $event.target.value)"
     @click="$emit('click', $event)"
     @contextmenu="$emit('contextmenu', $event)"
   />
 </template>
 
 <style scoped>
-.form-textarea {
+.textarea {
   border: 1px solid var(--color-neutral-04);
   background: var(--color-neutral-00);
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
+  padding: 5px 10px;
   margin: 0;
   font-size: 1em;
   color: var(--color-neutral-10);
 }
-.form-textarea:hover,
-.form-textarea:focus {
+.textarea:hover,
+.textarea:focus {
   border: 1px solid var(--color-primary-10);
   outline: none;
 }

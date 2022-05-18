@@ -1,11 +1,11 @@
 <template>
-  <legend class="form-legend">
+  <legend class="legend">
     <slot />
   </legend>
 </template>
 
 <style scoped>
-.form-legend {
+.legend {
   padding: 0;
 }
 </style>

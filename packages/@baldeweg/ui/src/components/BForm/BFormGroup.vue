@@ -5,21 +5,21 @@ defineProps({
 </script>
 
 <template>
-  <div class="form-group" :class="{ hasButtons: buttons }">
+  <div class="group" :class="{ hasButtons: buttons }">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.form-group {
+.group {
   clear: both;
   margin-bottom: 20px;
   overflow: auto;
 }
-.form-group:last-child {
+.group:last-child {
   margin-bottom: 0;
 }
-.form-group.hasButtons {
+.group.hasButtons {
   text-align: right;
 }
 </style>

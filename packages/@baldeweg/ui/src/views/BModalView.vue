@@ -118,7 +118,8 @@ const closeModal = (type) => {
     </section>
 
     <button @click="show = !show">Show Modal</button>
-    <BModal :width="600" @close="closeModal" v-if="show">
+
+    <BModal :width="600" @close="closeModal" close-button v-if="show">
       <template #title><BIcon type="plus" :size="16" /> Modal</template>
       <template #footer>Footer</template>
       <BContainer>

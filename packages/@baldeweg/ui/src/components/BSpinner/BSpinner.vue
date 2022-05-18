@@ -13,9 +13,9 @@ defineProps({
   <div
     class="spinner"
     :class="{
-      spinner_l: this.size === 'l',
-      spinner_m: this.size === 'm',
-      spinner_s: this.size === 's',
+      size_l: this.size === 'l',
+      size_m: this.size === 'm',
+      size_s: this.size === 's',
     }"
   />
 </template>
@@ -25,19 +25,19 @@ defineProps({
   border-radius: 50%;
   animation: spinner 2s linear infinite;
 }
-.spinner_s {
+.size_s {
   border: 2px solid var(--color-neutral-02);
   border-top: 2px solid var(--color-primary-10);
   width: 20px;
   height: 20px;
 }
-.spinner_m {
+.size_m {
   border: 4px solid var(--color-neutral-02);
   border-top: 4px solid var(--color-primary-10);
   width: 40px;
   height: 40px;
 }
-.spinner_l {
+.size_l {
   border: 6px solid var(--color-neutral-02);
   border-top: 6px solid var(--color-primary-10);
   width: 60px;

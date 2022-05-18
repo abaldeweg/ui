@@ -13,23 +13,23 @@ defineProps({
 
 <template>
   <div class="card">
-    <div class="card_image" v-if="$slots.image">
+    <div class="image" v-if="$slots.image">
       <RouterLink :to="{ name: route }">
         <slot name="image" />
       </RouterLink>
     </div>
 
-    <h2 class="card_title">
+    <h2 class="title">
       <RouterLink :to="{ name: route }">
         {{ title }}
       </RouterLink>
     </h2>
 
-    <div class="card_meta" v-if="$slots.meta">
+    <div class="meta" v-if="$slots.meta">
       <slot name="meta" />
     </div>
 
-    <p class="card_body">
+    <p class="body">
       <RouterLink :to="{ name: route }">
         <slot name="content" />
       </RouterLink>
@@ -45,36 +45,36 @@ defineProps({
   margin: 20px 0;
   overflow: auto;
 }
-.card_image {
+.image {
   background: var(--color-neutral-02);
   line-height: 0;
   margin: 0 20px 0 0;
   transition: opacity 0.2s;
 }
-.card_title {
+.title {
   margin: 0;
 }
-.card_title a {
+.title a {
   color: var(--color-neutral-10);
 }
-.card_title a:hover {
+.title a:hover {
   color: var(--color-neutral-06);
 }
-.card_body {
+.body {
   padding: 0;
   margin: 0;
 }
-.card_body a,
-.card_body a:hover {
+.body a,
+.body a:hover {
   color: var(--color-neutral-10);
 }
-.card_meta {
+.meta {
   color: var(--color-neutral-06);
 }
-.card_meta a {
+.meta a {
   color: var(--color-neutral-06);
 }
-.card_meta a:hover {
+.meta a:hover {
   text-decoration: underline;
 }
 </style>

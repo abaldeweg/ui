@@ -12,60 +12,60 @@ const props = defineProps({
 })
 
 const spacing = ref(10)
+const item = ref(null)
 const tooltip = ref(null)
-const container = ref(null)
 
 const calcTop = () => {
-  let top = container.value.getBoundingClientRect().y
+  let top = tooltip.value.getBoundingClientRect().y
   const position = props.position
 
-  tooltip.value.style.display = 'block'
-  const tooltipHeight = tooltip.value.offsetHeight
-  tooltip.value.style.display = null
+  item.value.style.display = 'block'
+  const itemHeight = item.value.offsetHeight
+  item.value.style.display = null
 
   if ('top' === position) {
-    return top - spacing.value - tooltipHeight
+    return top - spacing.value - itemHeight
   }
   if ('bottom' === position) {
-    return top + spacing.value + container.value.offsetHeight
+    return top + spacing.value + tooltip.value.offsetHeight
   }
   if ('left' === position || 'right' === position) {
-    return top + container.value.offsetHeight / 2 - tooltipHeight / 2
+    return top + tooltip.value.offsetHeight / 2 - itemHeight / 2
   }
 
   return top
 }
 
 const calcLeft = () => {
-  let left = container.value.getBoundingClientRect().x
+  let left = tooltip.value.getBoundingClientRect().x
   const position = props.position
 
-  tooltip.value.style.display = 'block'
-  const tooltipWidth = tooltip.value.offsetWidth
-  tooltip.value.style.display = null
+  item.value.style.display = 'block'
+  const itemWidth = item.value.offsetWidth
+  item.value.style.display = null
 
   if ('top' === position || 'bottom' === position) {
-    return left + container.value.offsetWidth / 2 - tooltipWidth / 2
+    return left + tooltip.value.offsetWidth / 2 - itemWidth / 2
   }
   if ('left' === position) {
-    return left - spacing.value - tooltipWidth
+    return left - spacing.value - itemWidth
   }
   if ('right' === position) {
-    return left + spacing.value + container.value.offsetWidth
+    return left + spacing.value + tooltip.value.offsetWidth
   }
 
   return left
 }
 
 onMounted(() => {
-  tooltip.value.style.top = calcTop() + 'px'
-  tooltip.value.style.left = calcLeft() + 'px'
+  item.value.style.top = calcTop() + 'px'
+  item.value.style.left = calcLeft() + 'px'
 })
 </script>
 
 <template>
-  <span class="tooltip" ref="container">
-    <div class="tooltip_item" ref="tooltip">
+  <span class="tooltip" ref="tooltip">
+    <div class="item" ref="item">
       {{ text }}
     </div>
     <slot />
@@ -73,16 +73,16 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.tooltip_item {
+.tooltip:hover .item {
+  display: block;
+}
+.item {
   display: none;
   position: fixed;
   border: 1px solid var(--color-neutral-02);
-  border-radius: 5px;
+  border-radius: 10px;
   background: var(--color-neutral-00);
   color: var(--color-neutral-10);
   padding: 5px 10px;
-}
-.tooltip:hover .tooltip_item {
-  display: block;
 }
 </style>

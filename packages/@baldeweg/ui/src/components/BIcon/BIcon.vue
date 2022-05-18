@@ -27,7 +27,7 @@ const { get } = useIcon()
     :height="size"
     viewBox="0 0 50 50"
     class="icon"
-    :class="{ noHover }"
+    :class="{ canHover: !noHover }"
     :style="{
       fill: color ? color : undefined,
     }"
@@ -42,10 +42,7 @@ const { get } = useIcon()
   opacity: 1;
   transition: opacity 0.2s;
 }
-.icon:hover {
+.icon:hover.canHover {
   opacity: 0.6;
-}
-.icon.noHover:hover {
-  opacity: 1;
 }
 </style>
