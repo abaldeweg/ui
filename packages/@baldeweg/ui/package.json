@@ -18,7 +18,7 @@
     "@vueuse/core": "^8.5.0",
     "ejs": "^3.1.8",
     "eslint": "8.15.0",
-    "eslint-plugin-vue": "8.7.1",
+    "eslint-plugin-vue": "9.0.1",
     "lodash": "^4.17.21",
     "mkdirp": "^1.0.4",
     "prettier": "2.6.2",
