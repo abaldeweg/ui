@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import { ViteWebfontDownload } from 'vite-plugin-webfont-dl'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
@@ -33,6 +34,9 @@ export default defineConfig({
         ],
       },
     }),
+    ViteWebfontDownload([
+      'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
+    ]),
   ],
   resolve: {
     alias: {
