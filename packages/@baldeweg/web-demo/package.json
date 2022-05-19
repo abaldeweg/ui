@@ -9,7 +9,8 @@
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'",
     "test:unit": "cypress open-ct",
     "test:unit:ci": "cypress run-ct --quiet --reporter spec",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "i18n:report": "vue-i18n-extract report --vueFiles './src/**/*.?(js|vue)' --languageFiles './locales/*.?(json|yml|yaml|js)'"
   },
   "dependencies": {
     "@baldeweg/ui": "^0.0",
@@ -32,7 +33,8 @@
     "prettier": "2.6.2",
     "start-server-and-test": "1.14.0",
     "vite": "2.9.9",
-    "vite-plugin-pwa": "^0.12.0"
+    "vite-plugin-pwa": "^0.12.0",
+    "vue-i18n-extract": "^2.0.6"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
