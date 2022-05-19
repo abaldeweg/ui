@@ -5,6 +5,13 @@
 - Remove @baldeweg/components
 - Install @baldeweg/ui
 - For custom `<title>`'s use `useTitle` composable
+
+```js
+import { useTitle } from '@baldeweg/ui/composables/useTitle'
+
+useTitle({ title: 'Title' })
+```
+
 - Theming needs to be activated
 
 ```js
