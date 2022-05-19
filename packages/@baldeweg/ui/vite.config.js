@@ -2,6 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'url'
 import path from 'path'
+import { ViteWebfontDownload } from 'vite-plugin-webfont-dl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +11,12 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-    dedupe: ['vue'],
+    dedupe: [
+      'vue',
+      ViteWebfontDownload([
+        'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
+      ]),
+    ],
   },
   build: {
     lib: {
