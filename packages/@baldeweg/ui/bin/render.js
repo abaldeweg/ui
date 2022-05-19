@@ -27,7 +27,7 @@ renderFile(
   './src/components/' + component,
   '.vue'
 )
-renderFile(__dirname + '/templates/View.ejs', './src/views', '.vue')
+renderFile(__dirname + '/templates/View.ejs', './src/views', 'View.vue')
 renderFile(
   __dirname + '/templates/Test.ejs',
   './src/components/__tests__/',
