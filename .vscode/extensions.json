@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "lokalise.i18n-ally",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "Vue.volar"
+  ]
+}
