@@ -637,3 +637,20 @@ Slots
 Slots
 
 - default
+
+### BPanel
+
+Props
+
+- visible - Bool, default: false
+- position - String (left, right), default: left
+
+Slots
+
+- default
+- header
+- footer
+
+Events
+
+- close
