@@ -539,6 +539,10 @@ Slots
 
 ### b-tabs
 
+Props
+
+- justify - String (flex-start, flex-end, center, space-between, space-around, space-evenly), default: flex-start
+
 Slots
 
 - default

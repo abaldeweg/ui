@@ -6,9 +6,10 @@
 
 <style scoped>
 .link {
-  border-radius: 3px;
+  border-radius: 10px;
   text-align: center;
-  padding: 10px;
+  padding: 5px 10px;
+  margin: 0 10px;
   color: var(--color-neutral-10);
 }
 .link a,
