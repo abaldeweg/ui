@@ -48,6 +48,8 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
   display: block;
   border-radius: 10px;
   border: 1px solid var(--color-neutral-04);
+  flex-grow: 1;
+  align-items: center;
 }
 .search.isBranded {
   border: 1px solid var(--color-primary-10);
@@ -88,6 +90,9 @@ input[type='search']::-ms-clear {
 @media all and (min-width: 500px) {
   .search {
     display: flex;
+  }
+  .buttons {
+    width: auto;
   }
 }
 </style>
