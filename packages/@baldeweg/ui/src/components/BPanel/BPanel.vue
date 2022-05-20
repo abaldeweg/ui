@@ -79,7 +79,7 @@ const slots = useSlots()
   border-top: 1px solid var(--color-neutral-02);
 }
 
-/* transitions */
+/* transition overlay */
 .overlay-enter-active,
 .overlay-leave-active {
   transition: opacity 0.5s ease;
@@ -89,6 +89,7 @@ const slots = useSlots()
   opacity: 0;
 }
 
+/* transition container */
 .container-enter-active {
   transition: all 0.5s ease-out;
 }
