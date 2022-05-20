@@ -24,21 +24,28 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
       :autofocus="focus"
       @input="$emit('update:modelValue', $event.target.value)"
     />
-    <button type="reset" class="button" @click="$emit('reset')">
-      <BIcon type="close" :size="18" />
-    </button>
-    <button type="button" class="button" @click="$emit('filter')" v-if="filter">
-      <BIcon type="filter" :size="18" />
-    </button>
-    <button class="button">
-      <BIcon type="search" :size="18" :isPrimary="branded" />
-    </button>
+    <div class="buttons">
+      <button type="reset" class="button" @click="$emit('reset')">
+        <BIcon type="close" :size="18" />
+      </button>
+      <button
+        type="button"
+        class="button"
+        @click="$emit('filter')"
+        v-if="filter"
+      >
+        <BIcon type="filter" :size="18" />
+      </button>
+      <button class="button">
+        <BIcon type="search" :size="18" :isPrimary="branded" />
+      </button>
+    </div>
   </form>
 </template>
 
 <style scoped>
 .search {
-  display: flex;
+  display: block;
   border-radius: 10px;
   border: 1px solid var(--color-neutral-04);
 }
@@ -58,6 +65,10 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
   font-size: 1em;
   color: var(--color-neutral-10);
 }
+.buttons {
+  width: 100%;
+  text-align: right;
+}
 .button {
   border: 0;
   background: transparent;
@@ -72,5 +83,11 @@ input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
+}
+
+@media all and (min-width: 500px) {
+  .search {
+    display: flex;
+  }
 }
 </style>
