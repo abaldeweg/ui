@@ -1,15 +1,14 @@
 version: 2.1
 orbs:
-  node: circleci/node@5.0.2
+  cypress: cypress-io/cypress@1.29.0
+executors:
+  image:
+    docker:
+      - image: 'cypress/base:16.14.0'
 workflows:
-  tests:
+  test:
     jobs:
-      - node/test:
-          matrix:
-            parameters:
-              version:
-                - 'lts'
-                - '14.19'
-              run-command:
-                - 'test:unit'
-          pkg-manager: yarn
+      - cypress/run:
+          executor: image
+          yarn: true
+          command: yarn build && yarn test:e2e:ci
