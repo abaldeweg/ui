@@ -30,6 +30,12 @@ app.use(ui)
 
 You can import composables from `@baldeweg/ui`.
 
+Example
+
+```js
+import { useLocale } from '@baldeweg/ui'
+```
+
 Currently available composables:
 
 - useToast
