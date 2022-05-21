@@ -7,7 +7,7 @@
 - For custom `<title>`'s use `useTitle` composable
 
 ```js
-import { useTitle } from '@baldeweg/ui/composables/useTitle'
+import { useTitle } from '@baldeweg/ui'
 
 useTitle({ title: 'Title' })
 ```
@@ -15,7 +15,7 @@ useTitle({ title: 'Title' })
 - Theming needs to be activated
 
 ```js
-import { useTheme } from '@baldeweg/ui/composables/useTheme'
+import { useTheme } from '@baldeweg/ui'
 
 useTheme()
 ```
@@ -23,7 +23,7 @@ useTheme()
 - Locale needs to be activated
 
 ```js
-import { useLocale } from '@baldeweg/ui/composables/useLocale'
+import { useLocale } from '@baldeweg/ui'
 
 useLocale()
 ```

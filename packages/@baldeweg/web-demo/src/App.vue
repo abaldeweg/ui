@@ -1,6 +1,6 @@
 <script setup>
-import { useLocale } from '@baldeweg/ui/composables/useLocale'
-import { useTheme } from '@baldeweg/ui/composables/useTheme'
+import { useLocale } from '@baldeweg/ui'
+import { useTheme } from '@baldeweg/ui'
 
 useLocale()
 useTheme()

@@ -28,7 +28,7 @@ const ui = createUi()
 app.use(ui)
 ```
 
-You can import composables from `@baldeweg/ui/composables/[NAME]`.
+You can import composables from `@baldeweg/ui`.
 
 Currently available composables:
 
