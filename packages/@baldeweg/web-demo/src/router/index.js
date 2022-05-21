@@ -12,7 +12,7 @@ const router = createRouter({
     },
     {
       path: '/:pathMatch(.*)',
-      redirect: { name: 'index' },
+      redirect: { name: 'home' },
     },
   ],
   scrollBehavior() {
