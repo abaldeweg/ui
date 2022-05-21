@@ -42,10 +42,6 @@
     "./composables/*": "./src/composables/*.js"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/abaldeweg/ui.git"
-  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
