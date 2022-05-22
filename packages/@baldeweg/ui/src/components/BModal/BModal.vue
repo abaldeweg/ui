@@ -26,28 +26,26 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Teleport to="body">
-    <div class="modal">
-      <div class="overlay" @click.prevent="close('overlay')" />
+  <div class="modal">
+    <div class="overlay" @click.prevent="close('overlay')" />
 
-      <div class="inner" :style="{ maxWidth: width + 'px' }">
-        <div class="header">
-          <h2 class="title" v-if="$slots.title"><slot name="title" /></h2>
-          <span class="close" @click="close('button')" v-if="closeButton">
-            <BIcon type="close" :size="15" />
-          </span>
-        </div>
+    <div class="inner" :style="{ maxWidth: width + 'px' }">
+      <div class="header">
+        <h2 class="title" v-if="$slots.title"><slot name="title" /></h2>
+        <span class="close" @click="close('button')" v-if="closeButton">
+          <BIcon type="close" :size="15" />
+        </span>
+      </div>
 
-        <div class="body">
-          <slot />
-        </div>
+      <div class="body">
+        <slot />
+      </div>
 
-        <div class="footer" v-if="$slots.footer">
-          <slot name="footer" />
-        </div>
+      <div class="footer" v-if="$slots.footer">
+        <slot name="footer" />
       </div>
     </div>
-  </Teleport>
+  </div>
 </template>
 
 <style scoped>
