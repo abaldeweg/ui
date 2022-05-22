@@ -36,10 +36,6 @@
     "vue-i18n-extract": "^2.0.6"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/abaldeweg/ui.git"
-  },
   "license": "MIT",
   "private": true
 }
