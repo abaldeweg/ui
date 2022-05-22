@@ -7,8 +7,6 @@
     "preview": "vite preview --port 5050",
     "test:e2e": "start-server-and-test 'yarn preview' http://127.0.0.1:5050/ 'cypress open'",
     "test:e2e:ci": "start-server-and-test 'yarn preview' http://127.0.0.1:5050/ 'cypress run'",
-    "test:unit": "cypress open-ct",
-    "test:unit:ci": "cypress run-ct --quiet --reporter spec",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "i18n:report": "vue-i18n-extract report --vueFiles './src/**/*.?(js|vue)' --languageFiles './locales/*.?(json|yml|yaml|js)'"
   },
