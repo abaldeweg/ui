@@ -10,7 +10,6 @@ defineProps({
     enctype="multipart/form-data"
     class="form"
     :class="{ noMargin }"
-    @submit="$emit('submit', $event)"
   >
     <slot />
   </form>
