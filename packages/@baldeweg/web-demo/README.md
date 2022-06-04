@@ -2,7 +2,7 @@
 
 This is a demo app.
 
-[Ecosystem](../../../README.md)
+[Ecosystem](https://github.com/abaldeweg/ui/blob/main/README.md)
 
 ## Requirements
 
