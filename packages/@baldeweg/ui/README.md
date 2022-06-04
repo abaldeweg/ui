@@ -564,7 +564,7 @@ Slots
 Use it in conjunction with the useToast composable.
 
 ```js
-import useToast from '@baldeweg/components/src/composables/useToast'
+import { useToast } from '@baldeweg/ui'
 ```
 
 Example

@@ -15,7 +15,7 @@
     "@rushstack/eslint-patch": "1.1.3",
     "@vitejs/plugin-vue": "2.3.3",
     "@vue/eslint-config-prettier": "7.0.0",
-    "@vueuse/core": "^8.5.0",
+    "@vueuse/core": "8.6.0",
     "ejs": "^3.1.8",
     "eslint": "8.16.0",
     "eslint-plugin-vue": "9.0.1",
@@ -25,7 +25,7 @@
     "start-server-and-test": "1.14.0",
     "vite": "2.9.9",
     "vite-plugin-webfont-dl": "^2.1.0",
-    "vitest": "0.13.0",
+    "vitest": "0.13.1",
     "vue-router": "^4.0.14"
   },
   "files": [
@@ -45,5 +45,11 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abaldeweg/ui.git"
   }
+}
 }
