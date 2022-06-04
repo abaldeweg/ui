@@ -18,3 +18,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// eslint-disable-next-line no-undef
+Cypress.on('window:before:load', (win) => {
+  // disable service workers
+  delete win.navigator.__proto__.serviceWorker
+})
