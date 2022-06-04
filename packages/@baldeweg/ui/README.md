@@ -2,8 +2,6 @@
 
 UI Components
 
-[Ecosystem](https://github.com/abaldeweg/ui/blob/main/README.md)
-
 ## Requirements
 
 - NodeJS 14LTS
