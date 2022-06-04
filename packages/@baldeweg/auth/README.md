@@ -2,8 +2,6 @@
 
 This is a demo app.
 
-[Ecosystem](https://github.com/abaldeweg/ui/blob/main/README.md)
-
 ## Requirements
 
 - Docker
