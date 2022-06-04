@@ -2,7 +2,7 @@
 
 UI Components
 
-[Ecosystem](../../../README.md)
+[Ecosystem](https://github.com/abaldeweg/ui/blob/main/README.md)
 
 ## Requirements
 
