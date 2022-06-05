@@ -27,7 +27,7 @@
     "cypress": "9.7.0",
     "eslint": "8.17.0",
     "eslint-plugin-cypress": "2.12.1",
-    "eslint-plugin-vue": "9.0.1",
+    "eslint-plugin-vue": "9.1.0",
     "prettier": "2.6.2",
     "start-server-and-test": "1.14.0",
     "vite": "2.9.9",
