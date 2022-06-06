@@ -30,6 +30,8 @@ rules: {
 }
 ```
 
+- [web-demo] Env var `VUE_APP_I18N_FALLBACK_LOCALE` is deprecated and can be removed
+
 ## Migrating from @baldeweg/components
 
 - Remove @baldeweg/components
