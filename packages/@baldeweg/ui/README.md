@@ -40,6 +40,7 @@ Currently available composables:
 - useTheme
 - useTitle
 - useLocale
+- useRequest
 
 Example Layout
 

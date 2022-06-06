@@ -3,6 +3,17 @@
 ## v0.2.0
 
 - [ui] Rename BHorizontalList to BSlider and BHorizontalListItem to BSliderItem
+- [ui] Replace `import { request } from '@/api'` with the new composable:
+
+```js
+import { useRequest } from '@baldeweg/ui'
+import Cookies from 'js-cookie'
+
+const { setAuthHeader, request } = useRequest()
+
+config.value.baseURL = import.meta.env.VUE_APP_API
+setAuthHeader(Cookies.get('token'))
+```
 
 ## Migrating from @baldeweg/components
 
