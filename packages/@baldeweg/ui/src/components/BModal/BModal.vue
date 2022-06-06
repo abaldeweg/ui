@@ -16,17 +16,25 @@ const close = (type) => {
   document.body.classList.remove('isModalOpen')
 }
 
+const keypress = (event) => {
+  if (event.key === 'Escape') {
+    close('key')
+  }
+}
+
 onMounted(() => {
   document.body.classList.add('isModalOpen')
+  document.addEventListener('keydown', keypress)
 })
 
 onBeforeUnmount(() => {
   document.body.classList.remove('isModalOpen')
+  document.removeEventListener('keydown', keypress)
 })
 </script>
 
 <template>
-  <div class="modal">
+  <div class="modal" @keydown.esc="close('key1')">
     <div class="overlay" @click.prevent="close('overlay')" />
 
     <div class="inner" :style="{ maxWidth: width + 'px' }">
