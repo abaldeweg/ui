@@ -1,5 +1,9 @@
 # Migration
 
+## v0.2.0
+
+- [ui] Rename BHorizontalList to BSlider and BHorizontalListItem to BSliderItem
+
 ## Migrating from @baldeweg/components
 
 - Remove @baldeweg/components

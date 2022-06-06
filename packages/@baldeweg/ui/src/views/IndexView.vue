@@ -58,11 +58,6 @@ useTitle({ title: 'Home - @baldeweg/ui' })
         <RouterLink :to="{ name: 'global' }">Global</RouterLink>
       </li>
       <li>
-        <RouterLink :to="{ name: 'horizontalList' }">
-          Horizontal List
-        </RouterLink>
-      </li>
-      <li>
         <RouterLink :to="{ name: 'icon' }">Icon</RouterLink>
       </li>
       <li>
@@ -84,6 +79,9 @@ useTitle({ title: 'Home - @baldeweg/ui' })
       </li>
       <li>
         <RouterLink :to="{ name: 'search' }">Search</RouterLink>
+      </li>
+      <li>
+        <RouterLink :to="{ name: 'slider' }"> Slider </RouterLink>
       </li>
       <li>
         <RouterLink :to="{ name: 'spinner' }">Spinner</RouterLink>

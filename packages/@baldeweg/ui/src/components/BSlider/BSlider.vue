@@ -1,11 +1,11 @@
 <template>
-  <div class="horizontal-list">
+  <div class="slider">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.horizontal-list {
+.slider {
   display: flex;
   gap: 20px;
   overflow-x: auto;

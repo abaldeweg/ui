@@ -28,8 +28,8 @@ import BFormLabel from './BForm/BFormLabel.vue'
 import BFormLegend from './BForm/BFormLegend.vue'
 import BFormSelect from './BForm/BFormSelect.vue'
 import BFormTextarea from './BForm/BFormTextarea.vue'
-import BHorizontalList from './BHorizontalList/BHorizontalList.vue'
-import BHorizontalListItem from './BHorizontalList/BHorizontalListItem.vue'
+import BSlider from './BSlider/BSlider.vue'
+import BSliderItem from './BSlider/BSliderItem.vue'
 import BIcon from './BIcon/BIcon.vue'
 import BList from './BList/BList.vue'
 import BMasthead from './BMasthead/BMasthead.vue'
@@ -79,8 +79,8 @@ export const components = [
   { name: 'BFormLegend', component: BFormLegend },
   { name: 'BFormSelect', component: BFormSelect },
   { name: 'BFormTextarea', component: BFormTextarea },
-  { name: 'BHorizontalList', component: BHorizontalList },
-  { name: 'BHorizontalListItem', component: BHorizontalListItem },
+  { name: 'BSlider', component: BSlider },
+  { name: 'BSliderItem', component: BSliderItem },
   { name: 'BIcon', component: BIcon },
   { name: 'BList', component: BList },
   { name: 'BMasthead', component: BMasthead },

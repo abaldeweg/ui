@@ -121,9 +121,9 @@ const router = createRouter({
       component: () => import('../views/BTabsView.vue'),
     },
     {
-      path: '/horizontal-list',
-      name: 'horizontalList',
-      component: () => import('../views/BHorizontalListView.vue'),
+      path: '/slider',
+      name: 'slider',
+      component: () => import('../views/BSliderView.vue'),
     },
     {
       path: '/toast',
