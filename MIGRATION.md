@@ -15,6 +15,21 @@ config.value.baseURL = import.meta.env.VUE_APP_API
 setAuthHeader(Cookies.get('token'))
 ```
 
+- [ui] Recommended lint rules for imports
+
+```js
+yarn add eslint-plugin-import
+
+// .eslintrc.cjs
+
+plugins: ['import'],
+rules: {
+  'import/first': 'error',
+  'import/order': 'error',
+  'import/newline-after-import': ['error', { count: 1 }],
+}
+```
+
 ## Migrating from @baldeweg/components
 
 - Remove @baldeweg/components

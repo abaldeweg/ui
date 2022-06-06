@@ -3,6 +3,7 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
+  plugins: ['import'],
   rules: {
     'prettier/prettier': [
       'error',
@@ -14,6 +15,9 @@ module.exports = {
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'import/first': 'error',
+    'import/order': 'error',
+    'import/newline-after-import': ['error', { count: 1 }],
   },
   extends: [
     'plugin:vue/vue3-essential',
