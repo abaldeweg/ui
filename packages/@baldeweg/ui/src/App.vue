@@ -1,8 +1,8 @@
 <script setup>
-import { useTheme } from './composables/useTheme.js'
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useDraggable } from '@vueuse/core'
+import { useTheme } from './composables/useTheme.js'
 import { useLocale } from './composables/useLocale.js'
 
 useLocale()

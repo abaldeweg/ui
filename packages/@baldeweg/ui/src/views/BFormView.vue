@@ -1,6 +1,6 @@
 <script setup>
-import { useTitle } from './../composables/useTitle.js'
 import { ref } from 'vue'
+import { useTitle } from './../composables/useTitle.js'
 
 useTitle({ title: 'BForm - @baldeweg/ui' })
 

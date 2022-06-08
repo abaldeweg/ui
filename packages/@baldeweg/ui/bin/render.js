@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+/* eslint-disable no-undef */
 
 'use strict'
 
-const ejs = require('ejs')
 const fs = require('fs')
+const ejs = require('ejs')
 const mkdirp = require('mkdirp')
 const { camelCase, upperFirst, snakeCase } = require('lodash')
 

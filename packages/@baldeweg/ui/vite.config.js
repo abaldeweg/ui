@@ -1,7 +1,8 @@
-import vue from '@vitejs/plugin-vue'
-import { defineConfig } from 'vite'
+/* eslint-disable no-undef */
 import { fileURLToPath, URL } from 'url'
 import path from 'path'
+import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
 import { ViteWebfontDownload } from 'vite-plugin-webfont-dl'
 
 // https://vitejs.dev/config/
