@@ -56,6 +56,7 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
   flex-grow: 1;
   outline: 0;
   border: 0;
+  width: 100%;
   padding: 5px;
   padding-left: 10px;
   margin: 0;
@@ -88,6 +89,9 @@ input[type='search']::-ms-clear {
     display: flex;
   }
   .buttons {
+    width: auto;
+  }
+  .input {
     width: auto;
   }
 }
