@@ -3,9 +3,6 @@
 ## v0.2.0
 
 - [ui] BModal can be closed with esc key
-- [ui] BSlider replaces BHorizontalList
-- [ui] New request composable
-- [eslint-config] Shareable config added `@baldeweg/eslint-config`
 - [ui] Rename BHorizontalList to BSlider and BHorizontalListItem to BSliderItem
 - [ui] Replace `import { request } from '@/api'` with the new composable:
 
@@ -19,7 +16,7 @@ config.value.baseURL = import.meta.env.VUE_APP_API
 setAuthHeader(Cookies.get('token'))
 ```
 
-- [ui] Recommended lint rules for imports
+- [eslint-config] Recommended lint rules for imports
 
 ```js
 yarn add eslint-plugin-import -D
