@@ -6,9 +6,6 @@
 - [ui] BSlider replaces BHorizontalList
 - [ui] New request composable
 - [eslint-config] Shareable config added `@baldeweg/eslint-config`
-
-## v0.1.0
-
 - [ui] Rename BHorizontalList to BSlider and BHorizontalListItem to BSliderItem
 - [ui] Replace `import { request } from '@/api'` with the new composable:
 
@@ -16,7 +13,7 @@
 import { useRequest } from '@baldeweg/ui'
 import Cookies from 'js-cookie'
 
-const { setAuthHeader, request } = useRequest()
+const { config, setAuthHeader, request } = useRequest()
 
 config.value.baseURL = import.meta.env.VUE_APP_API
 setAuthHeader(Cookies.get('token'))
@@ -25,7 +22,7 @@ setAuthHeader(Cookies.get('token'))
 - [ui] Recommended lint rules for imports
 
 ```js
-yarn add eslint-plugin-import
+yarn add eslint-plugin-import -D
 
 // .eslintrc.cjs
 
