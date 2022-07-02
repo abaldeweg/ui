@@ -1,9 +1,5 @@
 <template>
-  <pre class="code">
-    <code class="body">
-      <slot/>
-    </code>
-  </pre>
+  <pre class="code"><code class="body"><slot/></code></pre>
 </template>
 
 <style scoped>

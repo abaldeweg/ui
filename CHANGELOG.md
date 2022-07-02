@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.0
+
+- [ui] Fix spacing in BCode
+
 ## v0.2.0
 
 - [ui] BModal can be closed with esc key
