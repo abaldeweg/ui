@@ -3,6 +3,18 @@
 ## v0.3.0
 
 - [ui] Fix spacing in BCode
+- [eslint-config] Add package `@baldeweg/eslint-config` and extend the config.
+
+Example
+
+```js
+// .eslintrc.cjs
+
+module.exports = {
+  root: true,
+  extends: ['@baldeweg/eslint-config'],
+}
+```
 
 ## v0.2.0
 
