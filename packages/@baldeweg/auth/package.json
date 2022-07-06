@@ -18,7 +18,7 @@
     "js-cookie": "^3.0.1",
     "vue": "3.2.37",
     "vue-i18n": "9.1.10",
-    "vue-router": "4.0.16"
+    "vue-router": "4.1.1"
   },
   "devDependencies": {
     "@cypress/vite-dev-server": "3.0.0",
@@ -27,14 +27,14 @@
     "@vitejs/plugin-vue": "2.3.3",
     "@vue/eslint-config-prettier": "7.0.0",
     "cypress": "10.3.0",
-    "eslint": "8.18.0",
+    "eslint": "8.19.0",
     "eslint-plugin-cypress": "2.12.1",
-    "eslint-plugin-vue": "9.1.1",
+    "eslint-plugin-vue": "9.2.0",
     "prettier": "2.7.1",
     "start-server-and-test": "1.14.0",
     "vite": "2.9.13",
     "vite-plugin-pwa": "0.12.2",
-    "vite-plugin-webfont-dl": "^2.1.0",
+    "vite-plugin-webfont-dl": "2.2.0",
     "vue-i18n-extract": "^2.0.6"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
