@@ -16,6 +16,27 @@ module.exports = {
 }
 ```
 
+- [web-demo] Using the locale given by browser automatically. Please change filenames accordingly.
+
+```js
+// i18n.js
+
+import { createI18n } from 'vue-i18n'
+import en from '@/../locales/en.json'
+import de from '@/../locales/de.json'
+
+export default createI18n({
+  locale: navigator.language,
+  fallbackLocale: 'en',
+  messages: {
+    en,
+    de,
+  },
+})
+```
+
+- Env var `VUE_APP_I18N_LOCALE` is deprecated
+
 ## v0.2.0
 
 - [ui] BModal can be closed with esc key

@@ -13,8 +13,6 @@ Clone the projects from the git repository and start the container. For an updat
 ## Env Vars
 
 - VUE_APP_API - URL to the backend
-- VUE_APP_I18N_LOCALE - The locale e.g. `en-US`
-- VUE_APP_I18N_FALLBACK_LOCALE - Like `VUE_APP_I18N_LOCALE`, but as a last resort
 - VUE_APP_BASE_URL - The Base URL, in case the app is installed in a subdirectory
 
 ## Architecture

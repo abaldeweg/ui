@@ -1,12 +1,12 @@
 import { createI18n } from 'vue-i18n'
-import en_US from './../locales/en-US.json'
-import de_DE from './../locales/de-DE.json'
+import en from '@/../locales/en.json'
+import de from '@/../locales/de.json'
 
 export default createI18n({
-  locale: import.meta.env.VUE_APP_I18N_LOCALE,
-  fallbackLocale: 'en-US',
+  locale: navigator.language,
+  fallbackLocale: 'en',
   messages: {
-    'en-US': en_US,
-    'de-DE': de_DE,
+    en,
+    de,
   },
 })
