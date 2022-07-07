@@ -41,6 +41,7 @@ Currently available composables:
 - useTitle
 - useLocale
 - useRequest
+- useColorScheme
 
 Example Layout
 

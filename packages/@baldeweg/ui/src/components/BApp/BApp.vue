@@ -49,7 +49,7 @@ html {
   padding: 0;
   margin: 0;
 }
-html[data-theme='dark'] {
+html.dark {
   /* Primary */
   --color-primary-10: #d7621d;
   --color-primary-05: #e9915d;

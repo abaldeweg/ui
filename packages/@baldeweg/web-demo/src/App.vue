@@ -1,8 +1,9 @@
 <script setup>
-import { useLocale, useTheme } from '@baldeweg/ui'
+import { useLocale } from '@baldeweg/ui/composables/useLocale'
+import { useColorScheme } from '@baldeweg/ui/composables/useColorScheme'
 
 useLocale()
-useTheme()
+useColorScheme()
 </script>
 
 <template>

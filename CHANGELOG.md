@@ -36,6 +36,8 @@ export default createI18n({
 ```
 
 - Env var `VUE_APP_I18N_LOCALE` is deprecated
+- The `useTheme` composable is deprecated
+- New `useColorScheme` composable. You can set dark mode with the dark attribute. After that a `.dark` class will be set to the `html` element.
 
 ## v0.2.0
 

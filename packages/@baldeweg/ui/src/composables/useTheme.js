@@ -1,5 +1,6 @@
 import { ref, onMounted, watchEffect } from 'vue'
 
+// @deprecated
 export function useTheme() {
   const theme = ref(localStorage.getItem('theme') || 'light')
 
