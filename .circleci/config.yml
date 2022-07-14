@@ -12,3 +12,7 @@ workflows:
           executor: image
           yarn: true
           command: yarn workspace @baldeweg/ui build && yarn workspace @baldeweg/ui test:unit:ci
+      - cypress/run:
+          executor: image
+          yarn: true
+          command: yarn workspace @baldeweg/web-demo build && yarn workspace @baldeweg/web-demo test:e2e:ci
