@@ -23,7 +23,7 @@
     "@cypress/vite-dev-server": "3.0.0",
     "@cypress/vue": "4.0.0",
     "@rushstack/eslint-patch": "1.1.4",
-    "@vitejs/plugin-vue": "2.3.3",
+    "@vitejs/plugin-vue": "3.0.0",
     "@vue/eslint-config-prettier": "7.0.0",
     "cypress": "10.3.0",
     "eslint": "8.19.0",
