@@ -38,6 +38,33 @@ export default createI18n({
 - Env var `VUE_APP_I18N_LOCALE` is deprecated
 - The `useTheme` composable is deprecated
 - New `useColorScheme` composable. You can set dark mode with the dark attribute. After that a `.dark` class will be set to the `html` element.
+- New `useJWTAuth` composable. Make sure to set the base url for request.
+
+```js
+import { useRequest } from '@baldeweg/ui'
+
+const { config, setAuthHeader } = useRequest()
+config.value.baseURL = import.meta.env.VUE_APP_API
+
+const { token, watchToken} = useAuth()
+
+setAuthHeader(token.value)
+
+watchToken()
+```
+
+- New `useGCPAuth` composable. Set the firebase config while calling the composable.
+
+```js
+import { useAuth } from '../useGCPAuth.js'
+
+const firebaseConfig = {
+  apiKey: import.meta.env.VUE_APP_API_KEY,
+  authDomain: import.meta.env.VUE_APP_AUTH_DOMAIN,
+}
+
+const { login } = useAuth(firebaseConfig)
+```
 
 ## v0.2.0
 

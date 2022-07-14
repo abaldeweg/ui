@@ -2,8 +2,14 @@
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useDraggable } from '@vueuse/core'
+import Cookies from 'js-cookie'
+import { useRequest } from '@baldeweg/ui'
 import { useTheme } from './composables/useTheme.js'
 import { useLocale } from './composables/useLocale.js'
+
+const { config, setAuthHeader } = useRequest()
+config.value.baseURL = import.meta.env.VUE_APP_API
+setAuthHeader(Cookies.get('token'))
 
 useLocale()
 const { theme } = useTheme()

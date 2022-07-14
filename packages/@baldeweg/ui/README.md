@@ -42,6 +42,8 @@ Currently available composables:
 - useLocale
 - useRequest
 - useColorScheme
+- useJWTAuth (requires `js-cookie`)
+- useGCPAuth
 
 Example Layout
 

@@ -34,5 +34,8 @@ export default defineConfig({
       },
     },
   },
+  test: {
+    setupFiles: ['./src/setup.js'],
+  },
   envPrefix: ['VITE_', 'VUE_APP_'],
 })
