@@ -11,4 +11,4 @@ workflows:
       - cypress/run:
           executor: image
           yarn: true
-          command: yarn workspaces run build && yarn workspaces run test:e2e:ci
+          command: yarn workspace @baldeweg/ui build && yarn workspace @baldeweg/ui test:e2e:ci
