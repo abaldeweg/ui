@@ -11,8 +11,4 @@ workflows:
       - cypress/run:
           executor: image
           yarn: true
-          command: yarn workspace @baldeweg/ui build && yarn workspace @baldeweg/ui test:unit:ci
-      - cypress/run:
-          executor: image
-          yarn: true
-          command: ./node_modules/.bin/lerna link && yarn workspace @baldeweg/web-demo build && yarn workspace @baldeweg/web-demo test:e2e:ci
+          command: yarn workspace @baldeweg/ui test:unit:ci
