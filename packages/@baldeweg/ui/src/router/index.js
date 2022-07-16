@@ -81,11 +81,6 @@ const router = createRouter({
       component: () => import('../views/BCommentView.vue'),
     },
     {
-      path: '/drawer',
-      name: 'drawer',
-      component: () => import('../views/BDrawerView.vue'),
-    },
-    {
       path: '/list',
       name: 'list',
       component: () => import('../views/BListView.vue'),

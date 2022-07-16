@@ -43,9 +43,6 @@ useTitle({ title: 'Home - @baldeweg/ui' })
         <RouterLink :to="{ name: 'divider' }">Divider</RouterLink>
       </li>
       <li>
-        <RouterLink :to="{ name: 'drawer' }">Drawer</RouterLink>
-      </li>
-      <li>
         <RouterLink :to="{ name: 'dropdown' }">Dropdown</RouterLink>
       </li>
       <li>

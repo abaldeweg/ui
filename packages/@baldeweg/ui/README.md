@@ -449,23 +449,6 @@ Events
 
 If you use a form, consider wrapping the modal with it.
 
-### b-drawer
-
-Props
-
-- active - Bool (default: false)
-- collapsable - bool (default: false)
-- inline : Bool (default: false)
-
-Slots
-
-- default
-
-Events
-
-- open-menu
-- close-menu
-
 ### b-scroll-to-bottom
 
 Props

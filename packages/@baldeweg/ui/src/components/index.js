@@ -11,7 +11,6 @@ import BComment from './BComment/BComment.vue'
 import BContainer from './BContainer/BContainer.vue'
 import BDialog from './BDialog/BDialog.vue'
 import BDivider from './BDivider/BDivider.vue'
-import BDrawer from './BDrawer/BDrawer.vue'
 import BDropdown from './BDropdown/BDropdown.vue'
 import BDropdownDivider from './BDropdown/BDropdownDivider.vue'
 import BDropdownItem from './BDropdown/BDropdownItem.vue'
@@ -62,7 +61,6 @@ export const components = [
   { name: 'BContainer', component: BContainer },
   { name: 'BDialog', component: BDialog },
   { name: 'BDivider', component: BDivider },
-  { name: 'BDrawer', component: BDrawer },
   { name: 'BDropdown', component: BDropdown },
   { name: 'BDropdownDivider', component: BDropdownDivider },
   { name: 'BDropdownItem', component: BDropdownItem },
