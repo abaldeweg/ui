@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import { useDraggable } from '@vueuse/core'
 import Cookies from 'js-cookie'
 import { useRequest } from '@baldeweg/ui'
-import { useTheme } from './composables/useTheme.js'
+import { useColorScheme } from './composables/useColorScheme.js'
 import { useLocale } from './composables/useLocale.js'
 
 const { config, setAuthHeader } = useRequest()
@@ -12,7 +12,7 @@ config.value.baseURL = import.meta.env.VUE_APP_API
 setAuthHeader(Cookies.get('token'))
 
 useLocale()
-const { theme } = useTheme()
+const { dark } = useColorScheme()
 
 const el = ref(null)
 
@@ -32,17 +32,8 @@ const { style } = useDraggable(el, {
       <BForm @submit.prevent>
         <BFormGroup>
           <BFormItem>
-            <BFormLabel for="theme" hidden>Theme</BFormLabel>
-          </BFormItem>
-          <BFormItem>
-            <BFormSelect
-              id="theme"
-              v-model="theme"
-              :items="[
-                { key: 'light', value: 'Light' },
-                { key: 'dark', value: 'Dark' },
-              ]"
-            />
+            <input type="checkbox" id="dark" v-model="dark" />
+            <BFormLabel for="dark">Dark Mode</BFormLabel>
           </BFormItem>
         </BFormGroup>
       </BForm>
