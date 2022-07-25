@@ -1,13 +1,13 @@
 {
   "name": "@baldeweg/eslint-config",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "author": "André Baldeweg",
   "license": "MIT",
   "peerDependencies": {
     "@vue/eslint-config-prettier": "7.0.0",
+    "eslint": "8.20.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-vue": "9.2.0",
-    "eslint": "8.20.0"
+    "eslint-plugin-vue": "9.2.0"
   }
 }
