@@ -10,5 +10,7 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-vue": "9.2.0"
   },
-  "private": false
+  "publishConfig": {
+    "access": "public"
+  }
 }
