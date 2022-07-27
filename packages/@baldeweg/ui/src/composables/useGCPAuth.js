@@ -12,7 +12,7 @@ import {
 const user = ref(null)
 const isAuthenticated = ref(false)
 
-export function useAuth(firebaseConfig) {
+export function useGCPAuth(firebaseConfig) {
   const username = ref(null)
   const password = ref(null)
   const isLoggingIn = ref(false)
