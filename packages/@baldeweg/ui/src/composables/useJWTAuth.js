@@ -7,7 +7,7 @@ const refreshToken = ref(Cookies.get('refresh_token') || null)
 const user = ref(null)
 const isAuthenticated = ref(false)
 
-export function useAuth() {
+export function useJWTAuth() {
   const { request } = useRequest()
 
   const username = ref(null)
