@@ -41,12 +41,12 @@ export default createI18n({
 - New `useJWTAuth` composable. Make sure to set the base url for request.
 
 ```js
-import { useRequest } from '@baldeweg/ui'
+import { useRequest, useJWTAuth } from '@baldeweg/ui'
 
 const { config, setAuthHeader } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API
 
-const { token, watchToken} = useAuth()
+const { token, watchToken } = useJWTAuth()
 
 setAuthHeader(token.value)
 
@@ -56,14 +56,14 @@ watchToken()
 - New `useGCPAuth` composable. Set the firebase config while calling the composable.
 
 ```js
-import { useAuth } from '../useGCPAuth.js'
+import { useGCPAuth } from '../useGCPAuth.js'
 
 const firebaseConfig = {
   apiKey: import.meta.env.VUE_APP_API_KEY,
   authDomain: import.meta.env.VUE_APP_AUTH_DOMAIN,
 }
 
-const { login } = useAuth(firebaseConfig)
+const { login } = useGCPAuth(firebaseConfig)
 ```
 
 - Remove BDrawer, use BPanel instead
