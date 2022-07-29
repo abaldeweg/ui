@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { useRequest } from '@baldeweg/ui'
 import Cookies from 'js-cookie'
-import { useAuth } from '../useJWTAuth.js'
+import { useJWTAuth } from '../useJWTAuth.js'
 
 describe('JWTAuth', () => {
   const { config, setAuthHeader } = useRequest()
@@ -23,7 +23,7 @@ describe('JWTAuth', () => {
     updatePassword,
     checkForRefresh,
     watchToken,
-  } = useAuth()
+  } = useJWTAuth()
 
   setAuthHeader(token.value)
 

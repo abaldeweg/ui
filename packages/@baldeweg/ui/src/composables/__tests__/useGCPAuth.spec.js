@@ -1,5 +1,5 @@
 import { describe, it, expect, afterEach, vi } from 'vitest'
-import { useAuth } from '../useGCPAuth.js'
+import { useGCPAuth } from '../useGCPAuth.js'
 
 const promise = () => {
   return new Promise((resolve) => {
@@ -60,7 +60,7 @@ describe('GCPAuth', () => {
     login,
     logout,
     updatePassword,
-  } = useAuth(firebaseConfig)
+  } = useGCPAuth(firebaseConfig)
 
   it('login', () => {
     username.value = 'user'
