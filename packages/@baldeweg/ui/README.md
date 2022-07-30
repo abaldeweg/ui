@@ -400,7 +400,7 @@ Slots
 
 Props
 
-- type - String (start, center or end), Default: start
+- position - String (start, center or end), Default: start
 
 Slots
 

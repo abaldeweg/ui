@@ -20,6 +20,8 @@ const { login, token } = useGCPAuth(firebaseConfig)
 setAuthHeader(token.value)
 ```
 
+- `type` property in `b-masthead-item` renamed to `position`.
+
 ## v0.3.0
 
 - [ui] Fix spacing in BCode

@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  type: {
+  position: {
     type: String,
     default: 'start',
     validator(value) {
@@ -14,9 +14,9 @@ defineProps({
   <div
     class="item"
     :class="{
-      position_start: type === 'start',
-      position_center: type === 'center',
-      position_end: type === 'end',
+      position_start: position === 'start',
+      position_center: position === 'center',
+      position_end: position === 'end',
     }"
   >
     <slot />
