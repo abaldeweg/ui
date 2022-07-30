@@ -21,6 +21,7 @@ setAuthHeader(token.value)
 ```
 
 - `type` property in `b-masthead-item` renamed to `position`.
+- `b-tabs` is scrollable horizontally
 
 ## v0.3.0
 

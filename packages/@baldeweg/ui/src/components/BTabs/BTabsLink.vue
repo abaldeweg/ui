@@ -6,6 +6,7 @@
 
 <style scoped>
 .link {
+  flex-shrink: 0;
   border-radius: 10px;
   text-align: center;
   padding: 5px 10px;
