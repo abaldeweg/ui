@@ -25,7 +25,15 @@ vi.mock('firebase/auth', () => {
   }
   const getAuth = () => {
     const setPersistence = vi.fn()
-    const currentUser = {}
+    const currentUser = {
+      getIdToken: () => {
+        return new Promise((resolve) => {
+          resolve()
+
+          return 'token'
+        })
+      },
+    }
 
     return { setPersistence, currentUser }
   }
