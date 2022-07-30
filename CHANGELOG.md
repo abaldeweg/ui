@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.4.0
+
+- `useGCPAuth` improved
+
+```js
+import { useRequest, useGCPAuth } from '@baldeweg/ui'
+
+const { config, setAuthHeader } = useRequest()
+config.value.baseURL = import.meta.env.VUE_APP_API
+
+const firebaseConfig = {
+  apiKey: import.meta.env.VUE_APP_API_KEY,
+  authDomain: import.meta.env.VUE_APP_AUTH_DOMAIN,
+}
+
+const { login, token } = useGCPAuth(firebaseConfig)
+
+setAuthHeader(token.value)
+```
+
 ## v0.3.0
 
 - [ui] Fix spacing in BCode

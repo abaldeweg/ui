@@ -10,6 +10,7 @@ import {
 } from 'firebase/auth'
 
 const user = ref(null)
+const token = ref(null)
 const isAuthenticated = ref(false)
 
 export function useGCPAuth(firebaseConfig) {
@@ -31,6 +32,9 @@ export function useGCPAuth(firebaseConfig) {
       password.value
     ).then(() => {
       user.value = auth.currentUser
+      auth.currentUser.getIdToken().then((idToken) => {
+        token.value = idToken
+      })
       isAuthenticated.value = true
       isLoggingIn.value = false
 
@@ -42,6 +46,7 @@ export function useGCPAuth(firebaseConfig) {
   const logout = () => {
     return signOut(auth).then(() => {
       user.value = null
+      token.value = null
       isAuthenticated.value = false
     })
   }
@@ -56,15 +61,19 @@ export function useGCPAuth(firebaseConfig) {
     })
   }
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
+  onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser) {
       user.value = auth.currentUser
+      auth.currentUser.getIdToken().then((idToken) => {
+        token.value = idToken
+      })
       isAuthenticated.value = true
     }
   })
 
   return {
     user,
+    token,
     isAuthenticated,
     username,
     password,
