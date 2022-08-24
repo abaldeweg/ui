@@ -38,6 +38,7 @@ vi.mock('firebase/auth', () => {
     return { setPersistence, currentUser }
   }
   const onAuthStateChanged = vi.fn()
+  const browserSessionPersistence = null
 
   return {
     signInWithEmailAndPassword,
@@ -45,6 +46,7 @@ vi.mock('firebase/auth', () => {
     onAuthStateChanged,
     signOut,
     updatePassword,
+    browserSessionPersistence
   }
 })
 
