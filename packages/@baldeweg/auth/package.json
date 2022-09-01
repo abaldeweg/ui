@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/auth",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +13,7 @@
     "i18n:report": "vue-i18n-extract report --vueFiles './src/**/*.?(js|vue)' --languageFiles './locales/*.?(json|yml|yaml|js)'"
   },
   "dependencies": {
-    "@baldeweg/ui": "^0.2.0",
+    "@baldeweg/ui": "^0.2.1",
     "axios": "^0.27.2",
     "js-cookie": "^3.0.1",
     "vue": "3.2.37",
