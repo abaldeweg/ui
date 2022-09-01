@@ -11,7 +11,7 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
 </script>
 
 <template>
-  <form class="search" :class="{ isBranded: branded }">
+  <form class="search" :class="{ isBranded: branded }" @submit.prevent>
     <input
       type="search"
       class="input"
