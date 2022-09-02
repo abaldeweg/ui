@@ -11,7 +11,11 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
 </script>
 
 <template>
-  <form class="search" :class="{ isBranded: branded }" @submit.prevent>
+  <form
+    class="search"
+    :class="{ isBranded: branded }"
+    @submit.prevent="$emit('submit', $event)"
+  >
     <input
       type="search"
       class="input"
@@ -32,7 +36,7 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
       >
         <BIcon type="filter" :size="18" />
       </button>
-      <button class="button">
+      <button class="button" @click="$emit('submit', $event)">
         <BIcon type="search" :size="18" :isPrimary="branded" />
       </button>
     </div>
