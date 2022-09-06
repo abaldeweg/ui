@@ -31,6 +31,10 @@ useTitle({ title: 'BIcon - @baldeweg/ui' })
       <BIcon type="directory" :size="15" />
       <BIcon type="file" :size="15" />
       <BIcon type="clipboard" :size="15" />
+      <BIcon type="up" :size="15" />
+      <BIcon type="down" :size="15" />
+      <BIcon type="left" :size="15" />
+      <BIcon type="right" :size="15" />
     </section>
 
     <section>
@@ -58,6 +62,10 @@ useTitle({ title: 'BIcon - @baldeweg/ui' })
       <BIcon type="directory" />
       <BIcon type="file" />
       <BIcon type="clipboard" />
+      <BIcon type="up" />
+      <BIcon type="down" />
+      <BIcon type="left" />
+      <BIcon type="right" />
     </section>
 
     <section>
@@ -85,6 +93,10 @@ useTitle({ title: 'BIcon - @baldeweg/ui' })
       <BIcon type="directory" :size="50" />
       <BIcon type="file" :size="50" />
       <BIcon type="clipboard" :size="50" />
+      <BIcon type="up" :size="50" />
+      <BIcon type="down" :size="50" />
+      <BIcon type="left" :size="50" />
+      <BIcon type="right" :size="50" />
     </section>
   </article>
 </template>
