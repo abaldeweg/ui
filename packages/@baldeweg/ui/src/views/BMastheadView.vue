@@ -6,10 +6,10 @@ useTitle({ title: 'BMasthead - @baldeweg/ui' })
 
 <template>
   <BMasthead>
-    <BMastheadItem type="start">start</BMastheadItem>
+    <BMastheadItem position="start">start</BMastheadItem>
 
-    <BMastheadItem type="center">center</BMastheadItem>
+    <BMastheadItem position="center">center</BMastheadItem>
 
-    <BMastheadItem type="end">end</BMastheadItem>
+    <BMastheadItem position="end">end</BMastheadItem>
   </BMasthead>
 </template>
