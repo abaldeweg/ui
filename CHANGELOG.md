@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.0
+
+- Add arrow icons
+
 ## v0.4.0
 
 - `useGCPAuth` improved
