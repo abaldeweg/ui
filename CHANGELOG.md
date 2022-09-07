@@ -3,6 +3,7 @@
 ## v0.5.0
 
 - Add arrow icons
+- Revamp of the BCard component
 
 ## v0.4.0
 

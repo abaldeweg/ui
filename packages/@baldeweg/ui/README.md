@@ -128,21 +128,6 @@ Events
 
 - click
 
-### b-card
-
-Props
-
-- title
-- route
-
-Slots
-
-- image (optional)
-- content
-- meta (optional)
-
-### b-card-separator
-
 ### b-chip
 
 Props
@@ -649,3 +634,18 @@ Slots
 Events
 
 - close
+
+### b-card
+
+Props
+
+- route - Object
+- outlined - Boolean
+- filled - Boolean
+
+Slots
+
+- image
+- subtitle
+- text
+- actions
