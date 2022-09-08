@@ -4,6 +4,17 @@
 
 - Add arrow icons
 - Revamp of the BCard component
+- Turn off the legacy API for vue-i18n. <https://vue-i18n.intlify.dev/guide/advanced/composition.html>
+
+```js
+const i18n = VueI18n.createI18n({
+  legacy: false,
+})
+```
+
+```js
+import { useI18n } from 'vue-i18n'
+```
 
 ## v0.4.0
 
