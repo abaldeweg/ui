@@ -14,7 +14,7 @@ const { dark } = useColorScheme()
   <h1>{{ $t('welcome') }}</h1>
 
   Available locales: {{ i18n.global.availableLocales }}<br />
-  Selected locale: {{ i18n.global.locale}}<br />
+  Selected locale: {{ i18n.global.locale }}<br />
 
-  Color Scheme: <input type="checkbox" v-model="dark"/>
+  Color Scheme: <input type="checkbox" v-model="dark" />
 </template>
