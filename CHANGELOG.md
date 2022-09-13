@@ -16,6 +16,10 @@ const i18n = VueI18n.createI18n({
 import { useI18n } from 'vue-i18n'
 ```
 
+- Remove `useJWTAuth` and `useGCPAuth` composables
+
+https://github.com/abaldeweg/ui/tree/v0.4.2/packages/%40baldeweg/ui/src/composables
+
 ## v0.4.0
 
 - `useGCPAuth` improved
