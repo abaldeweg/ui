@@ -1,14 +1,22 @@
 version: 2.1
+
 orbs:
-  cypress: cypress-io/cypress@2.2.0
-executors:
-  image:
+  node: circleci/node@4.7
+
+jobs:
+  test:
     docker:
-      - image: 'cypress/base:16.14.2'
+      - image: cimg/node:16.10
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Run tests
+          command: yarn workspace @baldeweg/ui build && yarn workspace @baldeweg/ui test:unit:ci
+
 workflows:
   test:
     jobs:
-      - cypress/run:
-          executor: image
-          yarn: true
-          command: yarn workspace @baldeweg/ui build && yarn workspace @baldeweg/ui test:unit:ci
+      - test
+      
