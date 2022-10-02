@@ -23,7 +23,7 @@
     "eslint": "8.24.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-vue": "9.5.1",
-    "jsdom": "20.0.0",
+    "jsdom": "20.0.1",
     "lodash": "4.17.21",
     "mkdirp": "1.0.4",
     "msw": "0.47.3",
