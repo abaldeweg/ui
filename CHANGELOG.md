@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.6.0
+## v0.6.0
 
 - Add `BNav`
 - Show the label after the switch
