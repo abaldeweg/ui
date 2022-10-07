@@ -166,6 +166,11 @@ const router = createRouter({
       component: () => import('../views/BPanelView.vue'),
     },
     {
+      path: '/nav',
+      name: 'nav',
+      component: () => import('../views/BNavView.vue'),
+    },
+    {
       path: '/:pathMatch(.*)',
       redirect: { name: 'index' },
     },

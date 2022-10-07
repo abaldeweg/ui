@@ -46,6 +46,7 @@ import BTabsLink from './BTabs/BTabsLink.vue'
 import BToast from './BToast/BToast.vue'
 import BTooltip from './BTooltip/BTooltip.vue'
 import BUpload from './BUpload/BUpload.vue'
+import BNav from './BNav/BNav.vue'
 
 export const components = [
   { name: 'BAlert', component: BAlert },
@@ -96,4 +97,5 @@ export const components = [
   { name: 'BToast', component: BToast },
   { name: 'BTooltip', component: BTooltip },
   { name: 'BUpload', component: BUpload },
+  { name: 'BNav', component: BNav },
 ]

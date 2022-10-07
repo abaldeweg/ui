@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0
+
+- Add `BNav`
+
 ## v0.5.0
 
 - Add arrow icons

@@ -67,6 +67,9 @@ useTitle({ title: 'Home - @baldeweg/ui' })
         <RouterLink :to="{ name: 'modal' }">Modal</RouterLink>
       </li>
       <li>
+        <RouterLink :to="{ name: 'nav' }">Nav</RouterLink>
+      </li>
+      <li>
         <RouterLink :to="{ name: 'panel' }">Panel</RouterLink>
       </li>
       <li>
