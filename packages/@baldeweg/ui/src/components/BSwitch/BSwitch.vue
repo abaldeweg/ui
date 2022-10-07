@@ -12,14 +12,14 @@ defineProps({
 
 <template>
   <div class="switch">
-    <label class="label" @click="$emit('update:modelValue', !modelValue)">
-      {{ label }}
-    </label>
     <button
       class="indicator"
       :class="{ isActive: modelValue }"
       @click="$emit('update:modelValue', !modelValue)"
     />
+    <label class="label" @click="$emit('update:modelValue', !modelValue)">
+      {{ label }}
+    </label>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ defineProps({
 }
 .label {
   display: block;
-  margin-right: 10px;
+  margin-left: 10px;
   cursor: pointer;
 }
 .indicator {

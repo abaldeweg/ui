@@ -3,6 +3,7 @@
 ## 0.6.0
 
 - Add `BNav`
+- Show the label after the switch
 
 ## v0.5.0
 
