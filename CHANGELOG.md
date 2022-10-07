@@ -4,6 +4,7 @@
 
 - Add `BNav`
 - Show the label after the switch
+- Changed some icons
 
 ## v0.5.0
 
