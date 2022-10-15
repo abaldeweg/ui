@@ -1,0 +1,907 @@
+{
+  "$schema": "components.schema.json",
+  "components": [
+    {
+      "name": "BAlert",
+      "props": [
+        {
+          "name": "type",
+          "type": ["String"],
+          "allowedValues": ["neutral", "error", "warning", "success"],
+          "default": "neutral"
+        },
+        {
+          "name": "canHide",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BApp",
+      "description": "Do not forget to set the attribute `id=\"app\"` here, if not otherwise done.",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BBadge",
+      "props": [
+        {
+          "name": "content",
+          "type": ["String"]
+        },
+        {
+          "name": "hide-badge",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BBottomNav",
+      "props": [
+        {
+          "name": "title",
+          "type": ["String"]
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
+      ]
+    },
+    {
+      "name": "BBottomNavItem",
+      "description": "Items should be sized 35x35 pixel.",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BButton",
+      "props": [
+        {
+          "name": "design",
+          "type": ["String"],
+          "allowedValues": ["primary", "primary_danger", "primary_wide", "outline", "outline_danger", "outline_wide", "text", "text_danger"],
+          "default": "primary"
+        },
+        {
+          "name": "ripple",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
+      ]
+    },
+    {
+      "name": "BCard",
+      "props": [
+        {
+          "name": "route",
+          "type": ["Object"]
+        },
+        {
+          "name": "outlined",
+          "type": ["Boolean"]
+        },
+        {
+          "name": "filled",
+          "type": ["Boolean"]
+        }
+      ],
+      "slots": [
+        {
+          "name": "image"
+        },
+        {
+          "name": "subtitle"
+        },
+        {
+          "name": "text"
+        },
+        {
+          "name": "actions"
+        }
+      ]
+    },
+    {
+      "name": "BChip",
+      "props": [
+        {
+          "name": "hover",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "action"
+        }
+      ]
+    },
+    {
+      "name": "BCode",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BComment",
+      "props": [
+        {
+          "name": "author",
+          "type": ["String"]
+        },
+        {
+          "name": "date",
+          "type": ["String"]
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "actions"
+        }
+      ]
+    },
+    {
+      "name": "BContainer",
+      "props": [
+        {
+          "name": "size",
+          "type": ["String"],
+          "allowedValues": ["l","m","s"],
+          "default": "l"
+        },
+        {
+          "name": "align",
+          "type": ["String"],
+          "allowedValues": ["left", "right", "center"],
+          "default": "left"
+        },
+        {
+          "name": "highlight",
+          "type": ["Boolean"]
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BDialog",
+      "slots": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "actions"
+        }
+      ]
+    },
+    {
+      "name": "BDivider",
+      "props": [
+        {
+          "name": "size",
+          "type": ["String"],
+          "allowedValues": ["l", "m", "s", "xs"],
+          "default": "l"
+        }
+      ]
+    },
+    {
+      "name": "BDropdown",
+      "props": [
+        {
+          "name": "position",
+          "type": ["String"],
+          "allowedValues": ["selector", "mouse", "bottom"],
+          "default": "selector"
+        },
+        {
+          "name": "keep-open",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "selector"
+        }
+      ]
+    },
+    {
+      "name": "BDropdownItem",
+      "props": [
+        {
+          "name": "bold",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "no-hover",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "type": ["String"],
+          "allowedValues": ["all in b-icon allowed icons"],
+          "default": "null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ],
+      "events": [
+        {"name": "click"}
+      ]
+    },
+    {
+      "name": "BFlex",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFlexRow",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFlexCol",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BForm",
+      "description": "The form component is just a wrapper, you have to assign classes to your elements. Please omit the `<form>` element itself.",
+      "props": [
+        {
+          "name": "no-margin",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ],
+      "events": [{
+        "name": "submit"
+      }]
+    },
+    {
+      "name": "BFormGroup",
+      "props": [
+        {
+          "name": "buttons",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormItems",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormInput",
+      "description": "Not applicable to checkbox and radio.",
+      "props": [
+        {
+          "name": "value",
+          "type": ["String"]
+        },
+        {
+          "name": "no-styling",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "event",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "focus",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "input"
+        },
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "BFormSelect",
+      "props": [
+        {
+          "name": "value",
+          "type": ["String"]
+        },
+        {
+          "name": "items",
+          "description": "[{key: String, value: String}]",
+          "type": ["Array"]
+        },
+        {
+          "name": "item-key",
+          "type": ["String"],
+          "default": "key"
+        },
+        {
+          "name": "item-value",
+          "type": ["String"],
+          "default": "key"
+        },
+        {
+          "name": "focus",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "allow-empty",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ],
+      "events": [
+        {
+          "name": "input"
+        },
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "BFormTextarea",
+      "props": [
+        {
+          "name": "value",
+          "type": ["String"]
+        },
+        {
+          "name": "focus",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "input"
+        },
+        {
+          "name": "change"
+        },
+        {
+          "name": "click"
+        },
+        {
+          "name": "contextmenu"
+        }
+      ]
+    },
+    {
+      "name": "BFormLabel",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormFieldset",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormLegend",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormHelpline",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BIcon",
+      "props": [
+        {
+          "name": "type",
+          "type": ["String"],
+          "allowedValues": ["apps", "bin", "star", "close", "check", "download", "filter", "hamburger", "minus", "pause", "pencil", "play", "plus", "profile", "kebab", "meatballs", "moon", "dollar", "search", "euro", "cart", "directory", "file", "clipboard"]
+        },
+        {
+          "name": "size",
+          "type": ["Number"],
+          "default": "25"
+        },
+        {
+          "name": "no-hover",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "color",
+          "description": "String (e.g. hex code custom properties)",
+          "type": ["String"]
+        }
+      ]
+    },
+    {
+      "name": "BList",
+      "props": [
+        {
+          "name": "route",
+          "type": ["Object"]
+        },
+        {
+          "name": "bold",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "divider",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "image-size",
+          "type": ["String"],
+          "allowedValues": ["xs", "s", "m", "l", "xl"]
+        },
+        {
+          "name": "image-position",
+          "type": ["String"],
+          "allowedValues": ["start", "center", "end"],
+          "default": "center"
+        },
+        {
+          "name": "actions-position",
+          "type": ["String"],
+          "allowedValues": ["start", "center", "end"],
+          "default": "center"
+        },
+        {
+          "name": "reverse",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "subgroup-indent",
+          "type": ["Number"],
+          "default": "20px"
+        }
+      ],
+      "slots": [
+        {"name": "title"},
+        {"name": "image"},
+        {"name": "options"},
+        {"name": "meta - deprecated, use subtitle"},
+        {"name": "subtitle"},
+        {"name": "subgroup"}
+      ]
+    },
+    {
+      "name": "BMasthead",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BMastheadItem",
+      "props": [
+        {
+          "name": "position",
+          "type": ["String"],
+          "allowedValues": ["start", "center" , "end"],
+          "default": "start"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BModal",
+      "description": "If you use a form, consider wrapping the modal with it.",
+      "props": [
+        {
+          "name": "width",
+          "description": "defines the max-width property",
+          "type": ["Number"],
+          "default": "600"
+        },
+        {
+          "name": "close-button",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "title"
+        },
+        {
+          "name": "footer"
+        }
+      ],
+      "events": [
+        {
+          "name": "close"
+        }
+      ]
+    },
+    {
+      "name": "BNav",
+      "props": [
+        {
+          "name": "nav",
+          "type": ["Array"]
+        }
+      ]
+    },
+    {
+      "name": "BPanel",
+      "props": [
+        {
+          "name": "visible",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "position",
+          "type": ["String"],
+          "allowedValues": ["left", "right"],
+          "default": "left"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "header"
+        },
+        {
+          "name": "footer"
+        }
+      ],
+      "events": [
+        {
+          "name": "close"
+        }
+      ]
+    },
+    {
+      "name": "BScrollToBottom",
+      "props": [
+        {
+          "name": "width",
+          "description": "0 results to full width, all values are pixel values",
+          "type": ["Number"],
+          "default": "0"
+        },
+        {
+          "name": "height",
+          "description": "0 results in 100vh minus masthead height, all values are pixel values",
+          "type": ["Number"],
+          "default": "0"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BSearch",
+      "props": [
+        {
+          "name": "placeholder",
+          "type": ["String"]
+        },
+        {
+          "name": "filter",
+          "description": "Shows a filter icon.",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "branded",
+          "type": ["Boolean"],
+          "default": "false"
+        },
+        {
+          "name": "focus",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "input"
+        },
+        {
+          "name": "submit"
+        },
+        {
+          "name": "filter"
+        },
+        {
+          "name": "reset"
+        }
+      ]
+    },
+    {
+      "name": "BSlider",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BSliderItem",
+      "props": [
+        {
+          "name": "size",
+          "type": ["String"],
+          "allowedValues": ["xs", "s", "m", "l", "xl"],
+          "default": "m"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BSpinner",
+      "props": [
+        {
+          "name": "size",
+          "type": ["String"],
+          "allowedValues": ["l", "m", "s"],
+          "default": "l"
+        }
+      ]
+    },
+    {
+      "name": "BSubheader",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BSwitch",
+      "props": [
+        {
+          "name": "label",
+          "type": ["String"]
+        },
+        {
+          "name": "value",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "name": "BTable",
+      "description": "Its just a wrapper, make use of the HTML table elements, including `<table>`.",
+      "props": [
+        {
+          "name": "hover",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BTabs",
+      "props": [
+        {
+          "name": "justify",
+          "type": ["String"],
+          "allowedValues": ["flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"],
+          "default": "flex-start"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BTabsLink",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BToast",
+      "description": "Use it in conjunction with the useToast composable.",
+      "props": [
+        {
+          "name": "type",
+          "type": ["String"],
+          "allowedValues": ["neutral", "error", "warning", "success"],
+          "default": "false"
+        },
+        {
+          "name": "visible",
+          "type": ["Boolean"],
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ],
+      "events": [
+        {
+          "name": "hide"
+        }
+      ]
+    },
+    {
+      "name": "BTooltip",
+      "props": [
+        {
+          "name": "position",
+          "type": ["String"]
+        },
+        {
+          "name": "text",
+          "type": ["String"]
+        }
+      ]
+    },
+    {
+      "name": "BUpload",
+      "description": "Set the enctype of the parent form to `enctype=\"multipart/form-data\"`.",
+      "props": [
+        {
+          "name": "id",
+          "type": ["String"]
+        },
+        {
+          "name": "text",
+          "type": ["String"]
+        },
+        {
+          "name": "accept",
+          "description": "Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`",
+          "type": ["String"]
+        }
+      ],
+      "events": [
+        {
+          "name": "file"
+        }
+      ]
+    }
+  ]
+}
