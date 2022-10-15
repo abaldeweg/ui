@@ -6,13 +6,22 @@
       "props": [
         {
           "name": "type",
-          "type": ["String"],
-          "allowedValues": ["neutral", "error", "warning", "success"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "neutral",
+            "error",
+            "warning",
+            "success"
+          ],
           "default": "neutral"
         },
         {
           "name": "hidable",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
@@ -36,12 +45,17 @@
       "props": [
         {
           "name": "content",
-          "type": ["String"]
+          "type": [
+            "String",
+            "Number"
+          ]
         },
         {
-          "name": "hide-badge",
-          "type": ["Boolean"],
-          "default": "false"
+          "name": "hide-empty",
+          "type": [
+            "Boolean"
+          ],
+          "default": "true"
         }
       ],
       "slots": [
@@ -52,26 +66,23 @@
     },
     {
       "name": "BBottomNav",
-      "props": [
-        {
-          "name": "title",
-          "type": ["String"]
-        }
-      ],
       "slots": [
         {
           "name": "default"
-        }
-      ],
-      "events": [
-        {
-          "name": "click"
         }
       ]
     },
     {
       "name": "BBottomNavItem",
       "description": "Items should be sized 35x35 pixel.",
+      "props": [
+        {
+          "name": "title",
+          "type": [
+            "String"
+          ]
+        }
+      ],
       "slots": [
         {
           "name": "default"
@@ -83,13 +94,26 @@
       "props": [
         {
           "name": "design",
-          "type": ["String"],
-          "allowedValues": ["primary", "primary_danger", "primary_wide", "outline", "outline_danger", "outline_wide", "text", "text_danger"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "primary",
+            "primary_danger",
+            "primary_wide",
+            "outline",
+            "outline_danger",
+            "outline_wide",
+            "text",
+            "text_danger"
+          ],
           "default": "primary"
         },
         {
           "name": "ripple",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
@@ -109,15 +133,23 @@
       "props": [
         {
           "name": "route",
-          "type": ["Object"]
+          "type": [
+            "Object"
+          ]
         },
         {
           "name": "outlined",
-          "type": ["Boolean"]
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
         },
         {
           "name": "filled",
-          "type": ["Boolean"]
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
         }
       ],
       "slots": [
@@ -132,6 +164,9 @@
         },
         {
           "name": "actions"
+        },
+        {
+          "name": "title"
         }
       ]
     },
@@ -140,7 +175,9 @@
       "props": [
         {
           "name": "hover",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
@@ -166,11 +203,15 @@
       "props": [
         {
           "name": "author",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
         },
         {
           "name": "date",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
         }
       ],
       "slots": [
@@ -187,19 +228,34 @@
       "props": [
         {
           "name": "size",
-          "type": ["String"],
-          "allowedValues": ["l","m","s"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "l",
+            "m",
+            "s"
+          ],
           "default": "l"
         },
         {
           "name": "align",
-          "type": ["String"],
-          "allowedValues": ["left", "right", "center"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "left",
+            "right",
+            "center"
+          ],
           "default": "left"
         },
         {
           "name": "highlight",
-          "type": ["Boolean"]
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
         }
       ],
       "slots": [
@@ -224,8 +280,15 @@
       "props": [
         {
           "name": "size",
-          "type": ["String"],
-          "allowedValues": ["l", "m", "s", "xs"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "l",
+            "m",
+            "s",
+            "xs"
+          ],
           "default": "l"
         }
       ]
@@ -235,13 +298,21 @@
       "props": [
         {
           "name": "position",
-          "type": ["String"],
-          "allowedValues": ["selector", "mouse", "bottom"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "selector",
+            "mouse",
+            "bottom"
+          ],
           "default": "selector"
         },
         {
           "name": "keep-open",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
@@ -255,23 +326,33 @@
       ]
     },
     {
+      "name": "BDropdownDivider"
+    },
+    {
       "name": "BDropdownItem",
       "props": [
         {
           "name": "bold",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "no-hover",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "icon",
-          "type": ["String"],
-          "allowedValues": ["all in b-icon allowed icons"],
-          "default": "null"
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "All in b-icon allowed icons"
+          ]
         }
       ],
       "slots": [
@@ -280,7 +361,9 @@
         }
       ],
       "events": [
-        {"name": "click"}
+        {
+          "name": "click"
+        }
       ]
     },
     {
@@ -313,152 +396,12 @@
       "props": [
         {
           "name": "no-margin",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
-      "slots": [
-        {
-          "name": "default"
-        }
-      ],
-      "events": [{
-        "name": "submit"
-      }]
-    },
-    {
-      "name": "BFormGroup",
-      "props": [
-        {
-          "name": "buttons",
-          "type": ["Boolean"],
-          "default": "false"
-        }
-      ],
-      "slots": [
-        {
-          "name": "default"
-        }
-      ]
-    },
-    {
-      "name": "BFormItems",
-      "slots": [
-        {
-          "name": "default"
-        }
-      ]
-    },
-    {
-      "name": "BFormInput",
-      "description": "Not applicable to checkbox and radio.",
-      "props": [
-        {
-          "name": "value",
-          "type": ["String"]
-        },
-        {
-          "name": "no-styling",
-          "type": ["Boolean"],
-          "default": "false"
-        },
-        {
-          "name": "event",
-          "type": ["Boolean"],
-          "default": "false"
-        },
-        {
-          "name": "focus",
-          "type": ["Boolean"],
-          "default": "false"
-        }
-      ],
-      "events": [
-        {
-          "name": "input"
-        },
-        {
-          "name": "change"
-        }
-      ]
-    },
-    {
-      "name": "BFormSelect",
-      "props": [
-        {
-          "name": "value",
-          "type": ["String"]
-        },
-        {
-          "name": "items",
-          "description": "[{key: String, value: String}]",
-          "type": ["Array"]
-        },
-        {
-          "name": "item-key",
-          "type": ["String"],
-          "default": "key"
-        },
-        {
-          "name": "item-value",
-          "type": ["String"],
-          "default": "key"
-        },
-        {
-          "name": "focus",
-          "type": ["Boolean"],
-          "default": "false"
-        },
-        {
-          "name": "allow-empty",
-          "type": ["Boolean"],
-          "default": "false"
-        }
-      ],
-      "slots": [
-        {
-          "name": "default"
-        }
-      ],
-      "events": [
-        {
-          "name": "input"
-        },
-        {
-          "name": "change"
-        }
-      ]
-    },
-    {
-      "name": "BFormTextarea",
-      "props": [
-        {
-          "name": "value",
-          "type": ["String"]
-        },
-        {
-          "name": "focus",
-          "type": ["Boolean"],
-          "default": "false"
-        }
-      ],
-      "events": [
-        {
-          "name": "input"
-        },
-        {
-          "name": "change"
-        },
-        {
-          "name": "click"
-        },
-        {
-          "name": "contextmenu"
-        }
-      ]
-    },
-    {
-      "name": "BFormLabel",
       "slots": [
         {
           "name": "default"
@@ -474,7 +417,16 @@
       ]
     },
     {
-      "name": "BFormLegend",
+      "name": "BFormGroup",
+      "props": [
+        {
+          "name": "buttons",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
+        }
+      ],
       "slots": [
         {
           "name": "default"
@@ -490,27 +442,204 @@
       ]
     },
     {
+      "name": "BFormInput",
+      "description": "Not applicable to checkbox and radio.",
+      "props": [
+        {
+          "name": "modelValue",
+          "type": [
+            "String",
+            "Number"
+          ]
+        },
+        {
+          "name": "no-styling",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
+        },
+        {
+          "name": "event",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
+        },
+        {
+          "name": "focus",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue"
+        }
+      ]
+    },
+    {
+      "name": "BFormItem",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormLabel",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormLegend",
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "BFormSelect",
+      "props": [
+        {
+          "name": "modelValue",
+          "type": [
+            "String",
+            "Number"
+          ]
+        },
+        {
+          "name": "items",
+          "description": "[{key: String, value: String}]",
+          "type": [
+            "Array"
+          ]
+        },
+        {
+          "name": "item-key",
+          "type": [
+            "String"
+          ],
+          "default": "key"
+        },
+        {
+          "name": "item-value",
+          "type": [
+            "String"
+          ],
+          "default": "key"
+        },
+        {
+          "name": "focus",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
+        },
+        {
+          "name": "allow-empty",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue"
+        }
+      ]
+    },
+    {
+      "name": "BFormTextarea",
+      "props": [
+        {
+          "name": "modelValue",
+          "type": [
+            "String"
+          ]
+        },
+        {
+          "name": "focus",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue"
+        },
+        {
+          "name": "click"
+        },
+        {
+          "name": "contextmenu"
+        }
+      ]
+    },
+    {
       "name": "BIcon",
       "props": [
         {
           "name": "type",
-          "type": ["String"],
-          "allowedValues": ["apps", "bin", "star", "close", "check", "download", "filter", "hamburger", "minus", "pause", "pencil", "play", "plus", "profile", "kebab", "meatballs", "moon", "dollar", "search", "euro", "cart", "directory", "file", "clipboard"]
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "apps",
+            "bin",
+            "star",
+            "close",
+            "check",
+            "download",
+            "filter",
+            "hamburger",
+            "minus",
+            "pause",
+            "pencil",
+            "play",
+            "plus",
+            "profile",
+            "kebab",
+            "meatballs",
+            "moon",
+            "dollar",
+            "search",
+            "euro",
+            "cart",
+            "directory",
+            "file",
+            "clipboard"
+          ]
         },
         {
           "name": "size",
-          "type": ["Number"],
+          "type": [
+            "Number"
+          ],
           "default": "25"
         },
         {
           "name": "no-hover",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "color",
           "description": "String (e.g. hex code custom properties)",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
         }
       ]
     },
@@ -519,63 +648,109 @@
       "props": [
         {
           "name": "route",
-          "type": ["Object"]
+          "type": [
+            "Object"
+          ]
         },
         {
           "name": "bold",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "divider",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "image-size",
-          "type": ["String"],
-          "allowedValues": ["xs", "s", "m", "l", "xl"]
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+          ]
         },
         {
           "name": "image-position",
-          "type": ["String"],
-          "allowedValues": ["start", "center", "end"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "start",
+            "center",
+            "end"
+          ],
           "default": "center"
         },
         {
           "name": "actions-position",
-          "type": ["String"],
-          "allowedValues": ["start", "center", "end"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "start",
+            "center",
+            "end"
+          ],
           "default": "center"
         },
         {
           "name": "reverse",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "disabled",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "active",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "subgroup-indent",
-          "type": ["Number"],
+          "type": [
+            "Number"
+          ],
           "default": "20px"
         }
       ],
       "slots": [
-        {"name": "title"},
-        {"name": "image"},
-        {"name": "options"},
-        {"name": "meta - deprecated, use subtitle"},
-        {"name": "subtitle"},
-        {"name": "subgroup"}
+        {
+          "name": "title"
+        },
+        {
+          "name": "image"
+        },
+        {
+          "name": "options"
+        },
+        {
+          "name": "meta - deprecated, use subtitle"
+        },
+        {
+          "name": "subtitle"
+        },
+        {
+          "name": "subgroup"
+        }
       ]
     },
     {
@@ -591,8 +766,14 @@
       "props": [
         {
           "name": "position",
-          "type": ["String"],
-          "allowedValues": ["start", "center" , "end"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "start",
+            "center",
+            "end"
+          ],
           "default": "start"
         }
       ],
@@ -608,13 +789,17 @@
       "props": [
         {
           "name": "width",
-          "description": "defines the max-width property",
-          "type": ["Number"],
+          "description": "Defines the max-width property",
+          "type": [
+            "Number"
+          ],
           "default": "600"
         },
         {
           "name": "close-button",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
@@ -640,7 +825,9 @@
       "props": [
         {
           "name": "nav",
-          "type": ["Array"]
+          "type": [
+            "Array"
+          ]
         }
       ]
     },
@@ -649,13 +836,20 @@
       "props": [
         {
           "name": "visible",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "position",
-          "type": ["String"],
-          "allowedValues": ["left", "right"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "left",
+            "right"
+          ],
           "default": "left"
         }
       ],
@@ -682,14 +876,16 @@
         {
           "name": "width",
           "description": "0 results to full width, all values are pixel values",
-          "type": ["Number"],
-          "default": "0"
+          "type": [
+            "Number"
+          ]
         },
         {
           "name": "height",
           "description": "0 results in 100vh minus masthead height, all values are pixel values",
-          "type": ["Number"],
-          "default": "0"
+          "type": [
+            "Number"
+          ]
         }
       ],
       "slots": [
@@ -703,22 +899,36 @@
       "props": [
         {
           "name": "placeholder",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
+        },
+        {
+          "name": "modelValue",
+          "type": [
+            "String"
+          ]
         },
         {
           "name": "filter",
           "description": "Shows a filter icon.",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "branded",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         },
         {
           "name": "focus",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
@@ -734,6 +944,9 @@
         },
         {
           "name": "reset"
+        },
+        {
+          "name": "update:modelValue"
         }
       ]
     },
@@ -750,8 +963,16 @@
       "props": [
         {
           "name": "size",
-          "type": ["String"],
-          "allowedValues": ["xs", "s", "m", "l", "xl"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+          ],
           "default": "m"
         }
       ],
@@ -766,8 +987,14 @@
       "props": [
         {
           "name": "size",
-          "type": ["String"],
-          "allowedValues": ["l", "m", "s"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "l",
+            "m",
+            "s"
+          ],
           "default": "l"
         }
       ]
@@ -785,17 +1012,21 @@
       "props": [
         {
           "name": "label",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
         },
         {
-          "name": "value",
-          "type": ["Boolean"],
+          "name": "moelValue",
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
       "events": [
         {
-          "name": "input"
+          "name": "update:modelValue"
         }
       ]
     },
@@ -805,7 +1036,9 @@
       "props": [
         {
           "name": "hover",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
@@ -820,8 +1053,17 @@
       "props": [
         {
           "name": "justify",
-          "type": ["String"],
-          "allowedValues": ["flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"],
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "flex-start",
+            "flex-end",
+            "center",
+            "space-between",
+            "space-around",
+            "space-evenly"
+          ],
           "default": "flex-start"
         }
       ],
@@ -845,24 +1087,28 @@
       "props": [
         {
           "name": "type",
-          "type": ["String"],
-          "allowedValues": ["neutral", "error", "warning", "success"],
-          "default": "false"
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "neutral",
+            "error",
+            "warning",
+            "success"
+          ],
+          "default": "neutral"
         },
         {
           "name": "visible",
-          "type": ["Boolean"],
+          "type": [
+            "Boolean"
+          ],
           "default": "false"
         }
       ],
       "slots": [
         {
           "name": "default"
-        }
-      ],
-      "events": [
-        {
-          "name": "hide"
         }
       ]
     },
@@ -871,11 +1117,26 @@
       "props": [
         {
           "name": "position",
-          "type": ["String"]
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ]
         },
         {
           "name": "text",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
         }
       ]
     },
@@ -885,16 +1146,22 @@
       "props": [
         {
           "name": "id",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
         },
         {
           "name": "text",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
         },
         {
           "name": "accept",
           "description": "Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`",
-          "type": ["String"]
+          "type": [
+            "String"
+          ]
         }
       ],
       "events": [

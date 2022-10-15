@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-  content: [Number, String],
+  content: [String, Number],
   hideEmpty: {
     type: Boolean,
     default: true,

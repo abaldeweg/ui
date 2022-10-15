@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  modelValue: null,
+  modelValue: [String, Number],
   noStyling: Boolean,
   event: Boolean,
   focus: Boolean,
