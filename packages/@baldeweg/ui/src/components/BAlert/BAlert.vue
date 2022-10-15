@@ -9,7 +9,7 @@ defineProps({
     },
     default: 'neutral',
   },
-  canHide: Boolean,
+  hidable: Boolean,
 })
 
 const hide = ref(false)
@@ -30,7 +30,7 @@ const hide = ref(false)
       :size="20"
       @click="hide = true"
       :style="{ float: 'right' }"
-      v-if="canHide"
+      v-if="hidable"
     />
     <slot />
   </div>

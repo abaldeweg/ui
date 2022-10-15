@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.0
+
+- Rename `canHide` to `hidable` in BAlert
+
 ## v0.6.0
 
 - Add `BNav`

@@ -11,7 +11,7 @@
           "default": "neutral"
         },
         {
-          "name": "canHide",
+          "name": "hidable",
           "type": ["Boolean"],
           "default": "false"
         }
