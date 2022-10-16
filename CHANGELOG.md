@@ -4,6 +4,7 @@
 
 - Rename `canHide` to `hidable` in BAlert
 - Revamp `BFlex`, Remove `BFlexRow` and `BFlexCol`
+- Remove subgroup and meta in BList
 
 ## v0.6.0
 

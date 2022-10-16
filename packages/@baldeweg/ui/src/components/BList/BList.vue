@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-
 defineProps({
   route: Object,
   bold: Boolean,
@@ -26,13 +24,7 @@ defineProps({
   reverse: Boolean,
   disabled: Boolean,
   active: Boolean,
-  subgroupIndent: {
-    type: String,
-    default: '20px',
-  },
 })
-
-const showSubgroup = ref(false)
 </script>
 
 <template>
@@ -109,14 +101,6 @@ const showSubgroup = ref(false)
       >
         <slot name="options" />
       </div>
-    </div>
-
-    <div
-      class="list_subgroup"
-      :style="{ marginLeft: subgroupIndent }"
-      v-if="$slots.subgroup && showSubgroup"
-    >
-      <slot name="subgroup" />
     </div>
   </div>
 </template>

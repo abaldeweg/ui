@@ -761,13 +761,6 @@
             "Boolean"
           ],
           "default": "false"
-        },
-        {
-          "name": "subgroup-indent",
-          "type": [
-            "Number"
-          ],
-          "default": "20px"
         }
       ],
       "slots": [
@@ -781,13 +774,7 @@
           "name": "options"
         },
         {
-          "name": "meta - deprecated, use subtitle"
-        },
-        {
           "name": "subtitle"
-        },
-        {
-          "name": "subgroup"
         }
       ]
     },
