@@ -15,8 +15,6 @@ import BDropdown from './BDropdown/BDropdown.vue'
 import BDropdownDivider from './BDropdown/BDropdownDivider.vue'
 import BDropdownItem from './BDropdown/BDropdownItem.vue'
 import BFlex from './BFlex/BFlex.vue'
-import BFlexCol from './BFlex/BFlexCol.vue'
-import BFlexRow from './BFlex/BFlexRow.vue'
 import BForm from './BForm/BForm.vue'
 import BFormFieldset from './BForm/BFormFieldset.vue'
 import BFormGroup from './BForm/BFormGroup.vue'
@@ -66,8 +64,6 @@ export const components = [
   { name: 'BDropdownDivider', component: BDropdownDivider },
   { name: 'BDropdownItem', component: BDropdownItem },
   { name: 'BFlex', component: BFlex },
-  { name: 'BFlexCol', component: BFlexCol },
-  { name: 'BFlexRow', component: BFlexRow },
   { name: 'BForm', component: BForm },
   { name: 'BFormFieldset', component: BFormFieldset },
   { name: 'BFormGroup', component: BFormGroup },

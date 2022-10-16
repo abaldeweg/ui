@@ -3,6 +3,7 @@
 ## v0.7.0
 
 - Rename `canHide` to `hidable` in BAlert
+- Revamp `BFlex`, Remove `BFlexRow` and `BFlexCol`
 
 ## v0.6.0
 

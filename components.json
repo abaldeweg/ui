@@ -368,22 +368,56 @@
     },
     {
       "name": "BFlex",
-      "slots": [
+      "props": [
         {
-          "name": "default"
-        }
-      ]
-    },
-    {
-      "name": "BFlexRow",
-      "slots": [
+          "name": "direction",
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "row",
+            "column",
+            "row-reverse",
+            "column-reverse"
+          ],
+          "default": "row"
+        },
         {
-          "name": "default"
+          "name": "justify",
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "flex-start",
+            "flex-end",
+            "center",
+            "space-between",
+            "space-around",
+            "space-evenly"
+          ],
+          "default": "flex-start"
+        },
+        {
+          "name": "align",
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "stretch",
+            "flex-start",
+            "flex-end",
+            "center",
+            "baseline"
+          ],
+          "default": "stretch"
+        },
+        {
+          "name": "gap",
+          "description": "Accepts a string, so it could be used as a shorthand for row-gap and column-gap.",
+          "type": ["String"],
+          "default": "undefined"
         }
-      ]
-    },
-    {
-      "name": "BFlexCol",
+      ],
       "slots": [
         {
           "name": "default"
