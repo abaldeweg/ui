@@ -651,7 +651,11 @@
             "cart",
             "directory",
             "file",
-            "clipboard"
+            "clipboard",
+            "up",
+            "down",
+            "left",
+            "right"
           ]
         },
         {
