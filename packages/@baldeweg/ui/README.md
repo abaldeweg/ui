@@ -4,7 +4,7 @@ UI Components
 
 ## Requirements
 
-- NodeJS 16LTS
+- NodeJS
 - Yarn
 
 ## Getting Started
