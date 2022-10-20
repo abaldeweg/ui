@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/ui",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
