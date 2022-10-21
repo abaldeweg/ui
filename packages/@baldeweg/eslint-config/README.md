@@ -1,6 +1,6 @@
 # @baldeweg/eslint-config
 
-Install the config.
+Install the config
 
 ```bash
 yarn add @baldeweg/eslint-config
