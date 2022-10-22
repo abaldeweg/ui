@@ -59,6 +59,8 @@ Currently available composables:
 
 ## Components
 
+[Components](https://github.com/abaldeweg/ui/blob/main/packages/docu/components.md)
+
 Now, you can choose from the components.
 
 ### b-app
