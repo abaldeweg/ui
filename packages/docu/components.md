@@ -449,7 +449,7 @@ Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|nav |Array|||
+|nav |Array|||The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type (&#39;icon&#39; or &#39;dot&#39;)) and value (String, icon from BIcon).
 
 ## BPanel
 

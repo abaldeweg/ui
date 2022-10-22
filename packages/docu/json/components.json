@@ -850,6 +850,7 @@
       "props": [
         {
           "name": "nav",
+          "description": "The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type ('icon' or 'dot')) and value (String, icon from BIcon).",
           "type": [
             "Array"
           ]
