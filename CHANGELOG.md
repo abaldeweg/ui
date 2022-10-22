@@ -5,6 +5,7 @@
 - Rename `canHide` to `hidable` in BAlert
 - Revamp `BFlex`, Remove `BFlexRow` and `BFlexCol`
 - Remove subgroup and meta in BList
+- Remove `useTheme`, use `useColorScheme` instead
 
 ## v0.6.0
 

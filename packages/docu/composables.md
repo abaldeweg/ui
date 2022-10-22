@@ -5,7 +5,6 @@ You can import composables from `@baldeweg/ui`.
 Currently available composables:
 
 - useToast
-- useTheme
 - useTitle
 - useLocale
 - useRequest
