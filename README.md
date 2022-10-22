@@ -4,5 +4,5 @@ UI Components
 
 ## Packages
 
-- [ui](/packages/@baldeweg/ui/README.md)
-- [web-demo](/packages/@baldeweg/web-demo/README.md)
+- [ui](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/README.md)
+- [eslint-config](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/eslint-config/README.md)
