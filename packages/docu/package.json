@@ -2,7 +2,8 @@
   "name": "docu",
   "version": "0.7.0-alpha.2",
   "scripts": {
-    "generate": "node generator/render.js"
+    "generate": "node generator/render.js",
+    "compile": "tsc"
   },
   "main": "generator/index.js",
   "author": "André Baldeweg <a@baldeweg.org>",
@@ -14,5 +15,9 @@
   },
   "dependencies": {
     "ejs": "3.1.8"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.1",
+    "typescript": "^4.8.4"
   }
 }
