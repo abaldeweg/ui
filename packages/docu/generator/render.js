@@ -4,11 +4,11 @@
 
 const fs = require('fs')
 const ejs = require('ejs')
-const components = require('./../json/components.json')
+const { components } = require('./../json/components.json')
 
-const renderFile = (source, dir, extension) => {
-  ejs.renderFile(source, { components: components.components }, {}, (_err, str) => {
-    fs.writeFile(dir + extension, str, (err) => {
+const renderFile = (template, filename) => {
+  ejs.renderFile(template, { components }, {}, (_err, str) => {
+    fs.writeFile(filename, str, (err) => {
       if (err) console.error(err)
     })
   })
@@ -16,8 +16,7 @@ const renderFile = (source, dir, extension) => {
 
 renderFile(
   __dirname + '/templates/Component.ejs',
-  './components',
-  '.md'
+  './components.md',
 )
 
 console.log('Docu was rendered')
