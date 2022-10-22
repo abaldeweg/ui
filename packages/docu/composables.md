@@ -2,12 +2,6 @@
 
 You can import composables from `@baldeweg/ui`.
 
-Example
-
-```js
-import { useLocale } from '@baldeweg/ui'
-```
-
 Currently available composables:
 
 - useToast
@@ -17,7 +11,7 @@ Currently available composables:
 - useRequest
 - useColorScheme
 
-## Example for toast
+## Example for BToast
 
 ```js
 import { useToast } from '@baldeweg/ui'
