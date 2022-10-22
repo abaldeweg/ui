@@ -71,10 +71,10 @@ html {
 }
 ```
 
-## Composables
-
-[Composables](https://github.com/abaldeweg/ui/blob/main/packages/docu/composables.md)
-
 ## Components
 
 [Components](https://github.com/abaldeweg/ui/blob/main/packages/docu/components.md)
+
+## Composables
+
+[Composables](https://github.com/abaldeweg/ui/blob/main/packages/docu/composables.md)
