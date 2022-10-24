@@ -13,5 +13,8 @@
     "type": "git",
     "url": "https://github.com/abaldeweg/ui.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@baldeweg/docu": "0.7.0-alpha.2"
+  }
 }

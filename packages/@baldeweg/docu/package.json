@@ -1,8 +1,8 @@
 {
-  "name": "docu",
+  "name": "@baldeweg/docu",
   "version": "0.7.0-alpha.2",
   "scripts": {
-    "generate": "node index.js",
+    "generate": "node index.js ./json/components.json ./templates/Component.ejs ./components.md",
     "compile": "tsc"
   },
   "bin": {

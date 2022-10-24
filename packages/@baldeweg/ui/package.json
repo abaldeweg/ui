@@ -6,19 +6,20 @@
     "build": "vite build",
     "test:unit": "vitest --environment jsdom",
     "test:unit:ci": "vitest run --environment jsdom",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "docu": "docu ./docu/json/components.json ./docu/templates/component.ejs ./docu/components.md"
   },
   "dependencies": {
     "vue": "3.2.41"
   },
   "devDependencies": {
+    "@baldeweg/docu": "./packages/@baldeweg/docu",
     "@baldeweg/eslint-config": "^0.7.0-alpha.2",
     "@rushstack/eslint-patch": "1.2.0",
     "@vitejs/plugin-vue": "3.1.2",
     "@vue/eslint-config-prettier": "7.0.0",
     "@vueuse/core": "9.3.1",
     "axios": "1.1.3",
-    "ejs": "3.1.8",
     "eslint": "8.26.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-vue": "9.6.0",
