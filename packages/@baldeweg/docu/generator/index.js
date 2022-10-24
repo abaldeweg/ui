@@ -41,7 +41,6 @@ const ejs_1 = __importDefault(require("ejs"));
 const path_1 = __importDefault(require("path"));
 const renderFile = (src, template, filename) => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield Promise.resolve().then(() => __importStar(require(path_1.default.join(process.cwd(), src))));
-    console.log('src: ', path_1.default.join(process.cwd(), src));
     ejs_1.default.renderFile(template, { components: data.components }, {}, (_err, str) => {
         fs_1.default.writeFile(filename, str, (err) => {
             if (err)
