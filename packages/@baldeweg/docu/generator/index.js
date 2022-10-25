@@ -39,7 +39,6 @@ const renderFile = (src, template, filename) => {
                 });
             });
         });
-        reject();
     });
 };
 exports.renderFile = renderFile;
