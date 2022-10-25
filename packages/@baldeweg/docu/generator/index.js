@@ -22,15 +22,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -39,13 +30,16 @@ exports.renderFile = void 0;
 const fs_1 = __importDefault(require("fs"));
 const ejs_1 = __importDefault(require("ejs"));
 const path_1 = __importDefault(require("path"));
-const renderFile = (src, template, filename) => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield Promise.resolve().then(() => __importStar(require(path_1.default.join(process.cwd(), src))));
-    ejs_1.default.renderFile(template, { components: data.components }, {}, (_err, str) => {
-        fs_1.default.writeFile(filename, str, (err) => {
-            if (err)
-                console.error(err);
+const renderFile = (src, template, filename) => {
+    return new Promise((resolve, reject) => {
+        Promise.resolve().then(() => __importStar(require(path_1.default.join(process.cwd(), src)))).then((data) => {
+            ejs_1.default.renderFile(template, { components: data.components }, {}, (_err, str) => {
+                fs_1.default.writeFile(filename, str, (err) => {
+                    err ? reject(err) : resolve();
+                });
+            });
         });
+        reject();
     });
-});
+};
 exports.renderFile = renderFile;
