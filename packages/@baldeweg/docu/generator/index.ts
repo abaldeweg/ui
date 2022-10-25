@@ -11,8 +11,6 @@ const renderFile = (src: string, template: string, filename: string) => {
         })
       })
     })
-    reject()
-
   })
 }
 
