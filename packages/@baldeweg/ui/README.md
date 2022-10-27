@@ -73,8 +73,8 @@ html {
 
 ## Components
 
-[Components](https://github.com/abaldeweg/ui/blob/main/packages/docu/components.md)
+[Components](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/docu/components.md)
 
 ## Composables
 
-[Composables](https://github.com/abaldeweg/ui/blob/main/packages/docu/composables.md)
+[Composables](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/docu/composables.md)
