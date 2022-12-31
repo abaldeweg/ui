@@ -20,7 +20,7 @@
     "@vue/eslint-config-prettier": "7.0.0",
     "@vueuse/core": "9.9.0",
     "axios": "1.2.2",
-    "eslint": "8.30.0",
+    "eslint": "8.31.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-vue": "9.8.0",
     "jsdom": "20.0.3",
