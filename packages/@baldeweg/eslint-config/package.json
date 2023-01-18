@@ -7,7 +7,7 @@
   "peerDependencies": {
     "@vue/eslint-config-prettier": "7.0.0",
     "eslint": "8.31.0",
-    "eslint-plugin-import": "2.27.4",
+    "eslint-plugin-import": "2.27.5",
     "eslint-plugin-vue": "9.9.0"
   },
   "publishConfig": {
