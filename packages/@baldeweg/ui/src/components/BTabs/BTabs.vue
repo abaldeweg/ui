@@ -26,7 +26,6 @@ defineProps({
 <style scoped>
 .tabs {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 </style>
