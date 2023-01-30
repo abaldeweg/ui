@@ -6,6 +6,8 @@
 - Revamp `BFlex`, Remove `BFlexRow` and `BFlexCol`
 - Remove subgroup and meta in BList
 - Remove `useTheme`, use `useColorScheme` instead
+- Remove msw
+- Fix scrolling for tabs
 
 ## v0.6.0
 
