@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/ui",
-  "version": "0.7.0-alpha.2",
+  "version": "0.7.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@baldeweg/docu": "./packages/@baldeweg/docu",
-    "@baldeweg/eslint-config": "^0.7.0-alpha.2",
+    "@baldeweg/eslint-config": "^0.7.0",
     "@rushstack/eslint-patch": "1.2.0",
     "@vitejs/plugin-vue": "4.0.0",
     "@vue/eslint-config-prettier": "7.0.0",
