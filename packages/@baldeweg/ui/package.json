@@ -13,7 +13,7 @@
     "vue": "3.2.45"
   },
   "devDependencies": {
-    "@baldeweg/docu": "./packages/@baldeweg/docu",
+    "@baldeweg/docu": "0.7.0",
     "@baldeweg/eslint-config": "^0.7.0",
     "@rushstack/eslint-patch": "1.2.0",
     "@vitejs/plugin-vue": "4.0.0",
