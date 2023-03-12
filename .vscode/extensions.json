@@ -1,8 +1,6 @@
 {
   "recommendations": [
-    "lokalise.i18n-ally",
-    "mikestead.dotenv",
-    "editorconfig.editorconfig",
-    "Vue.volar"
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode.remote-explorer"
   ]
 }
