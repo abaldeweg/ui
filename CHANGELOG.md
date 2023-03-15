@@ -4,6 +4,7 @@
 
 - template-vue is now part of this project
 - Loading locales was revisited <https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/template-vue/src/i18n.js>
+- Remove $t from unit.setup.js
 
 ## v0.7.0
 
