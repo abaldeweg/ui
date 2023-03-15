@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.8.0
+
+- template-vue is now part of this project
+- Loading locales was revisited <https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/template-vue/src/i18n.js>
+
 ## v0.7.0
 
 - Rename `canHide` to `hidable` in BAlert
