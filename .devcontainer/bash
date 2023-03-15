@@ -1,0 +1,62 @@
+#!/bin/bash
+
+PATH="$(yarn global bin):$PATH"
+
+alias push='git push origin --follow-tags'
+alias ws="yarn workspace"
+
+function tag()
+{
+  if [[ $(git status -s) ]];
+    then
+      echo "Git repo has uncommitted changes."
+      git status -s;
+    else
+      git tag -a "v${1}" -m "v${1}";
+  fi
+}
+
+function watch ()
+{
+  if [ -f composer.json ]
+    then
+      symfony server:start --no-tls
+  fi
+  if [ -f yarn.lock ]
+    then
+      yarn dev
+  fi
+  if [ -f package-lock.json ]
+    then
+      npm run dev
+  fi
+  if [ -f docker-compose.yml ]
+    then
+      sudo docker-compose up
+  fi
+  if [ -f go.sum ]
+    then
+      go run ./
+  fi
+}
+
+function build ()
+{
+  if [ -f composer.json ]
+    then
+      vendor/bin/php-cs-fixer fix
+      bin/phpunit
+  fi
+  if [ -f yarn.lock ]
+    then
+      yarn build
+  fi
+  if [ -f package-lock.json ]
+    then
+      npm run build
+  fi
+  if [ -f .goreleaser.yaml ]
+    then
+      goreleaser build --snapshot --rm-dist
+  fi
+}
