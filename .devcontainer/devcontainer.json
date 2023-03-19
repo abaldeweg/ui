@@ -21,7 +21,8 @@
 				"donjayamanne.githistory",
 				"DavidAnson.vscode-markdownlint",
 				"christian-kohler.npm-intellisense",
-				"ZixuanChen.vitest-explorer"
+				"ZixuanChen.vitest-explorer",
+				"astro-build.astro-vscode"
 			]
 		}
 	},
