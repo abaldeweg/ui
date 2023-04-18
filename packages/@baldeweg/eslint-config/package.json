@@ -6,9 +6,9 @@
   "license": "MIT",
   "peerDependencies": {
     "@vue/eslint-config-prettier": "7.1.0",
-    "eslint": "8.36.0",
+    "eslint": "8.38.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-vue": "9.9.0"
+    "eslint-plugin-vue": "9.11.0"
   },
   "publishConfig": {
     "access": "public"
