@@ -64,7 +64,7 @@ const startRipple = () => {
     @click="click($event)"
     ref="el"
   >
-    <span class="ripple" v-show="isRippleActive" ref="el2" />
+    <span class="ripple" v-show="isRippleActive" ref="el2" v-if="ripple" />
     <slot />
   </button>
 </template>
