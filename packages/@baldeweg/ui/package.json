@@ -54,5 +54,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/abaldeweg/ui.git"
-  }
+  },
+  "type": "module"
 }
