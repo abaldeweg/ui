@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/vue": "2.1.1",
     "@baldeweg/ui": "0.7.2",
-    "astro": "2.3.4",
+    "astro": "2.4.0",
     "vue": "3.2.30"
   },
   "license": "MIT",
