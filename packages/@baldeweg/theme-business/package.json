@@ -13,7 +13,7 @@
     "@astrojs/vue": "2.1.1",
     "@baldeweg/ui": "0.7.2",
     "astro": "2.4.5",
-    "vue": "3.3.2"
+    "vue": "3.3.3"
   },
   "license": "MIT",
   "publishConfig": {
