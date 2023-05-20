@@ -32,7 +32,7 @@ defineProps({
   padding-top: 20px;
 }
 .header {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: var(--color-neutral-06);
 }
 .author {

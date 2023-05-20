@@ -65,7 +65,7 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
   padding-left: 10px;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 1em;
+  font-size: 1rem;
   color: var(--color-neutral-10);
 }
 .buttons {

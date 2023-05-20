@@ -75,7 +75,7 @@ const startRipple = () => {
   position: relative;
   border-radius: 10px;
   font-family: var(--font-sans);
-  font-size: 1em;
+  font-size: 1rem;
   margin: 0;
   text-align: center;
   text-decoration: none;

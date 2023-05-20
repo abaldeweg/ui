@@ -122,13 +122,13 @@ h6 {
   word-break: break-all;
 }
 h1 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 h3 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 table {
   width: 100%;
@@ -177,13 +177,13 @@ td:nth-last-child(1) {
 
 @media all and (min-width: 600px) {
   h1 {
-    font-size: 2.1em;
+    font-size: 2.1rem;
   }
   h2 {
-    font-size: 1.6em;
+    font-size: 1.6rem;
   }
   h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 </style>

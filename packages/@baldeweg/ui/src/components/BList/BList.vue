@@ -158,7 +158,7 @@ defineProps({
 }
 .title {
   font-family: var(--font-sans);
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: normal;
   cursor: pointer;
   margin: 0;

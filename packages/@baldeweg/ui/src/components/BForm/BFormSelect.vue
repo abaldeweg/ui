@@ -38,7 +38,7 @@ defineProps({
   width: 100%;
   padding: 5px 10px;
   margin: 0;
-  font-size: 1em;
+  font-size: 1rem;
   color: var(--color-neutral-10);
 }
 .select:hover,
