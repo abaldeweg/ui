@@ -16,7 +16,5 @@
     "vue": "3.3.4"
   },
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+  "private": true
 }
