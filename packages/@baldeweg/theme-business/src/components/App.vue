@@ -1,6 +1,6 @@
 <template>
   <BApp id="app">
-    <BContainer size="m">
+    <BContainer size="s">
       <slot/>
     </BContainer>
   </BApp>
