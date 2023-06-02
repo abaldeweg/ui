@@ -1,6 +1,6 @@
 # Name
 
-Description
+Template for new VueJS projects.
 
 ## Requirements
 
