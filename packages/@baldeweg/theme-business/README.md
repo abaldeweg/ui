@@ -9,4 +9,4 @@ Theme for Astro
 
 ## Get Started
 
-Install the package with ```yarn add @baldeweg/theme-business```.
+First, install degit with `yarn global add degit` and then download the repo `degit https://github.com/abaldeweg/ui/packages/@baldeweg/theme-business`.
