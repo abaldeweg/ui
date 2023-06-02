@@ -2,7 +2,7 @@
 
 Install the config
 
-```bash
+```shell
 yarn add @baldeweg/eslint-config
 ```
 
