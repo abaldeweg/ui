@@ -8,7 +8,7 @@
 
 <style>
 html {
-  --masthead-top-height: 0;
+  --masthead-top-height: 60px;
   --bottom-nav-height: 0;
 }
 </style>
