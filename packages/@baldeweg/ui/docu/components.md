@@ -558,7 +558,7 @@ Props
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
 |label |String|||
-|moelValue |Boolean|false||
+|modelValue |Boolean|false||
 
 Events
 
