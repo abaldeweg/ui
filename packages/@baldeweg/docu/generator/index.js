@@ -32,7 +32,7 @@ const ejs_1 = __importDefault(require("ejs"));
 const path_1 = __importDefault(require("path"));
 const renderFile = (src, template, filename) => {
     return new Promise((resolve, reject) => {
-        Promise.resolve().then(() => __importStar(require(path_1.default.join(process.cwd(), src)))).then((data) => {
+        Promise.resolve(`${path_1.default.join(process.cwd(), src)}`).then(s => __importStar(require(s))).then((data) => {
             ejs_1.default.renderFile(template, { components: data.components }, {}, (_err, str) => {
                 fs_1.default.writeFile(filename, str, (err) => {
                     err ? reject(err) : resolve();
