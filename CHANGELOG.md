@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.9.0
+
+- Use `prefer-color-scheme`, remove `.dark` class <https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/src/components/BApp/BApp.vue>
+- Remove `useColorScheme` composable
+
 ## v0.8.0
 
 - template-vue is now part of this project

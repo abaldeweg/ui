@@ -2,11 +2,9 @@
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useDraggable } from '@vueuse/core'
-import { useColorScheme } from './composables/useColorScheme.js'
 import { useLocale } from './composables/useLocale.js'
 
 useLocale()
-const { dark } = useColorScheme()
 
 const el = ref(null)
 
@@ -23,14 +21,6 @@ const { style } = useDraggable(el, {
       <p>
         <RouterLink :to="{ name: 'index' }">Home</RouterLink>
       </p>
-      <BForm @submit.prevent>
-        <BFormGroup>
-          <BFormItem>
-            <input type="checkbox" id="dark" v-model="dark" />
-            <BFormLabel for="dark">Dark Mode</BFormLabel>
-          </BFormItem>
-        </BFormGroup>
-      </BForm>
     </div>
   </BApp>
 </template>

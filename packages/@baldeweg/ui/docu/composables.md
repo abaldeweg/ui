@@ -8,7 +8,6 @@ Currently available composables:
 - useTitle
 - useLocale
 - useRequest
-- useColorScheme
 
 ## Example for BToast
 
