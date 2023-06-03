@@ -3044,10 +3044,10 @@ assertion-error@^1.1.0:
   resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
   integrity sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==
 
-astro@2.5.6:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.5.6.tgz#e90cdcc6aeac4d5524c877d86991d2837b1b8df8"
-  integrity sha512-IdgEnjP8kqLEYgNbWcrRyqR4tUq1iEXI3AZ5RqV9PTaDd4l9H+UmN0oDjrzG8VTmCdpfSHGlQEr+0qkGPoIiOw==
+astro@2.5.7:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.5.7.tgz#33d3ce88c083f9c699a437cf56be3ddb6c44eb42"
+  integrity sha512-qYKMIN4tXAOAsm10vU4f+Q7LfC05JmEbQiJmSBqIEhp+wnQcEUFkGLrHMSsps3oBzMtjErUdDDW5tGJcn5eVlA==
   dependencies:
     "@astrojs/compiler" "^1.4.0"
     "@astrojs/language-server" "^1.0.0"
@@ -9855,10 +9855,10 @@ vite-node@0.31.4:
     picocolors "^1.0.0"
     vite "^3.0.0 || ^4.0.0"
 
-vite-plugin-pwa@0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.16.1.tgz#3853a951d8758a60253415867b351b11f6e5d845"
-  integrity sha512-OdD+ck+jiCkeUQPwXCNttR62ZC2On4wasn+03Qyx0x1bLGv1IXgl59WexpWMbgKD7jZVjozWGcy3etRJJzwsvA==
+vite-plugin-pwa@0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.16.2.tgz#fa6e927fbbce59a168431210015b8c7a9921c5d8"
+  integrity sha512-MB/0UjZ06w8l6PqMehmJvejCHOvDT563LSo/CLxn0MkT6+Qk0TeytAeAWyn2S/dwXVIUYYmr8s67HJiSA7dNLw==
   dependencies:
     debug "^4.3.4"
     fast-glob "^3.2.12"
