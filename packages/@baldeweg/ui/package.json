@@ -31,7 +31,7 @@
     "vite": "4.4.2",
     "vite-plugin-webfont-dl": "3.7.6",
     "vitest": "0.32.2",
-    "vue-router": "4.2.2"
+    "vue-router": "4.2.4"
   },
   "files": [
     "dist"
