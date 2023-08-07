@@ -48,6 +48,7 @@ html {
   font-size: 18px;
   padding: 0;
   margin: 0;
+  scrollbar-gutter: stable;
 }
 @media (prefers-color-scheme: dark) {
   html {
