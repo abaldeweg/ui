@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "packages/@baldeweg/*"
   ],
   "version": "0.8.2",
   "npmClient": "yarn"
