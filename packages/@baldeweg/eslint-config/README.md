@@ -9,5 +9,5 @@ yarn add @baldeweg/eslint-config
 Add to your eslint config.
 
 ```js
-extends: ['@baldeweg/eslint-config'],
+extends: ['@baldeweg/eslint-config']
 ```
