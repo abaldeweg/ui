@@ -27,7 +27,7 @@
     "lodash": "4.17.21",
     "mkdirp": "3.0.1",
     "prettier": "3.0.3",
-    "start-server-and-test": "2.0.0",
+    "start-server-and-test": "2.0.1",
     "vite": "4.4.9",
     "vite-plugin-webfont-dl": "3.7.6",
     "vitest": "0.34.5",
