@@ -30,7 +30,7 @@
     "start-server-and-test": "2.0.1",
     "vite": "4.4.9",
     "vite-plugin-webfont-dl": "3.7.6",
-    "vitest": "0.34.5",
+    "vitest": "0.34.6",
     "vue-router": "4.2.5"
   },
   "files": [
