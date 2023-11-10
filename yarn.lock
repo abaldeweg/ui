@@ -1813,10 +1813,10 @@
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.3.5.tgz#ae69bcbb1bebb68c4ac0b11e9d8ed04526b3562b"
   integrity sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==
 
-"@types/ejs@3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@types/ejs/-/ejs-3.1.4.tgz#b9919c89767493b6443f85994ae6be6e49011b5c"
-  integrity sha512-fnM/NjByiWdSRJRrmGxgqOSAnmOnsvX1QcNYk5TVyIIj+7ZqOKMb9gQa4OIl/lil2w/8TiTWV+nz3q8yqxez/w==
+"@types/ejs@3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@types/ejs/-/ejs-3.1.5.tgz#49d738257cc73bafe45c13cb8ff240683b4d5117"
+  integrity sha512-nv+GSx77ZtXiJzwKdsASqi+YQ5Z7vwHsTP0JY2SiQgjGckkBRKZnk8nIM+7oUZ1VCtuTz0+By4qVR7fqzp/Dfg==
 
 "@types/estree@0.0.39":
   version "0.0.39"
