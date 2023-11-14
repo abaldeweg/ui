@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/template-vue",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
