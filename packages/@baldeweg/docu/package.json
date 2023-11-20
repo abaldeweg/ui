@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/ejs": "3.1.5",
-    "typescript": "5.2.2"
+    "typescript": "5.3.2"
   },
   "publishConfig": {
     "access": "public"
