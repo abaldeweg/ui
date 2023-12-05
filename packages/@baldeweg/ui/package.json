@@ -18,7 +18,7 @@
     "@rushstack/eslint-patch": "1.6.0",
     "@vitejs/plugin-vue": "4.5.0",
     "@vue/eslint-config-prettier": "8.0.0",
-    "@vueuse/core": "10.6.1",
+    "@vueuse/core": "10.7.0",
     "axios": "1.6.2",
     "eslint": "8.54.0",
     "eslint-plugin-import": "2.29.0",
