@@ -10,7 +10,7 @@ Template for new VueJS projects.
 
 ## Get Started
 
-First, install degit with `yarn global add degit` and then download the repo `degit https://github.com/abaldeweg/ui/packages/@baldeweg/template_vue`.
+First, install degit with `yarn global add degit` and then download the repo `degit https://github.com/abaldeweg/ui/ packages/@baldeweg/template_vue`.
 
 ## Env Vars
 
