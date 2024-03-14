@@ -21,7 +21,7 @@
 				"donjayamanne.githistory",
 				"DavidAnson.vscode-markdownlint",
 				"christian-kohler.npm-intellisense",
-				"ZixuanChen.vitest-explorer"
+				"vitest.explorer"
 			]
 		}
 	},
