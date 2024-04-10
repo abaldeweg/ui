@@ -18,7 +18,7 @@ yarn add @baldeweg/ui
 Then you can add this to your `main.js`.
 
 ```js
-import { createUi } from 'ui'
+import { createUi } from '@baldeweg/ui'
 import '@baldeweg/ui/styles'
 
 const ui = createUi()
