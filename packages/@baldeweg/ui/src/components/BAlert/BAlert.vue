@@ -10,6 +10,7 @@ const props = defineProps({
     default: 'neutral',
   },
   closable: Boolean,
+  elevated: Boolean
 })
 
 const showAlert = ref(false)
@@ -17,7 +18,8 @@ const alertClass = {
   type_error: props.type === 'error',
   type_warning: props.type === 'warning',
   type_success: props.type === 'success',
-  type_info: props.type === 'info'
+  type_info: props.type === 'info',
+  isElevated: props.elevated
 }
 </script>
 
@@ -35,7 +37,6 @@ const alertClass = {
   background: var(--color-neutral-00);
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 3px 3px 3px var(--color-neutral-02), -3px -3px 3px var(--color-neutral-02);
 }
 
 .type_error {
@@ -52,5 +53,9 @@ const alertClass = {
 
 .type_info {
   border: 2px solid var(--color-accent-blue-10);
+}
+
+.isElevated {
+  box-shadow: 3px 3px 3px var(--color-neutral-02), -3px -3px 3px var(--color-neutral-02);
 }
 </style>

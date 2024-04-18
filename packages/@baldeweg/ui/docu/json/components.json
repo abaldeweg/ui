@@ -24,6 +24,13 @@
             "Boolean"
           ],
           "default": "false"
+        },
+        {
+          "name": "elevated",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
         }
       ],
       "slots": [

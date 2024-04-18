@@ -7,9 +7,9 @@ useTitle({ title: 'BAlert - @baldeweg/ui' })
 <template>
   <div :style="{ margin: '20px' }">
     <BAlert>Message</BAlert>
-    <BAlert type="error" closable>Message</BAlert>
-    <BAlert type="warning" closable>Message</BAlert>
-    <BAlert type="success" closable>Message</BAlert>
-    <BAlert type="info" closable>Message</BAlert>
+    <BAlert type="error" closable elevated>Message</BAlert>
+    <BAlert type="warning" closable elevated>Message</BAlert>
+    <BAlert type="success" closable elevated>Message</BAlert>
+    <BAlert type="info" closable elevated>Message</BAlert>
   </div>
 </template>
