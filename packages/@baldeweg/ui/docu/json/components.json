@@ -19,7 +19,7 @@
           "default": "neutral"
         },
         {
-          "name": "hidable",
+          "name": "closable",
           "type": [
             "Boolean"
           ],

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-defineProps({
+const props = defineProps({
   type: {
     type: String,
     validator: (value) => {
@@ -9,20 +9,21 @@ defineProps({
     },
     default: 'neutral',
   },
-  hidable: Boolean,
+  closable: Boolean,
 })
 
-const hide = ref(false)
+const showAlert = ref(false)
+const alertClass = {
+  type_error: props.type === 'error',
+  type_warning: props.type === 'warning',
+  type_success: props.type === 'success',
+  type_info: props.type === 'info'
+}
 </script>
 
 <template>
-  <div class="alert" :class="{
-    type_error: type === 'error',
-    type_warning: type === 'warning',
-    type_success: type === 'success',
-    type_info: type === 'info'
-  }" v-if="!hide">
-    <BIcon type="close" :size="20" @click="hide = true" :style="{ float: 'right' }" v-if="hidable" />
+  <div class="alert" :class="alertClass" v-if="!showAlert">
+    <BIcon type="close" :size="20" @click="showAlert = true" :style="{ float: 'right' }" v-if="closable" />
     <slot />
   </div>
 </template>
