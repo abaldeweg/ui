@@ -13,7 +13,8 @@
             "neutral",
             "error",
             "warning",
-            "success"
+            "success",
+            "info"
           ],
           "default": "neutral"
         },

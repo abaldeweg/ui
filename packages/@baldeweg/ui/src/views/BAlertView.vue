@@ -10,5 +10,6 @@ useTitle({ title: 'BAlert - @baldeweg/ui' })
     <BAlert type="error" hidable>Message</BAlert>
     <BAlert type="warning" hidable>Message</BAlert>
     <BAlert type="success" hidable>Message</BAlert>
+    <BAlert type="info" hidable>Message</BAlert>
   </div>
 </template>

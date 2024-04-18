@@ -35,6 +35,9 @@ html {
   --color-accent-yellow-10: #f1d302;
   --color-accent-yellow-05: #f8eb8c;
   --color-accent-yellow-00: #fdfbe8;
+  --color-accent-blue-10: #1F75FF;
+  --color-accent-blue-05: #85B4FF;
+  --color-accent-blue-00: #EBF2FF;
   /* Font */
   --font-sans: 'Open Sans', 'Liberation Sans', 'Helvetica Neue', Arial;
   --font-serif: Georgia, Constantia, 'DejaVu Serif', 'Times New Roman';
