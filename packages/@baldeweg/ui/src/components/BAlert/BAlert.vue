@@ -40,9 +40,10 @@ const hide = ref(false)
 .alert {
   border-radius: 10px;
   border: 2px solid var(--color-neutral-08);
-  background: var(--color-neutral-02);
+  background: var(--color-neutral-00);
   padding: 20px;
   margin: 20px 0;
+  box-shadow: 3px 3px 3px var(--color-neutral-02), -3px -3px 3px var(--color-neutral-02);
 }
 .type_error {
   border: 2px solid var(--color-accent-red-10);
