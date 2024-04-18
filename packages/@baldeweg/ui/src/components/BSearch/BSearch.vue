@@ -5,6 +5,7 @@ defineProps({
   filter: Boolean,
   branded: Boolean,
   focus: Boolean,
+  reset: Boolean
 })
 
 defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
@@ -25,7 +26,7 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
       @input="$emit('update:modelValue', $event.target.value)"
     />
     <div class="buttons">
-      <button type="reset" class="button" @click="$emit('reset')">
+      <button type="reset" class="button" @click="$emit('reset')" v-if="reset">
         <BIcon type="close" :size="18" />
       </button>
       <button

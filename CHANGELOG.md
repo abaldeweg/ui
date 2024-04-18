@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.10.0
+
+- In BSearch its possible to hide the reset button
+
 ## v0.9.0
 
 - Use `prefer-color-scheme`, remove `.dark` class <https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/src/components/BApp/BApp.vue>
@@ -45,7 +49,7 @@ import { useI18n } from 'vue-i18n'
 
 - Remove `useJWTAuth` and `useGCPAuth` composables
 
-https://github.com/abaldeweg/ui/tree/v0.4.2/packages/%40baldeweg/ui/src/composables
+<https://github.com/abaldeweg/ui/tree/v0.4.2/packages/%40baldeweg/ui/src/composables>
 
 ## v0.4.0
 

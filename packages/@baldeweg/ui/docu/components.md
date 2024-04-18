@@ -500,6 +500,7 @@ Props
 |filter |Boolean|false||Shows a filter icon.
 |branded |Boolean|false||
 |focus |Boolean|false||
+|reset |Boolean|false||
 
 Events
 

@@ -20,6 +20,7 @@ const log = (msg) => {
       :branded="branded"
       focus
       v-model="term"
+      reset
       @update:modelValue="log('search')"
       @submit.prevent="log('submit')"
       @filter="log('filter')"

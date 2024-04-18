@@ -956,6 +956,13 @@
             "Boolean"
           ],
           "default": "false"
+        },
+        {
+          "name": "reset",
+          "type": [
+            "Boolean"
+          ],
+          "default": "false"
         }
       ],
       "events": [
