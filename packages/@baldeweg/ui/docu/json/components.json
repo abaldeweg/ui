@@ -1166,7 +1166,8 @@
             "bottom",
             "left",
             "right"
-          ]
+          ],
+          "default": "top"
         },
         {
           "name": "text",
