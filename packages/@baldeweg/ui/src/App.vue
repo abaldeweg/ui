@@ -9,7 +9,7 @@ useLocale()
 const el = ref(null)
 const handle = ref(null)
 
-const persistPosition = (pos) =>{
+const persistPosition = (pos) => {
   localStorage.setItem('admin_position', JSON.stringify(pos))
 }
 
@@ -46,12 +46,14 @@ const { style } = useDraggable(el, {
   box-sizing: border-box;
   z-index: 99999;
 }
+
 .admin_header {
   border-radius: 10px 10px 0 0;
   background: var(--color-neutral-02);
   padding: 5px 20px;
   cursor: move;
 }
+
 .admin_body {
   padding: 20px;
 }
