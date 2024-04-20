@@ -1,88 +1,135 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-
 const props = defineProps({
   position: {
     type: String,
     validator(value) {
       return ['top', 'bottom', 'left', 'right'].includes(value)
     },
+    default: 'top'
   },
   text: String,
 })
 
-const spacing = ref(10)
-const item = ref(null)
-const tooltip = ref(null)
-
-const calcTop = () => {
-  let top = tooltip.value.getBoundingClientRect().y
-  const position = props.position
-
-  item.value.style.display = 'block'
-  const itemHeight = item.value.offsetHeight
-  item.value.style.display = null
-
-  if ('top' === position) {
-    return top - spacing.value - itemHeight
-  }
-  if ('bottom' === position) {
-    return top + spacing.value + tooltip.value.offsetHeight
-  }
-  if ('left' === position || 'right' === position) {
-    return top + tooltip.value.offsetHeight / 2 - itemHeight / 2
-  }
-
-  return top
+const positionClass = {
+  'position_top': props.position === 'top',
+  'position_bottom': props.position === 'bottom',
+  'position_left': props.position === 'left',
+  'position_right': props.position === 'right',
 }
-
-const calcLeft = () => {
-  let left = tooltip.value.getBoundingClientRect().x
-  const position = props.position
-
-  item.value.style.display = 'block'
-  const itemWidth = item.value.offsetWidth
-  item.value.style.display = null
-
-  if ('top' === position || 'bottom' === position) {
-    return left + tooltip.value.offsetWidth / 2 - itemWidth / 2
-  }
-  if ('left' === position) {
-    return left - spacing.value - itemWidth
-  }
-  if ('right' === position) {
-    return left + spacing.value + tooltip.value.offsetWidth
-  }
-
-  return left
-}
-
-onMounted(() => {
-  item.value.style.top = calcTop() + 'px'
-  item.value.style.left = calcLeft() + 'px'
-})
 </script>
 
 <template>
-  <span class="tooltip" ref="tooltip">
-    <div class="item" ref="item">
-      {{ text }}
-    </div>
-    <slot />
-  </span>
+  <div class="tooltip">
+    <slot /><span class="text" :class="positionClass">{{ text }}</span>
+  </div>
 </template>
 
 <style scoped>
-.tooltip:hover .item {
-  display: block;
+.tooltip {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
 }
-.item {
-  display: none;
-  position: fixed;
-  border: 1px solid var(--color-neutral-02);
+
+.text {
   border-radius: 10px;
-  background: var(--color-neutral-00);
+  background: var(--color-neutral-02);
+  padding: 10px;
   color: var(--color-neutral-10);
-  padding: 5px 10px;
+  text-align: center;
+  line-height: initial;
+  opacity: 0;
+  transition: opacity .3s;
+  visibility: hidden;
+}
+
+.position_top,
+.position_bottom,
+.position_left,
+.position_right {
+  position: absolute;
+  z-index: 1;
+}
+
+.position_top,
+.position_bottom {
+  width: 250px;
+  left: 50%;
+  margin-left: -135px;
+}
+
+.position_top {
+  bottom: 100%;
+  margin-bottom: 10px;
+}
+
+.position_bottom {
+  top: 100%;
+  margin-top: 10px;
+}
+
+.position_left,
+.position_right {
+  height: 30px;
+  min-width: 250px;
+  bottom: 50%;
+  margin-bottom: -25px;
+}
+
+.position_left {
+  right: 100%;
+  margin-right: 10px;
+}
+
+.position_right {
+  left: 100%;
+  margin-left: 10px;
+}
+
+.text.position_top::after,
+.text.position_bottom::after,
+.text.position_left::after,
+.text.position_right::after {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+}
+
+.text.position_top::after,
+.text.position_bottom::after {
+  left: 50%;
+  margin-left: -10px;
+}
+
+.text.position_top::after {
+  top: 100%;
+  border-color: var(--color-neutral-02) transparent transparent transparent;
+}
+
+.text.position_bottom::after {
+  bottom: 100%;
+  border-color: transparent transparent var(--color-neutral-02) transparent;
+}
+
+.text.position_left::after,
+.text.position_right::after {
+  top: 50%;
+  margin-top: -10px;
+}
+
+.text.position_left::after {
+  left: 100%;
+  border-color: transparent transparent transparent var(--color-neutral-02);
+}
+
+.text.position_right::after {
+  right: 100%;
+  border-color: transparent var(--color-neutral-02) transparent transparent;
+}
+
+.tooltip:hover .text {
+  visibility: visible;
+  opacity: 1;
 }
 </style>
