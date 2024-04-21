@@ -6,8 +6,9 @@ Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|type |String|neutral|neutral, error, warning, success|
-|hidable |Boolean|false||
+|type |String|neutral|neutral, error, warning, success, info|
+|closable |Boolean|false||
+|elevated |Boolean|false||
 
 Slots
 
@@ -625,7 +626,7 @@ Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|position |String||top, bottom, left, right|
+|position |String|top|top, bottom, left, right|
 |text |String|||
 
 Slots
