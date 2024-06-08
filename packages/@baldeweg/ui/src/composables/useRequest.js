@@ -9,13 +9,15 @@ const config = ref({
   },
 })
 
-export function useRequest() {
+export function useRequest(localConfig) {
+  let mergedConfig = { ...config.value, localConfig }
+
   const setAuthHeader = (token) => {
-    config.value.headers['Authorization'] = 'Bearer ' + token
+    mergedConfig.headers['Authorization'] = 'Bearer ' + token
   }
 
   const request = (method, url, data, params) => {
-    return axios.create(config.value).request({
+    return axios.create(mergedConfig).request({
       method,
       url,
       data,
@@ -23,5 +25,5 @@ export function useRequest() {
     })
   }
 
-  return { config, setAuthHeader, request }
+  return { config, localConfig, setAuthHeader, request }
 }
