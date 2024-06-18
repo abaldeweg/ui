@@ -10,7 +10,7 @@ const config = ref({
 })
 
 export function useRequest(localConfig) {
-  let mergedConfig = { ...config.value, localConfig }
+  let mergedConfig = { ...config.value, ...localConfig }
 
   const setAuthHeader = (token) => {
     mergedConfig.headers['Authorization'] = 'Bearer ' + token
