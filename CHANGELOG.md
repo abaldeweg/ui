@@ -62,11 +62,11 @@ import { useI18n } from 'vue-i18n'
 import { useRequest, useGCPAuth } from '@baldeweg/ui'
 
 const { config, setAuthHeader } = useRequest()
-config.value.baseURL = import.meta.env.VUE_APP_API
+config.value.baseURL = import.meta.env.VITE_API
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VUE_APP_API_KEY,
-  authDomain: import.meta.env.VUE_APP_AUTH_DOMAIN,
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
 }
 
 const { login, token } = useGCPAuth(firebaseConfig)
@@ -112,7 +112,7 @@ export default createI18n({
 })
 ```
 
-- Env var `VUE_APP_I18N_LOCALE` is deprecated
+- Env var `VITE_I18N_LOCALE` is deprecated
 - The `useTheme` composable is deprecated
 - New `useColorScheme` composable. You can set dark mode with the dark attribute. After that a `.dark` class will be set to the `html` element.
 - New `useJWTAuth` composable. Make sure to set the base url for request.
@@ -121,7 +121,7 @@ export default createI18n({
 import { useRequest, useJWTAuth } from '@baldeweg/ui'
 
 const { config, setAuthHeader } = useRequest()
-config.value.baseURL = import.meta.env.VUE_APP_API
+config.value.baseURL = import.meta.env.VITE_API
 
 const { token, watchToken } = useJWTAuth()
 
@@ -136,8 +136,8 @@ watchToken()
 import { useGCPAuth } from '../useGCPAuth.js'
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VUE_APP_API_KEY,
-  authDomain: import.meta.env.VUE_APP_AUTH_DOMAIN,
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
 }
 
 const { login } = useGCPAuth(firebaseConfig)
@@ -157,7 +157,7 @@ import Cookies from 'js-cookie'
 
 const { config, setAuthHeader, request } = useRequest()
 
-config.value.baseURL = import.meta.env.VUE_APP_API
+config.value.baseURL = import.meta.env.VITE_API
 setAuthHeader(Cookies.get('token'))
 ```
 
@@ -176,7 +176,7 @@ rules: {
 }
 ```
 
-- [web-demo] Env var `VUE_APP_I18N_FALLBACK_LOCALE` is deprecated and can be removed
+- [web-demo] Env var `VITE_I18N_FALLBACK_LOCALE` is deprecated and can be removed
 
 ## Migrating from @baldeweg/components
 

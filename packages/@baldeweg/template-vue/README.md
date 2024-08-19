@@ -14,8 +14,8 @@ First, install degit with `yarn global add degit` and then download the repo `de
 
 ## Env Vars
 
-- VUE_APP_API - URL to the backend
-- VUE_APP_BASE_URL - The Base URL, in case the app is installed in a subdirectory
+- VITE_API - URL to the backend
+- VITE_BASE_URL - The Base URL, in case the app is installed in a subdirectory
 
 ## Architecture
 

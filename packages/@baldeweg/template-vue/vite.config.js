@@ -42,14 +42,14 @@ export default defineConfig(({ mode }) => {
         'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
       ]),
     ],
-    base: env.VUE_APP_BASE_URL,
+    base: env.VITE_BASE_URL,
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
       dedupe: ['vue'],
     },
-    envPrefix: ['VITE_', 'VUE_APP_'],
+    envPrefix: ['VITE_'],
     test: {
       setupFiles: ['unit.setup.js'],
     },
