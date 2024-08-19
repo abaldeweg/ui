@@ -6,7 +6,6 @@
     "build": "vite build",
     "test:unit": "vitest --environment jsdom",
     "test:unit:ci": "vitest run --environment jsdom",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "docu": "docu ./docu/json/components.json ./docu/templates/component.ejs ./docu/components.md"
   },
   "dependencies": {
