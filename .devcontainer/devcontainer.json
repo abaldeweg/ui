@@ -5,9 +5,7 @@
 	},
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/EliiseS/devcontainer-features/bash-profile:1": {
-			"command": ". /etc/bash_custom"
-		}
+    	"ghcr.io/abaldeweg/devcontainer_features/bash:latest": {}
 	},
 	"customizations": {
 		"vscode": {
