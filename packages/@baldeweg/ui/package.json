@@ -21,7 +21,7 @@
     "axios": "1.7.7",
     "eslint": "9.9.1",
     "eslint-plugin-import": "2.30.0",
-    "eslint-plugin-vue": "9.27.0",
+    "eslint-plugin-vue": "9.28.0",
     "jsdom": "25.0.0",
     "lodash": "4.17.21",
     "mkdirp": "3.0.1",
