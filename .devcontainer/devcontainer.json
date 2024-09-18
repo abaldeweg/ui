@@ -1,8 +1,6 @@
 {
 	"name": "Ubuntu",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {},
     	"ghcr.io/abaldeweg/devcontainer_features/bash:latest": {}
