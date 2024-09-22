@@ -79,6 +79,8 @@ const slots = useSlots()
 }
 .content {
   flex-grow: 1;
+  max-height: calc(100vh);
+  overflow-y: auto;
 }
 .footer {
   border-top: 1px solid var(--color-neutral-02);
