@@ -9,7 +9,7 @@ const position = ref('left')
 </script>
 
 <template>
-  <BPanel :visible="visible" :position="position" @close="visible = false">
+  <BPanel :visible="visible" :position="position" @close="visible = false" width="300px">
     <template #header>header</template>
     <template #footer>footer</template>
     <BContainer>

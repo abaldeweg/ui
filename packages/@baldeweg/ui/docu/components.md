@@ -460,6 +460,7 @@ Props
 |----|----|-------|--------------|-----------
 |visible |Boolean|false||
 |position |String|left|left, right|
+|width |String|300px||
 
 Slots
 

@@ -885,6 +885,13 @@
             "right"
           ],
           "default": "left"
+        },
+        {
+          "name": "width",
+          "type": [
+            "String"
+          ],
+          "default": "300px"
         }
       ],
       "slots": [

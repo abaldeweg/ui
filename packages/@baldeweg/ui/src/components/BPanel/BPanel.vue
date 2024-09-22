@@ -10,6 +10,10 @@ defineProps({
       return ['left', 'right'].includes(value)
     },
   },
+  width: {
+    type: String,
+    default: '300px'
+  }
 })
 
 defineEmits(['close'])
@@ -31,6 +35,7 @@ const slots = useSlots()
           position_right: position === 'right',
         }"
         v-if="visible"
+        :style="{ maxWidth: width }"
       >
         <div class="header" v-if="slots.header"><slot name="header" /></div>
         <div class="content"><slot /></div>
@@ -58,7 +63,7 @@ const slots = useSlots()
   top: 0;
   bottom: 0;
   background: var(--color-neutral-00);
-  width: 300px;
+  width: calc(100% - 20px);
   z-index: 3;
 }
 .container.position_left {
