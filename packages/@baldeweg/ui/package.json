@@ -9,7 +9,7 @@
     "docu": "docu ./docu/json/components.json ./docu/templates/component.ejs ./docu/components.md"
   },
   "dependencies": {
-    "vue": "3.5.8"
+    "vue": "3.5.9"
   },
   "devDependencies": {
     "@baldeweg/docu": "0.10.8",
