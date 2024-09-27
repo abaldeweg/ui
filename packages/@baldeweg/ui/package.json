@@ -27,7 +27,7 @@
     "mkdirp": "3.0.1",
     "prettier": "3.3.3",
     "start-server-and-test": "2.0.8",
-    "vite": "5.4.6",
+    "vite": "5.4.8",
     "vite-plugin-webfont-dl": "3.9.5",
     "vitest": "2.1.1",
     "vue-router": "4.4.5"
