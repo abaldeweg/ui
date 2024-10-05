@@ -16,7 +16,7 @@
     "@baldeweg/eslint-config": "0.10.9",
     "@rushstack/eslint-patch": "1.10.4",
     "@vitejs/plugin-vue": "5.1.4",
-    "@vue/eslint-config-prettier": "9.0.0",
+    "@vue/eslint-config-prettier": "10.0.0",
     "@vueuse/core": "11.1.0",
     "axios": "1.7.7",
     "eslint": "9.12.0",
