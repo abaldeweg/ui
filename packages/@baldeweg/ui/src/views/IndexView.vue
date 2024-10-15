@@ -64,6 +64,9 @@ useTitle({ title: 'Home - @baldeweg/ui' })
         <RouterLink :to="{ name: 'masthead' }">Masthead</RouterLink>
       </li>
       <li>
+        <RouterLink :to="{ name: 'material-icon' }">Material-Icon</RouterLink>
+      </li>
+      <li>
         <RouterLink :to="{ name: 'modal' }">Modal</RouterLink>
       </li>
       <li>

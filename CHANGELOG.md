@@ -3,6 +3,21 @@
 ## v0.11.0
 
 - `BSearch` has three new attributes: `resetLabel`, `filterLabel`, `searchLabel`
+- New component `BMaterialIcon`
+
+Props
+
+|Name|Type|Default|Allowed Values|Description
+|----|----|-------|--------------|-----------
+|size |Number|24||
+|color |String|||String (e.g. hex code, custom properties)
+|hover |Boolean|false||
+
+Slots
+
+|Name|Description
+|----|-----------
+|default|
 
 ## v0.10.0
 

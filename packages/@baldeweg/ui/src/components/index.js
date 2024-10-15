@@ -31,6 +31,7 @@ import BIcon from './BIcon/BIcon.vue'
 import BList from './BList/BList.vue'
 import BMasthead from './BMasthead/BMasthead.vue'
 import BMastheadItem from './BMasthead/BMastheadItem.vue'
+import BMaterialIcon from './BMaterialIcon/BMaterialIcon.vue'
 import BModal from './BModal/BModal.vue'
 import BPanel from './BPanel/BPanel.vue'
 import BSearch from './BSearch/BSearch.vue'
@@ -79,6 +80,7 @@ export const components = [
   { name: 'BList', component: BList },
   { name: 'BMasthead', component: BMasthead },
   { name: 'BMastheadItem', component: BMastheadItem },
+  { name: 'BMaterialIcon', component: BMaterialIcon },
   { name: 'BModal', component: BModal },
   { name: 'BPanel', component: BPanel },
   { name: 'BSearch', component: BSearch },

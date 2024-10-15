@@ -421,6 +421,22 @@ Slots
 |----|-----------
 |default|
 
+## BMaterialIcon
+
+Props
+
+|Name|Type|Default|Allowed Values|Description
+|----|----|-------|--------------|-----------
+|size |Number|24||
+|color |String|||String (e.g. hex code, custom properties)
+|hover |Boolean|false||
+
+Slots
+
+|Name|Description
+|----|-----------
+|default|
+
 ## BModal
 
 Props

@@ -21,6 +21,11 @@ const router = createRouter({
       component: () => import('../views/BMastheadView.vue'),
     },
     {
+      path: '/material-icon',
+      name: 'material-icon',
+      component: () => import('../views/BMaterialIconView.vue'),
+    },
+    {
       path: '/bottom-nav',
       name: 'bottom-nav',
       component: () => import('../views/BBottomNavView.vue'),

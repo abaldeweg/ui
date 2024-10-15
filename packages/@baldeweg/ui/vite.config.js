@@ -7,17 +7,18 @@ import { ViteWebfontDownload } from 'vite-plugin-webfont-dl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    ViteWebfontDownload([
+      'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
+      'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
+    ]),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-    dedupe: [
-      'vue',
-      ViteWebfontDownload([
-        'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
-      ]),
-    ],
+    dedupe: ['vue'],
   },
   build: {
     lib: {
