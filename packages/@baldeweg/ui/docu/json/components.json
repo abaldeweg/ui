@@ -954,6 +954,24 @@
             "Boolean"
           ],
           "default": "false"
+        },
+        {
+          "name": "resetLabel",
+          "type": [
+            "String"
+          ]
+        },
+        {
+          "name": "filterLabel",
+          "type": [
+            "String"
+          ]
+        },
+        {
+          "name": "searchLabel",
+          "type": [
+            "String"
+          ]
         }
       ],
       "events": [

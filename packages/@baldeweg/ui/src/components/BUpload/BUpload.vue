@@ -28,6 +28,7 @@ const isDragging = ref(false)
         :id="id"
         :accept="accept"
         @change="$emit('file', $event.target.files[0])"
+        aria-label="Upload"
       />
     </div>
   </div>

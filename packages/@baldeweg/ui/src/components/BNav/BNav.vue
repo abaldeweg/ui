@@ -79,6 +79,10 @@ defineProps({
 .title {
   flex-grow: 1;
 }
+.badge {
+  min-width: 30px;
+  text-align: right;
+}
 .badge a {
   color: var(--color-neutral-06);
 }

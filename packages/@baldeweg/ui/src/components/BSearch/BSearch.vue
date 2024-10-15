@@ -5,40 +5,28 @@ defineProps({
   filter: Boolean,
   branded: Boolean,
   focus: Boolean,
-  reset: Boolean
+  reset: Boolean,
+  resetLabel: String,
+  filterLabel: String,
+  searchLabel: String
 })
 
 defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
 </script>
 
 <template>
-  <form
-    class="search"
-    :class="{ isBranded: branded }"
-    @submit.prevent="$emit('submit', $event)"
-  >
-    <input
-      type="search"
-      class="input"
-      :placeholder="placeholder"
-      :value="modelValue"
-      :autofocus="focus"
-      @input="$emit('update:modelValue', $event.target.value)"
-    />
+  <form class="search" :class="{ isBranded: branded }" @submit.prevent="$emit('submit', $event)">
+    <input type="search" class="input" :placeholder="placeholder" :value="modelValue" :autofocus="focus"
+      @input="$emit('update:modelValue', $event.target.value)" aria-label="Search" />
     <div class="buttons">
       <button type="reset" class="button" @click="$emit('reset')" v-if="reset">
-        <BIcon type="close" :size="18" />
+        <BIcon type="close" :size="18" :aria-label="resetLabel" />
       </button>
-      <button
-        type="button"
-        class="button"
-        @click="$emit('filter')"
-        v-if="filter"
-      >
-        <BIcon type="filter" :size="18" />
+      <button type="button" class="button" @click="$emit('filter')" v-if="filter">
+        <BIcon type="filter" :size="18" :aria-label="filterLabel" />
       </button>
       <button class="button">
-        <BIcon type="search" :size="18" :isPrimary="branded" />
+        <BIcon type="search" :size="18" :isPrimary="branded" :aria-label="searchLabel" />
       </button>
     </div>
   </form>
@@ -52,9 +40,11 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
   flex-grow: 1;
   align-items: center;
 }
+
 .search.isBranded {
   border: 1px solid var(--color-primary-10);
 }
+
 .input {
   background: var(--color-neutral-00);
   border-radius: 10px;
@@ -69,10 +59,12 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
   font-size: 1rem;
   color: var(--color-neutral-10);
 }
+
 .buttons {
   width: 100%;
   text-align: right;
 }
+
 .button {
   border: 0;
   background: transparent;
@@ -80,9 +72,11 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
   margin: 0;
   cursor: pointer;
 }
+
 .input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+
 input[type='search']::-ms-clear {
   display: none;
   width: 0;
@@ -93,9 +87,11 @@ input[type='search']::-ms-clear {
   .search {
     display: flex;
   }
+
   .buttons {
     width: auto;
   }
+
   .input {
     width: auto;
   }

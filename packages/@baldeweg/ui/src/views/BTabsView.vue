@@ -10,7 +10,7 @@ const justify = ref('flex-start')
 <template>
   <BTabs :justify="justify">
     <BTabsLink v-for="n in 10" :key="n">
-      <RouterLink :to="{ name: 'index' }">Item {{ n }}</RouterLink>
+      <RouterLink :to="{ name: 'index', query: {item: n} }">Item {{ n }}</RouterLink>
     </BTabsLink>
   </BTabs>
 

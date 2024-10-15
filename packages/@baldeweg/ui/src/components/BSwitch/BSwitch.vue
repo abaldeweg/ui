@@ -17,9 +17,9 @@ defineProps({
       :class="{ isActive: modelValue }"
       @click="$emit('update:modelValue', !modelValue)"
     />
-    <label class="label" @click="$emit('update:modelValue', !modelValue)">
+    <div class="label" @click="$emit('update:modelValue', !modelValue)">
       {{ label }}
-    </label>
+    </div>
   </div>
 </template>
 

@@ -22,7 +22,7 @@ useTitle({ title: 'BGlobal - @baldeweg/ui' })
     </section>
 
     <section>
-      <p><a href="#">link</a></p>
+      <p><a href="#">Example Link</a></p>
       <p><strong>bold</strong></p>
       <p><code>code</code></p>
       <p><em>emphasis</em></p>

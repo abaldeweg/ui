@@ -15,7 +15,7 @@ const actions = ref(true)
 <template>
   <BCard :route="{ name: 'index' }" :outlined="outlined" :filled="filled">
     <template #image v-if="image">
-      <img src="@/assets/placeholder_16x9.jpg" alt="Image" width="300" />
+      <img src="@/assets/placeholder_16x9.jpg" alt="Example Image" width="300" />
     </template>
 
     <template #title>Title</template>

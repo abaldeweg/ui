@@ -49,7 +49,7 @@ const { style } = useDraggable(el, {
 
 .admin_header {
   border-radius: 10px 10px 0 0;
-  background: var(--color-neutral-02);
+  border-bottom: 1px solid var(--color-neutral-02);
   padding: 5px 20px;
   cursor: move;
 }

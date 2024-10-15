@@ -40,5 +40,6 @@ const show = computed(() => {
   padding: 0 5px;
   top: -15px;
   font-size: 0.7rem;
+  color: var(--color-neutral-00)
 }
 </style>

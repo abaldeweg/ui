@@ -25,6 +25,9 @@ const log = (msg) => {
       @submit.prevent="log('submit')"
       @filter="log('filter')"
       @reset="log('reset')"
+      resetLabel="Reset"
+      filterLabel="Filter"
+      searchLabel="Search"
     />
     <p>Term: {{ term }}</p>
     <button @click="branded = !branded">Toggle Styling</button>
