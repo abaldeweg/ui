@@ -476,21 +476,6 @@ Events
 |----|-----------
 |close|
 
-## BScrollToBottom
-
-Props
-
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
-|width |Number|||0 results to full width, all values are pixel values
-|height |Number|||0 results in 100vh minus masthead height, all values are pixel values
-
-Slots
-
-|Name|Description
-|----|-----------
-|default|
-
 ## BSearch
 
 Props
@@ -503,6 +488,9 @@ Props
 |branded |Boolean|false||
 |focus |Boolean|false||
 |reset |Boolean|false||
+|resetLabel |String|||
+|filterLabel |String|||
+|searchLabel |String|||
 
 Events
 
