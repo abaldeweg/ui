@@ -101,11 +101,6 @@ const router = createRouter({
       component: () => import('../views/BModalView.vue'),
     },
     {
-      path: '/scroll-to-bottom',
-      name: 'scrollToBottom',
-      component: () => import('../views/BScrollToBottomView.vue'),
-    },
-    {
       path: '/tooltip',
       name: 'tooltip',
       component: () => import('../views/BTooltipView.vue'),

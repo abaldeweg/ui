@@ -33,7 +33,6 @@ import BMasthead from './BMasthead/BMasthead.vue'
 import BMastheadItem from './BMasthead/BMastheadItem.vue'
 import BModal from './BModal/BModal.vue'
 import BPanel from './BPanel/BPanel.vue'
-import BScrollToBottom from './BScrollToBottom/BScrollToBottom.vue'
 import BSearch from './BSearch/BSearch.vue'
 import BSpinner from './BSpinner/BSpinner.vue'
 import BSubheader from './BSubheader/BSubheader.vue'
@@ -82,7 +81,6 @@ export const components = [
   { name: 'BMastheadItem', component: BMastheadItem },
   { name: 'BModal', component: BModal },
   { name: 'BPanel', component: BPanel },
-  { name: 'BScrollToBottom', component: BScrollToBottom },
   { name: 'BSearch', component: BSearch },
   { name: 'BSpinner', component: BSpinner },
   { name: 'BSubheader', component: BSubheader },

@@ -912,30 +912,6 @@
       ]
     },
     {
-      "name": "BScrollToBottom",
-      "props": [
-        {
-          "name": "width",
-          "description": "0 results to full width, all values are pixel values",
-          "type": [
-            "Number"
-          ]
-        },
-        {
-          "name": "height",
-          "description": "0 results in 100vh minus masthead height, all values are pixel values",
-          "type": [
-            "Number"
-          ]
-        }
-      ],
-      "slots": [
-        {
-          "name": "default"
-        }
-      ]
-    },
-    {
       "name": "BSearch",
       "props": [
         {

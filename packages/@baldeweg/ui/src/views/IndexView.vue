@@ -73,11 +73,6 @@ useTitle({ title: 'Home - @baldeweg/ui' })
         <RouterLink :to="{ name: 'panel' }">Panel</RouterLink>
       </li>
       <li>
-        <RouterLink :to="{ name: 'scrollToBottom' }">
-          Scroll to Bottom
-        </RouterLink>
-      </li>
-      <li>
         <RouterLink :to="{ name: 'search' }">Search</RouterLink>
       </li>
       <li>
