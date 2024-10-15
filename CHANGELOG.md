@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.11.0
+
+- `BSearch` has three new attributes: `resetLabel`, `filterLabel`, `searchLabel`
+
 ## v0.10.0
 
 - In BSearch its possible to hide the reset button
