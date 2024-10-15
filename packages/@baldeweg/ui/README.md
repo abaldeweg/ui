@@ -17,6 +17,8 @@ yarn add @baldeweg/ui
 
 Download the Material Icons Font: <https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200>
 
+Find all icon on <https://fonts.google.com/icons?icon.style=Outlined&icon.set=Material+Symbols&query=mater&icon.platform=web>.
+
 Then you can add this to your `main.js`.
 
 ```js
