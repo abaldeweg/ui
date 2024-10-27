@@ -1,0 +1,20 @@
+{
+  "name": "BChip",
+  "props": [
+    {
+      "name": "hover",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "action"
+    }
+  ]
+}

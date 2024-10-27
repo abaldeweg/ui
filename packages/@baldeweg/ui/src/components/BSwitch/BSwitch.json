@@ -1,0 +1,23 @@
+{
+  "name": "BSwitch",
+  "props": [
+    {
+      "name": "label",
+      "type": [
+        "String"
+      ]
+    },
+    {
+      "name": "modelValue",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "events": [
+    {
+      "name": "update:modelValue"
+    }
+  ]
+}

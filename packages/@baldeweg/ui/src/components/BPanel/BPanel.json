@@ -1,0 +1,46 @@
+{
+  "name": "BPanel",
+  "props": [
+    {
+      "name": "visible",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "position",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "left",
+        "right"
+      ],
+      "default": "left"
+    },
+    {
+      "name": "width",
+      "type": [
+        "String"
+      ],
+      "default": "300px"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "header"
+    },
+    {
+      "name": "footer"
+    }
+  ],
+  "events": [
+    {
+      "name": "close"
+    }
+  ]
+}

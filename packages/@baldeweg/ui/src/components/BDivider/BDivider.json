@@ -1,0 +1,18 @@
+{
+  "name": "BDivider",
+  "props": [
+    {
+      "name": "size",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "l",
+        "m",
+        "s",
+        "xs"
+      ],
+      "default": "l"
+    }
+  ]
+}

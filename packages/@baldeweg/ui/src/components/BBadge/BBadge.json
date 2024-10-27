@@ -1,0 +1,34 @@
+{
+  "name": "BBadge",
+  "props": [
+    {
+      "name": "content",
+      "type": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "name": "hide-empty",
+      "type": [
+        "Boolean"
+      ],
+      "default": "true"
+    },
+    {
+      "name": "position",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "left",
+        "right"
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

@@ -33,13 +33,6 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@baldeweg/docu@0.11.13":
-  version "0.11.13"
-  resolved "https://registry.yarnpkg.com/@baldeweg/docu/-/docu-0.11.13.tgz#47e7e9d593ebdc6b69eede29f9170e0d199f6220"
-  integrity sha512-mQ0mK4iXB7+QJtCbAcr62c33zfGbKikgHTu7mJOQ6VzyX6yXtn8FdHu0jDlXNMSTt2ev0+w2C+ktu/0CIShZiw==
-  dependencies:
-    ejs "3.1.10"
-
 "@baldeweg/eslint-config@0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.11.0.tgz#619179cd88a22816c1a56e523d4080e6c0360a20"

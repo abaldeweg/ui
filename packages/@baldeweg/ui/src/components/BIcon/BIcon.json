@@ -1,0 +1,62 @@
+{
+  "name": "BIcon",
+  "props": [
+    {
+      "name": "type",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "apps",
+        "bin",
+        "star",
+        "close",
+        "check",
+        "download",
+        "filter",
+        "hamburger",
+        "minus",
+        "pause",
+        "pencil",
+        "play",
+        "plus",
+        "profile",
+        "kebab",
+        "meatballs",
+        "moon",
+        "dollar",
+        "search",
+        "euro",
+        "cart",
+        "directory",
+        "file",
+        "clipboard",
+        "up",
+        "down",
+        "left",
+        "right"
+      ]
+    },
+    {
+      "name": "size",
+      "type": [
+        "Number"
+      ],
+      "default": "25"
+    },
+    {
+      "name": "no-hover",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "color",
+      "description": "String (e.g. hex code custom properties)",
+      "type": [
+        "String"
+      ]
+    }
+  ]
+}

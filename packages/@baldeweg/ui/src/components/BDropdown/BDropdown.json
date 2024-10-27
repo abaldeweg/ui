@@ -1,0 +1,32 @@
+{
+  "name": "BDropdown",
+  "props": [
+    {
+      "name": "position",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "selector",
+        "mouse",
+        "bottom"
+      ],
+      "default": "selector"
+    },
+    {
+      "name": "keep-open",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "selector"
+    }
+  ]
+}

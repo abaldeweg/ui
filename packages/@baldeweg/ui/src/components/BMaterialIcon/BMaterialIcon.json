@@ -1,0 +1,31 @@
+{
+  "name": "BMaterialIcon",
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "props": [
+    {
+      "name": "size",
+      "type": [
+        "Number"
+      ],
+      "default": "24"
+    },
+    {
+      "name": "color",
+      "description": "String (e.g. hex code, custom properties)",
+      "type": [
+        "String"
+      ]
+    },
+    {
+      "name": "hover",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ]
+}

@@ -1,66 +1,74 @@
 #!/usr/bin/env node
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs_1 = __importDefault(require("fs"));
 const ejs_1 = __importDefault(require("ejs"));
-const path_1 = __importDefault(require("path"));
-const args = process.argv.slice(2);
-const [src, template, filename] = args;
+const fs_1 = require("fs");
+const path_1 = require("path");
+const template = "./templates/component.ejs";
+const filename = "./components.md";
+const componentsDir = './../ui/src/components';
 /**
  * Renders an EJS template file with data from a JSON object and writes the output to a file.
  *
- * @param {string} src - The path to the JSON object containing the data.
+ * @param {object} data - The JSON object containing the data.
  * @param {string} template - The path to the EJS template file.
  * @param {string} filename - The path to the output file.
  * @returns {Promise<void>} A promise that resolves when the file is written successfully.
  */
-const renderFile = (src, template, filename) => {
+const renderFile = (data, template, filename) => {
     return new Promise((resolve, reject) => {
-        Promise.resolve(`${path_1.default.join(process.cwd(), src)}`).then(s => __importStar(require(s))).then((data) => {
-            ejs_1.default.renderFile(template, { components: data.components }, {}, (err, str) => {
-                if (err) {
-                    reject(err);
-                    return;
-                }
-                fs_1.default.writeFile(filename, str, (err) => {
-                    err ? reject(err) : resolve();
-                });
+        ejs_1.default.renderFile(template, { components: data.components }, {}, (err, str) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            (0, fs_1.writeFile)(filename, str, (err) => {
+                err ? reject(err) : resolve();
             });
-        })
-            .catch(reject);
+        });
     });
 };
-renderFile(src, template, filename)
-    .then(() => {
-    console.log('Documentation was rendered');
-})
-    .catch((err) => {
-    console.error('Error rendering documentation:', err);
-    process.exit(1);
-});
+/**
+ * Recursively reads all JSON files from a directory and its subdirectories.
+ *
+ * @param {string} dirPath - The path to the directory to read.
+ * @returns {Component[]} An array of component objects parsed from the JSON files.
+ */
+function readJsonFiles(dirPath) {
+    const components = [];
+    const files = (0, fs_1.readdirSync)(dirPath);
+    files.forEach((file) => {
+        const filePath = (0, path_1.join)(dirPath, file);
+        const stat = (0, fs_1.statSync)(filePath);
+        if (stat.isDirectory()) {
+            components.push(...readJsonFiles(filePath));
+        }
+        else if (file.endsWith('.json')) {
+            const jsonData = JSON.parse((0, fs_1.readFileSync)(filePath, 'utf8'));
+            components.push(jsonData);
+        }
+    });
+    return components;
+}
+/**
+ * Generates component documentation from JSON files and renders it using EJS.
+ */
+function generate() {
+    const componentsData = {
+        $schema: 'components.schema.json',
+        components: readJsonFiles(componentsDir),
+    };
+    const jsonString = JSON.stringify(componentsData, null, 2);
+    renderFile(JSON.parse(jsonString), template, filename)
+        .then(() => {
+        console.log('\x1b[32m%s\x1b[0m', 'Documentation was rendered');
+    })
+        .catch((err) => {
+        console.error('Error rendering documentation:', err);
+        process.exit(1);
+    });
+}
+generate();

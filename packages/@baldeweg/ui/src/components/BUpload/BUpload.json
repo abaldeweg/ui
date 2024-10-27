@@ -1,0 +1,30 @@
+{
+  "name": "BUpload",
+  "description": "Set the enctype of the parent form to `enctype=\"multipart/form-data\"`.",
+  "props": [
+    {
+      "name": "id",
+      "type": [
+        "String"
+      ]
+    },
+    {
+      "name": "text",
+      "type": [
+        "String"
+      ]
+    },
+    {
+      "name": "accept",
+      "description": "Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`",
+      "type": [
+        "String"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "file"
+    }
+  ]
+}
