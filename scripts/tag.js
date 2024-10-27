@@ -32,6 +32,11 @@ askForVersion().then(version => {
   })
 })
 
+/**
+ * Prompts the user for the version tag.
+ *
+ * @returns {Promise<string>} A promise that resolves with the version tag entered by the user.
+ */
 function askForVersion() {
   return new Promise(resolve => {
     readline.question("Version Tag: ", version => {
@@ -41,6 +46,12 @@ function askForVersion() {
   })
 }
 
+/**
+ * Sets the version in all package.json files within the specified workspace.
+ *
+ * @param {string} version The version to set.
+ * @returns {Promise<void>} A promise that resolves when all package.json files have been updated.
+ */
 function setVersion(version) {
   return new Promise((resolve, reject) => {
     fs.readdir(workspace, (err, pkg) => {
