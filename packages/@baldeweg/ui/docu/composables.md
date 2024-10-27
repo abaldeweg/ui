@@ -4,32 +4,9 @@ You can import composables from `@baldeweg/ui`.
 
 Currently available composables:
 
-- useToast
-- useTitle
 - useLocale
 - useRequest
+- useTitle
+- useToast
 
-## Example for BToast
-
-```js
-import { useToast } from '@baldeweg/ui'
-```
-
-Example
-
-```html
-<b-toast v-if="current" :type="current.type" :visible="true">
-  {{ current.body }}
-</b-toast>
-
-<button
-  @click="
-    add({
-      type: 'success',
-      body: 'Success',
-    })
-  "
->
-  Success
-</button>
-```
+For more documentation have a look into the code. <https://github.com/abaldeweg/ui/tree/main/packages/%40baldeweg/ui/src/composables>
