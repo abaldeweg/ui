@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: PWD
-        run: echo "${PWD}" && ls
+        run:  ls
       - name: Generate Documentation
         run: yarn workspace @baldeweg/ui docu
       - name: Commit Documentation Changes
