@@ -8,7 +8,7 @@ const readline = require('readline').createInterface({
   output: process.stdout
 })
 
-const workspace = 'packages/@baldeweg'
+const workspace = process.argv[2]
 
 askForVersion().then(version => {
   setVersion(version).then(() => {
