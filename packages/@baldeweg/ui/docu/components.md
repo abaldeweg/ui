@@ -33,6 +33,7 @@ Props
 |----|----|-------|--------------|-----------
 |content |String, Number|||
 |hide-empty |Boolean|true||
+|position |String||left, right|
 
 Slots
 
