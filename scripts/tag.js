@@ -10,6 +10,11 @@ const readline = require('readline').createInterface({
 
 const workspace = process.argv[2]
 
+if (!workspace) {
+  console.error('Workspace not provided. Usage: node tag.js <workspace>')
+  process.exit(1)
+}
+
 askForVersion().then(version => {
   setVersion(version).then(() => {
     exec(`git add ${workspace}/*/package.json && git commit -m "bump version"`, (error, stdout, stderr) => {
