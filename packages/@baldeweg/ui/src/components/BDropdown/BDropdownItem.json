@@ -1,0 +1,38 @@
+{
+  "name": "BDropdownItem",
+  "props": [
+    {
+      "name": "bold",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "no-hover",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "icon",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "All in b-icon allowed icons"
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "events": [
+    {
+      "name": "click"
+    }
+  ]
+}

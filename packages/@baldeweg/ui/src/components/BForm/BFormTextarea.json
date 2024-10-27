@@ -1,0 +1,29 @@
+{
+  "name": "BFormTextarea",
+  "props": [
+    {
+      "name": "modelValue",
+      "type": [
+        "String"
+      ]
+    },
+    {
+      "name": "focus",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "events": [
+    {
+      "name": "update:modelValue"
+    },
+    {
+      "name": "click"
+    },
+    {
+      "name": "contextmenu"
+    }
+  ]
+}

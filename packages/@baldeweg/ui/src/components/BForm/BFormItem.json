@@ -1,0 +1,8 @@
+{
+  "name": "BFormItem",
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

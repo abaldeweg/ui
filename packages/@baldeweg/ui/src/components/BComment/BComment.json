@@ -1,0 +1,25 @@
+{
+  "name": "BComment",
+  "props": [
+    {
+      "name": "author",
+      "type": [
+        "String"
+      ]
+    },
+    {
+      "name": "date",
+      "type": [
+        "String"
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "actions"
+    }
+  ]
+}

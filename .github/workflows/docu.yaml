@@ -19,9 +19,9 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - name: Generate Documentation
-        run: yarn workspace @baldeweg/ui docu
+        run: yarn workspace @baldeweg/docu generate
       - name: Commit Documentation Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: update documentation"
-          file_pattern: packages/@baldeweg/ui/docu/*
+          file_pattern: packages/@baldeweg/docu/*

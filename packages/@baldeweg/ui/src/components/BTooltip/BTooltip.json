@@ -1,0 +1,29 @@
+{
+  "name": "BTooltip",
+  "props": [
+    {
+      "name": "position",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "default": "top"
+    },
+    {
+      "name": "text",
+      "type": [
+        "String"
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

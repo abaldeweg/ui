@@ -1,0 +1,97 @@
+{
+  "name": "BList",
+  "props": [
+    {
+      "name": "route",
+      "type": [
+        "Object"
+      ]
+    },
+    {
+      "name": "bold",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "divider",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "image-size",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ]
+    },
+    {
+      "name": "image-position",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "start",
+        "center",
+        "end"
+      ],
+      "default": "center"
+    },
+    {
+      "name": "actions-position",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "start",
+        "center",
+        "end"
+      ],
+      "default": "center"
+    },
+    {
+      "name": "reverse",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "disabled",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "active",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "slots": [
+    {
+      "name": "title"
+    },
+    {
+      "name": "image"
+    },
+    {
+      "name": "options"
+    },
+    {
+      "name": "subtitle"
+    }
+  ]
+}

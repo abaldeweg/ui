@@ -1,0 +1,11 @@
+{
+  "name": "BDialog",
+  "slots": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "actions"
+    }
+  ]
+}
