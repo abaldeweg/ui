@@ -24,8 +24,7 @@ jobs:
   docu:
     runs-on: ubuntu-latest
     steps:
-      - name: PWD
-        run:  ls
+      - uses: actions/checkout@v4
       - name: Generate Documentation
         run: yarn workspace @baldeweg/ui docu
       - name: Commit Documentation Changes
