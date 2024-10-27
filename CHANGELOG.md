@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.12.0
+
+- Locale can be set local or global in the `useLocale` composable
+
 ## v0.11.0
 
 - `BSearch` has three new attributes: `resetLabel`, `filterLabel`, `searchLabel`
