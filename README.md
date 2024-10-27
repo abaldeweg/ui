@@ -10,4 +10,4 @@ UI Components
 
 ## Release
 
-Run `yarn release` and then set a git tag.
+Run `yarn release` and after that set a git tag.
