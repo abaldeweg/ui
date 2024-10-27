@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "name": "BAlert",
+      "props": [
+        {
+          "name": "type",
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "neutral",
+            "error",
+            "warning",
+            "success",
+            "info"
+          ],
+          "default": "neutral"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default"
+        }
+      ]
+    }
+  ]
+}

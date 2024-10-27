@@ -9,8 +9,7 @@
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
 <%_ el.props.forEach((prop)=>{ _%>
-|<%= prop.name %>
-|<% if (prop.type) { %><%= prop.type.join(', ') %><% } %>|<%= prop.default %>|<% if (prop.allowedValues) { %><%= prop.allowedValues.join(', ') %><% } %>|<%= prop.description %>
+|<%= prop.name %> |<% if (prop.type) { %><%= prop.type.join(', ') %><% } %>|<%= prop.default %>|<% if (prop.allowedValues) { %><%= prop.allowedValues.join(', ') %><% } %>|<%= prop.description %>
 <%_ }); _%>
 <%_ }; _%>
 <%_ if (el.slots) { _%>
