@@ -25,6 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: 'yarn'
+      - run: yarn install
       - name: Generate Documentation
         run: yarn workspace @baldeweg/ui docu
       - name: Commit Documentation Changes
