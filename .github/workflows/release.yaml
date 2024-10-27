@@ -38,7 +38,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   release-ui:
     runs-on: ubuntu-latest
-    needs: [release-docu, release-eslint-config]
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 22.x
