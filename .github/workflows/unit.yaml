@@ -4,11 +4,31 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v*'
+
   pull_request:
     branches:
       - main
 
 jobs:
+  release:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install
+      - run: yarn workspace @baldeweg/ui build
+      - name: Publish to NPM
+        run: yarn workspace @baldeweg/ui npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   docu:
     runs-on: ubuntu-latest
     permissions:
