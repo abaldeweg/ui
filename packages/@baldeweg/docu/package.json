@@ -1,0 +1,27 @@
+{
+  "name": "@baldeweg/docu",
+  "version": "0.11.12",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "bin": {
+    "docu": "index.js"
+  },
+  "main": "index.js",
+  "author": "André Baldeweg <a@baldeweg.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abaldeweg/ui.git"
+  },
+  "dependencies": {
+    "ejs": "3.1.10"
+  },
+  "devDependencies": {
+    "@types/ejs": "3.1.5",
+    "typescript": "5.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
