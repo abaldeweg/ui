@@ -8,9 +8,11 @@ const readline = require('readline').createInterface({
   output: process.stdout
 })
 
+const workspace = 'packages/@baldeweg'
+
 askForVersion().then(version => {
   setVersion(version).then(() => {
-    exec('git add packages/@baldeweg/*/package.json && git commit -m "bump version"', (error, stdout, stderr) => {
+    exec(`git add ${workspace}/*/package.json && git commit -m "bump version"`, (error, stdout, stderr) => {
       if (error) {
         console.error(`Error committing changes: ${error}`)
         return
@@ -35,10 +37,8 @@ function askForVersion() {
 }
 
 function setVersion(version) {
-  const packagesDir = 'packages/@baldeweg'
-
   return new Promise((resolve, reject) => {
-    fs.readdir(packagesDir, (err, pkg) => {
+    fs.readdir(workspace, (err, pkg) => {
       if (err) {
         console.error("Could not read packages directory:", err)
         reject(err)
@@ -46,7 +46,7 @@ function setVersion(version) {
       }
 
       pkg.forEach(package => {
-        const packagePath = path.join(packagesDir, package)
+        const packagePath = path.join(workspace, package)
 
         if (fs.statSync(packagePath).isDirectory()) {
           const packageJsonPath = path.join(packagePath, 'package.json')
