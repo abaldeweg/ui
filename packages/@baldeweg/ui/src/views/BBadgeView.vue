@@ -7,7 +7,7 @@ useTitle({ title: 'BBadge - @baldeweg/ui' })
 <template>
   <section>
     <p>
-      <BBadge content="1"><BIcon type="cart" /></BBadge>text text text
+      <BBadge content="1" position="left"><BIcon type="cart" /></BBadge>text text text
     </p>
     <p>
       <BBadge content="99"><BIcon type="cart" /></BBadge>text text text

@@ -5,6 +5,7 @@
 - Locale can be set local or global in the `useLocale` composable
 - Added documentation for composables
 - Remove `Teleport` component from `BPanel`
+- `BBadge` allows setting the badge left or right
 
 ## v0.11.0
 

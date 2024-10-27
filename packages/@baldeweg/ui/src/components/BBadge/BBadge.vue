@@ -7,6 +7,11 @@ const props = defineProps({
     type: Boolean,
     default: true,
   },
+  position: {
+    type: String,
+    default: 'right',
+    validator: (value) => ['left', 'right'].includes(value),
+  },
 })
 
 const show = computed(() => {
@@ -22,8 +27,9 @@ const show = computed(() => {
 
 <template>
   <div class="badge">
+    <div class="content" v-if="show && props.position === 'left'">{{ content }}</div>
     <slot />
-    <div class="content" v-if="show">{{ content }}</div>
+    <div class="content" v-if="show && props.position === 'right'">{{ content }}</div>
   </div>
 </template>
 
@@ -32,6 +38,7 @@ const show = computed(() => {
   display: inline-block;
   margin: 0 10px;
 }
+
 .content {
   position: relative;
   display: inline-block;
@@ -40,6 +47,6 @@ const show = computed(() => {
   padding: 0 5px;
   top: -15px;
   font-size: 0.7rem;
-  color: var(--color-neutral-00)
+  color: var(--color-neutral-00);
 }
 </style>
