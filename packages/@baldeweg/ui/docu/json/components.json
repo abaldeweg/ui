@@ -64,6 +64,16 @@
             "Boolean"
           ],
           "default": "true"
+        },
+        {
+          "name": "position",
+          "type": [
+            "String"
+          ],
+          "allowedValues": [
+            "left",
+            "right"
+          ]
         }
       ],
       "slots": [

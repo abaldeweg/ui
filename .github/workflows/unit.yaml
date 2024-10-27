@@ -21,3 +21,14 @@ jobs:
       - run: yarn install
       - run: yarn workspace @baldeweg/ui build
       - run: yarn workspace @baldeweg/ui test:unit:ci
+  docu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Documentation
+        run: yarn workspace @baldeweg/ui docu
+      - name: Commit Documentation Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: update documentation"
+          file_pattern: ./packages/@baldeweg/ui/docu/*
+
