@@ -10,7 +10,7 @@ const readline = require('readline').createInterface({
 
 askForVersion().then(version => {
   setVersion(version).then(() => {
-    exec('git add . && git commit -m "bump version"', (error, stdout, stderr) => {
+    exec('git add packages/@baldeweg/*/package.json && git commit -m "bump version"', (error, stdout, stderr) => {
       if (error) {
         console.error(`Error committing changes: ${error}`)
         return
