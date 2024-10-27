@@ -1,0 +1,52 @@
+{
+  "name": "BFormSelect",
+  "props": [
+    {
+      "name": "modelValue",
+      "type": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "name": "items",
+      "description": "[{key: String, value: String}]",
+      "type": [
+        "Array"
+      ]
+    },
+    {
+      "name": "item-key",
+      "type": [
+        "String"
+      ],
+      "default": "key"
+    },
+    {
+      "name": "item-value",
+      "type": [
+        "String"
+      ],
+      "default": "key"
+    },
+    {
+      "name": "focus",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "allow-empty",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "events": [
+    {
+      "name": "update:modelValue"
+    }
+  ]
+}

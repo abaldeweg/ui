@@ -1,0 +1,24 @@
+{
+  "name": "BSliderItem",
+  "props": [
+    {
+      "name": "size",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "default": "m"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "BModal",
+  "description": "If you use a form, consider wrapping the modal with it.",
+  "props": [
+    {
+      "name": "width",
+      "description": "Defines the max-width property",
+      "type": [
+        "Number"
+      ],
+      "default": "600"
+    },
+    {
+      "name": "close-button",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "title"
+    },
+    {
+      "name": "footer"
+    }
+  ],
+  "events": [
+    {
+      "name": "close"
+    }
+  ]
+}

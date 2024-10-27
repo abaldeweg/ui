@@ -1,0 +1,17 @@
+{
+  "name": "BBottomNavItem",
+  "description": "Items should be sized 35x35 pixel.",
+  "props": [
+    {
+      "name": "title",
+      "type": [
+        "String"
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

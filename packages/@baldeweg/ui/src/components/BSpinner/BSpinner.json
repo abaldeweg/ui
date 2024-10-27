@@ -1,0 +1,17 @@
+{
+  "name": "BSpinner",
+  "props": [
+    {
+      "name": "size",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "l",
+        "m",
+        "s"
+      ],
+      "default": "l"
+    }
+  ]
+}

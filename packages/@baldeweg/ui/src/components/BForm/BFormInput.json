@@ -1,0 +1,39 @@
+{
+  "name": "BFormInput",
+  "description": "Not applicable to checkbox and radio.",
+  "props": [
+    {
+      "name": "modelValue",
+      "type": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "name": "no-styling",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "event",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    },
+    {
+      "name": "focus",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "events": [
+    {
+      "name": "update:modelValue"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "BBottomNav",
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

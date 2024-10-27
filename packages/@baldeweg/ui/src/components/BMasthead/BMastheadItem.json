@@ -1,0 +1,22 @@
+{
+  "name": "BMastheadItem",
+  "props": [
+    {
+      "name": "position",
+      "type": [
+        "String"
+      ],
+      "allowedValues": [
+        "start",
+        "center",
+        "end"
+      ],
+      "default": "start"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

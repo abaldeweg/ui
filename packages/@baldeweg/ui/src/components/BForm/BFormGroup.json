@@ -1,0 +1,17 @@
+{
+  "name": "BFormGroup",
+  "props": [
+    {
+      "name": "buttons",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}
