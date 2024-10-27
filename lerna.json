@@ -1,8 +1,0 @@
-{
-  "packages": [
-    "packages/*",
-    "packages/@baldeweg/*"
-  ],
-  "version": "0.11.0",
-  "npmClient": "yarn"
-}
