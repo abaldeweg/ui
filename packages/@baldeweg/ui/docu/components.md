@@ -2,15 +2,18 @@
 
 ## BAlert
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|type |String|neutral|neutral, error, warning, success, info|
-|closable |Boolean|false||
-|elevated |Boolean|false||
+|type
+|String|neutral|neutral, error, warning, success, info|
+|closable
+|Boolean|false||
+|elevated
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -19,7 +22,7 @@ Slots
 ## BApp
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -27,15 +30,18 @@ Slots
 
 ## BBadge
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|content |String, Number|||
-|hide-empty |Boolean|true||
-|position |String||left, right|
+|content
+|String, Number|||
+|hide-empty
+|Boolean|true||
+|position
+|String||left, right|
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -44,7 +50,7 @@ Slots
 ## BBottomNav
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -52,13 +58,14 @@ Slots
 
 ## BBottomNavItem
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|title |String|||
+|title
+|String|||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -66,20 +73,22 @@ Slots
 
 ## BButton
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|design |String|primary|primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger|
-|ripple |Boolean|false||
+|design
+|String|primary|primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger|
+|ripple
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
 |default|
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -87,15 +96,18 @@ Events
 
 ## BCard
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|route |Object|||
-|outlined |Boolean|false||
-|filled |Boolean|false||
+|route
+|Object|||
+|outlined
+|Boolean|false||
+|filled
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -107,13 +119,14 @@ Slots
 
 ## BChip
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|hover |Boolean|false||
+|hover
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -123,7 +136,7 @@ Slots
 ## BCode
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -131,14 +144,16 @@ Slots
 
 ## BComment
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|author |String|||
-|date |String|||
+|author
+|String|||
+|date
+|String|||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -147,15 +162,18 @@ Slots
 
 ## BContainer
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|size |String|l|l, m, s|
-|align |String|left|left, right, center|
-|highlight |Boolean|false||
+|size
+|String|l|l, m, s|
+|align
+|String|left|left, right, center|
+|highlight
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -164,7 +182,7 @@ Slots
 ## BDialog
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -173,22 +191,25 @@ Slots
 
 ## BDivider
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|size |String|l|l, m, s, xs|
+|size
+|String|l|l, m, s, xs|
 
 ## BDropdown
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|position |String|selector|selector, mouse, bottom|
-|keep-open |Boolean|false||
+|position
+|String|selector|selector, mouse, bottom|
+|keep-open
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -200,21 +221,24 @@ Slots
 
 ## BDropdownItem
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|bold |Boolean|false||
-|no-hover |Boolean|false||
-|icon |String||All in b-icon allowed icons|
+|bold
+|Boolean|false||
+|no-hover
+|Boolean|false||
+|icon
+|String||All in b-icon allowed icons|
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
 |default|
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -222,16 +246,20 @@ Events
 
 ## BFlex
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|direction |String|row|row, column, row-reverse, column-reverse|
-|justify |String|flex-start|flex-start, flex-end, center, space-between, space-around, space-evenly|
-|align |String|stretch|stretch, flex-start, flex-end, center, baseline|
-|gap |String|undefined||Accepts a string, so it could be used as a shorthand for row-gap and column-gap.
+|direction
+|String|row|row, column, row-reverse, column-reverse|
+|justify
+|String|flex-start|flex-start, flex-end, center, space-between, space-around, space-evenly|
+|align
+|String|stretch|stretch, flex-start, flex-end, center, baseline|
+|gap
+|String|undefined||Accepts a string, so it could be used as a shorthand for row-gap and column-gap.
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -239,13 +267,14 @@ Slots
 
 ## BForm
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|no-margin |Boolean|false||
+|no-margin
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -254,7 +283,7 @@ Slots
 ## BFormFieldset
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -262,13 +291,14 @@ Slots
 
 ## BFormGroup
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|buttons |Boolean|false||
+|buttons
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -277,7 +307,7 @@ Slots
 ## BFormHelpline
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -285,16 +315,20 @@ Slots
 
 ## BFormInput
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|modelValue |String, Number|||
-|no-styling |Boolean|false||
-|event |Boolean|false||
-|focus |Boolean|false||
+|modelValue
+|String, Number|||
+|no-styling
+|Boolean|false||
+|event
+|Boolean|false||
+|focus
+|Boolean|false||
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -303,7 +337,7 @@ Events
 ## BFormItem
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -312,7 +346,7 @@ Slots
 ## BFormLabel
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -321,7 +355,7 @@ Slots
 ## BFormLegend
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -329,18 +363,24 @@ Slots
 
 ## BFormSelect
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|modelValue |String, Number|||
-|items |Array|||[{key: String, value: String}]
-|item-key |String|key||
-|item-value |String|key||
-|focus |Boolean|false||
-|allow-empty |Boolean|false||
+|modelValue
+|String, Number|||
+|items
+|Array|||[{key: String, value: String}]
+|item-key
+|String|key||
+|item-value
+|String|key||
+|focus
+|Boolean|false||
+|allow-empty
+|Boolean|false||
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -348,14 +388,16 @@ Events
 
 ## BFormTextarea
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|modelValue |String|||
-|focus |Boolean|false||
+|modelValue
+|String|||
+|focus
+|Boolean|false||
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -365,32 +407,45 @@ Events
 
 ## BIcon
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|type |String||apps, bin, star, close, check, download, filter, hamburger, minus, pause, pencil, play, plus, profile, kebab, meatballs, moon, dollar, search, euro, cart, directory, file, clipboard, up, down, left, right|
-|size |Number|25||
-|no-hover |Boolean|false||
-|color |String|||String (e.g. hex code custom properties)
+|type
+|String||apps, bin, star, close, check, download, filter, hamburger, minus, pause, pencil, play, plus, profile, kebab, meatballs, moon, dollar, search, euro, cart, directory, file, clipboard, up, down, left, right|
+|size
+|Number|25||
+|no-hover
+|Boolean|false||
+|color
+|String|||String (e.g. hex code custom properties)
 
 ## BList
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|route |Object|||
-|bold |Boolean|false||
-|divider |Boolean|false||
-|image-size |String||xs, s, m, l, xl|
-|image-position |String|center|start, center, end|
-|actions-position |String|center|start, center, end|
-|reverse |Boolean|false||
-|disabled |Boolean|false||
-|active |Boolean|false||
+|route
+|Object|||
+|bold
+|Boolean|false||
+|divider
+|Boolean|false||
+|image-size
+|String||xs, s, m, l, xl|
+|image-position
+|String|center|start, center, end|
+|actions-position
+|String|center|start, center, end|
+|reverse
+|Boolean|false||
+|disabled
+|Boolean|false||
+|active
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -402,7 +457,7 @@ Slots
 ## BMasthead
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -410,13 +465,14 @@ Slots
 
 ## BMastheadItem
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|position |String|start|start, center, end|
+|position
+|String|start|start, center, end|
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -424,15 +480,18 @@ Slots
 
 ## BMaterialIcon
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|size |Number|24||
-|color |String|||String (e.g. hex code, custom properties)
-|hover |Boolean|false||
+|size
+|Number|24||
+|color
+|String|||String (e.g. hex code, custom properties)
+|hover
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -440,14 +499,16 @@ Slots
 
 ## BModal
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|width |Number|600||Defines the max-width property
-|close-button |Boolean|false||
+|width
+|Number|600||Defines the max-width property
+|close-button
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -455,7 +516,7 @@ Slots
 |title|
 |footer|
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -463,23 +524,27 @@ Events
 
 ## BNav
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|nav |Array|||The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type (&#39;icon&#39; or &#39;dot&#39;)) and value (String, icon from BIcon).
+|nav
+|Array|||The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type (&#39;icon&#39; or &#39;dot&#39;)) and value (String, icon from BIcon).
 
 ## BPanel
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|visible |Boolean|false||
-|position |String|left|left, right|
-|width |String|300px||
+|visible
+|Boolean|false||
+|position
+|String|left|left, right|
+|width
+|String|300px||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -487,7 +552,7 @@ Slots
 |header|
 |footer|
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -495,21 +560,30 @@ Events
 
 ## BSearch
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|placeholder |String|||
-|modelValue |String|||
-|filter |Boolean|false||Shows a filter icon.
-|branded |Boolean|false||
-|focus |Boolean|false||
-|reset |Boolean|false||
-|resetLabel |String|||
-|filterLabel |String|||
-|searchLabel |String|||
+|placeholder
+|String|||
+|modelValue
+|String|||
+|filter
+|Boolean|false||Shows a filter icon.
+|branded
+|Boolean|false||
+|focus
+|Boolean|false||
+|reset
+|Boolean|false||
+|resetLabel
+|String|||
+|filterLabel
+|String|||
+|searchLabel
+|String|||
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -522,7 +596,7 @@ Events
 ## BSlider
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -530,13 +604,14 @@ Slots
 
 ## BSliderItem
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|size |String|m|xs, s, m, l, xl|
+|size
+|String|m|xs, s, m, l, xl|
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -544,16 +619,17 @@ Slots
 
 ## BSpinner
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|size |String|l|l, m, s|
+|size
+|String|l|l, m, s|
 
 ## BSubheader
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -561,14 +637,16 @@ Slots
 
 ## BSwitch
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|label |String|||
-|modelValue |Boolean|false||
+|label
+|String|||
+|modelValue
+|Boolean|false||
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
@@ -576,13 +654,14 @@ Events
 
 ## BTable
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|hover |Boolean|false||
+|hover
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -590,13 +669,14 @@ Slots
 
 ## BTabs
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|justify |String|flex-start|flex-start, flex-end, center, space-between, space-around, space-evenly|
+|justify
+|String|flex-start|flex-start, flex-end, center, space-between, space-around, space-evenly|
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -605,7 +685,7 @@ Slots
 ## BTabsLink
 
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -613,14 +693,16 @@ Slots
 
 ## BToast
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|type |String|neutral|neutral, error, warning, success|
-|visible |Boolean|false||
+|type
+|String|neutral|neutral, error, warning, success|
+|visible
+|Boolean|false||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -628,14 +710,16 @@ Slots
 
 ## BTooltip
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|position |String|top|top, bottom, left, right|
-|text |String|||
+|position
+|String|top|top, bottom, left, right|
+|text
+|String|||
 
-Slots
+### Slots
 
 |Name|Description
 |----|-----------
@@ -643,15 +727,18 @@ Slots
 
 ## BUpload
 
-Props
+### Props
 
 |Name|Type|Default|Allowed Values|Description
 |----|----|-------|--------------|-----------
-|id |String|||
-|text |String|||
-|accept |String|||Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`
+|id
+|String|||
+|text
+|String|||
+|accept
+|String|||Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`
 
-Events
+### Events
 
 |Name|Description
 |----|-----------
