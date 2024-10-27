@@ -40,4 +40,3 @@ jobs:
         with:
           commit_message: "docs: update documentation"
           file_pattern: packages/@baldeweg/ui/docu/*
-          token: ${{ secrets.DOCU_COMMIT_TOKEN }}
