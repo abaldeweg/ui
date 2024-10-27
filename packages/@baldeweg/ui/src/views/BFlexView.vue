@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BFlex - @baldeweg/ui' })
+useHead({ title: 'BFlex' })
 
 const direction = ref('row')
 const justify = ref('flex-start')

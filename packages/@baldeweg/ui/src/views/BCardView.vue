@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BCard - @baldeweg/ui' })
+useHead({ title: 'BCard' })
 
 const outlined = ref(false)
 const filled = ref(false)

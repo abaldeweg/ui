@@ -1,7 +1,7 @@
 <script setup>
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BBadge - @baldeweg/ui' })
+useHead({ title: 'BBadge' })
 </script>
 
 <template>

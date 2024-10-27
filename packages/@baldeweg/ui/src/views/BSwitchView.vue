@@ -1,8 +1,8 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BSwitch - @baldeweg/ui' })
+useHead({ title: 'BSwitch' })
 
 const switch1 = ref(false)
 const switch2 = ref(false)

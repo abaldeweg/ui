@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BSearch - @baldeweg/ui' })
+useHead({ title: 'BSearch' })
 
 const term = ref(null)
 const branded = ref(false)

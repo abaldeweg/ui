@@ -1,7 +1,7 @@
 <script setup>
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BUpload - @baldeweg/ui' })
+useHead({ title: 'BUpload' })
 
 const upload = (file) => {
   console.log(file)

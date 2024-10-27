@@ -1,3 +1,9 @@
+<script setup>
+import { useHead } from '@unhead/vue'
+
+useHead({ title: 'BNav' })
+</script>
+
 <template>
   <BNav
     :nav="[

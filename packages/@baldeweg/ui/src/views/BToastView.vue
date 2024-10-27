@@ -1,8 +1,8 @@
 <script setup>
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 import { useToast } from '@/composables/useToast.js'
 
-useTitle({ title: 'BToast - @baldeweg/ui' })
+useHead({ title: 'BToast' })
 
 const { current, add } = useToast()
 </script>

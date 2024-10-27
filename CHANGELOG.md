@@ -6,6 +6,7 @@
 - Added documentation for composables
 - Remove `Teleport` component from `BPanel`
 - `BBadge` allows setting the badge left or right
+- `useTitle` composable removed, use @unhead/vue instead <https://unhead.unjs.io/setup/vue/installation>
 
 ## v0.11.0
 

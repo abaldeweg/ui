@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BList - @baldeweg/ui' })
+useHead({ title: 'BList' })
 
 const bold = ref(false)
 const divider = ref(false)

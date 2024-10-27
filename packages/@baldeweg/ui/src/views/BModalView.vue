@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BModal - @baldeweg/ui' })
+useHead({ title: 'BModal' })
 
 const show = ref(true)
 

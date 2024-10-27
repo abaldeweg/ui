@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BPanel - @baldeweg/ui' })
+useHead({ title: 'BPanel' })
 
 const visible = ref(true)
 const position = ref('left')

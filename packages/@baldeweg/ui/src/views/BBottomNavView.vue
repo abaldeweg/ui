@@ -1,7 +1,7 @@
 <script setup>
-import { useTitle } from './../composables/useTitle.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'BBottomNavItem - @baldeweg/ui' })
+useHead({ title: 'BBottomNavItem' })
 
 const log = (msg) => {
   console.log(msg)
