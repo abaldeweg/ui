@@ -13,7 +13,7 @@ const outputFilename = "./components.md";
 /**
  * Renders an EJS template file with data from a JSON object and writes the output to a file.
  *
- * @param {object} components - The JSON object containing the data.
+ * @param {object} components - The JSON object containing the component data.
  * @returns {Promise<void>} A promise that resolves when the file is written successfully.
  */
 const renderFile = (components) => {

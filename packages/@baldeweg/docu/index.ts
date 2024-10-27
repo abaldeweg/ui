@@ -8,6 +8,9 @@ const componentsDir = './../ui/src/components'
 const template = "./component.ejs"
 const outputFilename = "./components.md"
 
+/**
+ * Interface representing a component property.
+ */
 interface Prop {
   name: string;
   description?: string;
@@ -16,16 +19,25 @@ interface Prop {
   default?: string;
 }
 
+/**
+ * Interface representing a component slot.
+ */
 interface Slot {
   name: string;
   description?: string;
 }
 
+/**
+ * Interface representing a component event.
+ */
 interface Event {
   name: string;
   description?: string;
 }
 
+/**
+ * Interface representing a component.
+ */
 interface Component {
   name: string;
   description?: string;
@@ -37,7 +49,7 @@ interface Component {
 /**
  * Renders an EJS template file with data from a JSON object and writes the output to a file.
  *
- * @param {object} components - The JSON object containing the data.
+ * @param {object} components - The JSON object containing the component data.
  * @returns {Promise<void>} A promise that resolves when the file is written successfully.
  */
 const renderFile = (components: any): Promise<void> => {
