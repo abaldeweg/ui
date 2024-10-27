@@ -22,27 +22,26 @@ const slots = useSlots()
 </script>
 
 <template>
-  <Teleport to="body">
-    <Transition name="overlay">
-      <div class="overlay" @click="$emit('close')" v-if="visible" />
-    </Transition>
+  <Transition name="overlay">
+    <div class="overlay" @click="$emit('close')" v-if="visible" />
+  </Transition>
 
-    <Transition name="container">
-      <div
-        class="container"
-        :class="{
-          position_left: position === 'left',
-          position_right: position === 'right',
-        }"
-        v-if="visible"
-        :style="{ maxWidth: width }"
-      >
-        <div class="header" v-if="slots.header"><slot name="header" /></div>
-        <div class="content"><slot /></div>
-        <div class="footer" v-if="slots.footer"><slot name="footer" /></div>
+  <Transition name="container">
+    <div class="container" :class="{
+      position_left: position === 'left',
+      position_right: position === 'right',
+    }" v-if="visible" :style="{ maxWidth: width }">
+      <div class="header" v-if="slots.header">
+        <slot name="header" />
       </div>
-    </Transition>
-  </Teleport>
+      <div class="content">
+        <slot />
+      </div>
+      <div class="footer" v-if="slots.footer">
+        <slot name="footer" />
+      </div>
+    </div>
+  </Transition>
 </template>
 
 <style scoped>
@@ -56,6 +55,7 @@ const slots = useSlots()
   opacity: 0.7;
   z-index: 3;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -66,22 +66,27 @@ const slots = useSlots()
   width: calc(100% - 20px);
   z-index: 3;
 }
+
 .container.position_left {
   left: 0;
   border-right: 1px solid var(--color-neutral-02);
 }
+
 .container.position_right {
   right: 0;
   border-left: 1px solid var(--color-neutral-02);
 }
+
 .header {
   border-bottom: 1px solid var(--color-neutral-02);
 }
+
 .content {
   flex-grow: 1;
   max-height: calc(100vh);
   overflow-y: auto;
 }
+
 .footer {
   border-top: 1px solid var(--color-neutral-02);
 }
@@ -91,6 +96,7 @@ const slots = useSlots()
 .overlay-leave-active {
   transition: opacity 0.5s ease;
 }
+
 .overlay-enter-from,
 .overlay-leave-to {
   opacity: 0;
@@ -100,23 +106,28 @@ const slots = useSlots()
 .container-enter-active {
   transition: all 0.5s ease-out;
 }
+
 .container-leave-active {
   transition: all 0.5s ease-in;
 }
+
 .container-enter-from,
 .container-leave-to {
   opacity: 0;
 }
+
 .container-enter-from.position_left,
 .container-leave-to.position_left {
   transform: translateX(-300px);
 }
+
 .container-enter-from.position_right,
 .container-leave-to.position_right {
   transform: translateX(300px);
 }
 
 @media print {
+
   .overlay,
   .container {
     display: none;

@@ -3,6 +3,8 @@
 ## v0.12.0
 
 - Locale can be set local or global in the `useLocale` composable
+- Added documentation for composables
+- Remove `Teleport` component from `BPanel`
 
 ## v0.11.0
 
