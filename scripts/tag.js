@@ -88,6 +88,7 @@ function setVersion(version) {
                 }
 
                 console.log(`Updated version for ${package} to ${version}`)
+                resolve()
               })
             } catch (parseErr) {
               console.error(`Could not parse package.json for ${package}:`, parseErr)
@@ -96,8 +97,6 @@ function setVersion(version) {
           })
         }
       })
-
-      resolve()
     })
   })
 }
