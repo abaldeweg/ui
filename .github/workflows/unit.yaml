@@ -9,18 +9,6 @@ on:
       - main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn workspace @baldeweg/ui build
-      - run: yarn workspace @baldeweg/ui test:unit:ci
   docu:
     runs-on: ubuntu-latest
     permissions:
@@ -40,3 +28,15 @@ jobs:
         with:
           commit_message: "docs: update documentation"
           file_pattern: packages/@baldeweg/ui/docu/*
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn workspace @baldeweg/ui build
+      - run: yarn workspace @baldeweg/ui test:unit:ci
