@@ -3,7 +3,7 @@
   "version": "0.12.0",
   "scripts": {
     "compile": "tsc",
-    "docu": "node index.js"
+    "generate": "node index.js"
   },
   "main": "index.js",
   "author": "André Baldeweg <a@baldeweg.org>",

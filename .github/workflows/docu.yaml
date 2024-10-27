@@ -19,7 +19,7 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - name: Generate Documentation
-        run: yarn workspace @baldeweg/docu docu
+        run: yarn workspace @baldeweg/docu generate
       - name: Commit Documentation Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
