@@ -6,8 +6,8 @@
 <%_ if (el.props) { _%>
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 <%_ el.props.forEach((prop)=>{ _%>
 |<%= prop.name %> |<% if (prop.type) { %><%= prop.type.join(', ') %><% } %>|<%= prop.default %>|<% if (prop.allowedValues) { %><%= prop.allowedValues.join(', ') %><% } %>|<%= prop.description %>
 <%_ }); _%>

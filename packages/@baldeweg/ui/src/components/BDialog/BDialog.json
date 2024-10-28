@@ -1,11 +1,25 @@
 {
   "name": "BDialog",
+  "props":[
+    {
+      "name": "visible",
+      "type": [
+        "Boolean"
+      ],
+      "default": false
+    }
+  ],
   "slots": [
     {
       "name": "default"
     },
     {
       "name": "actions"
+    }
+  ],
+  "events": [
+    {
+      "name": "close"
     }
   ]
 }

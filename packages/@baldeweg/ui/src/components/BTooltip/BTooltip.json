@@ -18,7 +18,8 @@
       "name": "text",
       "type": [
         "String"
-      ]
+      ],
+      "example": "Message"
     }
   ],
   "slots": [

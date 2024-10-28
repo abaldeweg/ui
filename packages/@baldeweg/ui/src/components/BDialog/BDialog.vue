@@ -1,18 +1,29 @@
-<template>
-  <Teleport to="body">
-    <div class="dialog">
-      <div class="overlay" />
+<script setup>
+import { defineEmits, defineProps } from 'vue'
 
-      <div class="body">
-        <div class="content">
-          <slot />
-        </div>
-        <div class="footer">
-          <slot name="actions" />
-        </div>
+const emit = defineEmits(['close'])
+
+defineProps({
+  visible: {
+    type: Boolean,
+    default: false
+  }
+})
+</script>
+
+<template>
+  <div v-if="visible" class="dialog">
+    <div class="overlay" @click="emit('close')" />
+
+    <div class="body">
+      <div class="content">
+        <slot />
+      </div>
+      <div class="footer">
+        <slot name="actions" />
       </div>
     </div>
-  </Teleport>
+  </div>
 </template>
 
 <style scoped>
@@ -23,6 +34,7 @@
   width: 100%;
   z-index: 5;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -32,6 +44,7 @@
   height: 100%;
   opacity: 0.8;
 }
+
 .body {
   position: relative;
   border: 1px solid var(--color-neutral-02);
@@ -41,9 +54,11 @@
   margin: 60px auto;
   box-sizing: border-box;
 }
+
 .content {
   padding: 20px;
 }
+
 .footer {
   padding: 20px;
   text-align: right;

@@ -13,13 +13,14 @@
       "type": [
         "Boolean"
       ],
-      "default": "true"
+      "default": true
     },
     {
       "name": "position",
       "type": [
         "String"
       ],
+      "default": "right",
       "allowedValues": [
         "left",
         "right"

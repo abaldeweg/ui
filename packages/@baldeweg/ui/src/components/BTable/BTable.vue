@@ -13,11 +13,11 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style>
 .table {
   overflow: auto;
 }
-.canHover tbody tr:hover {
+.table.canHover tbody tr:hover {
   background: var(--color-neutral-02);
 }
 </style>
