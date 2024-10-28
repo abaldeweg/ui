@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const props = defineProps({
   type: {
@@ -9,18 +9,26 @@ const props = defineProps({
     },
     default: 'neutral',
   },
-  closable: Boolean,
-  elevated: Boolean
+  closable: {
+    type: Boolean,
+    default: false
+  },
+  elevated: {
+    type: Boolean,
+    default: false
+  }
 })
 
 const showAlert = ref(false)
-const alertClass = {
-  type_error: props.type === 'error',
-  type_warning: props.type === 'warning',
-  type_success: props.type === 'success',
-  type_info: props.type === 'info',
-  isElevated: props.elevated
-}
+const alertClass = computed(() => {
+  return {
+    type_error: props.type === 'error',
+    type_warning: props.type === 'warning',
+    type_success: props.type === 'success',
+    type_info: props.type === 'info',
+    isElevated: props.elevated
+  }
+})
 </script>
 
 <template>
