@@ -4,8 +4,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |type |String|neutral|neutral, error, warning, success, info|
 |closable |Boolean|false||
 |elevated |Boolean|false||
@@ -29,11 +29,11 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |content |String, Number|||
 |hide-empty |Boolean|true||
-|position |String||left, right|
+|position |String|right|left, right|
 
 ### Slots
 
@@ -54,8 +54,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |title |String|||
 
 ### Slots
@@ -68,8 +68,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |design |String|primary|primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger|
 |ripple |Boolean|false||
 
@@ -89,8 +89,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |route |Object|||
 |outlined |Boolean|false||
 |filled |Boolean|false||
@@ -109,8 +109,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |hover |Boolean|false||
 
 ### Slots
@@ -133,8 +133,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |author |String|||
 |date |String|||
 
@@ -149,8 +149,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |size |String|l|l, m, s|
 |align |String|left|left, right, center|
 |highlight |Boolean|false||
@@ -163,6 +163,11 @@
 
 ## BDialog
 
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|visible |Boolean|false||
 
 ### Slots
 
@@ -171,20 +176,26 @@
 |default|
 |actions|
 
+### Events
+
+|Name|Description
+|----|-----------
+|close|
+
 ## BDivider
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |size |String|l|l, m, s, xs|
 
 ## BDropdown
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |position |String|selector|selector, mouse, bottom|
 |keep-open |Boolean|false||
 
@@ -202,8 +213,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |bold |Boolean|false||
 |no-hover |Boolean|false||
 |icon |String||All in b-icon allowed icons|
@@ -224,8 +235,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |direction |String|row|row, column, row-reverse, column-reverse|
 |justify |String|flex-start|flex-start, flex-end, center, space-between, space-around, space-evenly|
 |align |String|stretch|stretch, flex-start, flex-end, center, baseline|
@@ -241,8 +252,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |no-margin |Boolean|false||
 
 ### Slots
@@ -264,8 +275,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |buttons |Boolean|false||
 
 ### Slots
@@ -287,8 +298,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |modelValue |String, Number|||
 |no-styling |Boolean|false||
 |event |Boolean|false||
@@ -331,8 +342,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |modelValue |String, Number|||
 |items |Array|||[{key: String, value: String}]
 |item-key |String|key||
@@ -350,8 +361,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |modelValue |String|||
 |focus |Boolean|false||
 
@@ -367,8 +378,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |type |String||apps, bin, star, close, check, download, filter, hamburger, minus, pause, pencil, play, plus, profile, kebab, meatballs, moon, dollar, search, euro, cart, directory, file, clipboard, up, down, left, right|
 |size |Number|25||
 |no-hover |Boolean|false||
@@ -378,8 +389,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |route |Object|||
 |bold |Boolean|false||
 |divider |Boolean|false||
@@ -412,8 +423,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |position |String|start|start, center, end|
 
 ### Slots
@@ -426,8 +437,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |size |Number|24||
 |color |String|||String (e.g. hex code, custom properties)
 |hover |Boolean|false||
@@ -442,8 +453,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |width |Number|600||Defines the max-width property
 |close-button |Boolean|false||
 
@@ -465,16 +476,16 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |nav |Array|||The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type (&#39;icon&#39; or &#39;dot&#39;)) and value (String, icon from BIcon).
 
 ## BPanel
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |visible |Boolean|false||
 |position |String|left|left, right|
 |width |String|300px||
@@ -497,8 +508,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |placeholder |String|||
 |modelValue |String|||
 |filter |Boolean|false||Shows a filter icon.
@@ -532,8 +543,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |size |String|m|xs, s, m, l, xl|
 
 ### Slots
@@ -546,8 +557,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |size |String|l|l, m, s|
 
 ## BSubheader
@@ -563,8 +574,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |label |String|||
 |modelValue |Boolean|false||
 
@@ -578,8 +589,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |hover |Boolean|false||
 
 ### Slots
@@ -592,8 +603,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |justify |String|flex-start|flex-start, flex-end, center, space-between, space-around, space-evenly|
 
 ### Slots
@@ -615,8 +626,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |type |String|neutral|neutral, error, warning, success|
 |visible |Boolean|false||
 
@@ -630,8 +641,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |position |String|top|top, bottom, left, right|
 |text |String|||
 
@@ -645,8 +656,8 @@
 
 ### Props
 
-|Name|Type|Default|Allowed Values|Description
-|----|----|-------|--------------|-----------
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
 |id |String|||
 |text |String|||
 |accept |String|||Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`
