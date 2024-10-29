@@ -217,7 +217,7 @@
 |----|----|-------|--------------|----------|-----------
 |bold |Boolean|false||
 |no-hover |Boolean|false||
-|icon |String||All in b-icon allowed icons|
+|icon |String|||
 
 ### Slots
 
@@ -374,17 +374,6 @@
 |click|
 |contextmenu|
 
-## BIcon
-
-### Props
-
-|Name|Type|Default|Allowed Values|Example|Description
-|----|----|-------|--------------|----------|-----------
-|type |String||apps, bin, star, close, check, download, filter, hamburger, minus, pause, pencil, play, plus, profile, kebab, meatballs, moon, dollar, search, euro, cart, directory, file, clipboard, up, down, left, right|
-|size |Number|25||
-|no-hover |Boolean|false||
-|color |String|||String (e.g. hex code custom properties)
-
 ## BList
 
 ### Props
@@ -478,7 +467,7 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|nav |Array|||The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type (&#39;icon&#39; or &#39;dot&#39;)) and value (String, icon from BIcon).
+|nav |Array|||The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type (&#39;icon&#39; or &#39;dot&#39;)) and value (String).
 
 ## BPanel
 
