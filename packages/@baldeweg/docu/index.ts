@@ -17,6 +17,7 @@ interface Prop {
   type: string[];
   allowedValues?: string[];
   default?: string;
+  example?: string
 }
 
 /**

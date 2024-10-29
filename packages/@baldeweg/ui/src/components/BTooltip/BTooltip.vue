@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   position: {
     type: String,
@@ -10,12 +12,14 @@ const props = defineProps({
   text: String,
 })
 
-const positionClass = {
-  'position_top': props.position === 'top',
-  'position_bottom': props.position === 'bottom',
-  'position_left': props.position === 'left',
-  'position_right': props.position === 'right',
-}
+const positionClass = computed(() => {
+  return {
+    'position_top': props.position === 'top',
+    'position_bottom': props.position === 'bottom',
+    'position_left': props.position === 'left',
+    'position_right': props.position === 'right',
+  }
+})
 </script>
 
 <template>

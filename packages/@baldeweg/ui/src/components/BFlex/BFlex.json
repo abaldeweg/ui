@@ -49,7 +49,8 @@
       "type": [
         "String"
       ],
-      "default": "undefined"
+      "default": "undefined",
+      "example": "20px"
     }
   ],
   "slots": [

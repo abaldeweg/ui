@@ -11,7 +11,7 @@
       "type": [
         "Number"
       ],
-      "default": "24"
+      "default": 24
     },
     {
       "name": "color",
@@ -25,7 +25,7 @@
       "type": [
         "Boolean"
       ],
-      "default": "false"
+      "default": false
     }
   ]
 }
