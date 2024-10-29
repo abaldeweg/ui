@@ -1,4 +1,5 @@
 {
+  "$schema": "./../component.schema.json",
   "name": "BApp",
   "description": "Do not forget to set the attribute `id=\"app\"` here, if not otherwise done.",
   "slots": [

@@ -1,4 +1,5 @@
 {
+  "$schema": "./../component.schema.json",
   "name": "BModal",
   "description": "If you use a form, consider wrapping the modal with it.",
   "props": [

@@ -1,4 +1,5 @@
 {
+  "$schema": "./../component.schema.json",
   "name": "BUpload",
   "description": "Set the enctype of the parent form to `enctype=\"multipart/form-data\"`.",
   "props": [

@@ -1,4 +1,5 @@
 {
+  "$schema": "./../component.schema.json",
   "name": "BTable",
   "description": "Its just a wrapper, make use of the HTML table elements, including `<table>`.",
   "props": [

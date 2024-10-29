@@ -1,4 +1,5 @@
 {
+  "$schema": "./../component.schema.json",
   "name": "BToast",
   "description": "Use it in conjunction with the useToast composable.",
   "props": [
