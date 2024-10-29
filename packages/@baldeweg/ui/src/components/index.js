@@ -27,7 +27,6 @@ import BFormSelect from './BForm/BFormSelect.vue'
 import BFormTextarea from './BForm/BFormTextarea.vue'
 import BSlider from './BSlider/BSlider.vue'
 import BSliderItem from './BSlider/BSliderItem.vue'
-import BIcon from './BIcon/BIcon.vue'
 import BList from './BList/BList.vue'
 import BMasthead from './BMasthead/BMasthead.vue'
 import BMastheadItem from './BMasthead/BMastheadItem.vue'
@@ -76,7 +75,6 @@ export const components = [
   { name: 'BFormTextarea', component: BFormTextarea },
   { name: 'BSlider', component: BSlider },
   { name: 'BSliderItem', component: BSliderItem },
-  { name: 'BIcon', component: BIcon },
   { name: 'BList', component: BList },
   { name: 'BMasthead', component: BMasthead },
   { name: 'BMastheadItem', component: BMastheadItem },

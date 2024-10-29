@@ -84,10 +84,10 @@ defineProps({
         v-if="$slots.subgroup"
       >
         <span @click="showSubgroup = true">
-          <BIcon type="plus" v-if="!showSubgroup" />
+          <BMaterialIcon v-if="!showSubgroup">plus</BMaterialIcon>
         </span>
         <span @click="showSubgroup = false">
-          <BIcon type="minus" v-if="showSubgroup" />
+          <BMaterialIcon v-if="showSubgroup">minus</BMaterialIcon>
         </span>
       </div>
 
