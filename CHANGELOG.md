@@ -3,6 +3,7 @@
 ## v0.13.0
 
 - `BIcon` component removed, use `BMaterialIcon` instead <https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/docu/components.md#bmaterialicon>
+- `useLocale` removed, use unhead instead, e.g. `htmlAttrs: { lang: navigator.language }`
 
 ## v0.12.0
 

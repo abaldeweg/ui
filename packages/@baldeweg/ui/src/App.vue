@@ -2,15 +2,15 @@
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useDraggable } from '@vueuse/core'
-import { useLocale } from './composables/useLocale.js'
 import { useHead } from '@unhead/vue'
-
-useLocale()
 
 useHead({
   title: "Home",
   titleTemplate: '%s %separator %siteName',
   templateParams: { separator: '-', siteName: '@baldeweg/ui' },
+  htmlAttrs: {
+    lang: navigator.language,
+  }
 })
 
 const el = ref(null)
