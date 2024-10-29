@@ -1,7 +1,7 @@
 <script setup>
 import { useHead } from '@unhead/vue'
 import { computed, defineAsyncComponent, ref, watchEffect } from 'vue'
-import components from './components.json'
+import components from './../components.json'
 import { useRouter } from 'vue-router'
 
 const props = defineProps({
@@ -15,7 +15,7 @@ useHead({ title: computed(() => props.component || 'Component') })
 
 const exampleComponent = ref(undefined)
 const loadComponent = () => {
-  exampleComponent.value = defineAsyncComponent(() => import(`@/components/${props.component}/Example${props.component}.vue`))
+  exampleComponent.value = defineAsyncComponent(() => import(`@/components/B${props.component}/ExampleB${props.component}.vue`))
 }
 
 watchEffect(() => {
@@ -39,7 +39,7 @@ const updateRoute = () => {
         <BFormLabel for="component">Components</BFormLabel>
       </BFormItem>
       <BFormItem>
-        <BFormSelect id="component" v-model="componentName" :items="components" @change="updateRoute" />
+        <BFormSelect id="component" v-model="componentName" :items="components" item-key="name" item-value="name" @change="updateRoute" />
       </BFormItem>
     </BFormGroup>
   </BForm>

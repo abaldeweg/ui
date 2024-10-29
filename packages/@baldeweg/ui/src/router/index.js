@@ -14,7 +14,7 @@ const router = createRouter({
       path: '/component/:component?',
       name: 'component',
       component: () => import('../views/ComponentView.vue'),
-      props: (route) => ({ component: route.params.component || 'BAlert' }),
+      props: (route) => ({ component: route.params.component || 'Alert' }),
     },
     {
       path: '/:pathMatch(.*)',

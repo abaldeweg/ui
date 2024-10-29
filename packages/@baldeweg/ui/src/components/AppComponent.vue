@@ -4,7 +4,7 @@ import { reactive, ref, watchEffect, computed } from 'vue'
 const props = defineProps({
   component: {
     type: String,
-    default: 'BAlert',
+    default: 'Alert',
   },
 })
 
