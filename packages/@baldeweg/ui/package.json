@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "test:unit": "vitest --environment jsdom",
-    "test:unit:ci": "vitest run --environment jsdom",
+    "test:unit:ci": "vitest run --environment jsdom"
   },
   "dependencies": {
     "vue": "3.5.12"
