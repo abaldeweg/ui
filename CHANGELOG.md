@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.13.0
+
+- `BIcon` component removed, use `BMaterialIcon` instead <https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/docu/components.md#bmaterialicon>
+
 ## v0.12.0
 
 - Locale can be set local or global in the `useLocale` composable
