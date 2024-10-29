@@ -17,7 +17,7 @@ const image = ref(true)
     </template>
 
     <template #options v-if="options">
-      <BIcon type="kebab" />
+      <BMaterialIcon :size="32" hover>more_vert</BMaterialIcon>
     </template>
 
     <template #subtitle v-if="subtitle">

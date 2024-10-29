@@ -7,19 +7,19 @@ const log = (msg) => {
 <template>
   <AppComponent component="BBottomNav">
     <BBottomNavItem @click="log('profile')" title="Profile">
-      <BIcon type="profile" :size="35" />
+      <BMaterialIcon :size="35" hover>person</BMaterialIcon>
     </BBottomNavItem>
     <BBottomNavItem @click="log('profile')" title="Profile">
-      <BIcon type="profile" :size="35" />
+      <BMaterialIcon :size="35" hover>person</BMaterialIcon>
     </BBottomNavItem>
     <BBottomNavItem @click="log('profile')" title="Profile">
-      <BIcon type="profile" :size="35" />
+      <BMaterialIcon :size="35" hover>person</BMaterialIcon>
     </BBottomNavItem>
     <BBottomNavItem @click="log('profile')" title="Profile">
-      <BIcon type="profile" :size="35" />
+      <BMaterialIcon :size="35" hover>person</BMaterialIcon>
     </BBottomNavItem>
     <BBottomNavItem @click="log('profile')" title="Profile">
-      <BIcon type="profile" :size="35" />
+      <BMaterialIcon :size="35" hover>person</BMaterialIcon>
     </BBottomNavItem>
   </AppComponent>
 </template>

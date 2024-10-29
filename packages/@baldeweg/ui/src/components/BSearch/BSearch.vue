@@ -20,13 +20,13 @@ defineEmits(['reset', 'input', 'update:modelValue', 'submit', 'filter'])
       @input="$emit('update:modelValue', $event.target.value)" aria-label="Search" />
     <div class="buttons">
       <button type="reset" class="button" @click="$emit('reset')" v-if="reset">
-        <BIcon type="close" :size="18" :aria-label="resetLabel" />
+        <BMaterialIcon :size="22" :aria-label="resetLabel" hover>close</BMaterialIcon>
       </button>
       <button type="button" class="button" @click="$emit('filter')" v-if="filter">
-        <BIcon type="filter" :size="18" :aria-label="filterLabel" />
+        <BMaterialIcon :size="22" :aria-label="filterLabel" hover>filter_alt</BMaterialIcon>
       </button>
       <button class="button">
-        <BIcon type="search" :size="18" :isPrimary="branded" :aria-label="searchLabel" />
+        <BMaterialIcon :size="22" :isPrimary="branded" :aria-label="searchLabel" hover>search</BMaterialIcon>
       </button>
     </div>
   </form>
@@ -94,6 +94,12 @@ input[type='search']::-ms-clear {
 
   .input {
     width: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    color: var(--color-neutral-10);
   }
 }
 </style>

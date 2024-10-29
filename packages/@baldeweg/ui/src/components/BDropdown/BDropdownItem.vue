@@ -9,7 +9,7 @@ defineProps({
 <template>
   <li class="item" :class="{ isBold: bold, canHover: !noHover }">
     <div class="icon" v-if="icon">
-      <BIcon :type="icon" :size="15" no-hover />
+      <BMaterialIcon :type="icon" :size="15">{{ icon }}</BMaterialIcon>
     </div>
     <div class="title">
       <slot />
@@ -24,15 +24,19 @@ defineProps({
   padding: 10px 20px;
   cursor: pointer;
 }
+
 .item.isBold {
   font-weight: bold;
 }
+
 .item:hover.canHover {
   background: var(--color-neutral-02);
 }
+
 .title {
   width: 100%;
 }
+
 .icon {
   display: flex;
   margin-right: 10px;

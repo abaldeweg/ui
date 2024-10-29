@@ -1,7 +1,7 @@
 <template>
   <p>
     <AppComponent component="BBadge">
-      <BIcon type="cart" />
+      <BMaterialIcon>shopping_cart</BMaterialIcon>
     </AppComponent>text text text
   </p>
 </template>

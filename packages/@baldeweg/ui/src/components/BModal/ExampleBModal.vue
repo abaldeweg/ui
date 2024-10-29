@@ -12,7 +12,7 @@ const closeModal = (type) => {
 <template>
   <AppComponent component="BModal" @close="closeModal" v-if="show">
     <template #title>
-      <BIcon type="plus" :size="16" /> Modal
+      <BMaterialIcon :size="26">add</BMaterialIcon> Modal
     </template>
     <template #footer>Footer</template>
     <BContainer>

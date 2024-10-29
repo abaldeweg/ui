@@ -33,7 +33,8 @@ const alertClass = computed(() => {
 
 <template>
   <div class="alert" :class="alertClass" v-if="!showAlert">
-    <BIcon type="close" :size="20" @click="showAlert = true" :style="{ float: 'right' }" v-if="closable" />
+    <BMaterialIcon :size="28" @click="showAlert = true" hover :style="{ float: 'right' }" v-if="closable">close
+    </BMaterialIcon>
     <slot />
   </div>
 </template>

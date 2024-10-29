@@ -19,9 +19,6 @@
       "name": "icon",
       "type": [
         "String"
-      ],
-      "allowedValues": [
-        "All in b-icon allowed icons"
       ]
     }
   ],

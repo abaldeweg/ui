@@ -41,7 +41,7 @@ onBeforeUnmount(() => {
       <div class="header">
         <h2 class="title" v-if="$slots.title"><slot name="title" /></h2>
         <span class="close" @click="close('button')" v-if="closeButton">
-          <BIcon type="close" :size="15" />
+          <BMaterialIcon :size="26" hover>close</BMaterialIcon>
         </span>
       </div>
 
