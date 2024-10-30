@@ -39,11 +39,11 @@ const iconStyle = computed(() => ({
   vertical-align: middle;
   opacity: 1;
   transition: opacity 0.2s;
-  cursor: pointer;
 }
 
 .icon:hover.canHover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .material-symbols-outlined {
