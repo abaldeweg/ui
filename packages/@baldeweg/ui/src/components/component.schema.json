@@ -46,7 +46,8 @@
           "default": {
             "type": [
               "string",
-              "boolean"
+              "boolean",
+              "number"
             ]
           }
         },
