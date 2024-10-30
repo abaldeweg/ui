@@ -22,7 +22,7 @@ const listComponents = () => {
     .map(dirent => getComponentData(dirent.name))
     .flat()
 
-  writeFileSync('./src/components.json', JSON.stringify(directories, null, 2))
+  writeFileSync('./src/components.json', JSON.stringify(directories, null, 2) + '\n')
 }
 
 listComponents()
