@@ -49,7 +49,7 @@ watchEffect(async () => {
 
   <h2>Preview</h2>
 
-  <component :is="componentName" v-bind="propsValues">
+  <component :is="componentName" v-bind="propsValues" v-on="$listeners">
     <template v-for="(slot, index) in slotsModule" :key="index" v-slot:[slot.name]>
       <slot :name="slot.name" />
     </template>
