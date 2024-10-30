@@ -13,5 +13,3 @@ export const createUi = () => {
 
   return { install }
 }
-
-export * from './composables.js'
