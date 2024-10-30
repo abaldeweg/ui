@@ -445,6 +445,7 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
+|modelValue |Boolean|false||
 |width |Number|600||Defines the max-width property
 |close-button |Boolean|false||
 
