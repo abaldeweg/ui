@@ -41,7 +41,7 @@
   ],
   "events": [
     {
-      "name": "close"
+      "name": "update:modelValue"
     }
   ]
 }
