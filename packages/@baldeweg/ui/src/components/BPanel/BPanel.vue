@@ -1,8 +1,11 @@
 <script setup>
 import { useSlots } from 'vue'
 
-defineProps({
-  visible: Boolean,
+const props = defineProps({
+  modelValue: {
+    type: Boolean,
+    default: false
+  },
   position: {
     type: String,
     default: 'left',
@@ -16,21 +19,25 @@ defineProps({
   }
 })
 
-defineEmits(['close'])
+const emit = defineEmits(['update:modelValue'])
 
 const slots = useSlots()
+
+const close = () => {
+  emit('update:modelValue', false)
+}
 </script>
 
 <template>
   <Transition name="overlay">
-    <div class="overlay" @click="$emit('close')" v-if="visible" />
+    <div class="overlay" @click="close" v-if="modelValue" />
   </Transition>
 
   <Transition name="container">
     <div class="container" :class="{
       position_left: position === 'left',
       position_right: position === 'right',
-    }" v-if="visible" :style="{ maxWidth: width }">
+    }" v-if="modelValue" :style="{ maxWidth: width }">
       <div class="header" v-if="slots.header">
         <slot name="header" />
       </div>
@@ -127,7 +134,6 @@ const slots = useSlots()
 }
 
 @media print {
-
   .overlay,
   .container {
     display: none;
