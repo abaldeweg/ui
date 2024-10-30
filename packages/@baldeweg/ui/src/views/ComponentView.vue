@@ -1,7 +1,7 @@
 <script setup>
 import { useHead } from '@unhead/vue'
 import { computed, defineAsyncComponent, ref, watchEffect } from 'vue'
-import components from './../components.json'
+import components from './../components/components.json'
 import { useRouter } from 'vue-router'
 
 const props = defineProps({
