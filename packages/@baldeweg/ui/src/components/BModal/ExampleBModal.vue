@@ -1,16 +1,5 @@
-<script setup>
-import { ref } from 'vue'
-
-const show = ref(true)
-
-const closeModal = (type) => {
-  show.value = !show.value
-  console.log(type)
-}
-</script>
-
 <template>
-  <AppComponent component="BModal" @close="closeModal" v-if="show">
+  <AppComponent component="BModal">
     <template #title>
       <BMaterialIcon :size="26">add</BMaterialIcon> Modal
     </template>

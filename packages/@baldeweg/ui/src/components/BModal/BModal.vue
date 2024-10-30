@@ -1,46 +1,55 @@
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue'
 
-defineProps({
+const props = defineProps({
+  modelValue: {
+    type: Boolean,
+    default: false,
+  },
   width: {
     type: Number,
     default: 600,
   },
-  closeButton: Boolean,
+  closeButton: {
+    type: Boolean,
+    default: true
+  },
 })
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(['update:modelValue'])
 
-const close = (type) => {
-  emit('close', type)
+const close = () => {
+  emit('update:modelValue', false)
   document.body.classList.remove('isModalOpen')
 }
 
-const keypress = (event) => {
-  if (event.key === 'Escape') {
-    close('key')
+const handleKeydown = (event) => {
+  if (event.key === 'Escape' && props.modelValue) {
+    close()
   }
 }
 
 onMounted(() => {
   document.body.classList.add('isModalOpen')
-  document.addEventListener('keydown', keypress)
+  document.addEventListener('keydown', handleKeydown)
 })
 
 onBeforeUnmount(() => {
   document.body.classList.remove('isModalOpen')
-  document.removeEventListener('keydown', keypress)
+  document.removeEventListener('keydown', handleKeydown)
 })
 </script>
 
 <template>
-  <div class="modal" @keydown.esc="close('key1')">
-    <div class="overlay" @click.prevent="close('overlay')" />
+  <div v-if="modelValue" class="modal">
+    <div class="overlay" @click="close" />
 
     <div class="inner" :style="{ maxWidth: width + 'px' }">
       <div class="header">
-        <h2 class="title" v-if="$slots.title"><slot name="title" /></h2>
-        <span class="close" @click="close('button')" v-if="closeButton">
+        <h2 class="title" v-if="$slots.title">
+          <slot name="title" />
+        </h2>
+        <span class="close" @click="close" v-if="closeButton">
           <BMaterialIcon :size="26" hover>close</BMaterialIcon>
         </span>
       </div>
@@ -64,6 +73,7 @@ onBeforeUnmount(() => {
   width: 100%;
   z-index: 4;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -73,6 +83,7 @@ onBeforeUnmount(() => {
   height: 100%;
   opacity: 0.8;
 }
+
 .inner {
   display: flex;
   flex-direction: column;
@@ -84,12 +95,14 @@ onBeforeUnmount(() => {
   margin: 60px auto;
   box-sizing: border-box;
 }
+
 .header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-neutral-02);
   padding: 5px 20px;
 }
+
 .title {
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -97,14 +110,17 @@ onBeforeUnmount(() => {
   flex-grow: 1;
   margin: 0;
 }
+
 .close {
   float: right;
 }
+
 .body {
   flex-grow: 1;
   height: calc(100vh - 90px);
   overflow-y: auto;
 }
+
 .footer {
   border-top: 1px solid var(--color-neutral-02);
   padding: 20px;
