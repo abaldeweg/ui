@@ -477,7 +477,7 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|visible |Boolean|false||
+|modelValue |Boolean|false||
 |position |String|left|left, right|
 |width |String|300px||
 
