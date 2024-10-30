@@ -16,14 +16,14 @@
       "type": [
         "Number"
       ],
-      "default": "600"
+      "default": 600
     },
     {
       "name": "close-button",
       "type": [
         "Boolean"
       ],
-      "default": "false"
+      "default": false
     }
   ],
   "slots": [
@@ -39,7 +39,7 @@
   ],
   "events": [
     {
-      "name": "close"
+      "name": "update:modelValue"
     }
   ]
 }
