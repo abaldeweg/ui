@@ -6,6 +6,7 @@
 - `useLocale` removed, use unhead instead, e.g. `htmlAttrs: { lang: navigator.language }`
 - remove `useRequest`, include it by yourself instead <https://github.com/abaldeweg/ui/blob/636ea240c5fb457387328ac939ae2e34cf1a3597/packages/%40baldeweg/ui/src/composables/useRequest.js>
 - remove `useToast`, include it by yourself instead <https://github.com/abaldeweg/ui/blob/636ea240c5fb457387328ac939ae2e34cf1a3597/packages/%40baldeweg/ui/src/composables/useToast.js>
+- `BDialog`, `BModal` and `BPanel` use modelValue instead of e.g. `visible` prop
 
 ## v0.12.0
 
