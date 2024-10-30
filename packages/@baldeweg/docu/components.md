@@ -167,7 +167,8 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|visible |Boolean|false||
+|modelValue |Boolean|false||
+|canClose |Boolean|true||
 
 ### Slots
 
@@ -180,7 +181,7 @@
 
 |Name|Description
 |----|-----------
-|close|
+|update:modelValue|
 
 ## BDivider
 
