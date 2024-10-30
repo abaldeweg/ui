@@ -44,16 +44,16 @@ export function useRequest(localConfig = {}) {
    *
    * @param {string} method The HTTP method (e.g., 'get', 'post', 'put', 'delete').
    * @param {string} url The request URL.
-   * @param {object} body The request data (for POST, PUT requests).
-   * @param {object} query The request query parameters.
+   * @param {object} data The request data (for POST, PUT requests).
+   * @param {object} params The request query parameters.
    * @returns {Promise} A promise that resolves with the Axios response.
    */
-  const request = (method, url, body, query) => {
+  const request = (method, url, data, params) => {
     return axios.create(mergedConfig).request({
       method,
       url,
-      body,
-      query,
+      data,
+      params,
     })
   }
 
