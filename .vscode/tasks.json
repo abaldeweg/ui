@@ -9,7 +9,7 @@
       "group": "none",
       "presentation": {
         "reveal": "always",
-        "panel": "dedicated"
+        "panel": "new"
       }
     },
   ]
