@@ -461,7 +461,7 @@
 
 |Name|Description
 |----|-----------
-|close|
+|update:modelValue|
 
 ## BNav
 
@@ -493,7 +493,7 @@
 
 |Name|Description
 |----|-----------
-|close|
+|update:modelValue|
 
 ## BSearch
 
