@@ -1,13 +1,20 @@
 {
   "$schema": "./../component.schema.json",
   "name": "BDialog",
-  "props":[
+  "props": [
     {
-      "name": "visible",
+      "name": "modelValue",
       "type": [
         "Boolean"
       ],
       "default": false
+    },
+    {
+      "name": "canClose",
+      "type": [
+        "Boolean"
+      ],
+      "default": true
     }
   ],
   "slots": [
@@ -20,7 +27,7 @@
   ],
   "events": [
     {
-      "name": "close"
+      "name": "update:modelValue"
     }
   ]
 }

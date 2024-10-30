@@ -1,17 +1,33 @@
 <script setup>
-const emit = defineEmits(['close'])
+import { computed } from 'vue'
 
-defineProps({
-  visible: {
+const emit = defineEmits(['update:modelValue'])
+
+const props = defineProps({
+  modelValue: {
     type: Boolean,
     default: false
+  },
+  canClose: {
+    type: Boolean,
+    default: true
   }
 })
+
+const visible = computed({
+  get: () => props.modelValue,
+  set: (value) => emit('update:modelValue', value)
+})
+
+const close = () => {
+  if (!props.canClose) return
+  visible.value = !visible
+}
 </script>
 
 <template>
   <div v-if="visible" class="dialog">
-    <div class="overlay" @click="emit('close')" />
+    <div class="overlay" @click="close" />
 
     <div class="body">
       <div class="content">
