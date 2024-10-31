@@ -1,7 +1,11 @@
 <template>
-  <p>
-    <AppComponent component="BBadge">
+  <AppComponent component="BBadge">
+    <template #icon>
       <BMaterialIcon>shopping_cart</BMaterialIcon>
-    </AppComponent>text text text
-  </p>
+    </template>
+    Cart
+    <template #action>
+      <BMaterialIcon :size="18" color="var(--color-neutral-08)" hover>close</BMaterialIcon>
+    </template>
+  </AppComponent>
 </template>
