@@ -371,22 +371,19 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |route |Object|||
-|bold |Boolean|false||
+|start-size |String|100px||
+|end-size |String|50px||
 |divider |Boolean|false||
-|image-size |String||xs, s, m, l, xl|
-|image-position |String|center|start, center, end|
-|actions-position |String|center|start, center, end|
-|reverse |Boolean|false||
-|disabled |Boolean|false||
-|active |Boolean|false||
+|hover |Boolean|false||
 
 ### Slots
 
 |Name|Description
 |----|-----------
+|default|
+|start|
+|end|
 |title|
-|image|
-|options|
 |subtitle|
 
 ## BMasthead
