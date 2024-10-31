@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref, watchEffect, computed } from 'vue'
+import { reactive, ref, watchEffect, computed, watch } from 'vue'
 
 const props = defineProps({
   component: {
@@ -8,7 +8,7 @@ const props = defineProps({
   },
 })
 
-const componentName = ref(props.component);
+const componentName = ref(props.component)
 const propsSchema = ref([])
 const propsValues = reactive({})
 const slotsSchema = ref([])
@@ -24,10 +24,13 @@ const fetchComponentSchema = async () => {
     return prop
   }) : []
   slotsModule.value = res.slots ? res.slots.map((slot) => {
-    return slot
+    if (!disabledSlots.value[slot.name]) return slot
+    return undefined
   }) : []
   slotsSchema.value = res.slots
   eventsSchema.value = res.events
+
+  slotsModule.value = slotsModule.value.filter(slot => slot !== undefined);
 }
 
 const initializePropsValues = () => {
@@ -38,10 +41,16 @@ const initializePropsValues = () => {
   })
 }
 
+const disabledSlots = ref({})
+
 watchEffect(async () => {
   await fetchComponentSchema()
   initializePropsValues()
 })
+
+watch(disabledSlots, () => {
+  fetchComponentSchema()
+}, { deep: true })
 </script>
 
 <template>
@@ -62,42 +71,105 @@ watchEffect(async () => {
 
   <BDivider />
 
-  <BContainer size="l">
+  <BContainer size="l" v-if="propsSchema">
     <h2>Properties</h2>
 
-    <BForm @submit.prevent>
-      <BFormGroup v-for="prop in propsSchema" :key="prop.name">
-        <BFormItem>
-          <BFormLabel :for="prop.name">
-            {{ prop.name }}<span v-if="prop.type"> ({{ prop.type.join(',') }})</span>
-          </BFormLabel>
-        </BFormItem>
-        <BFormItem>
-          <BFormInput v-if="!prop.allowedValues && prop.type.length === 1 && prop.type[0] === 'Number'" :id="prop.name"
-            v-model.number="propsValues[prop.name]" type="number" />
-          <BFormInput v-else-if="!prop.allowedValues && !prop.type.includes('Boolean')" :id="prop.name"
-            v-model="propsValues[prop.name]" />
-          <BFormSelect v-else-if="prop.allowedValues" :id="prop.name" v-model="propsValues[prop.name]"
-            :items="prop.allowedValues" item-key="key" item-value="value" />
-          <div v-else-if="prop.type.includes('Boolean')">
-            <BSwitch v-model="propsValues[prop.name]" />
-          </div>
-        </BFormItem>
-      </BFormGroup>
-    </BForm>
+    <BTable>
+      <table>
+        <thead>
+          <tr>
+            <th width="250">Name</th>
+            <th>Options</th>
+            <th width="150">Data-Type</th>
+            <th width="150">Default</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr v-for="prop in propsSchema" :key="prop.name">
+            <td>
+              {{ prop.name }}
+            </td>
+
+            <td>
+              <BForm @submit.prevent>
+                <BFormGroup>
+                  <BFormItem>
+                    <BFormLabel :for="prop.name">
+                      {{ prop.name }}
+                    </BFormLabel>
+                  </BFormItem>
+                  <BFormItem>
+                    <BFormInput v-if="!prop.allowedValues && prop.type.length === 1 && prop.type[0] === 'Number'"
+                      :id="prop.name" v-model.number="propsValues[prop.name]" type="number" />
+                    <BFormInput v-else-if="!prop.allowedValues && !prop.type.includes('Boolean')" :id="prop.name"
+                      v-model="propsValues[prop.name]" />
+                    <BFormSelect v-else-if="prop.allowedValues" :id="prop.name" v-model="propsValues[prop.name]"
+                      :items="prop.allowedValues" item-key="key" item-value="value" />
+                    <div v-else-if="prop.type.includes('Boolean')">
+                      <BSwitch v-model="propsValues[prop.name]" />
+                    </div>
+                  </BFormItem>
+                </BFormGroup>
+              </BForm>
+            </td>
+
+            <td>
+              {{ prop.type.join(', ') }}
+            </td>
+
+            <td>
+              {{ prop.default }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </BTable>
   </BContainer>
 
-  <BContainer size="l">
+  <BContainer size="l" v-if="slotsSchema">
     <h2>Slots</h2>
-    <ul>
-      <li v-for="(slot, index) in slotsSchema" :key="index">{{ slot.name }}</li>
-    </ul>
+
+    <BTable>
+      <table>
+        <thead>
+          <tr>
+            <th width="250">Name</th>
+            <th width="250">Disable</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr v-for="(slot, index) in slotsSchema" :key="index">
+            <td>{{ slot.name }}</td>
+            <td>
+              <BSwitch v-model="disabledSlots[slot.name]" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </BTable>
   </BContainer>
 
-  <BContainer size="l">
+  <BContainer size="l" v-if="eventsSchema">
     <h2>Events</h2>
-    <ul>
-      <li v-for="(event, index) in eventsSchema" :key="index">{{ event.name }}</li>
-    </ul>
+
+    <BTable>
+      <table>
+        <thead>
+          <tr>
+            <th width="250">Name</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr v-for="(event, index) in eventsSchema" :key="index">
+            <td>
+              {{ event.name }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </BTable>
   </BContainer>
 </template>
