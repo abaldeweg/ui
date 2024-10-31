@@ -2,7 +2,8 @@
 
 ## v0.14.0
 
-Refactor BBadge and remove BChip
+- Refactor `BBadge` and remove `BChip`
+- `BList` refactoring
 
 ## v0.13.0
 

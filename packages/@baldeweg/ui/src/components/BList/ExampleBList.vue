@@ -1,31 +1,23 @@
 <script setup>
-import { ref } from 'vue'
+import { useRandomText } from '@/composables/useRandomText.js'
 
-const subtitle = ref(true)
-const options = ref(true)
-const image = ref(true)
+const { generateParagraph } = useRandomText()
 </script>
 
 <template>
   <AppComponent component="BList">
-    <template #image v-if="image">
-      <img src="@/assets/placeholder_1x1.jpg" alt="Icon" />
+    <template #start>
+      <RouterLink :to="route">
+        <img src="@/assets/placeholder_1x1.jpg" alt="Icon" />
+      </RouterLink>
     </template>
 
-    <template #title>
-      text text text text text text text text text text
-    </template>
+    <template #title>Title</template>
+    <template #subtitle>Subtitle</template>
+    {{ generateParagraph(10, false) }}
 
-    <template #options v-if="options">
+    <template #end>
       <BMaterialIcon :size="32" hover>more_vert</BMaterialIcon>
-    </template>
-
-    <template #subtitle v-if="subtitle">
-      <RouterLink :to="{ name: 'index' }">Subtitle</RouterLink> &bull; Text Text
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text Text Text Text Text Text Text Text Text
     </template>
   </AppComponent>
 </template>
