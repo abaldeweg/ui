@@ -28,10 +28,6 @@
     "directory": "Card"
   },
   {
-    "name": "Chip",
-    "directory": "Chip"
-  },
-  {
     "name": "Code",
     "directory": "Code"
   },

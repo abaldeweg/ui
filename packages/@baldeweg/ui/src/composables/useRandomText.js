@@ -13,18 +13,21 @@ export function useRandomText() {
     return sentences.value[randomIndex]
   }
 
-  function generateParagraph(counter) {
+  function generateParagraph(counter = 5, tags = true) {
     let paragraph = ''
     for (let i = 0; i < counter; i++) {
       paragraph += randomSentence() + ' '
     }
-    return '<p>' + paragraph + '</p>'
+    if (tags) {
+      return '<p>' + paragraph + '</p>'
+    }
+    return paragraph
   }
 
-  const generateParagraphs = (count) => {
+  const generateParagraphs = (count = 5, tags = true) => {
     const paragraphs = []
     for (let i = 0; i < count; i++) {
-      paragraphs.push(generateParagraph(Math.floor(Math.random() * 10) + 5))
+      paragraphs.push(generateParagraph(Math.floor(Math.random() * 10) + 5, tags))
     }
     return paragraphs.join('')
   }
