@@ -31,15 +31,19 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|content |String, Number|||
-|hide-empty |Boolean|true||
+|variant |String|none|none, inline, superscript|
 |position |String|right|left, right|
+|background |String|none|none, primary, neutral|
+|content |String, Number|||
+|hideEmpty |Boolean|false||
 
 ### Slots
 
 |Name|Description
 |----|-----------
+|icon|
 |default|
+|action|
 
 ## BBottomNav
 
@@ -104,21 +108,6 @@
 |text|
 |actions|
 |title|
-
-## BChip
-
-### Props
-
-|Name|Type|Default|Allowed Values|Example|Description
-|----|----|-------|--------------|----------|-----------
-|hover |Boolean|false||
-
-### Slots
-
-|Name|Description
-|----|-----------
-|default|
-|action|
 
 ## BCode
 
