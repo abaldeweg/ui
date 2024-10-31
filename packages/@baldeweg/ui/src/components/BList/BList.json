@@ -9,87 +9,48 @@
       ]
     },
     {
-      "name": "bold",
+      "name": "start-size",
       "type": [
-        "Boolean"
+        "String"
       ],
-      "default": false
+      "default": "100px"
+    },
+    {
+      "name": "end-size",
+      "type": [
+        "String"
+      ],
+      "default": "50px"
     },
     {
       "name": "divider",
       "type": [
         "Boolean"
       ],
-      "default": false
+      "default": false,
+      "example": true
     },
     {
-      "name": "image-size",
-      "type": [
-        "String"
-      ],
-      "allowedValues": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
-      ]
-    },
-    {
-      "name": "image-position",
-      "type": [
-        "String"
-      ],
-      "allowedValues": [
-        "start",
-        "center",
-        "end"
-      ],
-      "default": "center"
-    },
-    {
-      "name": "actions-position",
-      "type": [
-        "String"
-      ],
-      "allowedValues": [
-        "start",
-        "center",
-        "end"
-      ],
-      "default": "center"
-    },
-    {
-      "name": "reverse",
+      "name": "hover",
       "type": [
         "Boolean"
       ],
-      "default": false
-    },
-    {
-      "name": "disabled",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
-    },
-    {
-      "name": "active",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "default": false,
+      "example": true
     }
   ],
   "slots": [
     {
+      "name": "default"
+    },
+    {
+      "name": "start"
+    },
+    {
+      "name": "end"
+    },
+    {
       "name": "title"
-    },
-    {
-      "name": "image"
-    },
-    {
-      "name": "options"
     },
     {
       "name": "subtitle"

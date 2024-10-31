@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.14.0
+
+- `BList` refactoring
+
 ## v0.13.0
 
 - `BIcon` component removed, use `BMaterialIcon` instead <https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/docu/components.md#bmaterialicon>
