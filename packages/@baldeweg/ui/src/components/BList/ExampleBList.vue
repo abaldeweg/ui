@@ -12,9 +12,9 @@ const { generateParagraph } = useRandomText()
       </RouterLink>
     </template>
 
-      <template #title>Title</template>
-      <template #subtitle>Subtitle</template>
-      {{generateParagraph(10,false)}}
+    <template #title>Title</template>
+    <template #subtitle>Subtitle</template>
+    {{ generateParagraph(10, false) }}
 
     <template #end>
       <BMaterialIcon :size="32" hover>more_vert</BMaterialIcon>

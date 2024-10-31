@@ -31,8 +31,9 @@ defineProps({
           <slot name="title" />
         </h3>
         <p><span v-if="$slots.subtitle" class="subtitle">
-          <slot name="subtitle" />
-        </span><span v-if="$slots.subtitle && $slots.default"> - </span><slot />
+            <slot name="subtitle" />
+          </span><span v-if="$slots.subtitle && $slots.default"> - </span>
+          <slot />
         </p>
       </RouterLink>
     </div>
@@ -73,11 +74,11 @@ defineProps({
 }
 
 .content h3 {
-  margin:0;
+  margin: 0;
 }
 
 .content p {
-  padding:0;
+  padding: 0;
 }
 
 .content a,
