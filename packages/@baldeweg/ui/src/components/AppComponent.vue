@@ -51,6 +51,8 @@ watchEffect(async () => {
 watch(disabledSlots, () => {
   fetchComponentSchema()
 }, { deep: true })
+
+const tab = ref("props")
 </script>
 
 <template>
@@ -71,7 +73,15 @@ watch(disabledSlots, () => {
 
   <BDivider />
 
-  <BContainer size="l" v-if="propsSchema">
+  <BTabs justify="center">
+    <BTabsLink @click="tab = 'props'" v-if="propsSchema" class="tab">Props</BTabsLink>
+    <BTabsLink @click="tab = 'slots'" v-if="slotsSchema" class="tab">Slots</BTabsLink>
+    <BTabsLink @click="tab = 'events'" v-if="eventsSchema" class="tab">Events</BTabsLink>
+  </BTabs>
+
+  <BDivider />
+
+  <BContainer size="l" v-if="propsSchema && tab === 'props'">
     <h2>Properties</h2>
 
     <BTable>
@@ -127,7 +137,7 @@ watch(disabledSlots, () => {
     </BTable>
   </BContainer>
 
-  <BContainer size="l" v-if="slotsSchema">
+  <BContainer size="l" v-if="slotsSchema && tab === 'slots'">
     <h2>Slots</h2>
 
     <BTable>
@@ -151,7 +161,7 @@ watch(disabledSlots, () => {
     </BTable>
   </BContainer>
 
-  <BContainer size="l" v-if="eventsSchema">
+  <BContainer size="l" v-if="eventsSchema && tab === 'events'">
     <h2>Events</h2>
 
     <BTable>
@@ -173,3 +183,9 @@ watch(disabledSlots, () => {
     </BTable>
   </BContainer>
 </template>
+
+<style>
+.tab {
+  cursor: pointer;
+}
+</style>
