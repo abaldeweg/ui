@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from 'vue'
-import components from './components.json'
+import components from './components/components.json'
 
 export const createUi = () => {
   const install = (app) => {

@@ -8,10 +8,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'index',
-      component: () => import('../views/IndexView.vue'),
+      redirect: { name: 'component', params: { component: 'Alert' } }
+
     },
     {
-      path: '/component/:component?',
+      path: '/:component?',
       name: 'component',
       component: () => import('../views/ComponentView.vue'),
       props: (route) => ({ component: route.params.component || 'Alert' }),

@@ -7,25 +7,28 @@
       "name": "id",
       "type": [
         "String"
-      ]
+      ],
+      "example": "upload"
     },
     {
       "name": "text",
       "type": [
         "String"
-      ]
+      ],
+      "example": "Upload files"
     },
     {
       "name": "accept",
       "description": "Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`",
       "type": [
         "String"
-      ]
+      ],
+      "example": "image/jpeg, image/jpg, image/png, image/webp"
     }
   ],
   "events": [
     {
-      "name": "file"
+      "name": "update:modelValue"
     }
   ]
 }

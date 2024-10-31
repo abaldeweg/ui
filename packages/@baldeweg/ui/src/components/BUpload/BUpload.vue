@@ -5,7 +5,13 @@ defineProps({
   id: String,
   text: String,
   accept: String,
+  modelValue: {
+    type: Boolean,
+    default: false,
+  },
 })
+
+const emits = defineEmits(["update:modelValue"])
 
 const isDragging = ref(false)
 </script>
@@ -27,7 +33,7 @@ const isDragging = ref(false)
         event
         :id="id"
         :accept="accept"
-        @change="$emit('file', $event.target.files[0])"
+        @change="emits('update:modelValue', $event.target.files[0])"
         aria-label="Upload"
       />
     </div>
