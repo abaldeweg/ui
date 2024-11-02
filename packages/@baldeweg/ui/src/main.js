@@ -10,7 +10,7 @@ const admin = createAdmin()
 const app = createApp(App)
 const head = createHead()
 
-app.use(ui)
+app.use(ui, {})
 app.use(admin)
 app.use(router)
 app.use(head)

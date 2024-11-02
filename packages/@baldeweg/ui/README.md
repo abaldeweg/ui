@@ -78,3 +78,19 @@ html {
 ## Components
 
 [Components](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/docu/components.md)
+
+## Settings
+
+```js
+import { createUi } from './ui.js'
+
+const ui = createUi()
+
+app.use(ui, {})
+```
+
+```js
+import { inject } from 'vue'
+
+const options = inject("ui")
+```
