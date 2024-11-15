@@ -9,7 +9,7 @@
     "components:list": "node ./scripts/components.js"
   },
   "dependencies": {
-    "vue": "3.5.12"
+    "vue": "3.5.13"
   },
   "devDependencies": {
     "@baldeweg/eslint-config": "0.11.0",
