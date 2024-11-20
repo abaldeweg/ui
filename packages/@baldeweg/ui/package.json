@@ -9,23 +9,23 @@
     "components:list": "node ./scripts/components.js"
   },
   "dependencies": {
-    "vue": "3.5.12"
+    "vue": "3.5.13"
   },
   "devDependencies": {
     "@baldeweg/eslint-config": "0.11.0",
     "@rushstack/eslint-patch": "1.10.4",
-    "@unhead/vue": "1.11.10",
-    "@vitejs/plugin-vue": "5.1.4",
+    "@unhead/vue": "1.11.11",
+    "@vitejs/plugin-vue": "5.2.0",
     "@vue/eslint-config-prettier": "10.1.0",
-    "eslint": "9.13.0",
+    "eslint": "9.15.0",
     "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-vue": "9.30.0",
+    "eslint-plugin-vue": "9.31.0",
     "jsdom": "25.0.1",
     "prettier": "3.3.3",
     "start-server-and-test": "2.0.8",
-    "vite": "5.4.10",
+    "vite": "5.4.11",
     "vite-plugin-webfont-dl": "3.9.5",
-    "vitest": "2.1.4",
+    "vitest": "2.1.5",
     "vue-router": "4.4.5"
   },
   "files": [
