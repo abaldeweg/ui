@@ -53,6 +53,37 @@ watch(disabledSlots, () => {
 }, { deep: true })
 
 const tab = ref("props")
+
+const propsNames = computed(() => {
+  return propsSchema.value.map(prop => ` ${prop.name}="${propsValues[prop.name]}"`).join('')
+})
+
+const eventsNames = computed(() => {
+  return eventsSchema.value
+    ? eventsSchema.value.map(event => ` @${event.name}="handler"`).join('')
+    : ''
+})
+
+const slotsNames = computed(() => {
+  return slotsModule.value.map(slot => {
+    if (slot.name === 'default') {
+      return;
+    } else {
+      return `\n\t<template #${slot.name}>${slot.name}</template>`
+    }
+  }).join('')
+})
+
+const generatedCode = computed(() => {
+  const openingTag = `<${props.component}${propsNames.value}${eventsNames.value}`
+  const closingTag = `</${props.component}>`
+
+  if (slotsNames.value) {
+    return `${openingTag}>${slotsNames.value}\n${closingTag}`
+  } else {
+    return `${openingTag} />`
+  }
+})
 </script>
 
 <template>
@@ -77,6 +108,7 @@ const tab = ref("props")
     <BTabsLink @click="tab = 'props'" v-if="propsSchema" class="tab">Props</BTabsLink>
     <BTabsLink @click="tab = 'slots'" v-if="slotsSchema" class="tab">Slots</BTabsLink>
     <BTabsLink @click="tab = 'events'" v-if="eventsSchema" class="tab">Events</BTabsLink>
+    <BTabsLink @click="tab = 'code'" class="tab">Code</BTabsLink>
   </BTabs>
 
   <BDivider />
@@ -181,6 +213,12 @@ const tab = ref("props")
         </tbody>
       </table>
     </BTable>
+  </BContainer>
+
+  <BContainer size="l" v-if="tab === 'code'">
+    <h2>Code</h2>
+
+    <BCode>{{ generatedCode }}</BCode>
   </BContainer>
 </template>
 
