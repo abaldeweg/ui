@@ -407,39 +407,39 @@
   dependencies:
     undici-types "~6.19.8"
 
-"@unhead/dom@1.11.11":
-  version "1.11.11"
-  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.11.11.tgz#74569a280d7b9f013813aef8dee4705cb011e58a"
-  integrity sha512-4YwziCH5CmjvUzSGdZ4Klj6BqhLSTNZooA9kt47yDxj4Qw9uHqVnXwWWupYsVdIYPNsw1tR2AkHveg82y1Fn3A==
+"@unhead/dom@1.11.13":
+  version "1.11.13"
+  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.11.13.tgz#7dbf4bb233220a25854938d73dbac16d6697e074"
+  integrity sha512-8Bpo3e50i49/z0TMiskQk3OqUVJpWOO0cnEEydJeFnjsPczDH76H3mWLvB11cv1B/rjLdBiPgui7yetFta5LCw==
   dependencies:
-    "@unhead/schema" "1.11.11"
-    "@unhead/shared" "1.11.11"
+    "@unhead/schema" "1.11.13"
+    "@unhead/shared" "1.11.13"
 
-"@unhead/schema@1.11.11":
-  version "1.11.11"
-  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.11.11.tgz#28c5dbe923fce0948badca998934c322f5a1c096"
-  integrity sha512-xSGsWHPBYcMV/ckQeImbrVu6ddeRnrdDCgXUKv3xIjGBY+ob/96V80lGX8FKWh8GwdFSwhblISObKlDAt5K9ZQ==
+"@unhead/schema@1.11.13":
+  version "1.11.13"
+  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.11.13.tgz#475f1b93d761b75beef6ba0e9387b771e0f25ed9"
+  integrity sha512-fIpQx6GCpl99l4qJXsPqkXxO7suMccuLADbhaMSkeXnVEi4ZIle+l+Ri0z+GHAEpJj17FMaQdO5n9FMSOMUxkw==
   dependencies:
     hookable "^5.5.3"
     zhead "^2.2.4"
 
-"@unhead/shared@1.11.11":
-  version "1.11.11"
-  resolved "https://registry.yarnpkg.com/@unhead/shared/-/shared-1.11.11.tgz#1ec0ec744edce31808256801ce13efd369fa6d62"
-  integrity sha512-RfdvUskPn90ipO+PmR98jKZ8Lsx1uuzscOenO5xcrMrtWGhlLWaEBIrbvFOvX5PZ/u8/VNMJChTXGDUjEtHmlg==
+"@unhead/shared@1.11.13":
+  version "1.11.13"
+  resolved "https://registry.yarnpkg.com/@unhead/shared/-/shared-1.11.13.tgz#0294f2faccbd6ec81418279cbb64d518891e8724"
+  integrity sha512-EiJ3nsEtf6dvZ6OwVYrrrrCUl4ZE/9GTjpexEMti8EJXweSuL7SifNNXtIFk7UMoM0ULYxb7K/AKQV/odwoZyQ==
   dependencies:
-    "@unhead/schema" "1.11.11"
+    "@unhead/schema" "1.11.13"
 
-"@unhead/vue@1.11.11":
-  version "1.11.11"
-  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.11.11.tgz#226ee5dda055c005ff2569fb5c2cbc91cf76acdc"
-  integrity sha512-AxsHHauZ+w0m2irwDHqkc3GdNChMLBtolk8CN3IAZM6vTwH0EbPXlFCFcIk4WwkH0opG+R2GlKTThr5H0HLm7g==
+"@unhead/vue@1.11.13":
+  version "1.11.13"
+  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.11.13.tgz#758321e0c50cc7904fd76b9edcf765a6dd632238"
+  integrity sha512-s5++LqsNM01rkMQwtc4W19cP1fXC81o4YMyL+Kaqh9X0OPLeWnjONAh0U/Z2CIXBqhJHI+DoNXmDACXyuWPPxg==
   dependencies:
-    "@unhead/schema" "1.11.11"
-    "@unhead/shared" "1.11.11"
+    "@unhead/schema" "1.11.13"
+    "@unhead/shared" "1.11.13"
     defu "^6.1.4"
     hookable "^5.5.3"
-    unhead "1.11.11"
+    unhead "1.11.13"
 
 "@vitejs/plugin-vue@5.2.0":
   version "5.2.0"
@@ -3121,14 +3121,14 @@ undici-types@~6.19.8:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.19.8.tgz#35111c9d1437ab83a7cdc0abae2f26d88eda0a02"
   integrity sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==
 
-unhead@1.11.11:
-  version "1.11.11"
-  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.11.11.tgz#5115d42ccb4c76fa6053b5b83831a1e14de901a1"
-  integrity sha512-98tM2R8OWJhvS6uqTewkfIrsPqFU/VwnKpU2tVZ+jPXSWgWSLmM3K2Y2v5AEM4bZjmC/XH8pLVGzbqB7xzFI/Q==
+unhead@1.11.13:
+  version "1.11.13"
+  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.11.13.tgz#be8fc9034559dfdefaa9827e12da46d8fe7aa7b9"
+  integrity sha512-I7yyvqRfpPPzXuCG7HKZkgAWJDbzXDDEVyib4C/78HREqhNGHVSyo4TqX1h1xB5cx7WYc21HHDRT2/8YkqOy2w==
   dependencies:
-    "@unhead/dom" "1.11.11"
-    "@unhead/schema" "1.11.11"
-    "@unhead/shared" "1.11.11"
+    "@unhead/dom" "1.11.13"
+    "@unhead/schema" "1.11.13"
+    "@unhead/shared" "1.11.13"
     hookable "^5.5.3"
 
 uri-js@^4.2.2:
