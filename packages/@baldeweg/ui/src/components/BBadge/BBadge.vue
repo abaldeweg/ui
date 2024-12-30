@@ -35,36 +35,36 @@ const isHidden = computed(() => {
 
 const classes = computed(() => {
   return {
-    isInline: props.variant === 'inline' && !isHidden.value,
-    hasSuperscript: props.variant === 'superscript' && !isHidden.value,
-    backgroundPrimary: props.background === "primary",
-    backgroundNeutral: props.background === "neutral",
-    positionLeft: props.position === 'left',
-    positionRight: props.position === 'right'
+    badge_isInline: props.variant === 'inline' && !isHidden.value,
+    badge_hasSuperscript: props.variant === 'superscript' && !isHidden.value,
+    badge_backgroundPrimary: props.background === "primary",
+    badge_backgroundNeutral: props.background === "neutral",
+    badge_positionLeft: props.position === 'left',
+    badge_positionRight: props.position === 'right'
   }
 })
 </script>
 
 <template>
   <div class="badge" :class="classes" :data-content="content">
-    <div class="icon" v-if="$slots.icon">
+    <div class="badge_icon" v-if="$slots.icon">
       <slot name="icon" />
     </div>
 
-    <div class="body">
+    <div class="badge_body">
       <slot />
     </div>
 
-    <div class="inline" :class="{ positionLeft: props.position === 'left', positionRight: props.position === 'right' }"
+    <div class="badge_inline" :class="{ badge_positionLeft: props.position === 'left', badge_positionRight: props.position === 'right' }"
       v-if="props.variant === 'inline' && !isHidden">{{ content }}</div>
 
-    <div class="action" v-if="$slots.action">
+    <div class="badge_action" v-if="$slots.action">
       <slot name="action" />
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .badge {
   display: inline-flex;
   border-radius: 20px;
@@ -72,26 +72,26 @@ const classes = computed(() => {
   transition: background-color 0.3s;
 }
 
-.badge:hover {
+.badge_badge:hover {
   cursor: pointer;
 }
 
-.icon,
-.body,
-.action {
+.badge_icon,
+.badge_body,
+.badge_action {
   line-height: 0;
   align-content: center;
 }
 
-.icon {
+.badge_icon {
   margin-right: 10px;
 }
 
-.body {
+.badge_body {
   display: inline-block;
 }
 
-.inline {
+.badge_inline {
   display: inline-block;
   background: var(--color-neutral-02);
   border-radius: 20px;
@@ -103,56 +103,56 @@ const classes = computed(() => {
   align-content: center;
 }
 
-.inline.positionLeft {
+.badge_inline.badge_positionLeft {
   margin-right: 10px;
 }
 
-.inline.positionRight {
+.badge_inline.badge_positionRight {
   margin-left: 10px;
 }
 
-.isInline.positionLeft .icon {
+.badge_isInline.badge_positionLeft .badge_icon {
   order: 2;
 }
 
-.isInline.positionLeft .body {
+.badge_isInline.badge_positionLeft .badge_body {
   order: 3;
 }
 
-.isInline.positionLeft .inline {
+.badge_isInline.badge_positionLeft .badge_inline {
   order: 1;
 }
 
-.isInline.positionRight .icon {
+.badge_isInline.badge_positionRight .badge_icon {
   order: 1;
 }
 
-.isInline.positionRight .body {
+.badge_isInline.badge_positionRight .badge_body {
   order: 2;
 }
 
-.isInline.positionRight .inline {
+.badge_isInline.badge_positionRight .badge_inline {
   order: 3;
 }
 
-.badge.backgroundPrimary {
+.badge_badge.badge_backgroundPrimary {
   background: var(--color-primary-10);
 }
 
-.badge.backgroundPrimary:hover {
+.badge_badge.badge_backgroundPrimary:hover {
   background: var(--color-primary-05);
 }
 
-.badge.backgroundNeutral {
+.badge_badge.badge_backgroundNeutral {
   background: var(--color-neutral-02);
 }
 
-.badge.backgroundNeutral:hover {
+.badge_badge.badge_backgroundNeutral:hover {
   background: var(--color-neutral-04);
 }
 
-.hasSuperscript.positionLeft::before,
-.hasSuperscript.positionRight::after {
+.badge_hasSuperscript.badge_positionLeft::before,
+.badge_hasSuperscript.badge_positionRight::after {
   content: attr(data-content);
   display: inline-block;
   position: relative;
@@ -165,7 +165,7 @@ const classes = computed(() => {
   color: var(--color-neutral-10);
 }
 
-.action {
+.badge_action {
   margin-left: 10px;
   order: 3;
 }

@@ -14,11 +14,11 @@ defineProps({
 <template>
   <div class="toast" v-if="visible">
     <div
-      class="inner"
+      class="toast_inner"
       :class="{
-        type_error: type === 'error',
-        type_warning: type === 'warning',
-        type_success: type === 'success',
+        toast_type_error: type === 'error',
+        toast_type_warning: type === 'warning',
+        toast_type_success: type === 'success',
       }"
     >
       <slot />
@@ -37,7 +37,7 @@ defineProps({
   box-sizing: border-box;
   z-index: 6;
 }
-.inner {
+.toast_inner {
   border-radius: 10px;
   background: var(--color-neutral-02);
   max-width: 400px;
@@ -45,13 +45,13 @@ defineProps({
   margin: auto;
   box-sizing: border-box;
 }
-.type_error {
+.toast_type_error {
   border-left: 10px solid var(--color-accent-red-10);
 }
-.type_warning {
+.toast_type_warning {
   border-left: 10px solid var(--color-accent-yellow-10);
 }
-.type_success {
+.toast_type_success {
   border-left: 10px solid var(--color-accent-green-10);
 }
 </style>

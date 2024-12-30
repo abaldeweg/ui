@@ -42,30 +42,30 @@ onBeforeUnmount(() => {
 
 <template>
   <div v-if="modelValue" class="modal">
-    <div class="overlay" @click="close" />
+    <div class="modal_overlay" @click="close" />
 
-    <div class="inner" :style="{ maxWidth: width + 'px' }">
-      <div class="header">
-        <h2 class="title" v-if="$slots.title">
+    <div class="modal_inner" :style="{ maxWidth: width + 'px' }">
+      <div class="modal_header">
+        <h2 class="modal_title" v-if="$slots.title">
           <slot name="title" />
         </h2>
-        <span class="close" @click="close" v-if="closeButton">
+        <span class="modal_close" @click="close" v-if="closeButton">
           <BMaterialIcon :size="26" hover>close</BMaterialIcon>
         </span>
       </div>
 
-      <div class="body">
+      <div class="modal_body">
         <slot />
       </div>
 
-      <div class="footer" v-if="$slots.footer">
+      <div class="modal_footer" v-if="$slots.footer">
         <slot name="footer" />
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .modal {
   position: fixed;
   top: 0;
@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
   z-index: 4;
 }
 
-.overlay {
+.modal_overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
   opacity: 0.8;
 }
 
-.inner {
+.modal_inner {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -96,14 +96,14 @@ onBeforeUnmount(() => {
   box-sizing: border-box;
 }
 
-.header {
+.modal_header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-neutral-02);
   padding: 5px 20px;
 }
 
-.title {
+.modal_title {
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: normal;
@@ -111,17 +111,17 @@ onBeforeUnmount(() => {
   margin: 0;
 }
 
-.close {
+.modal_close {
   float: right;
 }
 
-.body {
+.modal_body {
   flex-grow: 1;
   height: calc(100vh - 90px);
   overflow-y: auto;
 }
 
-.footer {
+.modal_footer {
   border-top: 1px solid var(--color-neutral-02);
   padding: 20px;
 }

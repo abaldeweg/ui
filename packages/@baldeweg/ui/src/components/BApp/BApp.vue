@@ -4,7 +4,7 @@
   </main>
 </template>
 
-<style scoped>
+<style>
 .content {
   display: block;
   clear: both;

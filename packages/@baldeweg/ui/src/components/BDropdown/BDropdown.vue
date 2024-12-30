@@ -79,7 +79,7 @@ const showDropdown = (event) => {
     </span>
 
     <div
-      class="overlay"
+      class="dropdown_overlay"
       :class="{
         isActive: show,
       }"
@@ -103,7 +103,7 @@ const showDropdown = (event) => {
   </article>
 </template>
 
-<style scoped>
+<style>
 .dropdown {
   display: none;
   position: fixed;
@@ -124,10 +124,10 @@ const showDropdown = (event) => {
 .dropdown.isActive {
   display: block;
 }
-.overlay {
+.dropdown_overlay {
   display: none;
 }
-.overlay.isActive {
+.dropdown_overlay.isActive {
   position: fixed;
   top: 0;
   left: 0;

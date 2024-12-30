@@ -69,7 +69,7 @@ const startRipple = () => {
   </button>
 </template>
 
-<style scoped>
+<style>
 .btn {
   display: inline-block;
   position: relative;

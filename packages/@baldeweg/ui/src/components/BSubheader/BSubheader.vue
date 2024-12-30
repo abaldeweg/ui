@@ -2,7 +2,7 @@
   <div class="subheader"><slot /></div>
 </template>
 
-<style scoped>
+<style>
 .subheader {
   color: var(--color-neutral-06);
   text-transform: uppercase;

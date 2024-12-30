@@ -55,7 +55,7 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style>
 .flex {
   display: flex;
   max-width: 1200px;

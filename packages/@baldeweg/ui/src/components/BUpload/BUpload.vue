@@ -17,10 +17,10 @@ const isDragging = ref(false)
 </script>
 
 <template>
-  <div class="upload" :class="{ isDragging }">
-    <p class="text">{{ text }}</p>
+  <div class="upload" :class="{ upload_isDragging: isDragging }">
+    <p class="upload_text">{{ text }}</p>
     <div
-      class="dropzone"
+      class="upload_dropzone"
       @dragover="isDragging = true"
       @dragenter="isDragging = true"
       @dragleave="isDragging = false"
@@ -29,7 +29,7 @@ const isDragging = ref(false)
     >
       <b-form-input
         type="file"
-        class="input"
+        class="upload_input"
         event
         :id="id"
         :accept="accept"
@@ -40,7 +40,7 @@ const isDragging = ref(false)
   </div>
 </template>
 
-<style scoped>
+<style>
 .upload {
   position: relative;
   height: 300px;
@@ -48,22 +48,22 @@ const isDragging = ref(false)
   border-radius: 10px;
 }
 .upload:hover,
-.upload.isDragging {
+.upload.upload_isDragging {
   border: 1px solid var(--color-primary-10);
 }
-.text {
+.upload_text {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
 }
-.dropzone {
+.upload_dropzone {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.input {
+.upload_input {
   position: absolute;
   width: 100%;
   height: 100%;

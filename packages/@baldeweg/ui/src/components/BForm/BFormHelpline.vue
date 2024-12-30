@@ -4,7 +4,7 @@
   </p>
 </template>
 
-<style scoped>
+<style>
 .helpline {
   font-size: 0.8rem;
   color: var(--color-neutral-08);

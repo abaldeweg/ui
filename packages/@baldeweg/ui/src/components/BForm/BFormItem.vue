@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .item {
   clear: both;
   overflow: auto;

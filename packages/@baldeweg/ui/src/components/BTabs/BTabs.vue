@@ -23,7 +23,7 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style>
 .tabs {
   display: flex;
   overflow-x: auto;

@@ -10,7 +10,7 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style>
 .group {
   clear: both;
   margin-bottom: 20px;

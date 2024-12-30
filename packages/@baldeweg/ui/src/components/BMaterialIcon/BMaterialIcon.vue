@@ -34,7 +34,7 @@ const iconStyle = computed(() => ({
   </span>
 </template>
 
-<style scoped>
+<style>
 .icon {
   vertical-align: middle;
   opacity: 1;

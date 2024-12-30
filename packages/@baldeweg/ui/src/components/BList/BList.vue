@@ -16,21 +16,21 @@ defineProps({
 
 <template>
   <div class="list" :class="{
-    hasHover: hover,
-    isActive: active,
+    list_hasHover: hover,
+    list_isActive: active,
   }">
-    <div v-if="$slots.start" class="start" :style="{ width: startSize }">
+    <div v-if="$slots.start" class="list_start" :style="{ width: startSize }">
       <slot name="start" />
     </div>
 
-    <div class="content" :class="{
-      hasDivider: divider,
+    <div class="list_content" :class="{
+      list_hasDivider: divider,
     }">
       <RouterLink :to="route">
         <h3 v-if="$slots.title">
           <slot name="title" />
         </h3>
-        <p><span v-if="$slots.subtitle" class="subtitle">
+        <p><span v-if="$slots.subtitle" class="list_subtitle">
             <slot name="subtitle" />
           </span><span v-if="$slots.subtitle && $slots.default"> - </span>
           <slot />
@@ -38,8 +38,8 @@ defineProps({
       </RouterLink>
     </div>
 
-    <div v-if="$slots.end" class="end" :class="{
-      hasDivider: divider,
+    <div v-if="$slots.end" class="list_end" :class="{
+      list_hasDivider: divider,
     }" :style="{ width: endSize }">
       <slot name="end" />
     </div>
@@ -53,49 +53,49 @@ defineProps({
   transition: background-color 0.3s ease;
 }
 
-.hasHover:hover {
+.list_hasHover:hover {
   background: var(--color-neutral-02);
   cursor: pointer;
 }
 
-.start,
-.content,
-.end {
+.list_start,
+.list_content,
+.list_end {
   /* border: 1px solid #ff0000; */
   padding: 10px 0;
 }
 
-.start {
+.list_start {
   padding-right: 20px;
 }
 
-.content {
+.list_content {
   flex-grow: 1;
 }
 
-.content h3 {
+.list_content h3 {
   margin: 0;
 }
 
-.content p {
+.list_content p {
   padding: 0;
 }
 
-.content a,
-.content a:hover {
+.list_content a,
+.list_content a:hover {
   color: var(--color-neutral-10) !important;
 }
 
-.subtitle {
+.list_subtitle {
   font-weight: bold;
 }
 
-.end {
+.list_end {
   padding-left: 20px;
 }
 
-.content.hasDivider,
-.end.hasDivider {
+.list_content.list_hasDivider,
+.list_end.list_hasDivider {
   border-bottom: 1px solid var(--color-neutral-02);
 }
 </style>

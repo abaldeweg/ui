@@ -4,7 +4,7 @@
   </fieldset>
 </template>
 
-<style scoped>
+<style>
 .fieldset {
   clear: both;
   border: 0 hidden;

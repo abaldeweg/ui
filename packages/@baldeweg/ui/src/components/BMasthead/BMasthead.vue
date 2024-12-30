@@ -4,7 +4,7 @@
   </header>
 </template>
 
-<style scoped>
+<style>
 .masthead {
   display: grid;
   grid-template-columns: repeat(4, 25%);

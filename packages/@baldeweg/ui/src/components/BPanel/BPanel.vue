@@ -29,30 +29,30 @@ const close = () => {
 </script>
 
 <template>
-  <Transition name="overlay">
-    <div class="overlay" @click="close" v-if="modelValue" />
+  <Transition name="panel_overlay">
+    <div class="panel_overlay" @click="close" v-if="modelValue" />
   </Transition>
 
-  <Transition name="container">
-    <div class="container" :class="{
-      position_left: position === 'left',
-      position_right: position === 'right',
+  <Transition name="panel_container">
+    <div class="panel_container" :class="{
+      panel_position_left: position === 'left',
+      panel_position_right: position === 'right',
     }" v-if="modelValue" :style="{ maxWidth: width }">
-      <div class="header" v-if="slots.header">
+      <div class="panel_header" v-if="slots.header">
         <slot name="header" />
       </div>
-      <div class="content">
+      <div class="panel_content">
         <slot />
       </div>
-      <div class="footer" v-if="slots.footer">
+      <div class="panel_footer" v-if="slots.footer">
         <slot name="footer" />
       </div>
     </div>
   </Transition>
 </template>
 
-<style scoped>
-.overlay {
+<style>
+.panel_overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -63,7 +63,7 @@ const close = () => {
   z-index: 3;
 }
 
-.container {
+.panel_container {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -74,68 +74,68 @@ const close = () => {
   z-index: 3;
 }
 
-.container.position_left {
+.panel_container.panel_position_left {
   left: 0;
   border-right: 1px solid var(--color-neutral-02);
 }
 
-.container.position_right {
+.panel_container.panel_position_right {
   right: 0;
   border-left: 1px solid var(--color-neutral-02);
 }
 
-.header {
+.panel_header {
   border-bottom: 1px solid var(--color-neutral-02);
 }
 
-.content {
+.panel_content {
   flex-grow: 1;
   max-height: calc(100vh);
   overflow-y: auto;
 }
 
-.footer {
+.panel_footer {
   border-top: 1px solid var(--color-neutral-02);
 }
 
 /* transition overlay */
-.overlay-enter-active,
-.overlay-leave-active {
+.panel_overlay-enter-active,
+.panel_overlay-leave-active {
   transition: opacity 0.5s ease;
 }
 
-.overlay-enter-from,
-.overlay-leave-to {
+.panel_overlay-enter-from,
+.panel_overlay-leave-to {
   opacity: 0;
 }
 
 /* transition container */
-.container-enter-active {
+.panel_container-enter-active {
   transition: all 0.5s ease-out;
 }
 
-.container-leave-active {
+.panel_container-leave-active {
   transition: all 0.5s ease-in;
 }
 
-.container-enter-from,
-.container-leave-to {
+.panel_container-enter-from,
+.panel_container-leave-to {
   opacity: 0;
 }
 
-.container-enter-from.position_left,
-.container-leave-to.position_left {
+.panel_container-enter-from.panel_position_left,
+.panel_container-leave-to.panel_position_left {
   transform: translateX(-300px);
 }
 
-.container-enter-from.position_right,
-.container-leave-to.position_right {
+.panel_container-enter-from.panel_position_right,
+.panel_container-leave-to.panel_position_right {
   transform: translateX(300px);
 }
 
 @media print {
-  .overlay,
-  .container {
+  .panel_overlay,
+  .panel_container {
     display: none;
   }
 }

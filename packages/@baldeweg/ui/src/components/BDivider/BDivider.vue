@@ -14,29 +14,29 @@ defineProps({
   <hr
     class="divider"
     :class="{
-      size_l: size === 'l',
-      size_m: size === 'm',
-      size_s: size === 's',
-      size_xs: size === 'xs',
+      divider_size_l: size === 'l',
+      divider_size_m: size === 'm',
+      divider_size_s: size === 's',
+      divider_size_xs: size === 'xs',
     }"
   />
 </template>
 
-<style scoped>
+<style>
 .divider {
   border: 0 hidden;
   border-top: 1px solid var(--color-neutral-02);
 }
-.size_l {
+.divider_size_l {
   width: 100%;
 }
-.size_m {
+.divider_size_m {
   max-width: 1160px;
 }
-.size_s {
+.divider_size_s {
   max-width: 600px;
 }
-.size_xs {
+.divider_size_xs {
   max-width: 100px;
 }
 </style>

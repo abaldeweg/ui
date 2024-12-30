@@ -7,22 +7,22 @@ defineProps({
 
 <template>
   <div class="comment">
-    <div class="actions" v-if="$slots.actions">
+    <div class="comment_actions" v-if="$slots.actions">
       <slot name="actions" />
     </div>
 
-    <div class="header" v-if="author || date">
-      <span class="author" v-if="author">{{ author }}</span>
-      <span class="date" v-if="date">{{ date }}</span>
+    <div class="comment_header" v-if="author || date">
+      <span class="comment_author" v-if="author">{{ author }}</span>
+      <span class="comment_date" v-if="date">{{ date }}</span>
     </div>
 
-    <div class="body">
+    <div class="comment_body">
       <p><slot /></p>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .comment {
   border-bottom: 1px solid var(--color-neutral-02);
   margin-bottom: 20px;
@@ -31,20 +31,20 @@ defineProps({
   border-top: 1px solid var(--color-neutral-02);
   padding-top: 20px;
 }
-.header {
+.comment_header {
   font-size: 0.8rem;
   color: var(--color-neutral-06);
 }
-.author {
+.comment_author {
   font-weight: bold;
 }
-.date {
+.comment_date {
   margin-left: 10px;
 }
-.actions {
+.comment_actions {
   float: right;
 }
-.body {
+.comment_body {
   overflow-wrap: break-word;
 }
 </style>

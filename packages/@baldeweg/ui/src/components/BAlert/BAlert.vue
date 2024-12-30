@@ -22,11 +22,11 @@ const props = defineProps({
 const showAlert = ref(false)
 const alertClass = computed(() => {
   return {
-    type_error: props.type === 'error',
-    type_warning: props.type === 'warning',
-    type_success: props.type === 'success',
-    type_info: props.type === 'info',
-    isElevated: props.elevated
+    alert_type_error: props.type === 'error',
+    alert_type_warning: props.type === 'warning',
+    alert_type_success: props.type === 'success',
+    alert_type_info: props.type === 'info',
+    alert_isElevated: props.elevated
   }
 })
 </script>
@@ -39,7 +39,7 @@ const alertClass = computed(() => {
   </div>
 </template>
 
-<style scoped>
+<style>
 .alert {
   border-radius: 10px;
   border: 2px solid var(--color-neutral-08);
@@ -48,23 +48,23 @@ const alertClass = computed(() => {
   margin: 20px 0;
 }
 
-.type_error {
+.alert_type_error {
   border: 2px solid var(--color-accent-red-10);
 }
 
-.type_warning {
+.alert_type_warning {
   border: 2px solid var(--color-accent-yellow-10);
 }
 
-.type_success {
+.alert_type_success {
   border: 2px solid var(--color-accent-green-10);
 }
 
-.type_info {
+.alert_type_info {
   border: 2px solid var(--color-accent-blue-10);
 }
 
-.isElevated {
+.alert_isElevated {
   box-shadow: 3px 3px 3px var(--color-neutral-02), -3px -3px 3px var(--color-neutral-02);
 }
 </style>

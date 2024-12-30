@@ -29,7 +29,7 @@ defineProps({
   </select>
 </template>
 
-<style scoped>
+<style>
 .select {
   border: 1px solid var(--color-neutral-04);
   background: var(--color-neutral-00);

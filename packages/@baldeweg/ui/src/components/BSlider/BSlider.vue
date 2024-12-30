@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .slider {
   display: flex;
   gap: 20px;

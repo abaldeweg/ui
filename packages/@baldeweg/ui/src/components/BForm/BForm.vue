@@ -15,7 +15,7 @@ defineProps({
   </form>
 </template>
 
-<style scoped>
+<style>
 .form {
   box-sizing: border-box;
   width: 100%;

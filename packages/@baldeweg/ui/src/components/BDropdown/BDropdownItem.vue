@@ -7,37 +7,37 @@ defineProps({
 </script>
 
 <template>
-  <li class="item" :class="{ isBold: bold, canHover: !noHover }">
-    <div class="icon" v-if="icon">
+  <li class="dropdown_item" :class="{ dropdown_isBold: bold, dropdown_canHover: !noHover }">
+    <div class="dropdown_icon" v-if="icon">
       <BMaterialIcon :type="icon" :size="15">{{ icon }}</BMaterialIcon>
     </div>
-    <div class="title">
+    <div class="dropdown_title">
       <slot />
     </div>
   </li>
 </template>
 
-<style scoped>
-.item {
+<style>
+.dropdown_item {
   display: flex;
   align-items: center;
   padding: 10px 20px;
   cursor: pointer;
 }
 
-.item.isBold {
+.dropdown_item.dropdown_isBold {
   font-weight: bold;
 }
 
-.item:hover.canHover {
+.dropdown_item:hover.dropdown_canHover {
   background: var(--color-neutral-02);
 }
 
-.title {
+.dropdown_title {
   width: 100%;
 }
 
-.icon {
+.dropdown_icon {
   display: flex;
   margin-right: 10px;
 }

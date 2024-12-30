@@ -10,33 +10,33 @@ defineProps({
   <article
     class="card"
     :class="{
-      outlined,
-      filled,
+      card_outlined: outlined,
+      card_filled: filled,
     }"
   >
-    <div class="image" v-if="$slots.image">
+    <div class="card_image" v-if="$slots.image">
       <RouterLink :to="route" v-if="route">
         <slot name="image" />
       </RouterLink>
       <slot name="image" v-else />
     </div>
 
-    <div class="body">
-      <div class="title">
+    <div class="card_body">
+      <div class="card_title">
         <RouterLink :to="route" v-if="route">
           <slot name="title" />
         </RouterLink>
         <slot name="title" v-else />
       </div>
 
-      <div class="subtitle" v-if="$slots.subtitle">
+      <div class="card_subtitle" v-if="$slots.subtitle">
         <RouterLink :to="route" v-if="route">
           <slot name="subtitle" />
         </RouterLink>
         <slot name="subtitle" v-else />
       </div>
 
-      <div class="text" v-if="$slots.text">
+      <div class="card_text" v-if="$slots.text">
         <RouterLink :to="route" v-if="route">
           <slot name="text" />
         </RouterLink>
@@ -44,7 +44,7 @@ defineProps({
       </div>
     </div>
 
-    <div class="actions" v-if="$slots.actions">
+    <div class="card_actions" v-if="$slots.actions">
       <slot name="actions" />
     </div>
   </article>
@@ -54,44 +54,44 @@ defineProps({
 .card {
   clear: both;
 }
-.outlined {
+.card_outlined {
   border: 2px solid var(--color-neutral-02);
 }
-.filled {
+.card_filled {
   background: var(--color-neutral-02);
 }
-.image {
+.card_image {
   background: var(--color-neutral-02);
   width: 100%;
   line-height: 0;
 }
-.title {
+.card_title {
   font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
 }
-.title,
-.title a {
+.card_title,
+.card_title a {
   color: var(--color-neutral-10);
 }
-.title:hover,
-.title a:hover {
+.card_title:hover,
+.card_title a:hover {
   color: var(--color-neutral-06);
 }
-.subtitle,
-.subtitle a,
-.subtitle a:hover {
+.card_subtitle,
+.card_subtitle a,
+.card_subtitle a:hover {
   color: var(--color-neutral-06);
   font-size: 1.2rem;
 }
-.text,
-.text a,
-.text a:hover {
+.card_text,
+.card_text a,
+.card_text a:hover {
   color: var(--color-neutral-10);
   margin-top: 10px;
 }
-.actions {
+.card_actions {
   text-align: right;
   margin-top: 20px;
 }

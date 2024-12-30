@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .link {
   flex-shrink: 0;
   border-radius: 10px;

@@ -16,7 +16,7 @@ defineProps({
   />
 </template>
 
-<style scoped>
+<style>
 .textarea {
   border: 1px solid var(--color-neutral-04);
   background: var(--color-neutral-00);

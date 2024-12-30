@@ -4,7 +4,7 @@
   </legend>
 </template>
 
-<style scoped>
+<style>
 .legend {
   padding: 0;
 }

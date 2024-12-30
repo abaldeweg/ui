@@ -22,19 +22,19 @@ defineProps({
   <section
     class="container"
     :class="{
-      size_l: size === 'l',
-      size_m: size === 'm',
-      size_s: size === 's',
-      align_right: align === 'right',
-      align_center: align === 'center',
-      hasHighlight: highlight,
+      container_size_l: size === 'l',
+      container_size_m: size === 'm',
+      container_size_s: size === 's',
+      container_align_right: align === 'right',
+      container_align_center: align === 'center',
+      container_hasHighlight: highlight,
     }"
   >
     <slot />
   </section>
 </template>
 
-<style scoped>
+<style>
 .container {
   clear: both;
   letter-spacing: 0.3px;
@@ -47,22 +47,22 @@ defineProps({
   display: table;
   clear: both;
 }
-.size_l {
+.container_size_l {
   width: 100%;
 }
-.size_m {
+.container_size_m {
   max-width: 1160px;
 }
-.size_s {
+.container_size_s {
   max-width: 600px;
 }
-.align_right {
+.container_align_right {
   text-align: right;
 }
-.align_center {
+.container_align_center {
   text-align: center;
 }
-.hasHighlight {
+.container_hasHighlight {
   background: var(--color-neutral-02);
 }
 </style>

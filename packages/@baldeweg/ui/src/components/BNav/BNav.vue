@@ -8,14 +8,14 @@ defineProps({
 
 <template>
   <ul class="nav">
-    <li class="item" v-for="(item, index) in nav" :key="index">
-      <span class="icon" v-if="item.icon">
+    <li class="nav_item" v-for="(item, index) in nav" :key="index">
+      <span class="nav_icon" v-if="item.icon">
         <BMaterialIcon :type="item.icon.value" :size="18" no-hover color="var(--color-neutral-06)"
           v-if="item.icon.type === 'icon'">{{ item.icon.value }}</BMaterialIcon>
-        <div class="dot" v-if="item.icon.type === 'dot'" :style="{ background: item.icon.value }" />
+        <div class="nav_dot" v-if="item.icon.type === 'dot'" :style="{ background: item.icon.value }" />
       </span>
 
-      <span class="title">
+      <span class="nav_title">
         <RouterLink :to="item.route" v-if="typeof item.route === 'object'">
           {{ item.title }}
         </RouterLink>
@@ -24,21 +24,21 @@ defineProps({
         </a>
       </span>
 
-      <span class="badge" v-if="item.badge">
+      <span class="nav_badge" v-if="item.badge">
         <RouterLink :to="item.route">{{ item.badge }}</RouterLink>
       </span>
     </li>
   </ul>
 </template>
 
-<style scoped>
+<style>
 .nav {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.item {
+.nav_item {
   display: flex;
   justify-items: center;
   border-radius: 10px;
@@ -47,22 +47,22 @@ defineProps({
   transition: background 0.3s ease;
 }
 
-.item:hover,
-.item:has(.isActiveExact) {
+.nav_item:hover,
+.nav_item:has(.isActiveExact) {
   background: var(--color-neutral-02);
   transition: background 0.3s ease;
 }
 
-.item,
-.item a {
+.nav_item,
+.nav_item a {
   color: var(--color-neutral-10);
 }
 
-.item a {
+.nav_item a {
   display: block;
 }
 
-.icon {
+.nav_icon {
   display: flex;
   justify-items: end;
   align-items: center;
@@ -70,27 +70,27 @@ defineProps({
   width: 25px;
 }
 
-.dot {
+.nav_dot {
   border-radius: 50%;
   width: 10px;
   height: 10px;
 }
 
-.title {
+.nav_title {
   flex-grow: 1;
 }
 
-.badge {
+.nav_badge {
   min-width: 30px;
   text-align: right;
 }
 
-.badge a {
+.nav_badge a {
   color: var(--color-neutral-06);
 }
 
-.item:hover .badge,
-.isActiveExact .badge {
+.nav_item:hover .nav_badge,
+.isActiveExact .nav_badge {
   color: var(--color-neutral-00);
 }
 </style>

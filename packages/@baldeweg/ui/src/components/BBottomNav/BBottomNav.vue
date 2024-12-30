@@ -4,7 +4,7 @@
   </header>
 </template>
 
-<style scoped>
+<style>
 .bottom_nav {
   display: flex;
   align-items: center;

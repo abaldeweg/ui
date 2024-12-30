@@ -27,20 +27,20 @@ const close = () => {
 
 <template>
   <div v-if="visible" class="dialog">
-    <div class="overlay" @click="close" />
+    <div class="dialog_overlay" @click="close" />
 
-    <div class="body">
-      <div class="content">
+    <div class="dialog_body">
+      <div class="dialog_content">
         <slot />
       </div>
-      <div class="footer">
+      <div class="dialog_footer">
         <slot name="actions" />
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .dialog {
   position: fixed;
   top: 0;
@@ -49,7 +49,7 @@ const close = () => {
   z-index: 5;
 }
 
-.overlay {
+.dialog_overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -59,7 +59,7 @@ const close = () => {
   opacity: 0.8;
 }
 
-.body {
+.dialog_body {
   position: relative;
   border: 1px solid var(--color-neutral-02);
   border-radius: 10px;
@@ -69,11 +69,11 @@ const close = () => {
   box-sizing: border-box;
 }
 
-.content {
+.dialog_content {
   padding: 20px;
 }
 
-.footer {
+.dialog_footer {
   padding: 20px;
   text-align: right;
 }
