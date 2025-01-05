@@ -132,7 +132,7 @@ const positionClass = computed(() => {
   border-color: transparent var(--color-neutral-02) transparent transparent;
 }
 
-.tooltip_tooltip:hover .tooltip_text {
+.tooltip:hover .tooltip_text {
   visibility: visible;
   opacity: 1;
 }
