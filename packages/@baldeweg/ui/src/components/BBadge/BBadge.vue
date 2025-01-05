@@ -72,7 +72,7 @@ const classes = computed(() => {
   transition: background-color 0.3s;
 }
 
-.badge_badge:hover {
+.badge:hover {
   cursor: pointer;
 }
 
@@ -135,19 +135,19 @@ const classes = computed(() => {
   order: 3;
 }
 
-.badge_badge.badge_backgroundPrimary {
+.badge.badge_backgroundPrimary {
   background: var(--color-primary-10);
 }
 
-.badge_badge.badge_backgroundPrimary:hover {
+.badge.badge_backgroundPrimary:hover {
   background: var(--color-primary-05);
 }
 
-.badge_badge.badge_backgroundNeutral {
+.badge.badge_backgroundNeutral {
   background: var(--color-neutral-02);
 }
 
-.badge_badge.badge_backgroundNeutral:hover {
+.badge.badge_backgroundNeutral:hover {
   background: var(--color-neutral-04);
 }
 
