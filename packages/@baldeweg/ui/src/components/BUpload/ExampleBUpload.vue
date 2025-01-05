@@ -5,7 +5,5 @@ const upload = ref(false)
 </script>
 
 <template>
-  <BForm enctype="multipart/form-data" class="upload" @submit.prevent>
-    <AppComponent component="BUpload" v-model="upload" />
-  </BForm>
+  <AppComponent component="BUpload" v-model="upload" />
 </template>
