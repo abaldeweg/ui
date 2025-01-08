@@ -632,39 +632,39 @@
   dependencies:
     undici-types "~6.20.0"
 
-"@unhead/dom@1.11.14":
-  version "1.11.14"
-  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.11.14.tgz#30e39d9848c964e5038c98e2de0de8bd0737d77a"
-  integrity sha512-FaHCWo9JR4h7PCpSRaXuMC6ifXOuBzlI0PD1MmUcxND2ayDl1d6DauIbN8TUf9TDRxNkrK1Ehb0OCXjC1ZJtrg==
+"@unhead/dom@1.11.15":
+  version "1.11.15"
+  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.11.15.tgz#1f2fad5173f160877ac33e09e634960e98905a0e"
+  integrity sha512-2OZ7zvZQLqlqkhvsKsNOhxxoO3vgjygzzrmtooQR9QNKY+3HjwJ3+QfjGswXI976YV7VJem57ydQSMk1ijB7yg==
   dependencies:
-    "@unhead/schema" "1.11.14"
-    "@unhead/shared" "1.11.14"
+    "@unhead/schema" "1.11.15"
+    "@unhead/shared" "1.11.15"
 
-"@unhead/schema@1.11.14":
-  version "1.11.14"
-  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.11.14.tgz#fec0c3947144001c12d68c96a8585abaa6771f1b"
-  integrity sha512-V9W9u5tF1/+TiLqxu+Qvh1ShoMDkPEwHoEo4DKdDG6ko7YlbzFfDxV6el9JwCren45U/4Vy/4Xi7j8OH02wsiA==
+"@unhead/schema@1.11.15":
+  version "1.11.15"
+  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.11.15.tgz#600f659d44f415b3aa47636df9341464eb53185a"
+  integrity sha512-UkLz1dqw4yoh4jELEyLsgSG7yrXc+gv68GkQeTv8LysEPa8sXtFqhfuqTBLhY3sHqSnP8RkDknhtFhG2S3fuKQ==
   dependencies:
     hookable "^5.5.3"
     zhead "^2.2.4"
 
-"@unhead/shared@1.11.14":
-  version "1.11.14"
-  resolved "https://registry.yarnpkg.com/@unhead/shared/-/shared-1.11.14.tgz#b001403cfbdb35c8a12a9231f0734a91d2460213"
-  integrity sha512-41Qt4PJKYVrEGOTXgBJLRYrEu3S7n5stoB4TFC6312CIBVedXqg7voHQurn32LVDjpfJftjLa2ggCjpqdqoRDw==
+"@unhead/shared@1.11.15":
+  version "1.11.15"
+  resolved "https://registry.yarnpkg.com/@unhead/shared/-/shared-1.11.15.tgz#f7e3fa2174abaca4e63b67dcedf1397637efb28e"
+  integrity sha512-VT42ssmwpFGfixfXqAZ+Rn7KyNG0yFqWGsvLOXIgahiTzh3N1k2st1tPvuYFZU22dtWBNxG7cvy8yxUd1vunMQ==
   dependencies:
-    "@unhead/schema" "1.11.14"
+    "@unhead/schema" "1.11.15"
+    packrup "^0.1.2"
 
-"@unhead/vue@1.11.14":
-  version "1.11.14"
-  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.11.14.tgz#8d534bb7101882a70e2c0db1c49aefa3cea216d1"
-  integrity sha512-6nfi7FsZ936gscmj+1nUB1pybiFMFbnuEFo7B/OY2klpLWsYDUOVvpsJhbu7C3u7wkTlJXglmAk6jdd8I7WgZA==
+"@unhead/vue@1.11.15":
+  version "1.11.15"
+  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.11.15.tgz#5e2ace14f2c8f11acd195abb62a517a1c59a255b"
+  integrity sha512-2NT8Kph5AvB/qO+C8UKAc7cudbFRZTJk0eRpn8o1nG3yk2+mWvN0vsTTjnKvXixNF193I/R+zqo/NkcjgaWG9A==
   dependencies:
-    "@unhead/schema" "1.11.14"
-    "@unhead/shared" "1.11.14"
-    defu "^6.1.4"
+    "@unhead/schema" "1.11.15"
+    "@unhead/shared" "1.11.15"
     hookable "^5.5.3"
-    unhead "1.11.14"
+    unhead "1.11.15"
 
 "@vitejs/plugin-vue@5.2.1":
   version "5.2.1"
@@ -1296,11 +1296,6 @@ define-properties@^1.2.1:
     define-data-property "^1.0.1"
     has-property-descriptors "^1.0.0"
     object-keys "^1.1.1"
-
-defu@^6.1.4:
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/defu/-/defu-6.1.4.tgz#4e0c9cf9ff68fe5f3d7f2765cc1a012dfdcb0479"
-  integrity sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==
 
 delayed-stream@~1.0.0:
   version "1.0.0"
@@ -2700,6 +2695,11 @@ p-locate@^5.0.0:
   dependencies:
     p-limit "^3.0.2"
 
+packrup@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/packrup/-/packrup-0.1.2.tgz#7e6c50e5b79a1e68cd717e79fd06d40abb8f1583"
+  integrity sha512-ZcKU7zrr5GlonoS9cxxrb5HVswGnyj6jQvwFBa6p5VFw7G71VAHcUKL5wyZSU/ECtPM/9gacWxy2KFQKt1gMNA==
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -3399,14 +3399,14 @@ undici-types@~6.20.0:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.20.0.tgz#8171bf22c1f588d1554d55bf204bc624af388433"
   integrity sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==
 
-unhead@1.11.14:
-  version "1.11.14"
-  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.11.14.tgz#9be7c432a74fa299462d7e87b2a2c0b0e9c48e01"
-  integrity sha512-XmXW0aZyX9kGk9ejCKCSvv/J4T3Rt4hoAe2EofM+nhG+zwZ7AArUMK/0F/fj6FTkfgY0u0/JryE00qUDULgygA==
+unhead@1.11.15:
+  version "1.11.15"
+  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.11.15.tgz#40f3cf6130d850c63beb3f0a7f29fc2ba78ae983"
+  integrity sha512-fA0rYB7qMHKY4sg0yzEXhi0cqiF/nl/OUKNaXOS9ChJwCjJxabpZvmQIUOiGS+1ckoFbZc3qZnhDLpdeNhOQwg==
   dependencies:
-    "@unhead/dom" "1.11.14"
-    "@unhead/schema" "1.11.14"
-    "@unhead/shared" "1.11.14"
+    "@unhead/dom" "1.11.15"
+    "@unhead/schema" "1.11.15"
+    "@unhead/shared" "1.11.15"
     hookable "^5.5.3"
 
 uri-js@^4.2.2:
