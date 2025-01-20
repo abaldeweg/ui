@@ -23,7 +23,7 @@
     "jsdom": "26.0.0",
     "prettier": "3.4.2",
     "start-server-and-test": "2.0.10",
-    "vite": "6.0.7",
+    "vite": "6.0.9",
     "vite-plugin-webfont-dl": "3.10.4",
     "vitest": "2.1.8",
     "vue-router": "4.5.0"
