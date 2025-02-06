@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/docu",
-  "version": "0.13.1",
+  "version": "0.14.0",
   "scripts": {
     "compile": "tsc",
     "generate": "node index.js"
