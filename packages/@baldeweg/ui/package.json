@@ -19,7 +19,7 @@
     "@vue/eslint-config-prettier": "10.2.0",
     "eslint": "9.21.0",
     "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-vue": "9.32.0",
+    "eslint-plugin-vue": "9.33.0",
     "jsdom": "26.0.0",
     "prettier": "3.5.2",
     "start-server-and-test": "2.0.10",
