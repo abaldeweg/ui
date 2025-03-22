@@ -108,6 +108,11 @@ a,
 a:hover {
   color: var(--color-primary-10);
   text-decoration: none;
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-05);
 }
 p {
   padding: 10px 0;
