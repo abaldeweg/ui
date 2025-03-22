@@ -89,6 +89,7 @@ const classes = computed(() => {
 
 .badge_body {
   display: inline-block;
+  min-height: 1rem;
 }
 
 .badge_inline {
