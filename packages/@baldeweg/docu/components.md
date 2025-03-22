@@ -371,9 +371,9 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |route |Object|||
-|start-size |String|100px||
-|text-size |String|150px||
-|end-size |String|50px||
+|media-size |String|landscape|landscape, portrait, avatar|
+|text-width |String|200px||
+|controls-width |String|50px||
 |divider |Boolean|false||
 |hover |Boolean|false||
 
@@ -382,9 +382,9 @@
 |Name|Description
 |----|-----------
 |default|
-|start|
+|media|
 |text|
-|end|
+|controls|
 |title|
 |subtitle|
 
