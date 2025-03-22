@@ -3,6 +3,7 @@
 ## v0.15.0
 
 - Refactor `BList`
+- Remove reference font size, browser is now the reference
 
 ## v0.14.0
 

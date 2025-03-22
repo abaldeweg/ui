@@ -48,7 +48,6 @@ html {
 
   color: var(--color-neutral-10);
   font-family: var(--font-sans);
-  font-size: 18px;
   padding: 0;
   margin: 0;
   scrollbar-gutter: stable;
@@ -178,12 +177,6 @@ td:nth-last-child(1) {
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-}
-
-@media all and (min-width: 1200px) {
-  html {
-    font-size: 20px;
-  }
 }
 
 @media all and (min-width: 600px) {
