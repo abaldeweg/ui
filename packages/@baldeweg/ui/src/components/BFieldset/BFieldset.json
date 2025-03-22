@@ -1,0 +1,17 @@
+{
+  "$schema": "./../component.schema.json",
+  "name": "BFieldset",
+  "props": [
+    {
+      "name": "legend",
+      "type": [
+        "String"
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}
