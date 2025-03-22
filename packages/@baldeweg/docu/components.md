@@ -372,6 +372,7 @@
 |----|----|-------|--------------|----------|-----------
 |route |Object|||
 |start-size |String|100px||
+|text-size |String|150px||
 |end-size |String|50px||
 |divider |Boolean|false||
 |hover |Boolean|false||
@@ -382,6 +383,7 @@
 |----|-----------
 |default|
 |start|
+|text|
 |end|
 |title|
 |subtitle|
