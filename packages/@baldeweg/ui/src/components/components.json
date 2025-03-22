@@ -52,10 +52,6 @@
     "directory": "Dropdown"
   },
   {
-    "name": "DropdownDivider",
-    "directory": "Dropdown"
-  },
-  {
     "name": "DropdownItem",
     "directory": "Dropdown"
   },
