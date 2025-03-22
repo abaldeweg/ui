@@ -1,5 +1,16 @@
+<script setup>
+defineProps({
+  legend: {
+    type: String,
+  }
+})
+</script>
+
 <template>
   <fieldset class="fieldset">
+    <legend class="legend">
+      {{ legend }}
+    </legend>
     <slot />
   </fieldset>
 </template>
@@ -13,7 +24,12 @@
   margin-bottom: 20px;
   overflow: auto;
 }
+
 .fieldset:last-child {
   margin-bottom: 0;
+}
+
+.legend {
+  padding: 0;
 }
 </style>

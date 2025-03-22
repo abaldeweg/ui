@@ -60,15 +60,15 @@
     "directory": "Dropdown"
   },
   {
+    "name": "Fieldset",
+    "directory": "Fieldset"
+  },
+  {
     "name": "Flex",
     "directory": "Flex"
   },
   {
     "name": "Form",
-    "directory": "Form"
-  },
-  {
-    "name": "FormFieldset",
     "directory": "Form"
   },
   {
@@ -89,10 +89,6 @@
   },
   {
     "name": "FormLabel",
-    "directory": "Form"
-  },
-  {
-    "name": "FormLegend",
     "directory": "Form"
   },
   {
