@@ -9,21 +9,26 @@
       ]
     },
     {
-      "name": "start-size",
+      "name": "media-size",
       "type": [
         "String"
       ],
-      "default": "100px"
+      "default": "landscape",
+      "allowedValues": [
+        "landscape",
+        "portrait",
+        "avatar"
+      ]
     },
     {
-      "name": "text-size",
+      "name": "text-width",
       "type": [
         "String"
       ],
-      "default": "150px"
+      "default": "200px"
     },
     {
-      "name": "end-size",
+      "name": "controls-width",
       "type": [
         "String"
       ],
@@ -51,13 +56,13 @@
       "name": "default"
     },
     {
-      "name": "start"
+      "name": "media"
     },
     {
       "name": "text"
     },
     {
-      "name": "end"
+      "name": "controls"
     },
     {
       "name": "title"

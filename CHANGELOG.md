@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.15.0
+
+- Refactor `BList`
+
 ## v0.14.0
 
 - Refactor `BBadge` and remove `BChip`

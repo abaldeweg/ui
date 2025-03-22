@@ -6,7 +6,7 @@ const { generateParagraph } = useRandomText()
 
 <template>
   <AppComponent component="BList">
-    <template #start>
+    <template #media>
       <RouterLink :to="route">
         <img src="@/assets/placeholder_1x1.jpg" alt="Icon" />
       </RouterLink>
@@ -17,10 +17,10 @@ const { generateParagraph } = useRandomText()
     {{ generateParagraph(10, false) }}
 
     <template #text>
-      2.99 EUR
+      0.00 EUR
     </template>
 
-    <template #end>
+    <template #controls>
       <BMaterialIcon :size="32" hover>more_vert</BMaterialIcon>
     </template>
   </AppComponent>

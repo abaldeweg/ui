@@ -1,15 +1,16 @@
 <script setup>
 defineProps({
   route: Object,
-  startSize: {
+  mediaSize: {
     type: String,
-    default: '100px',
+    default: 'landscape',
+    validator: (value) => ['landscape', 'portrait', 'avatar'].includes(value),
   },
-  textSize: {
+  textWidth: {
     type: String,
-    default: '150px',
+    default: '200px',
   },
-  endSize: {
+  controlsWidth: {
     type: String,
     default: '50px',
   },
@@ -23,8 +24,14 @@ defineProps({
     list_hasHover: hover,
     list_isActive: active,
   }">
-    <div v-if="$slots.start" class="list_start" :style="{ width: startSize }">
-      <slot name="start" />
+    <div v-if="$slots.media" class="list_media" :class="{
+      list_hasHover: hover,
+      list_isActive: active,
+      list_mediaSize_landscape: mediaSize === 'landscape',
+      list_mediaSize_portrait: mediaSize === 'portrait',
+      list_mediaSize_avatar: mediaSize === 'avatar',
+    }" :style="{ width: mediaSize }">
+      <slot name="media" />
     </div>
 
     <div class="list_content" :class="{
@@ -34,9 +41,11 @@ defineProps({
         <h3 v-if="$slots.title">
           <slot name="title" />
         </h3>
-        <p><span v-if="$slots.subtitle" class="list_subtitle">
+        <p>
+          <span v-if="$slots.subtitle" class="list_subtitle">
             <slot name="subtitle" />
-          </span><span v-if="$slots.subtitle && $slots.default"> - </span>
+          </span>
+          <span v-if="$slots.subtitle && $slots.default"> - </span>
           <slot />
         </p>
       </RouterLink>
@@ -44,9 +53,11 @@ defineProps({
         <h3 v-if="$slots.title">
           <slot name="title" />
         </h3>
-        <p><span v-if="$slots.subtitle" class="list_subtitle">
+        <p>
+          <span v-if="$slots.subtitle" class="list_subtitle">
             <slot name="subtitle" />
-          </span><span v-if="$slots.subtitle && $slots.default"> - </span>
+          </span>
+          <span v-if="$slots.subtitle && $slots.default"> - </span>
           <slot />
         </p>
       </div>
@@ -54,21 +65,22 @@ defineProps({
 
     <div v-if="$slots.text" class="list_text" :class="{
       list_hasDivider: divider,
-    }" :style="{ width: textSize }">
+    }" :style="{ width: textWidth }">
       <slot name="text" />
     </div>
 
-    <div v-if="$slots.end" class="list_end" :class="{
+    <div v-if="$slots.controls" class="list_controls" :class="{
       list_hasDivider: divider,
-    }" :style="{ width: endSize }">
-      <slot name="end" />
+    }" :style="{ width: controlsWidth }">
+      <slot name="controls" />
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .list {
   display: flex;
+  border-bottom: 1px solid var(--color-neutral-02);
   margin: 20px 0;
   transition: background-color 0.3s ease;
 }
@@ -78,15 +90,35 @@ defineProps({
   cursor: pointer;
 }
 
-.list_start,
+.list_media,
 .list_content,
 .list_text,
-.list_end {
+.list_controls {
   padding: 10px 0;
 }
 
-.list_start {
+.list_media {
   padding-right: 20px;
+  width: 90px;
+  flex-grow: 1;
+}
+
+.list_media.list_mediaSize_landscape {
+  width: 400px;
+}
+
+.list_mediaSize_landscape img {
+  width: 200px;
+}
+
+.list_mediaSize_portrait img {
+  width: 50px;
+}
+
+.list_mediaSize_avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .list_content {
@@ -117,13 +149,7 @@ defineProps({
   font-weight: bold;
 }
 
-.list_end {
+.list_controls {
   padding-left: 20px;
-}
-
-.list_content.list_hasDivider,
-.list_text.list_hasDivider,
-.list_end.list_hasDivider {
-  border-bottom: 1px solid var(--color-neutral-02);
 }
 </style>
