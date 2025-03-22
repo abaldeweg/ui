@@ -5,6 +5,10 @@ defineProps({
     type: String,
     default: '100px',
   },
+  textSize: {
+    type: String,
+    default: '150px',
+  },
   endSize: {
     type: String,
     default: '50px',
@@ -26,7 +30,7 @@ defineProps({
     <div class="list_content" :class="{
       list_hasDivider: divider,
     }">
-      <RouterLink :to="route">
+      <RouterLink :to="route" v-if="route">
         <h3 v-if="$slots.title">
           <slot name="title" />
         </h3>
@@ -36,6 +40,22 @@ defineProps({
           <slot />
         </p>
       </RouterLink>
+      <div v-else>
+        <h3 v-if="$slots.title">
+          <slot name="title" />
+        </h3>
+        <p><span v-if="$slots.subtitle" class="list_subtitle">
+            <slot name="subtitle" />
+          </span><span v-if="$slots.subtitle && $slots.default"> - </span>
+          <slot />
+        </p>
+      </div>
+    </div>
+
+    <div v-if="$slots.text" class="list_text" :class="{
+      list_hasDivider: divider,
+    }" :style="{ width: textSize }">
+      <slot name="text" />
     </div>
 
     <div v-if="$slots.end" class="list_end" :class="{
@@ -60,8 +80,8 @@ defineProps({
 
 .list_start,
 .list_content,
+.list_text,
 .list_end {
-  /* border: 1px solid #ff0000; */
   padding: 10px 0;
 }
 
@@ -90,11 +110,19 @@ defineProps({
   font-weight: bold;
 }
 
+.list_text {
+  padding-left: 20px;
+  text-align: right;
+  color: var(--color-primary-10);
+  font-weight: bold;
+}
+
 .list_end {
   padding-left: 20px;
 }
 
 .list_content.list_hasDivider,
+.list_text.list_hasDivider,
 .list_end.list_hasDivider {
   border-bottom: 1px solid var(--color-neutral-02);
 }

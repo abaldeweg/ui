@@ -16,6 +16,13 @@
       "default": "100px"
     },
     {
+      "name": "text-size",
+      "type": [
+        "String"
+      ],
+      "default": "150px"
+    },
+    {
       "name": "end-size",
       "type": [
         "String"
@@ -45,6 +52,9 @@
     },
     {
       "name": "start"
+    },
+    {
+      "name": "text"
     },
     {
       "name": "end"

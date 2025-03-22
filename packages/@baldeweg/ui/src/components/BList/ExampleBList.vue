@@ -16,6 +16,10 @@ const { generateParagraph } = useRandomText()
     <template #subtitle>Subtitle</template>
     {{ generateParagraph(10, false) }}
 
+    <template #text>
+      2.99 EUR
+    </template>
+
     <template #end>
       <BMaterialIcon :size="32" hover>more_vert</BMaterialIcon>
     </template>
