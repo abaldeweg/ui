@@ -22,7 +22,6 @@
         "color",
         "datetime-local",
         "email",
-        "file",
         "month",
         "number",
         "password",
