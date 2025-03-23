@@ -5,7 +5,7 @@ useHead({ title: 'BFieldset' })
 </script>
 
 <template>
-  <BFieldset legend="Legend">
+  <AppComponent component="BFieldset">
     <button>Submit</button>
-  </BFieldset>
+  </AppComponent>
 </template>

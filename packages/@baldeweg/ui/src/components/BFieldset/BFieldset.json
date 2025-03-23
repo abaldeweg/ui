@@ -6,7 +6,8 @@
       "name": "legend",
       "type": [
         "String"
-      ]
+      ],
+      "example": "Legend"
     }
   ],
   "slots": [
