@@ -6,12 +6,6 @@ defineProps({
     default: 'text',
     validator: (value) => ['date', 'color', 'datetime-local', 'email', 'month', 'number', 'password', 'range', 'search', 'tel', 'text', 'time', 'url', 'week'].includes(value),
   },
-  label: String,
-  help: String,
-  hideLabel: {
-    type: Boolean,
-    default: false,
-  },
   name: {
     type: String,
     required: true,
@@ -19,6 +13,12 @@ defineProps({
   id: {
     type: String,
     required: true,
+  },
+  label: String,
+  help: String,
+  hideLabel: {
+    type: Boolean,
+    default: false,
   },
 })
 
@@ -32,7 +32,7 @@ const emit = defineEmits(['update:modelValue'])
 <template>
   <div class="input_group">
     <div :class="['input_item', { visuallyHidden: hideLabel }]">
-      <label>{{ label }}</label>
+      <label :for=id>{{ label }}</label>
     </div>
     <div class="input_item">
       <input class="input_input" v-bind="$attrs" :type="type" :value="modelValue" :name="name" :id="id"
@@ -55,11 +55,6 @@ const emit = defineEmits(['update:modelValue'])
 
 .input_item {
   padding: 5px 0;
-}
-
-.input_helpline {
-  font-size: 0.8rem;
-  color: var(--color-neutral-06);
 }
 
 .input_input {
@@ -87,5 +82,10 @@ input[type="color"].input_input {
 
 input[type="range"].input_input {
   padding: 0;
+}
+
+.input_helpline {
+  font-size: 0.8rem;
+  color: var(--color-neutral-06);
 }
 </style>

@@ -35,6 +35,20 @@
       ]
     },
     {
+      "name": "name",
+      "type": [
+        "String"
+      ],
+      "example": "input-name"
+    },
+    {
+      "name": "id",
+      "type": [
+        "String"
+      ],
+      "example": "input-id"
+    },
+    {
       "name": "label",
       "type": [
         "String"
@@ -54,20 +68,6 @@
         "String"
       ],
       "example": "Help text"
-    },
-    {
-      "name": "name",
-      "type": [
-        "String"
-      ],
-      "example": "input-name"
-    },
-    {
-      "name": "id",
-      "type": [
-        "String"
-      ],
-      "example": "input-id"
     }
   ],
   "events": [
