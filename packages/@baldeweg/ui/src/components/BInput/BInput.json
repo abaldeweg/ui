@@ -56,18 +56,18 @@
       "example": "Help text"
     },
     {
-      "name": "focus",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
-    },
-    {
-      "name": "placeholder",
+      "name": "name",
       "type": [
         "String"
       ],
-      "example": "Placeholder"
+      "example": "input-name"
+    },
+    {
+      "name": "id",
+      "type": [
+        "String"
+      ],
+      "example": "input-id"
     }
   ],
   "events": [

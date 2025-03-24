@@ -8,14 +8,17 @@ defineProps({
   },
   label: String,
   help: String,
-  focus: {
-    type: Boolean,
-    default: false,
-  },
-  placeholder: String,
   hideLabel: {
     type: Boolean,
     default: false,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  id: {
+    type: String,
+    required: true,
   },
 })
 
@@ -32,8 +35,8 @@ const emit = defineEmits(['update:modelValue'])
       <label>{{ label }}</label>
     </div>
     <div class="input_item">
-      <input class="input_input" v-bind="$attrs" :type="type" :value="modelValue" :placeholder="placeholder"
-        :autofocus="focus" @input="emit('update:modelValue', $event.target.value)" />
+      <input class="input_input" v-bind="$attrs" :type="type" :value="modelValue" :name="name" :id="id"
+        @input="emit('update:modelValue', $event.target.value)" />
     </div>
     <p v-if="help" class="input_helpline">
       {{ help }}
