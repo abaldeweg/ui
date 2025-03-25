@@ -60,6 +60,10 @@
     "directory": "Dropdown"
   },
   {
+    "name": "Editor",
+    "directory": "Editor"
+  },
+  {
     "name": "Fieldset",
     "directory": "Fieldset"
   },
