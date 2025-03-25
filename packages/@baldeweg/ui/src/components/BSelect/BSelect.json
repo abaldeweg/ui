@@ -1,0 +1,64 @@
+{
+  "$schema": "./../component.schema.json",
+  "name": "BSelect",
+  "description": "Additional attributes are passed to the underlying input or select element.",
+  "props": [
+    {
+      "name": "modelValue",
+      "type": [
+        "String",
+        "Array"
+      ],
+      "example": []
+    },
+    {
+      "name": "type",
+      "type": [
+        "String"
+      ],
+      "default": "checkbox",
+      "allowedValues": [
+        "checkbox",
+        "radio",
+        "options"
+      ]
+    },
+    {
+      "name": "name",
+      "type": [
+        "String"
+      ],
+      "example": "select-name"
+    },
+    {
+      "name": "id",
+      "type": [
+        "String"
+      ],
+      "example": "select-id"
+    },
+    {
+      "name": "help",
+      "type": [
+        "String"
+      ],
+      "example": "Help text"
+    },
+    {
+      "name": "options",
+      "type": [
+        "Array"
+      ],
+      "example": {
+        "banana": "Banana",
+        "cherry": "Cherry",
+        "kiwi": "Kiwi"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "update:modelValue"
+    }
+  ]
+}
