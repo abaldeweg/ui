@@ -1,19 +1,13 @@
 {
   "$schema": "./../component.schema.json",
   "name": "BForm",
-  "description": "The form component is just a wrapper, you have to assign classes to your elements. Please omit the `<form>` element itself.",
-  "props": [
-    {
-      "name": "no-margin",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
-    }
-  ],
+  "description": "The form component is just a wrapper.",
   "slots": [
     {
       "name": "default"
+    },
+    {
+      "name": "buttons"
     }
   ]
 }
