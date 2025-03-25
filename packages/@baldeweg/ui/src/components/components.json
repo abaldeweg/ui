@@ -168,6 +168,10 @@
     "directory": "Tabs"
   },
   {
+    "name": "Textarea",
+    "directory": "Textarea"
+  },
+  {
     "name": "Toast",
     "directory": "Toast"
   },
