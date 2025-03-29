@@ -22,4 +22,4 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm -F @baldeweg/ui build
-      - run: pnpm -F @baldeweg/ui test:unit:ci
+      - run: pnpm -F @baldeweg/ui test

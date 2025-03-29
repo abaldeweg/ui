@@ -4,8 +4,7 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "vite build",
-    "test:unit": "vitest --environment jsdom",
-    "test:unit:ci": "vitest run --environment jsdom",
+    "test": "vitest run --environment jsdom",
     "components:list": "node ./scripts/components.js",
     "build-storybook": "storybook build"
   },
