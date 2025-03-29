@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'yarn'
-      - run: yarn install
+          cache: 'pnpm'
+      - run: pnpm install
       - name: Generate Documentation
-        run: yarn workspace @baldeweg/docu generate
+        run: pnpm -F @baldeweg/docu generate
       - name: Commit Documentation Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
