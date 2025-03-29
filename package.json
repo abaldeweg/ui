@@ -5,9 +5,6 @@
     "release": "node scripts/tag.js packages/@baldeweg"
   },
   "devDependencies": {},
-  "workspaces": [
-    "packages/@baldeweg/*"
-  ],
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
     "type": "git",
