@@ -5,8 +5,7 @@
     "dev": "storybook dev -p 6006",
     "build": "vite build",
     "test": "vitest run --environment jsdom",
-    "components:list": "node ./scripts/components.js",
-    "build-storybook": "storybook build"
+    "components:list": "node ./scripts/components.js"
   },
   "dependencies": {
     "vue": "3.5.13"
