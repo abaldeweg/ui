@@ -3,9 +3,7 @@ import { fn } from "@storybook/test";
 import BButton from "./BButton.vue";
 
 export default {
-  title: "Components/Button",
   component: BButton,
-  tags: ["autodocs"],
   argTypes: {
     design: {
       control: { type: "select" },
