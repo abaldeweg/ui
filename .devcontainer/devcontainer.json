@@ -1,25 +1,25 @@
 {
-	"name": "Ubuntu",
-	"image": "mcr.microsoft.com/devcontainers/base:noble",
-	"features": {
-		"ghcr.io/devcontainers/features/node:1.6.2": {},
-    	"ghcr.io/abaldeweg/devcontainer_features/bash:3.0.0": {}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"EditorConfig.EditorConfig",
-				"Vue.volar",
-				"mikestead.dotenv",
-				"streetsidesoftware.code-spell-checker",
-				"streetsidesoftware.code-spell-checker-german",
-				"donjayamanne.githistory",
-				"DavidAnson.vscode-markdownlint",
-				"christian-kohler.npm-intellisense",
-				"vitest.explorer"
-			]
-		}
-	},
-	"postCreateCommand": "yarn install"
+  "name": "Ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1.6.2": {},
+    "ghcr.io/abaldeweg/devcontainer_features/bash:3.0.0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
+        "Vue.volar",
+        "mikestead.dotenv",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-german",
+        "donjayamanne.githistory",
+        "DavidAnson.vscode-markdownlint",
+        "christian-kohler.npm-intellisense",
+        "vitest.explorer"
+      ]
+    }
+  },
+  "postCreateCommand": "yarn install"
 }
