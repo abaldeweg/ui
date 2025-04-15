@@ -1,17 +1,10 @@
-<script setup>
-defineProps({
-  noMargin: Boolean,
-})
-</script>
-
 <template>
-  <form
-    method="post"
-    enctype="multipart/form-data"
-    class="form"
-    :class="{ noMargin }"
-  >
+  <form>
     <slot />
+
+    <div class="form_buttons" v-if="$slots.buttons">
+      <slot name="buttons" />
+    </div>
   </form>
 </template>
 
@@ -19,9 +12,13 @@ defineProps({
 .form {
   box-sizing: border-box;
   width: 100%;
-  margin: 10px 0;
 }
-.form.noMargin {
-  margin: 0;
+
+.form_buttons {
+  clear: both;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  overflow: auto;
 }
 </style>
