@@ -9,7 +9,7 @@ export default {
       control: { type: "select" },
       options: ["primary", "primary_danger", "primary_wide"],
     },
-    ripple: { control: {type: "boolean"} },
+    ripple: { control: { type: "boolean" } },
   },
   args: { onClick: fn() },
 };
