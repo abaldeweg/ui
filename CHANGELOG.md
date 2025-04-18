@@ -4,6 +4,7 @@
 
 - Refactor `BList`
 - Remove reference font size, browser is now the reference
+- Remove `BDropdownDivider` component
 
 ## v0.14.0
 
