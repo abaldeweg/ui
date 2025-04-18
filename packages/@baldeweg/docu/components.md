@@ -196,9 +196,6 @@
 |default|
 |selector|
 
-## BDropdownDivider
-
-
 ## BDropdownItem
 
 ### Props
