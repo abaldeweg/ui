@@ -218,6 +218,20 @@
 |----|-----------
 |click|
 
+## BFieldset
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|legend |String|||
+
+### Slots
+
+|Name|Description
+|----|-----------
+|default|
+
 ## BFlex
 
 ### Props
