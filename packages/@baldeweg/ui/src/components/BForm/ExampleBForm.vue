@@ -54,8 +54,8 @@ const selectedOption = ref('3')
       Value: {{ selectedOption }}
     </BFormGroup>
 
-    <BFormFieldset>
-      <BFormLegend>Checkbox</BFormLegend>
+    <BFieldset>
+      <BLegend>Checkbox</BLegend>
       <BFormItem>
         <BFormItem>
           <input type="checkbox" value="checkbox1" id="checkbox1" @input="log" />
@@ -74,10 +74,10 @@ const selectedOption = ref('3')
           <BFormLabel for="checkbox3">Checkbox 3</BFormLabel>
         </BFormItem>
       </BFormItem>
-    </BFormFieldset>
+    </BFieldset>
 
-    <BFormFieldset>
-      <BFormLegend>Radio</BFormLegend>
+    <BFieldset>
+      <BLegend>Radio</BLegend>
       <BFormItem>
         <input type="radio" value="radio1" id="radio1" @input="log" />
         <BFormLabel for="radio1">Radio 1</BFormLabel>
@@ -86,7 +86,7 @@ const selectedOption = ref('3')
         <input type="radio" value="radio2" id="radio2" @input="log" />
         <BFormLabel for="radio2">Radio 2</BFormLabel>
       </BFormItem>
-    </BFormFieldset>
+    </BFieldset>
 
     <BFormGroup>
       <BFormItem>
