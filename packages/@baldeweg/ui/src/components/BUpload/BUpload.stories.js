@@ -3,6 +3,13 @@ import BUpload from './BUpload.vue'
 export default {
   title: 'Components/BUpload',
   component: BUpload,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Set the enctype of the parent form to `enctype="multipart/form-data"`.',
+      },
+    },
+  },
   argTypes: {
     id: {
       control: 'text',

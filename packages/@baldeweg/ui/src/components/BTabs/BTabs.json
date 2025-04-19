@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BTabs",
   "props": [
     {
       "name": "justify",
-      "type": [
-        "String"
-      ],
-      "default": "flex-start",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'flex-start'"
+      },
+      "values": [
         "flex-start",
         "flex-end",
         "center",

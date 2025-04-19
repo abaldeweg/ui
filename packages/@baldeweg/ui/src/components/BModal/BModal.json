@@ -1,28 +1,35 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BModal",
-  "description": "If you use a form, consider wrapping the modal with it.",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "width",
-      "type": [
-        "Number"
-      ],
-      "default": "600"
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "600"
+      }
     },
     {
       "name": "closeButton",
-      "type": [
-        "Boolean"
-      ],
-      "default": true
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
     }
   ],
   "slots": [

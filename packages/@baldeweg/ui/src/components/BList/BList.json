@@ -1,20 +1,22 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BList",
   "props": [
     {
       "name": "route",
-      "type": [
-        "Object"
-      ]
+      "type": {
+        "name": "object"
+      }
     },
     {
       "name": "mediaSize",
-      "type": [
-        "String"
-      ],
-      "default": "landscape",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'landscape'"
+      },
+      "values": [
         "landscape",
         "portrait",
         "avatar"
@@ -22,31 +24,43 @@
     },
     {
       "name": "textWidth",
-      "type": [
-        "String"
-      ],
-      "default": "200px"
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'200px'"
+      }
     },
     {
       "name": "controlsWidth",
-      "type": [
-        "String"
-      ],
-      "default": "50px"
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'50px'"
+      }
     },
     {
       "name": "divider",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "hover",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

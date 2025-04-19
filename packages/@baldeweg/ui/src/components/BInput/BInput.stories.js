@@ -16,6 +16,13 @@ export default {
     hideLabel: { control: 'boolean' },
     'update:modelValue': { action: 'updated' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: "Not applicable to checkbox and radio. Additional attributes are passed to the underlying input element. For types refer to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes."
+      }
+    }
+  }
 }
 
 const Template = (args) => ({

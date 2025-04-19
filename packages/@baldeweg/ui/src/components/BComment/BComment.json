@@ -1,18 +1,17 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BComment",
   "props": [
     {
       "name": "author",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "date",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     }
   ],
   "slots": [

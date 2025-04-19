@@ -1,15 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BFlex",
-  "description": "gap accepts a string, so it could be used as a shorthand for row-gap and column-gap.",
   "props": [
     {
       "name": "direction",
-      "type": [
-        "String"
-      ],
-      "default": "row",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'row'"
+      },
+      "values": [
         "row",
         "column",
         "row-reverse",
@@ -18,11 +19,14 @@
     },
     {
       "name": "justify",
-      "type": [
-        "String"
-      ],
-      "default": "flex-start",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'flex-start'"
+      },
+      "values": [
         "flex-start",
         "flex-end",
         "center",
@@ -33,11 +37,14 @@
     },
     {
       "name": "align",
-      "type": [
-        "String"
-      ],
-      "default": "stretch",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'stretch'"
+      },
+      "values": [
         "stretch",
         "flex-start",
         "flex-end",
@@ -47,10 +54,13 @@
     },
     {
       "name": "gap",
-      "type": [
-        "String"
-      ],
-      "default": "undefined"
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "undefined"
+      }
     }
   ],
   "slots": [

@@ -1,5 +1,4 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BFormFieldset",
   "slots": [
     {

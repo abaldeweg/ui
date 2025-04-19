@@ -1,35 +1,41 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BFormInput",
-  "description": "Not applicable to checkbox and radio.",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "String",
-        "Number"
-      ]
+      "type": {
+        "name": "string|number"
+      }
     },
     {
       "name": "noStyling",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "event",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "focus",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "events": [

@@ -3,33 +3,33 @@
 
 ## <%= el.name %>
 
-<%_ if (el.props) { _%>
+<%_ if (el.props && el.props.length > 0) { _%>
 ### Props
 
-|Name|Type|Default|Allowed Values|Example|Description
-|----|----|-------|--------------|----------|-----------
+|Name|Type|Default|Values|Required
+|----|----|-------|--------------|--------
 <%_ el.props.forEach((prop)=>{ _%>
-|<%= prop.name %> |<% if (prop.type) { %><%= prop.type.join(', ') %><% } %>|<%= prop.default %>|<% if (prop.allowedValues) { %><%= prop.allowedValues.join(', ') %><% } %>|<%= prop.description %>
+|<%= prop.name %> |<% if (prop.type !== undefined) { %><%= typeof prop.type === 'object' ? JSON.stringify(prop.type) : prop.type %><% } %>|<% if (prop.defaultValue !== undefined) { %><%= typeof prop.defaultValue === 'object' ? JSON.stringify(prop.defaultValue) : prop.defaultValue %><% } %>|<% if (prop.values) { %><%= prop.values.join(', ') %><% } %>|<% if (prop.required) { %>  Yes <% } else { %>  No <% } %>
 <%_ }); _%>
 <%_ }; _%>
-<%_ if (el.slots) { _%>
+<%_ if (el.slots && el.slots.length > 0) { _%>
 
 ### Slots
 
-|Name|Description
-|----|-----------
+|Name
+|----
 <%_ el.slots.forEach((slot)=>{ _%>
-|<%= slot.name %>|<%= slot.description %>
+|<%= slot.name %>
 <%_ }); _%>
 <%_ }; _%>
-<%_ if (el.events) { _%>
+<%_ if (el.events && el.events.length > 0) { _%>
 
 ### Events
 
-|Name|Description
-|----|-----------
+|Name
+|----
 <%_ el.events.forEach((event)=>{ _%>
-|<%= event.name %>|<%= event.description %>
+|<%= event.name %>
 <%_ }); _%>
 <%_ }; _%>
 <%_ }); _%>

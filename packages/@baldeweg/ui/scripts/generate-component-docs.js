@@ -5,106 +5,63 @@ import path from 'path'
 import { parse } from 'vue-docgen-api'
 import { globSync } from 'glob'
 
-// Configuration
 const COMPONENTS_DIR = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../src/components')
 
 /**
+ * Get all component files that match the pattern
+ * @returns {string[]} Array of file paths
+ * @throws {Error} If globbing fails
+ */
+function getComponentFiles() {
+  try {
+    return globSync(`${COMPONENTS_DIR}/**/B*.vue`)
+  } catch (error) {
+    throw new Error(`Failed to find component files: ${error.message}`)
+  }
+}
+
+/**
+ * Process a single component file
+ * @param {string} filePath - Path to the Vue component file
+ * @returns {Promise<void>} A promise that resolves when processing is complete
+ * @throws {Error} If parsing or writing fails
+*/
+async function processComponentFile(filePath) {
+  const componentName = path.basename(filePath, '.vue')
+
+  try {
+    console.log(`Processing component ${componentName}`)
+
+    const info = await parse(filePath)
+    const componentDir = path.dirname(filePath)
+    const componentJsonPath = path.join(componentDir, `${componentName}.json`)
+
+    const componentInfo = {
+      name: componentName,
+      props: info.props,
+      slots: info.slots,
+      events: info.events,
+    }
+
+    fs.writeFileSync(componentJsonPath, JSON.stringify(componentInfo, null, 2) + '\n')
+  } catch (error) {
+    console.error(`Error processing component ${componentName}: ${error.message}`)
+    process.exit(1)
+  }
+}
+
+/**
  * Extract component information from Vue files
- * @returns {Promise<Object>} A promise that resolves to an object containing component information
+ * @returns {Promise<number>} Number of processed files
  */
 async function extractComponentInfo() {
-  const componentFiles = globSync(`${COMPONENTS_DIR}/**/*.vue`)
-  const componentsInfo = {}
-  let componentCount = 0
+  const componentFiles = getComponentFiles()
 
   for (const filePath of componentFiles) {
-    try {
-      const componentName = path.basename(filePath, '.vue')
-
-      if (componentName.startsWith('Example') || componentName === 'AppComponent') {
-        continue
-      }
-
-      console.log(`Processing component: ${componentName}`)
-      componentCount++
-
-      const info = await parse(filePath)
-
-      const props = (info.props || []).map(prop => {
-        let typeArray = prop.type?.name ? (Array.isArray(prop.type.name) ? prop.type.name : [prop.type.name]) : [];
-
-        typeArray = typeArray.flatMap(type => {
-          if (typeof type === 'string' && type.includes('|')) {
-            return type.split('|');
-          }
-          return type;
-        });
-
-        typeArray = typeArray.map(type => type.charAt(0).toUpperCase() + type.slice(1));
-
-        let defaultValue = prop.defaultValue?.value;
-        if (typeof defaultValue === 'string') {
-          if ((defaultValue.startsWith("'") && defaultValue.endsWith("'")) ||
-            (defaultValue.startsWith('"') && defaultValue.endsWith('"'))) {
-            defaultValue = defaultValue.slice(1, -1);
-          }
-        }
-
-        if (defaultValue === 'true') defaultValue = true;
-        if (defaultValue === 'false') defaultValue = false;
-
-        return {
-          name: prop.name,
-          type: typeArray,
-          default: defaultValue,
-          allowedValues: prop.values
-        };
-      })
-
-      const events = (info.events || []).map(event => ({
-        name: event.name,
-      }))
-
-      const slots = (info.slots || []).map(slot => ({
-        name: slot.name,
-      }))
-
-      let existingDescription = null
-      const componentDir = path.dirname(filePath)
-      const componentJsonPath = path.join(componentDir, `${componentName}.json`)
-      try {
-        if (fs.existsSync(componentJsonPath)) {
-          const existingConfig = JSON.parse(fs.readFileSync(componentJsonPath, 'utf8'))
-          if (existingConfig.description) {
-            existingDescription = existingConfig.description
-          }
-        }
-      } catch (error) {
-        console.warn(`Could not read existing config for ${componentName}: ${error.message}`)
-      }
-      const description = existingDescription ||
-        (info.description ? info.description.trim() : undefined);
-
-      const componentInfo = {
-        "$schema": "./../component.schema.json",
-        name: componentName,
-        description: description,
-        props: props.length > 0 ? props : undefined,
-        slots: slots.length > 0 ? slots : undefined,
-        events: events.length > 0 ? events : undefined,
-      }
-
-      componentsInfo[componentName] = componentInfo
-
-      fs.writeFileSync(componentJsonPath, JSON.stringify(componentInfo, null, 2) + '\n')
-    } catch (error) {
-      console.error(`Error processing component ${filePath}: ${error.message}`)
-    }
+    await processComponentFile(filePath)
   }
 
-  console.log(`Total components processed: ${componentCount}`)
-
-  return componentsInfo
+  return componentFiles.length
 }
 
 /**
@@ -113,27 +70,14 @@ async function extractComponentInfo() {
  */
 async function generateComponentDocs() {
   try {
-    console.log('Starting component documentation generation...')
-    const componentsInfo = await extractComponentInfo()
+    const results = await extractComponentInfo()
 
-    const output = {
-      components: componentsInfo,
-      generatedAt: new Date().toISOString()
-    }
-
-    return Promise.resolve()
+    console.log(`✅ Successfully processed ${results} component files.`)
+    process.exit(0)
   } catch (error) {
-    console.error(`Failed to generate component documentation: ${error.message}`)
-    return Promise.reject(error)
+    console.error('❌ Error during generation:', error)
+    process.exit(1)
   }
 }
 
 generateComponentDocs()
-  .then(() => {
-    console.log('✅ Documentation generated successfully!')
-    process.exit(0)
-  })
-  .catch(error => {
-    console.error('❌ Error during generation:', error)
-    process.exit(1)
-  })

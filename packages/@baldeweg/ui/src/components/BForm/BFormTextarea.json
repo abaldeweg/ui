@@ -1,19 +1,21 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BFormTextarea",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "focus",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "events": [

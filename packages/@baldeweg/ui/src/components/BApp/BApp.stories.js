@@ -5,6 +5,11 @@ export default {
   component: BApp,
   parameters: {
     layout: 'fullscreen',
+    docs: {
+      description: {
+        component: 'Do not forget to set the attribute `id=\"app\"` here, if not otherwise done.'
+      }
+    }
   },
 }
 

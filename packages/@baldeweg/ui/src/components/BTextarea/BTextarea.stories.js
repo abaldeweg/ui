@@ -3,6 +3,13 @@ import BTextarea from './BTextarea.vue'
 export default {
   title: 'Components/BTextarea',
   component: BTextarea,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Additional attributes are passed to the underlying input element.',
+      },
+    },
+  },
   argTypes: {
     modelValue: { control: 'text' },
     name: { control: 'text' },

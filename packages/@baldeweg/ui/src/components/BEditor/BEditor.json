@@ -1,51 +1,57 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BEditor",
-  "description": "Additional attributes are passed to the underlying editor.",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "name",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      },
+      "required": true
     },
     {
       "name": "id",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      },
+      "required": true
     },
     {
       "name": "label",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "hideLabel",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "help",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "language",
-      "type": [
-        "String"
-      ],
-      "default": "json"
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'json'"
+      }
     }
   ],
   "events": [

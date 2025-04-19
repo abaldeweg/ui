@@ -15,6 +15,13 @@ export default {
       options: ['json', 'css', 'html', 'typescript', 'javascript'],
     },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Additional attributes are passed to the underlying editor.'
+      }
+    }
+  }
 }
 
 const Template = (args) => ({

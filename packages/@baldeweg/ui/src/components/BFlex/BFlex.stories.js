@@ -3,6 +3,13 @@ import BFlex from './BFlex.vue'
 export default {
   title: 'Components/BFlex',
   component: BFlex,
+  parameters: {
+    docs: {
+      description: {
+        component: "gap accepts a string, so it could be used as a shorthand for row-gap and column-gap."
+      }
+    }
+  },
   argTypes: {
     direction: {
       control: { type: 'select' },

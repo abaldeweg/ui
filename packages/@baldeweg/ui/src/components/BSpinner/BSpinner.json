@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BSpinner",
   "props": [
     {
       "name": "size",
-      "type": [
-        "String"
-      ],
-      "default": "l",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'l'"
+      },
+      "values": [
         "l",
         "m",
         "s"

@@ -1,13 +1,15 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BFormGroup",
   "props": [
     {
       "name": "buttons",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

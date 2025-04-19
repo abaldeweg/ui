@@ -1,20 +1,25 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BDialog",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "canClose",
-      "type": [
-        "Boolean"
-      ],
-      "default": true
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
     }
   ],
   "slots": [

@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BMastheadItem",
   "props": [
     {
       "name": "position",
-      "type": [
-        "String"
-      ],
-      "default": "start",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'start'"
+      },
+      "values": [
         "start",
         "center",
         "end"

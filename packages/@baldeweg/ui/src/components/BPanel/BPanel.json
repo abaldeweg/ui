@@ -1,31 +1,39 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BPanel",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "position",
-      "type": [
-        "String"
-      ],
-      "default": "left",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      },
+      "values": [
         "left",
         "right"
       ]
     },
     {
       "name": "width",
-      "type": [
-        "String"
-      ],
-      "default": "300px"
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'300px'"
+      }
     }
   ],
   "slots": [

@@ -1,26 +1,31 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BDropdownItem",
   "props": [
     {
       "name": "bold",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "noHover",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "icon",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     }
   ],
   "slots": [
