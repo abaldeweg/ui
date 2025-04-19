@@ -1,0 +1,62 @@
+{
+  "$schema": "./../component.schema.json",
+  "name": "BEditor",
+  "description": "Additional attributes are passed to the underlying editor.",
+  "props": [
+    {
+      "name": "modelValue",
+      "type": [
+        "String",
+        "Number"
+      ],
+    "example": "{\n\t\"item 1\": \"value 1\",\n\t\"item 2\": []\n}"
+    },
+    {
+      "name": "name",
+      "type": [
+        "String"
+      ],
+      "example": "editor-name"
+    },
+    {
+      "name": "id",
+      "type": [
+        "String"
+      ],
+      "example": "editor-id"
+    },
+    {
+      "name": "label",
+      "type": [
+        "String"
+      ],
+      "example": "Label"
+    },
+    {
+      "name": "hide-label",
+      "type": [
+        "Boolean"
+      ],
+      "default": false
+    },
+    {
+      "name": "help",
+      "type": [
+        "String"
+      ],
+      "example": "Help text"
+    },
+    {
+      "name": "language",
+      "type": [
+        "String"
+      ],
+      "example": "json"
+    }
+  ],
+  "events": [
+    {
+      "name": "update:modelValue"
+    }
+  ]
+}
