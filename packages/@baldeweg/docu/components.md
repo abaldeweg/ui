@@ -375,6 +375,26 @@
 |click|
 |contextmenu|
 
+## BInput
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|modelValue |String, Number|||
+|type |String|text|date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week|https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes
+|name |String|||
+|id |String|||
+|label |String|||
+|hide-label |Boolean|false||
+|help |String|||
+
+### Events
+
+|Name|Description
+|----|-----------
+|update:modelValue|
+
 ## BList
 
 ### Props
