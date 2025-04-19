@@ -6,10 +6,8 @@
     {
       "name": "modelValue",
       "type": [
-        "String",
         "Array"
-      ],
-      "example": []
+      ]
     },
     {
       "name": "type",
@@ -27,33 +25,25 @@
       "name": "name",
       "type": [
         "String"
-      ],
-      "example": "select-name"
+      ]
     },
     {
       "name": "id",
       "type": [
         "String"
-      ],
-      "example": "select-id"
+      ]
     },
     {
       "name": "help",
       "type": [
         "String"
-      ],
-      "example": "Help text"
+      ]
     },
     {
       "name": "options",
       "type": [
-        "Array"
-      ],
-      "example": {
-        "banana": "Banana",
-        "cherry": "Cherry",
-        "kiwi": "Kiwi"
-      }
+        "Object"
+      ]
     }
   ],
   "events": [

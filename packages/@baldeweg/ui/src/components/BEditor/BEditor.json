@@ -6,34 +6,29 @@
     {
       "name": "modelValue",
       "type": [
-        "String",
-        "Number"
-      ],
-    "example": "{\n\t\"item 1\": \"value 1\",\n\t\"item 2\": []\n}"
+        "String"
+      ]
     },
     {
       "name": "name",
       "type": [
         "String"
-      ],
-      "example": "editor-name"
+      ]
     },
     {
       "name": "id",
       "type": [
         "String"
-      ],
-      "example": "editor-id"
+      ]
     },
     {
       "name": "label",
       "type": [
         "String"
-      ],
-      "example": "Label"
+      ]
     },
     {
-      "name": "hide-label",
+      "name": "hideLabel",
       "type": [
         "Boolean"
       ],
@@ -43,15 +38,14 @@
       "name": "help",
       "type": [
         "String"
-      ],
-      "example": "Help text"
+      ]
     },
     {
       "name": "language",
       "type": [
         "String"
       ],
-      "example": "json"
+      "default": "json"
     }
   ],
   "events": [

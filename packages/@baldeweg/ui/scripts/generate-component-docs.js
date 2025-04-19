@@ -3,7 +3,7 @@
 import fs from 'fs'
 import path from 'path'
 import { parse } from 'vue-docgen-api'
-import glob from 'glob'
+import { globSync } from 'glob'
 
 // Configuration
 const COMPONENTS_DIR = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../src/components')
@@ -13,7 +13,7 @@ const COMPONENTS_DIR = path.resolve(path.dirname(new URL(import.meta.url).pathna
  * @returns {Promise<Object>} A promise that resolves to an object containing component information
  */
 async function extractComponentInfo() {
-  const componentFiles = glob.sync(`${COMPONENTS_DIR}/**/*.vue`)
+  const componentFiles = globSync(`${COMPONENTS_DIR}/**/*.vue`)
   const componentsInfo = {}
 
   for (const filePath of componentFiles) {
