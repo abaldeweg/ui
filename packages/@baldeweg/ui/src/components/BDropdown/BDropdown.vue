@@ -9,7 +9,10 @@ const props = defineProps({
       return ['selector', 'mouse', 'bottom'].includes(value)
     },
   },
-  keepOpen: Boolean,
+  keepOpen: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const show = ref(false)

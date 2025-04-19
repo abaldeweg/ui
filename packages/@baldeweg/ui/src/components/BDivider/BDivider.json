@@ -7,13 +7,13 @@
       "type": [
         "String"
       ],
+      "default": "l",
       "allowedValues": [
         "l",
         "m",
         "s",
         "xs"
-      ],
-      "default": "l"
+      ]
     }
   ]
 }

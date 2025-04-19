@@ -7,24 +7,24 @@
       "type": [
         "String"
       ],
+      "default": "l",
       "allowedValues": [
         "l",
         "m",
         "s"
-      ],
-      "default": "l"
+      ]
     },
     {
       "name": "align",
       "type": [
         "String"
       ],
+      "default": "left",
       "allowedValues": [
         "left",
         "right",
         "center"
-      ],
-      "default": "left"
+      ]
     },
     {
       "name": "highlight",

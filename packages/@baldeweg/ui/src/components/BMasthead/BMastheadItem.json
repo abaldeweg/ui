@@ -7,12 +7,12 @@
       "type": [
         "String"
       ],
+      "default": "start",
       "allowedValues": [
         "start",
         "center",
         "end"
-      ],
-      "default": "start"
+      ]
     }
   ],
   "slots": [

@@ -16,7 +16,6 @@
     },
     {
       "name": "filter",
-      "description": "Shows a filter icon.",
       "type": [
         "Boolean"
       ],
@@ -64,19 +63,19 @@
   ],
   "events": [
     {
-      "name": "input"
-    },
-    {
       "name": "submit"
     },
     {
-      "name": "filter"
+      "name": "update:modelValue"
     },
     {
       "name": "reset"
     },
     {
-      "name": "update:modelValue"
+      "name": "filter"
+    },
+    {
+      "name": "input"
     }
   ]
 }

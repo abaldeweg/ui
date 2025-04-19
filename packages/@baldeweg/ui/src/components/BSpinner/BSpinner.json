@@ -7,12 +7,12 @@
       "type": [
         "String"
       ],
+      "default": "l",
       "allowedValues": [
         "l",
         "m",
         "s"
-      ],
-      "default": "l"
+      ]
     }
   ]
 }

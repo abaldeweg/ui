@@ -14,22 +14,22 @@ defineProps({
       return ['left', 'right', 'center'].includes(value)
     },
   },
-  highlight: Boolean,
+  highlight: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
 <template>
-  <section
-    class="container"
-    :class="{
-      container_size_l: size === 'l',
-      container_size_m: size === 'm',
-      container_size_s: size === 's',
-      container_align_right: align === 'right',
-      container_align_center: align === 'center',
-      container_hasHighlight: highlight,
-    }"
-  >
+  <section class="container" :class="{
+    container_size_l: size === 'l',
+    container_size_m: size === 'm',
+    container_size_s: size === 's',
+    container_align_right: align === 'right',
+    container_align_center: align === 'center',
+    container_hasHighlight: highlight,
+  }">
     <slot />
   </section>
 </template>
@@ -42,26 +42,33 @@ defineProps({
   margin: auto;
   box-sizing: border-box;
 }
+
 .container::after {
   content: '';
   display: table;
   clear: both;
 }
+
 .container_size_l {
   width: 100%;
 }
+
 .container_size_m {
   max-width: 1160px;
 }
+
 .container_size_s {
   max-width: 600px;
 }
+
 .container_align_right {
   text-align: right;
 }
+
 .container_align_center {
   text-align: center;
 }
+
 .container_hasHighlight {
   background: var(--color-neutral-02);
 }

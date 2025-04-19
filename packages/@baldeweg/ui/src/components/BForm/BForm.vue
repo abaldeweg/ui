@@ -1,6 +1,9 @@
 <script setup>
 defineProps({
-  noMargin: Boolean,
+  noMargin: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
