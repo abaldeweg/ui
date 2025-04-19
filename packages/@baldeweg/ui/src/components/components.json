@@ -56,6 +56,10 @@
     "directory": "Dropdown"
   },
   {
+    "name": "Editor",
+    "directory": "Editor"
+  },
+  {
     "name": "Fieldset",
     "directory": "Fieldset"
   },
@@ -140,6 +144,10 @@
     "directory": "Search"
   },
   {
+    "name": "Select",
+    "directory": "Select"
+  },
+  {
     "name": "Slider",
     "directory": "Slider"
   },
@@ -170,6 +178,10 @@
   {
     "name": "TabsLink",
     "directory": "Tabs"
+  },
+  {
+    "name": "Textarea",
+    "directory": "Textarea"
   },
   {
     "name": "Toast",
