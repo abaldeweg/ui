@@ -14,8 +14,14 @@ defineProps({
     type: String,
     default: '50px',
   },
-  divider: Boolean,
-  hover: Boolean,
+  divider: {
+    type: Boolean,
+    default: false,
+  },
+  hover: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 

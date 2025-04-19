@@ -7,20 +7,19 @@
       "type": [
         "String"
       ],
+      "default": "top",
       "allowedValues": [
         "top",
         "bottom",
         "left",
         "right"
-      ],
-      "default": "top"
+      ]
     },
     {
       "name": "text",
       "type": [
         "String"
-      ],
-      "example": "Message"
+      ]
     }
   ],
   "slots": [

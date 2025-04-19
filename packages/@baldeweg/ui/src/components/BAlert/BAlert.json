@@ -7,14 +7,14 @@
       "type": [
         "String"
       ],
+      "default": "neutral",
       "allowedValues": [
         "neutral",
         "error",
         "warning",
         "success",
         "info"
-      ],
-      "default": "neutral"
+      ]
     },
     {
       "name": "closable",

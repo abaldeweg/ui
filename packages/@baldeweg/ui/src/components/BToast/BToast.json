@@ -7,13 +7,13 @@
       "type": [
         "String"
       ],
+      "default": "neutral",
       "allowedValues": [
         "neutral",
         "error",
         "warning",
         "success"
-      ],
-      "default": "neutral"
+      ]
     },
     {
       "name": "visible",
