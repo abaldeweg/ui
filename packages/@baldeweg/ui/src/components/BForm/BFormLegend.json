@@ -1,0 +1,9 @@
+{
+  "$schema": "./../component.schema.json",
+  "name": "BFormLegend",
+  "slots": [
+    {
+      "name": "default"
+    }
+  ]
+}

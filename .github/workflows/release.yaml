@@ -10,45 +10,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'yarn'
+          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install
+      - run: pnpm install
       - name: Publish @baldeweg/docu to NPM
-        run: yarn workspace @baldeweg/docu publish
+        run: pnpm -F @baldeweg/docu publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   release-eslint-config:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'yarn'
+          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install
+      - run: pnpm install
       - name: Publish @baldeweg/eslint-config to NPM
-        run: yarn workspace @baldeweg/eslint-config publish
+        run: pnpm -F @baldeweg/eslint-config publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   release-ui:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'yarn'
+          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install
-      - run: yarn workspace @baldeweg/ui build
+      - run: pnpm install
+      - run: pnpm -F @baldeweg/ui build
       - name: Publish @baldeweg/ui to NPM
-        run: yarn workspace @baldeweg/ui publish
+        run: pnpm -F @baldeweg/ui publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
