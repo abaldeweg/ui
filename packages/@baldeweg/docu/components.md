@@ -218,6 +218,26 @@
 |----|-----------
 |click|
 
+## BEditor
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|modelValue |String, Number|||
+|name |String|||
+|id |String|||
+|label |String|||
+|hide-label |Boolean|false||
+|help |String|||
+|language |String|||
+
+### Events
+
+|Name|Description
+|----|-----------
+|update:modelValue|
+
 ## BFieldset
 
 ### Props
