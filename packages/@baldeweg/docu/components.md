@@ -218,13 +218,13 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|modelValue |String, Number|||
+|modelValue |String|||
 |name |String|||
 |id |String|||
 |label |String|||
-|hide-label |Boolean|false||
+|hideLabel |Boolean|false||
 |help |String|||
-|language |String|||
+|language |String|json||
 
 ### Events
 
@@ -560,12 +560,12 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|modelValue |String, Array|||
+|modelValue |Array|||
 |type |String|checkbox|checkbox, radio, options|
 |name |String|||
 |id |String|||
 |help |String|||
-|options |Array|||
+|options |Object|||
 
 ### Events
 
@@ -671,12 +671,11 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|modelValue |String, Number|||
-|type |String|text|date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week|https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes
+|modelValue |String|||
 |name |String|||
 |id |String|||
 |label |String|||
-|hide-label |Boolean|false||
+|hideLabel |Boolean|false||
 |help |String|||
 
 ### Events
