@@ -94,15 +94,6 @@ onMounted(() => {
   outline: none;
 }
 
-input[type="color"].editor_input {
-  width: 90px;
-  height: 40px;
-}
-
-input[type="range"].editor_input {
-  padding: 0;
-}
-
 .editor_helpline {
   font-size: 0.8rem;
   color: var(--color-neutral-06);
