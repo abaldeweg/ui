@@ -144,6 +144,10 @@
     "directory": "Search"
   },
   {
+    "name": "Select",
+    "directory": "Select"
+  },
+  {
     "name": "Slider",
     "directory": "Slider"
   },
