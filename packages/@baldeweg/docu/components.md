@@ -104,10 +104,10 @@
 |Name|Description
 |----|-----------
 |image|
+|title|
 |subtitle|
 |text|
 |actions|
-|title|
 
 ## BCode
 
@@ -131,8 +131,8 @@
 
 |Name|Description
 |----|-----------
-|default|
 |actions|
+|default|
 
 ## BContainer
 
@@ -187,14 +187,14 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |position |String|selector|selector, mouse, bottom|
-|keep-open |Boolean|false||
+|keepOpen |Boolean|false||
 
 ### Slots
 
 |Name|Description
 |----|-----------
-|default|
 |selector|
+|default|
 
 ## BDropdownItem
 
@@ -203,7 +203,7 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |bold |Boolean|false||
-|no-hover |Boolean|false||
+|noHover |Boolean|false||
 |icon |String|||
 
 ### Slots
@@ -211,12 +211,6 @@
 |Name|Description
 |----|-----------
 |default|
-
-### Events
-
-|Name|Description
-|----|-----------
-|click|
 
 ## BEditor
 
@@ -261,7 +255,7 @@
 |direction |String|row|row, column, row-reverse, column-reverse|
 |justify |String|flex-start|flex-start, flex-end, center, space-between, space-around, space-evenly|
 |align |String|stretch|stretch, flex-start, flex-end, center, baseline|
-|gap |String|undefined||Accepts a string, so it could be used as a shorthand for row-gap and column-gap.
+|gap |String|undefined||
 
 ### Slots
 
@@ -275,7 +269,7 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|no-margin |Boolean|false||
+|noMargin |Boolean|false||
 
 ### Slots
 
@@ -322,7 +316,7 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |modelValue |String, Number|||
-|no-styling |Boolean|false||
+|noStyling |Boolean|false||
 |event |Boolean|false||
 |focus |Boolean|false||
 
@@ -365,12 +359,12 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|modelValue |String, Number|||
-|items |Array|||[{key: String, value: String}]
-|item-key |String|key||
-|item-value |String|key||
-|focus |Boolean|false||
-|allow-empty |Boolean|false||
+|items |Array|||
+|itemKey |String|key||
+|itemValue |String|value||
+|modelValue |Number, String|||
+|focus |Boolean|||
+|allowEmpty |Boolean|false||
 
 ### Events
 
@@ -401,13 +395,13 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|modelValue |String, Number|||
-|type |String|text|date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week|https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes
+|modelValue |String|||
+|type |String|text|date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week|
 |name |String|||
 |id |String|||
 |label |String|||
-|hide-label |Boolean|false||
 |help |String|||
+|hideLabel |Boolean|false||
 
 ### Events
 
@@ -422,9 +416,9 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |route |Object|||
-|media-size |String|landscape|landscape, portrait, avatar|
-|text-width |String|200px||
-|controls-width |String|50px||
+|mediaSize |String|landscape|landscape, portrait, avatar|
+|textWidth |String|200px||
+|controlsWidth |String|50px||
 |divider |Boolean|false||
 |hover |Boolean|false||
 
@@ -432,12 +426,12 @@
 
 |Name|Description
 |----|-----------
-|default|
 |media|
-|text|
-|controls|
 |title|
 |subtitle|
+|default|
+|text|
+|controls|
 
 ## BMasthead
 
@@ -469,7 +463,7 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |size |Number|24||
-|color |String|||String (e.g. hex code, custom properties)
+|color |String|inherit||
 |hover |Boolean|false||
 
 ### Slots
@@ -485,15 +479,15 @@
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
 |modelValue |Boolean|false||
-|width |Number|600||Defines the max-width property
-|close-button |Boolean|false||
+|width |Number|600||
+|closeButton |Boolean|true||
 
 ### Slots
 
 |Name|Description
 |----|-----------
-|default|
 |title|
+|default|
 |footer|
 
 ### Events
@@ -508,7 +502,7 @@
 
 |Name|Type|Default|Allowed Values|Example|Description
 |----|----|-------|--------------|----------|-----------
-|nav |Array|||The array expects objects with properties route (String or RouterLink), title (String), badge (String), icon (object containing property type (&#39;icon&#39; or &#39;dot&#39;)) and value (String).
+|nav |Array|||
 
 ## BPanel
 
@@ -524,8 +518,8 @@
 
 |Name|Description
 |----|-----------
-|default|
 |header|
+|default|
 |footer|
 
 ### Events
@@ -542,7 +536,7 @@
 |----|----|-------|--------------|----------|-----------
 |placeholder |String|||
 |modelValue |String|||
-|filter |Boolean|false||Shows a filter icon.
+|filter |Boolean|false||
 |branded |Boolean|false||
 |focus |Boolean|false||
 |reset |Boolean|false||
@@ -554,11 +548,11 @@
 
 |Name|Description
 |----|-----------
-|input|
 |submit|
-|filter|
-|reset|
 |update:modelValue|
+|reset|
+|filter|
+|input|
 
 ## BSelect
 
@@ -729,7 +723,8 @@
 |----|----|-------|--------------|----------|-----------
 |id |String|||
 |text |String|||
-|accept |String|||Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`
+|accept |String|||
+|modelValue |Boolean|false||
 
 ### Events
 
