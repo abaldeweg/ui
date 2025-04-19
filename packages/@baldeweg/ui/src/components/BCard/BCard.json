@@ -28,6 +28,9 @@
       "name": "image"
     },
     {
+      "name": "title"
+    },
+    {
       "name": "subtitle"
     },
     {
@@ -35,9 +38,6 @@
     },
     {
       "name": "actions"
-    },
-    {
-      "name": "title"
     }
   ]
 }

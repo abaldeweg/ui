@@ -7,14 +7,14 @@
       "type": [
         "String"
       ],
+      "default": "m",
       "allowedValues": [
         "xs",
         "s",
         "m",
         "l",
         "xl"
-      ],
-      "default": "m"
+      ]
     }
   ],
   "slots": [

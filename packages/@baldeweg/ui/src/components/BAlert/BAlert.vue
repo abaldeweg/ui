@@ -4,9 +4,7 @@ import { ref, computed } from 'vue'
 const props = defineProps({
   type: {
     type: String,
-    validator: (value) => {
-      return ['neutral', 'error', 'warning', 'success', 'info'].includes(value)
-    },
+    validator: (value) =>  ['neutral', 'error', 'warning', 'success', 'info'].includes(value),
     default: 'neutral',
   },
   closable: {

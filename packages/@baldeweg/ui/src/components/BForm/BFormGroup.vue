@@ -1,6 +1,9 @@
 <script setup>
 defineProps({
-  buttons: Boolean,
+  buttons: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 

@@ -5,6 +5,17 @@ const props = defineProps({
   design: {
     type: String,
     default: 'primary',
+    validator: (value) =>
+      [
+        'primary',
+        'primary_danger',
+        'primary_wide',
+        'outline',
+        'outline_danger',
+        'outline_wide',
+        'text',
+        'text_danger',
+      ].includes(value),
   },
   ripple: {
     type: Boolean,

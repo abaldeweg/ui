@@ -2,10 +2,22 @@
 defineProps({
   placeholder: String,
   modelValue: String,
-  filter: Boolean,
-  branded: Boolean,
-  focus: Boolean,
-  reset: Boolean,
+  filter: {
+    type: Boolean,
+    default: false
+  },
+  branded: {
+    type: Boolean,
+    default: false
+  },
+  focus: {
+    type: Boolean,
+    default: false
+  },
+  reset: {
+    type: Boolean,
+    default: false
+  },
   resetLabel: String,
   filterLabel: String,
   searchLabel: String

@@ -14,11 +14,11 @@
       "type": [
         "String"
       ],
+      "default": "left",
       "allowedValues": [
         "left",
         "right"
-      ],
-      "default": "left"
+      ]
     },
     {
       "name": "width",
@@ -30,10 +30,10 @@
   ],
   "slots": [
     {
-      "name": "default"
+      "name": "header"
     },
     {
-      "name": "header"
+      "name": "default"
     },
     {
       "name": "footer"

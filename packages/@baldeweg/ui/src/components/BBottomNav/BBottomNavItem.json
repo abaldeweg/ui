@@ -1,7 +1,6 @@
 {
   "$schema": "./../component.schema.json",
   "name": "BBottomNavItem",
-  "description": "Items should be sized 35x35 pixel.",
   "props": [
     {
       "name": "title",

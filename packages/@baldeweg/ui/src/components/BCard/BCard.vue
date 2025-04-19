@@ -1,8 +1,14 @@
 <script setup>
 defineProps({
   route: Object,
-  outlined: Boolean,
-  filled: Boolean,
+  outlined: {
+    type: Boolean,
+    default: false,
+  },
+  filled: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 

@@ -9,7 +9,7 @@
       ]
     },
     {
-      "name": "media-size",
+      "name": "mediaSize",
       "type": [
         "String"
       ],
@@ -21,14 +21,14 @@
       ]
     },
     {
-      "name": "text-width",
+      "name": "textWidth",
       "type": [
         "String"
       ],
       "default": "200px"
     },
     {
-      "name": "controls-width",
+      "name": "controlsWidth",
       "type": [
         "String"
       ],
@@ -39,36 +39,34 @@
       "type": [
         "Boolean"
       ],
-      "default": false,
-      "example": true
+      "default": false
     },
     {
       "name": "hover",
       "type": [
         "Boolean"
       ],
-      "default": false,
-      "example": true
+      "default": false
     }
   ],
   "slots": [
     {
-      "name": "default"
-    },
-    {
       "name": "media"
-    },
-    {
-      "name": "text"
-    },
-    {
-      "name": "controls"
     },
     {
       "name": "title"
     },
     {
       "name": "subtitle"
+    },
+    {
+      "name": "default"
+    },
+    {
+      "name": "text"
+    },
+    {
+      "name": "controls"
     }
   ]
 }

@@ -6,23 +6,21 @@
       "name": "author",
       "type": [
         "String"
-      ],
-      "example": "Jane Doe"
+      ]
     },
     {
       "name": "date",
       "type": [
         "String"
-      ],
-      "example": "2024-10-28"
+      ]
     }
   ],
   "slots": [
     {
-      "name": "default"
+      "name": "actions"
     },
     {
-      "name": "actions"
+      "name": "default"
     }
   ]
 }
