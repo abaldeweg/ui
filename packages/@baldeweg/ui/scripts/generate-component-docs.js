@@ -15,6 +15,7 @@ const COMPONENTS_DIR = path.resolve(path.dirname(new URL(import.meta.url).pathna
 async function extractComponentInfo() {
   const componentFiles = globSync(`${COMPONENTS_DIR}/**/*.vue`)
   const componentsInfo = {}
+  let componentCount = 0
 
   for (const filePath of componentFiles) {
     try {
@@ -25,6 +26,7 @@ async function extractComponentInfo() {
       }
 
       console.log(`Processing component: ${componentName}`)
+      componentCount++
 
       const info = await parse(filePath)
 
@@ -99,6 +101,8 @@ async function extractComponentInfo() {
       console.error(`Error processing component ${filePath}: ${error.message}`)
     }
   }
+
+  console.log(`Total components processed: ${componentCount}`)
 
   return componentsInfo
 }
