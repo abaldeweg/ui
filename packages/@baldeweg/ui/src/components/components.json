@@ -52,10 +52,6 @@
     "directory": "Dropdown"
   },
   {
-    "name": "DropdownDivider",
-    "directory": "Dropdown"
-  },
-  {
     "name": "DropdownItem",
     "directory": "Dropdown"
   },
@@ -69,6 +65,10 @@
   },
   {
     "name": "Form",
+    "directory": "Form"
+  },
+  {
+    "name": "FormFieldset",
     "directory": "Form"
   },
   {
@@ -89,6 +89,10 @@
   },
   {
     "name": "FormLabel",
+    "directory": "Form"
+  },
+  {
+    "name": "FormLegend",
     "directory": "Form"
   },
   {
