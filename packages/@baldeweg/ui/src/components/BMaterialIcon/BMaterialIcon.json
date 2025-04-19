@@ -1,25 +1,21 @@
 {
   "$schema": "./../component.schema.json",
   "name": "BMaterialIcon",
-  "slots": [
-    {
-      "name": "default"
-    }
-  ],
+  "description": "color accepts a string (e.g. hex code, custom properties)",
   "props": [
     {
       "name": "size",
       "type": [
         "Number"
       ],
-      "default": 24
+      "default": "24"
     },
     {
       "name": "color",
-      "description": "String (e.g. hex code, custom properties)",
       "type": [
         "String"
-      ]
+      ],
+      "default": "inherit"
     },
     {
       "name": "hover",
@@ -27,6 +23,11 @@
         "Boolean"
       ],
       "default": false
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
     }
   ]
 }

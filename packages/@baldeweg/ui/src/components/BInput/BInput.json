@@ -1,18 +1,16 @@
 {
   "$schema": "./../component.schema.json",
   "name": "BInput",
-  "description": "Not applicable to checkbox and radio. Additional attributes are passed to the underlying input element.",
+  "description": "Not applicable to checkbox and radio. Additional attributes are passed to the underlying input element. For types refer to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes.",
   "props": [
     {
       "name": "modelValue",
       "type": [
-        "String",
-        "Number"
+        "String"
       ]
     },
     {
       "name": "type",
-      "description": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes",
       "type": [
         "String"
       ],
@@ -38,36 +36,32 @@
       "name": "name",
       "type": [
         "String"
-      ],
-      "example": "input-name"
+      ]
     },
     {
       "name": "id",
       "type": [
         "String"
-      ],
-      "example": "input-id"
+      ]
     },
     {
       "name": "label",
       "type": [
         "String"
-      ],
-      "example": "Label"
-    },
-    {
-      "name": "hide-label",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      ]
     },
     {
       "name": "help",
       "type": [
         "String"
+      ]
+    },
+    {
+      "name": "hideLabel",
+      "type": [
+        "Boolean"
       ],
-      "example": "Help text"
+      "default": false
     }
   ],
   "events": [

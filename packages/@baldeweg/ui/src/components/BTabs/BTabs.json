@@ -7,6 +7,7 @@
       "type": [
         "String"
       ],
+      "default": "flex-start",
       "allowedValues": [
         "flex-start",
         "flex-end",
@@ -14,8 +15,7 @@
         "space-between",
         "space-around",
         "space-evenly"
-      ],
-      "default": "flex-start"
+      ]
     }
   ],
   "slots": [

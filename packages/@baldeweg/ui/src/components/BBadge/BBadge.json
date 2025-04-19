@@ -7,12 +7,12 @@
       "type": [
         "String"
       ],
+      "default": "none",
       "allowedValues": [
         "none",
         "inline",
         "superscript"
-      ],
-      "default": "none"
+      ]
     },
     {
       "name": "position",
@@ -30,20 +30,19 @@
       "type": [
         "String"
       ],
+      "default": "none",
       "allowedValues": [
         "none",
         "primary",
         "neutral"
-      ],
-      "default": "none"
+      ]
     },
     {
       "name": "content",
       "type": [
         "String",
         "Number"
-      ],
-      "example": 1
+      ]
     },
     {
       "name": "hideEmpty",

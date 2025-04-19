@@ -12,26 +12,25 @@
     },
     {
       "name": "width",
-      "description": "Defines the max-width property",
       "type": [
         "Number"
       ],
-      "default": 600
+      "default": "600"
     },
     {
-      "name": "close-button",
+      "name": "closeButton",
       "type": [
         "Boolean"
       ],
-      "default": false
+      "default": true
     }
   ],
   "slots": [
     {
-      "name": "default"
+      "name": "title"
     },
     {
-      "name": "title"
+      "name": "default"
     },
     {
       "name": "footer"
