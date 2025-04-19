@@ -8,6 +8,7 @@ const props = defineProps({
   },
   ripple: {
     type: Boolean,
+    default: false,
   },
 })
 
