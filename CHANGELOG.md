@@ -6,7 +6,7 @@
 - Remove reference font size, browser is now the reference
 - Remove `BDropdownDivider` component
 - Add `BFieldset` component
-- New components `BInput`, `BEditor` and `BTextarea`
+- New components `BInput`, `BEditor`, `BTextarea` and `BSelect`
 
 ## v0.14.0
 
