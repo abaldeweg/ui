@@ -196,9 +196,6 @@
 |default|
 |selector|
 
-## BDropdownDivider
-
-
 ## BDropdownItem
 
 ### Props
@@ -220,6 +217,40 @@
 |Name|Description
 |----|-----------
 |click|
+
+## BEditor
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|modelValue |String, Number|||
+|name |String|||
+|id |String|||
+|label |String|||
+|hide-label |Boolean|false||
+|help |String|||
+|language |String|||
+
+### Events
+
+|Name|Description
+|----|-----------
+|update:modelValue|
+
+## BFieldset
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|legend |String|||
+
+### Slots
+
+|Name|Description
+|----|-----------
+|default|
 
 ## BFlex
 
@@ -363,6 +394,26 @@
 |update:modelValue|
 |click|
 |contextmenu|
+
+## BInput
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|modelValue |String, Number|||
+|type |String|text|date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week|https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes
+|name |String|||
+|id |String|||
+|label |String|||
+|hide-label |Boolean|false||
+|help |String|||
+
+### Events
+
+|Name|Description
+|----|-----------
+|update:modelValue|
 
 ## BList
 
@@ -600,6 +651,26 @@
 |Name|Description
 |----|-----------
 |default|
+
+## BTextarea
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|modelValue |String, Number|||
+|type |String|text|date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week|https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes
+|name |String|||
+|id |String|||
+|label |String|||
+|hide-label |Boolean|false||
+|help |String|||
+
+### Events
+
+|Name|Description
+|----|-----------
+|update:modelValue|
 
 ## BToast
 
