@@ -104,6 +104,10 @@
     "directory": "Form"
   },
   {
+    "name": "Input",
+    "directory": "Input"
+  },
+  {
     "name": "List",
     "directory": "List"
   },
