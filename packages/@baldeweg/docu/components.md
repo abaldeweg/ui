@@ -560,6 +560,25 @@
 |reset|
 |update:modelValue|
 
+## BSelect
+
+### Props
+
+|Name|Type|Default|Allowed Values|Example|Description
+|----|----|-------|--------------|----------|-----------
+|modelValue |String, Array|||
+|type |String|checkbox|checkbox, radio, options|
+|name |String|||
+|id |String|||
+|help |String|||
+|options |Array|||
+
+### Events
+
+|Name|Description
+|----|-----------
+|update:modelValue|
+
 ## BSlider
 
 
