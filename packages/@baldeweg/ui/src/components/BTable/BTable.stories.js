@@ -3,6 +3,13 @@ import BTable from './BTable.vue'
 export default {
   title: 'Components/BTable',
   component: BTable,
+  parameters: {
+    docs: {
+      description: {
+        component: "Its just a wrapper, make use of the HTML table elements, including `<table>`."
+      }
+    }
+  },
   argTypes: {
     hover: {
       control: 'boolean',

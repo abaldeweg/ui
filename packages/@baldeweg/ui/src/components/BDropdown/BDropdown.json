@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BDropdown",
   "props": [
     {
       "name": "position",
-      "type": [
-        "String"
-      ],
-      "default": "selector",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'selector'"
+      },
+      "values": [
         "selector",
         "mouse",
         "bottom"
@@ -16,10 +18,13 @@
     },
     {
       "name": "keepOpen",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

@@ -3,6 +3,13 @@ import BSelect from './BSelect.vue'
 export default {
   title: 'Components/BSelect',
   component: BSelect,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Additional attributes are passed to the underlying input or select element.',
+      },
+    },
+  },
   argTypes: {
     modelValue: {
       control: 'object',

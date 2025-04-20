@@ -1,21 +1,22 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BInput",
-  "description": "Not applicable to checkbox and radio. Additional attributes are passed to the underlying input element. For types refer to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes.",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "type",
-      "type": [
-        "String"
-      ],
-      "default": "text",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'text'"
+      },
+      "values": [
         "date",
         "color",
         "datetime-local",
@@ -34,34 +35,39 @@
     },
     {
       "name": "name",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      },
+      "required": true
     },
     {
       "name": "id",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      },
+      "required": true
     },
     {
       "name": "label",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "help",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "hideLabel",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "events": [

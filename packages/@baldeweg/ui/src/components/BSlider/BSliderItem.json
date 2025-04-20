@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BSliderItem",
   "props": [
     {
       "name": "size",
-      "type": [
-        "String"
-      ],
-      "default": "m",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'m'"
+      },
+      "values": [
         "xs",
         "s",
         "m",

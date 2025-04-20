@@ -1,12 +1,11 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BBottomNavItem",
   "props": [
     {
       "name": "title",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     }
   ],
   "slots": [

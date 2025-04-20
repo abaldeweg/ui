@@ -1,46 +1,53 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BFormSelect",
   "props": [
     {
       "name": "items",
-      "type": [
-        "Array"
-      ]
+      "type": {
+        "name": "array"
+      }
     },
     {
       "name": "itemKey",
-      "type": [
-        "String"
-      ],
-      "default": "key"
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'key'"
+      }
     },
     {
       "name": "itemValue",
-      "type": [
-        "String"
-      ],
-      "default": "value"
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'value'"
+      }
     },
     {
       "name": "modelValue",
-      "type": [
-        "Number",
-        "String"
-      ]
+      "type": {
+        "name": "number|string"
+      }
     },
     {
       "name": "focus",
-      "type": [
-        "Boolean"
-      ]
+      "type": {
+        "name": "boolean"
+      }
     },
     {
       "name": "allowEmpty",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "events": [

@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BButton",
   "props": [
     {
       "name": "design",
-      "type": [
-        "String"
-      ],
-      "default": "primary",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'primary'"
+      },
+      "values": [
         "primary",
         "primary_danger",
         "primary_wide",
@@ -21,10 +23,13 @@
     },
     {
       "name": "ripple",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

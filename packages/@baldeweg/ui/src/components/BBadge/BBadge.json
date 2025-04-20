@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BBadge",
   "props": [
     {
       "name": "variant",
-      "type": [
-        "String"
-      ],
-      "default": "none",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"none\""
+      },
+      "values": [
         "none",
         "inline",
         "superscript"
@@ -16,22 +18,28 @@
     },
     {
       "name": "position",
-      "type": [
-        "String"
-      ],
-      "default": "right",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'right'"
+      },
+      "values": [
         "left",
         "right"
       ]
     },
     {
       "name": "background",
-      "type": [
-        "String"
-      ],
-      "default": "none",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"none\""
+      },
+      "values": [
         "none",
         "primary",
         "neutral"
@@ -39,17 +47,19 @@
     },
     {
       "name": "content",
-      "type": [
-        "String",
-        "Number"
-      ]
+      "type": {
+        "name": "string|number"
+      }
     },
     {
       "name": "hideEmpty",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

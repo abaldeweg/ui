@@ -1,44 +1,47 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BTextarea",
-  "description": "Additional attributes are passed to the underlying input element.",
   "props": [
     {
       "name": "modelValue",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "name",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      },
+      "required": true
     },
     {
       "name": "id",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      },
+      "required": true
     },
     {
       "name": "label",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "hideLabel",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "help",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     }
   ],
   "events": [

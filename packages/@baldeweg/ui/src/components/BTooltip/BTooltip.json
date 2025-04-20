@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BTooltip",
   "props": [
     {
       "name": "position",
-      "type": [
-        "String"
-      ],
-      "default": "top",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'top'"
+      },
+      "values": [
         "top",
         "bottom",
         "left",
@@ -17,9 +19,9 @@
     },
     {
       "name": "text",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     }
   ],
   "slots": [

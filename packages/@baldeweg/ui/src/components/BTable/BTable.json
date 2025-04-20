@@ -1,14 +1,15 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BTable",
-  "description": "Its just a wrapper, make use of the HTML table elements, including `<table>`.",
   "props": [
     {
       "name": "hover",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

@@ -1,26 +1,31 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BCard",
   "props": [
     {
       "name": "route",
-      "type": [
-        "Object"
-      ]
+      "type": {
+        "name": "object"
+      }
     },
     {
       "name": "outlined",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     },
     {
       "name": "filled",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

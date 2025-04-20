@@ -1,14 +1,16 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BToast",
   "props": [
     {
       "name": "type",
-      "type": [
-        "String"
-      ],
-      "default": "neutral",
-      "allowedValues": [
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'neutral'"
+      },
+      "values": [
         "neutral",
         "error",
         "warning",
@@ -17,10 +19,13 @@
     },
     {
       "name": "visible",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "slots": [

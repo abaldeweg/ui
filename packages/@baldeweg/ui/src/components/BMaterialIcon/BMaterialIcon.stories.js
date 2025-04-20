@@ -10,7 +10,7 @@ export default {
     },
     color: {
       control: { type: 'color' },
-      description: 'Sets the color of the icon',
+      description: 'Sets the color of the icon. Accepts a string (e.g. hex code, custom properties)',
     },
     hover: {
       control: { type: 'boolean' },

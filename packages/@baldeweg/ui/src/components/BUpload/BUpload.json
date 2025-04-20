@@ -1,32 +1,33 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BUpload",
-  "description": "Set the enctype of the parent form to `enctype=\"multipart/form-data\"`.",
   "props": [
     {
       "name": "id",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "text",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "accept",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "modelValue",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "events": [

@@ -1,19 +1,21 @@
 {
-  "$schema": "./../component.schema.json",
   "name": "BSwitch",
   "props": [
     {
       "name": "label",
-      "type": [
-        "String"
-      ]
+      "type": {
+        "name": "string"
+      }
     },
     {
       "name": "modelValue",
-      "type": [
-        "Boolean"
-      ],
-      "default": false
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
     }
   ],
   "events": [
