@@ -45,7 +45,27 @@
     {
       "name": "options",
       "type": {
-        "name": "object"
+        "name": "array"
+      }
+    },
+    {
+      "name": "optionsKeyName",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'optionsKey'"
+      }
+    },
+    {
+      "name": "optionsValueName",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'optionsValue'"
       }
     }
   ],

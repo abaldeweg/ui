@@ -8,7 +8,6 @@
 |----|----|-------|--------------|--------
 |type |{&#34;name&#34;:&#34;string&#34;}|{&#34;func&#34;:false,&#34;value&#34;:&#34;&#39;neutral&#39;&#34;}|neutral, error, warning, success, info|  No 
 |closable |{&#34;name&#34;:&#34;boolean&#34;}|{&#34;func&#34;:false,&#34;value&#34;:&#34;false&#34;}||  No 
-|elevated |{&#34;name&#34;:&#34;boolean&#34;}|{&#34;func&#34;:false,&#34;value&#34;:&#34;false&#34;}||  No 
 
 ### Slots
 
@@ -565,7 +564,9 @@
 |name |{&#34;name&#34;:&#34;string&#34;}|||  Yes 
 |id |{&#34;name&#34;:&#34;string&#34;}|||  Yes 
 |help |{&#34;name&#34;:&#34;string&#34;}|||  No 
-|options |{&#34;name&#34;:&#34;object&#34;}|||  No 
+|options |{&#34;name&#34;:&#34;array&#34;}|||  No 
+|optionsKeyName |{&#34;name&#34;:&#34;string&#34;}|{&#34;func&#34;:false,&#34;value&#34;:&#34;&#39;optionsKey&#39;&#34;}||  No 
+|optionsValueName |{&#34;name&#34;:&#34;string&#34;}|{&#34;func&#34;:false,&#34;value&#34;:&#34;&#39;optionsValue&#39;&#34;}||  No 
 
 ### Events
 

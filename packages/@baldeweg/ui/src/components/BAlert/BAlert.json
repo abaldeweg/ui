@@ -27,16 +27,6 @@
         "func": false,
         "value": "false"
       }
-    },
-    {
-      "name": "elevated",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
     }
   ],
   "slots": [
