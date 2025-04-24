@@ -28,7 +28,7 @@
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-storybook": "0.12.0",
     "eslint-plugin-vue": "10.0.0",
-    "glob": "11.0.1",
+    "glob": "11.0.2",
     "monaco-editor": "0.52.2",
     "jsdom": "26.1.0",
     "prettier": "3.5.3",
