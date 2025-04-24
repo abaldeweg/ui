@@ -105,12 +105,10 @@ defineProps({
 
 .list_media {
   padding-right: 20px;
-  width: 90px;
-  flex-grow: 1;
 }
 
 .list_media.list_mediaSize_landscape {
-  width: 400px;
+  width: 200px;
 }
 
 .list_mediaSize_landscape img {
@@ -118,7 +116,7 @@ defineProps({
 }
 
 .list_mediaSize_portrait img {
-  width: 50px;
+  width: 100px;
 }
 
 .list_mediaSize_avatar img {
@@ -157,5 +155,6 @@ defineProps({
 
 .list_controls {
   padding-left: 20px;
+  text-align: right;
 }
 </style>
