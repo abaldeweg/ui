@@ -7,6 +7,7 @@
 - Remove `BDropdownDivider` component
 - Add `BFieldset` component
 - New components `BInput`, `BEditor`, `BTextarea` and `BSelect`
+- Remove the `elevated` prop from `BAlert`
 
 ## v0.14.0
 
