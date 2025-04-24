@@ -1,4 +1,4 @@
-import { defineAsyncComponent } from 'vue'
+import { defineComponent } from 'vue'
 import components from './components/components.json'
 
 export const createUi = () => {
@@ -6,7 +6,7 @@ export const createUi = () => {
     components.forEach(component => {
       app.component(
         "B" + component.name,
-        defineAsyncComponent(() => import(`./components/B${component.directory}/B${component.name}.vue`))
+        defineComponent(() => import(`./components/B${component.directory}/B${component.name}.vue`))
       )
 
       app.provide("ui", options)
