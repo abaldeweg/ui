@@ -20,7 +20,15 @@ const props = defineProps({
   },
   help: String,
   options: {
-    type: Object,
+    type: Array,
+  },
+  optionsKeyName: {
+    type: String,
+    default: 'optionsKey',
+  },
+  optionsValueName: {
+    type: String,
+    default: 'optionsValue',
   }
 })
 
@@ -40,21 +48,45 @@ watch(selected, (newValue) => {
 <template>
   <div class="select_group">
     <div class="select_item">
-      <div v-if="type === 'checkbox'" v-for="(value, key) in options" :key="key" class="select_option">
-        <input v-model="selected" type="checkbox" :value="key" :name="name" :id="key" />
-        <label :for="key">{{ value }}</label>
+      <div v-if="type === 'checkbox'" v-for="(option, index) in options"
+        :key="option[optionsValueName]"
+        class="select_option">
+        <input
+          v-model="selected"
+          type="checkbox"
+          :value="option[optionsValueName]"
+          :name="name"
+          :id="option[optionsValueName]"
+        />
+        <label :for="`${option[optionsValueName]}`">
+          {{ option[optionsKeyName] }}
+        </label>
       </div>
 
-      <div v-if="type === 'radio'" v-for="(value, key) in options" :key="key" class="select_option">
-        <input v-model="selected" type="radio" :value="key" :name="name" :id="key" />
-        <label :for="key">{{ value }}</label>
+      <div v-if="type === 'radio'" v-for="(option, index) in options"
+        :key="option[optionsValueName]"
+        class="select_option">
+        <input
+          v-model="selected"
+          type="radio"
+          :value="option[optionsValueName]"
+          :name="name"
+          :id="option[optionsValueName]"
+        />
+        <label :for="`${option[optionsValueName]}`">
+          {{ option[optionsKeyName] }}
+        </label>
       </div>
 
       <div v-if="type === 'options'">
-        <label :for="key">{{ value }}</label>
-        <select v-model="selected" class="select_input">
-          <option :value="key" :name="name" :id="key" v-for="(value, key) in options" :key="key">
-            {{ value }}</option>
+        <select v-model="selected" class="select_input" :id="id" :name="name">
+          <option
+            v-for="(option, index) in options"
+            :key="option[optionsValueName]"
+            :value="option[optionsValueName]"
+          >
+            {{ option[optionsKeyName] }}
+          </option>
         </select>
       </div>
 

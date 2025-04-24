@@ -12,7 +12,7 @@ export default {
   },
   argTypes: {
     modelValue: {
-      control: 'object',
+      control: 'array',
     },
     type: {
       control: 'select',
@@ -21,7 +21,9 @@ export default {
     name: { control: 'text' },
     id: { control: 'text' },
     help: { control: 'text' },
-    options: { control: 'object' },
+    options: { control: 'array' },
+    optionsKeyName: { control: 'text' },
+    optionsValueName: { control: 'text' },
   },
 }
 
@@ -39,40 +41,40 @@ Checkbox.args = {
   name: 'checkbox',
   id: 'checkbox',
   type: 'checkbox',
-  options: {
-    option1: 'Option 1',
-    option2: 'Option 2',
-    option3: 'Option 3',
-    option4: 'Option 4',
-  },
+  options: [
+    { optionsKey: 'Option 1', optionsValue: 'option1' },
+    { optionsKey: 'Option 2', optionsValue: 'option2' },
+    { optionsKey: 'Option 3', optionsValue: 'option3' },
+    { optionsKey: 'Option 4', optionsValue: 'option4' },
+  ],
 }
 
 export const RadioButton = Template.bind({})
 RadioButton.args = {
-  modelValue: 'option2',
+  modelValue: ['option2'],
   name: 'radio',
   id: 'radio',
   type: 'radio',
-  options: {
-    option1: 'Option 1',
-    option2: 'Option 2',
-    option3: 'Option 3',
-    option4: 'Option 4',
-  },
+  options: [
+    { optionsKey: 'Option 1', optionsValue: 'option1' },
+    { optionsKey: 'Option 2', optionsValue: 'option2' },
+    { optionsKey: 'Option 3', optionsValue: 'option3' },
+    { optionsKey: 'Option 4', optionsValue: 'option4' },
+  ],
 }
 
 export const DropdownSelect = Template.bind({})
 DropdownSelect.args = {
-  modelValue: 'option2',
+  modelValue: ['option2'],
   name: 'dropdown',
   id: 'dropdown',
   type: 'options',
-  options: {
-    option1: 'Option 1',
-    option2: 'Option 2',
-    option3: 'Option 3',
-    option4: 'Option 4',
-  },
+  options: [
+    { optionsKey: 'Option 1', optionsValue: 'option1' },
+    { optionsKey: 'Option 2', optionsValue: 'option2' },
+    { optionsKey: 'Option 3', optionsValue: 'option3' },
+    { optionsKey: 'Option 4', optionsValue: 'option4' },
+  ],
 }
 
 export const WithHelpText = Template.bind({})
@@ -82,9 +84,24 @@ WithHelpText.args = {
   id: 'helpline',
   type: 'radio',
   help: 'Select one option',
-  options: {
-    option1: 'Yes',
-    option2: 'No',
-    option3: 'Maybe',
-  },
+  options: [
+    { optionsKey: 'yes', optionsValue: 'Yes' },
+    { optionsKey: 'no', optionsValue: 'No' },
+    { optionsKey: 'maybe', optionsValue: 'Maybe' },
+  ],
+}
+
+export const WithCustomKeyNames = Template.bind({})
+WithCustomKeyNames.args = {
+  modelValue: ['custom2'],
+  name: 'custom-keys',
+  id: 'custom-keys',
+  type: 'checkbox',
+  optionsKeyName: 'label',
+  optionsValueName: 'id',
+  options: [
+    { label: 'First Option', id: 'custom1' },
+    { label: 'Second Option', id: 'custom2' },
+    { label: 'Third Option', id: 'custom3' },
+  ]
 }
