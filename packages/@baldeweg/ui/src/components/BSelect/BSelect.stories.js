@@ -42,10 +42,10 @@ Checkbox.args = {
   id: 'checkbox',
   type: 'checkbox',
   options: [
-    { optionsKey: 'Option 1', optionsValue: 'option1' },
-    { optionsKey: 'Option 2', optionsValue: 'option2' },
-    { optionsKey: 'Option 3', optionsValue: 'option3' },
-    { optionsKey: 'Option 4', optionsValue: 'option4' },
+    { optionsKey: 'option1', optionsValue: 'Option 1' },
+    { optionsKey: 'option2', optionsValue: 'Option 2' },
+    { optionsKey: 'option3', optionsValue: 'Option 3' },
+    { optionsKey: 'option4', optionsValue: 'Option 4' },
   ],
 }
 
@@ -56,10 +56,10 @@ RadioButton.args = {
   id: 'radio',
   type: 'radio',
   options: [
-    { optionsKey: 'Option 1', optionsValue: 'option1' },
-    { optionsKey: 'Option 2', optionsValue: 'option2' },
-    { optionsKey: 'Option 3', optionsValue: 'option3' },
-    { optionsKey: 'Option 4', optionsValue: 'option4' },
+    { optionsKey: 'option1', optionsValue: 'Option 1' },
+    { optionsKey: 'option2', optionsValue: 'Option 2' },
+    { optionsKey: 'option3', optionsValue: 'Option 3' },
+    { optionsKey: 'option4', optionsValue: 'Option 4' },
   ],
 }
 
@@ -70,10 +70,10 @@ DropdownSelect.args = {
   id: 'dropdown',
   type: 'options',
   options: [
-    { optionsKey: 'Option 1', optionsValue: 'option1' },
-    { optionsKey: 'Option 2', optionsValue: 'option2' },
-    { optionsKey: 'Option 3', optionsValue: 'option3' },
-    { optionsKey: 'Option 4', optionsValue: 'option4' },
+    { optionsKey: 'option1', optionsValue: 'Option 1' },
+    { optionsKey: 'option2', optionsValue: 'Option 2' },
+    { optionsKey: 'option3', optionsValue: 'Option 3' },
+    { optionsKey: 'option4', optionsValue: 'Option 4' },
   ],
 }
 
@@ -100,8 +100,8 @@ WithCustomKeyNames.args = {
   optionsKeyName: 'label',
   optionsValueName: 'id',
   options: [
-    { label: 'First Option', id: 'custom1' },
-    { label: 'Second Option', id: 'custom2' },
-    { label: 'Third Option', id: 'custom3' },
+    { label: 'option1', id: 'First Option' },
+    { label: 'option2', id: 'Second Option' },
+    { label: 'option3', id: 'Third Option' },
   ]
 }

@@ -49,32 +49,32 @@ watch(selected, (newValue) => {
   <div class="select_group">
     <div class="select_item">
       <div v-if="type === 'checkbox'" v-for="(option, index) in options"
-        :key="option[optionsValueName]"
+        :key="option[optionsKeyName]"
         class="select_option">
         <input
           v-model="selected"
           type="checkbox"
-          :value="option[optionsValueName]"
+          :value="option[optionsKeyName]"
           :name="name"
-          :id="option[optionsValueName]"
+          :id="option[optionsKeyName]"
         />
         <label :for="`${option[optionsValueName]}`">
-          {{ option[optionsKeyName] }}
+          {{ option[optionsValueName] }}
         </label>
       </div>
 
       <div v-if="type === 'radio'" v-for="(option, index) in options"
-        :key="option[optionsValueName]"
+        :key="option[optionsKeyName]"
         class="select_option">
         <input
           v-model="selected"
           type="radio"
-          :value="option[optionsValueName]"
+          :value="option[optionsKeyName]"
           :name="name"
-          :id="option[optionsValueName]"
+          :id="option[optionsKeyName]"
         />
-        <label :for="`${option[optionsValueName]}`">
-          {{ option[optionsKeyName] }}
+        <label :for="option[optionsKeyName]">
+          {{ option[optionsValueName] }}
         </label>
       </div>
 
@@ -82,10 +82,10 @@ watch(selected, (newValue) => {
         <select v-model="selected" class="select_input" :id="id" :name="name">
           <option
             v-for="(option, index) in options"
-            :key="option[optionsValueName]"
-            :value="option[optionsValueName]"
+            :key="option[optionsKeyName]"
+            :value="option[optionsKeyName]"
           >
-            {{ option[optionsKeyName] }}
+            {{ option[optionsValueName] }}
           </option>
         </select>
       </div>
