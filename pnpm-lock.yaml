@@ -37,7 +37,7 @@ importers:
         version: 5.8.3
       vitest:
         specifier: 3.1.2
-        version: 3.1.2(@types/node@22.14.1)(jsdom@26.1.0)(msw@2.7.3(@types/node@22.14.1)(typescript@5.8.3))
+        version: 3.1.2(@types/node@22.15.2)(jsdom@26.1.0)(msw@2.7.3(@types/node@22.15.2)(typescript@5.8.3))
 
   packages/@baldeweg/eslint-config:
     dependencies:
@@ -131,10 +131,7 @@ importers:
         version: 3.10.4(vite@6.3.3(@types/node@22.15.2))
       vitest:
         specifier: 3.1.2
-        version: 3.1.2(@types/node@22.14.1)(jsdom@26.1.0)(msw@2.7.3(@types/node@22.14.1)(typescript@5.8.3))
-      vue-docgen-api:
-        specifier: 4.79.2
-        version: 4.79.2(vue@3.5.13(typescript@5.8.3))
+        version: 3.1.2(@types/node@22.15.2)(jsdom@26.1.0)(msw@2.7.3(@types/node@22.15.2)(typescript@5.8.3))
 
 packages:
 
