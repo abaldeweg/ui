@@ -1,15 +1,27 @@
 name: Publish to npm
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Name of the tag to create'
+        required: true
 
 jobs:
   release-docu:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Git user
+        run: |
+          git config --global user.email "a@baldeweg.org"
+          git config --global user.name "André Baldeweg"
+      - name: Tag the commit
+        run: git tag -a ${{ inputs.tag_name }} -m "Version ${{ inputs.tag_name }}"
+      - name: Push the tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push origin ${{ inputs.tag_name }}
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Use Node.js 22.x
@@ -27,6 +39,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Git user
+        run: |
+          git config --global user.email "a@baldeweg.org"
+          git config --global user.name "André Baldeweg"
+      - name: Tag the commit
+        run: git tag -a ${{ inputs.tag_name }} -m "Version ${{ inputs.tag_name }}"
+      - name: Push the tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push origin ${{ inputs.tag_name }}
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Use Node.js 22.x
@@ -44,6 +66,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Git user
+        run: |
+          git config --global user.email "a@baldeweg.org"
+          git config --global user.name "André Baldeweg"
+      - name: Tag the commit
+        run: git tag -a ${{ inputs.tag_name }} -m "Version ${{ inputs.tag_name }}"
+      - name: Push the tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push origin ${{ inputs.tag_name }}
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Use Node.js 22.x
