@@ -8,6 +8,29 @@ on:
         required: true
 
 jobs:
+  tag-packages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: npm install -g pnpm
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: 'pnpm'
+      - run: pnpm install
+      - name: Set version in package.json
+        run: |
+          pnpm -F @baldeweg/docu version ${{ inputs.tag_name }}
+        run: pnpm release
+      - name: Commit Version Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update version"
+          file_pattern: packages/@baldeweg/**/*
   tag:
     runs-on: ubuntu-latest
     steps:

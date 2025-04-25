@@ -15,36 +15,7 @@ if (!workspace) {
   process.exit(1)
 }
 
-askForVersion().then(version => {
-  setVersion(version).then(() => {
-    exec(`git add ${workspace}/*/package.json && git commit -m "bump version"`, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error committing changes: ${error}`)
-        return
-      }
-
-      if (stderr) {
-        console.error(`Error committing changes: ${error}`)
-      }
-
-      console.log(`Changes committed: ${stdout}`)
-    })
-  })
-})
-
-/**
- * Prompts the user for the version tag.
- *
- * @returns {Promise<string>} A promise that resolves with the version tag entered by the user.
- */
-function askForVersion() {
-  return new Promise(resolve => {
-    readline.question("Version Tag: ", version => {
-      readline.close()
-      resolve(version)
-    })
-  })
-}
+setVersion(workspace)
 
 /**
  * Sets the version in all package.json files within the specified workspace.

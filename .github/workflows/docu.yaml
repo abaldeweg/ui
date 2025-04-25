@@ -26,4 +26,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: update documentation"
-          file_pattern: packages/@baldeweg/docu/*
+          file_pattern: packages/@baldeweg/ui/*
