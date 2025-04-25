@@ -5,7 +5,7 @@ UI Components
 ## Requirements
 
 - NodeJS
-- Yarn
+- pnpm
 
 ## Get Started
 

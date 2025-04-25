@@ -10,9 +10,21 @@ importers:
 
   packages/@baldeweg/docu:
     dependencies:
+      commander:
+        specifier: 13.1.0
+        version: 13.1.0
       ejs:
         specifier: 3.1.10
         version: 3.1.10
+      glob:
+        specifier: 11.0.2
+        version: 11.0.2
+      prettier:
+        specifier: 3.5.3
+        version: 3.5.3
+      vue-docgen-api:
+        specifier: 4.79.2
+        version: 4.79.2(vue@3.5.13(typescript@5.8.3))
     devDependencies:
       '@types/ejs':
         specifier: 3.1.5
@@ -23,6 +35,9 @@ importers:
       typescript:
         specifier: 5.8.3
         version: 5.8.3
+      vitest:
+        specifier: 3.1.2
+        version: 3.1.2(@types/node@22.14.1)(jsdom@26.1.0)(msw@2.7.3(@types/node@22.14.1)(typescript@5.8.3))
 
   packages/@baldeweg/eslint-config:
     dependencies:
@@ -45,6 +60,9 @@ importers:
         specifier: 3.5.13
         version: 3.5.13(typescript@5.8.3)
     devDependencies:
+      '@baldeweg/docu':
+        specifier: workspace:*
+        version: link:../docu
       '@baldeweg/eslint-config':
         specifier: 0.11.0
         version: 0.11.0(@vue/eslint-config-prettier@10.2.0(eslint@9.25.1)(prettier@3.5.3))(eslint-plugin-import@2.31.0(eslint@9.25.1))(eslint-plugin-vue@10.0.0(eslint@9.25.1)(vue-eslint-parser@10.1.1(eslint@9.25.1)))(eslint@9.25.1)
@@ -90,9 +108,6 @@ importers:
       eslint-plugin-vue:
         specifier: 10.0.0
         version: 10.0.0(eslint@9.25.1)(vue-eslint-parser@10.1.1(eslint@9.25.1))
-      glob:
-        specifier: 11.0.2
-        version: 11.0.2
       jsdom:
         specifier: 26.1.0
         version: 26.1.0
@@ -117,9 +132,6 @@ importers:
       vitest:
         specifier: 3.1.2
         version: 3.1.2(@types/node@22.14.1)(jsdom@26.1.0)(msw@2.7.3(@types/node@22.14.1)(typescript@5.8.3))
-      vue-docgen-api:
-        specifier: 4.79.2
-        version: 4.79.2(vue@3.5.13(typescript@5.8.3))
 
 packages:
 
@@ -1181,6 +1193,10 @@ packages:
   commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
+    engines: {node: '>=18'}
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -4030,6 +4046,8 @@ snapshots:
       delayed-stream: 1.0.0
 
   commander@10.0.1: {}
+
+  commander@13.1.0: {}
 
   concat-map@0.0.1: {}
 

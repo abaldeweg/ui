@@ -1,9 +1,12 @@
 {
   "name": "@baldeweg/docu",
   "version": "0.14.3",
+  "bin": {
+    "docu": "index.js"
+  },
   "scripts": {
     "compile": "tsc",
-    "generate": "node index.js"
+    "test": "vitest"
   },
   "main": "index.js",
   "author": "André Baldeweg <a@baldeweg.org>",
@@ -13,11 +16,16 @@
     "url": "https://github.com/abaldeweg/ui.git"
   },
   "dependencies": {
-    "ejs": "3.1.10"
+    "commander": "13.1.0",
+    "ejs": "3.1.10",
+    "glob": "11.0.2",
+    "prettier": "3.5.3",
+    "vue-docgen-api": "4.79.2"
   },
   "devDependencies": {
     "@types/ejs": "3.1.5",
     "@types/node": "22.14.1",
-    "typescript": "5.8.3"
+    "typescript": "5.8.3",
+    "vitest": "3.1.2"
   }
 }

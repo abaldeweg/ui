@@ -6,12 +6,13 @@
     "build": "vite build",
     "test": "vitest run --environment jsdom",
     "components:list": "node ./scripts/components.js",
-    "generate-docs": "node ./scripts/generate-component-docs.js"
+    "generate-docu": "docu"
   },
   "dependencies": {
     "vue": "3.5.13"
   },
   "devDependencies": {
+    "@baldeweg/docu": "workspace:*",
     "@baldeweg/eslint-config": "0.11.0",
     "@rushstack/eslint-patch": "1.11.0",
     "@storybook/addon-a11y": "8.6.12",
@@ -27,7 +28,6 @@
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-storybook": "0.12.0",
     "eslint-plugin-vue": "10.0.0",
-    "glob": "11.0.2",
     "jsdom": "26.1.0",
     "monaco-editor": "0.52.2",
     "prettier": "3.5.3",
@@ -35,8 +35,7 @@
     "storybook": "8.6.12",
     "vite": "6.3.3",
     "vite-plugin-webfont-dl": "3.10.4",
-    "vitest": "3.1.2",
-    "vue-docgen-api": "4.79.2"
+    "vitest": "3.1.2"
   },
   "files": [
     "dist"
