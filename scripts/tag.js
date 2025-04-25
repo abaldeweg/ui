@@ -33,7 +33,7 @@ function setVersion(version) {
       }
 
       pkg.forEach(package => {
-        const packagePath = path.join(workspace, package)
+        const packagePath = path.join(package)
 
         if (fs.statSync(packagePath).isDirectory()) {
           const packageJsonPath = path.join(packagePath, 'package.json')
