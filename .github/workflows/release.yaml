@@ -24,7 +24,10 @@ jobs:
       - run: pnpm install
       - name: Set version in package.json
         run: |
-          pnpm release packages/@baldeweg ${{ inputs.tag_name }}
+          # pnpm release packages/@baldeweg ${{ inputs.tag_name }}
+          sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/docu/package.json
+          sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/eslint-config/package.json
+          sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/ui/package.json
       - name: Commit Version Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -48,7 +51,7 @@ jobs:
         run: git push origin ${{ inputs.tag_name }}
 
   release-docu:
-    needs: tag-packages
+    needs: tag
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -67,7 +70,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   release-eslint-config:
-    needs: tag-packages
+    needs: tag
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -86,7 +89,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   release-ui:
-    needs: tag-packages
+    needs: tag
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

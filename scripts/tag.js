@@ -3,10 +3,6 @@
 const { exec } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
 
 const workspace = process.argv[2]
 const version = process.argv[3]
@@ -20,13 +16,10 @@ setVersion(version).then(() => {
   process.exit(0)
 })
 
-
-
 /**
  * Sets the version in all package.json files within the specified workspace.
- *
- * @param {string} version The version to set.
- * @returns {Promise<void>} A promise that resolves when all package.json files have been updated.
+ * @param {string} version - The version to set.
+ * @returns {Promise<void>} - A promise that resolves when all package.json files have been updated.
  */
 function setVersion(version) {
   return new Promise((resolve, reject) => {
