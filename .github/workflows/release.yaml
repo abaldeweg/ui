@@ -24,9 +24,7 @@ jobs:
       - run: pnpm install
       - name: Set version in package.json
         run: |
-          pnpm -F @baldeweg/docu version ${{ inputs.tag_name }}
-      - name: Set version in package.json
-        run: pnpm release
+          pnpm release ${{ inputs.tag_name }}
       - name: Commit Version Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
