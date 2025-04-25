@@ -9,13 +9,18 @@ const readline = require('readline').createInterface({
 })
 
 const workspace = process.argv[2]
+const version = process.argv[3]
 
 if (!workspace) {
   console.error('Workspace not provided. Usage: node tag.js <workspace>')
   process.exit(1)
 }
 
-setVersion(workspace)
+setVersion(version).then(() => {
+  process.exit(0)
+})
+
+
 
 /**
  * Sets the version in all package.json files within the specified workspace.
@@ -33,7 +38,7 @@ function setVersion(version) {
       }
 
       pkg.forEach(package => {
-        const packagePath = path.join(package)
+        const packagePath = path.join(workspace, package)
 
         if (fs.statSync(packagePath).isDirectory()) {
           const packageJsonPath = path.join(packagePath, 'package.json')
