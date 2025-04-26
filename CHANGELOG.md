@@ -8,6 +8,7 @@
 - Add `BFieldset` component
 - New components `BInput`, `BEditor`, `BTextarea` and `BSelect`
 - Remove the `elevated` prop from `BAlert`
+- Remove `BComment` component 
 
 ## v0.14.0
 
