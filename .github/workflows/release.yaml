@@ -30,7 +30,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-      - run: pnpm install
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Set version in package.json
         run: |
           sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/docu/package.json
