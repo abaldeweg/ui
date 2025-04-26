@@ -33,6 +33,8 @@ jobs:
         with:
           commit_message: "chore: update version"
           file_pattern: packages/@baldeweg/**/*
+      - name: Push Changes
+        run: git push origin HEAD
 
   tag:
     needs: tag-packages
