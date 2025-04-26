@@ -8,15 +8,7 @@ on:
         required: true
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install pnpm
-        run: npm install -g pnpm
-
   tag:
-    needs: setup
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -51,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: git push origin ${{ inputs.tag_name }}
 
-  release-docu:
+  docu:
     needs: tag
     runs-on: ubuntu-latest
     steps:
@@ -63,13 +55,14 @@ jobs:
         with:
           node-version: 22.x
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm install
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Publish @baldeweg/docu to NPM
         run: pnpm -F @baldeweg/docu publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  release-eslint-config:
+  eslint-config:
     needs: tag
     runs-on: ubuntu-latest
     steps:
@@ -81,13 +74,14 @@ jobs:
         with:
           node-version: 22.x
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm install
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Publish @baldeweg/eslint-config to NPM
         run: pnpm -F @baldeweg/eslint-config publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  release-ui:
+  ui:
     needs: tag
     runs-on: ubuntu-latest
     steps:
@@ -99,8 +93,10 @@ jobs:
         with:
           node-version: 22.x
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm install
-      - run: pnpm -F @baldeweg/ui build
+      - name: Install pnpm
+        run: npm install -g pnpm
+      - name: Build @baldeweg/ui
+        run: pnpm -F @baldeweg/ui build
       - name: Publish @baldeweg/ui to NPM
         run: pnpm -F @baldeweg/ui publish
         env:
