@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/eslint-config",
-  "version": "0.15.0-alpha.10",
+  "version": "0.15.0-alpha.11",
   "main": "index.js",
   "author": "André Baldeweg",
   "license": "MIT",

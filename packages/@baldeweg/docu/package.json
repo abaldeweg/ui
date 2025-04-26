@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/docu",
-  "version": "0.15.0-alpha.10",
+  "version": "0.15.0-alpha.11",
   "bin": {
     "docu": "index.js"
   },
