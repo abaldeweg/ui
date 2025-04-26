@@ -114,22 +114,6 @@
 | ------- |
 | default |
 
-## BComment
-
-### Props
-
-| Name   | Type   | Default | Values | Required |
-| ------ | ------ | ------- | ------ | -------- |
-| author | string |         |        | No       |
-| date   | string |         |        | No       |
-
-### Slots
-
-| Name    |
-| ------- |
-| actions |
-| default |
-
 ## BContainer
 
 ### Props
