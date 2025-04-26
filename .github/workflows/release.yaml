@@ -1,4 +1,4 @@
-name: Publish to npm
+name: Tag and release packages
 
 on:
   workflow_dispatch:
@@ -8,23 +8,31 @@ on:
         required: true
 
 jobs:
-  tag-packages:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+  tag:
+    needs: setup
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Set up Git user
+        run: |
+          git config --global user.email "a@baldeweg.org"
+          git config --global user.name "André Baldeweg"
       - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'pnpm'
       - run: pnpm install
       - name: Set version in package.json
         run: |
-          # pnpm release packages/@baldeweg ${{ inputs.tag_name }}
           sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/docu/package.json
           sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/eslint-config/package.json
           sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/ui/package.json
@@ -35,16 +43,6 @@ jobs:
           file_pattern: packages/@baldeweg/**/*
       - name: Push Changes
         run: git push origin HEAD
-
-  tag:
-    needs: tag-packages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Git user
-        run: |
-          git config --global user.email "a@baldeweg.org"
-          git config --global user.name "André Baldeweg"
       - name: Tag the commit
         run: git tag -a ${{ inputs.tag_name }} -m "Version ${{ inputs.tag_name }}"
       - name: Push the tag
@@ -57,17 +55,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Pull latest changes
         run: git pull origin HEAD
-      - name: Install pnpm
-        run: npm install -g pnpm
       - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
       - run: pnpm install
       - name: Publish @baldeweg/docu to NPM
@@ -80,17 +73,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Pull latest changes
         run: git pull origin HEAD
-      - name: Install pnpm
-        run: npm install -g pnpm
       - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
       - run: pnpm install
       - name: Publish @baldeweg/eslint-config to NPM
@@ -103,17 +91,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Pull latest changes
         run: git pull origin HEAD
-      - name: Install pnpm
-        run: npm install -g pnpm
       - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
       - run: pnpm install
       - run: pnpm -F @baldeweg/ui build
