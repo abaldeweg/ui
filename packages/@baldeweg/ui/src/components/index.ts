@@ -95,5 +95,5 @@ export {
   BTextarea,
   BToast,
   BTooltip,
-  BUpload
+  BUpload,
 };

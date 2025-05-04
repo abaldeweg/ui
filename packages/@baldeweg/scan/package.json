@@ -1,0 +1,23 @@
+{
+  "name": "@baldeweg/scan",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "scan": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/ejs": "3.1.5",
+    "@types/jest": "29.5.14",
+    "@types/node": "22.15.3",
+    "commander": "13.1.0",
+    "ejs": "3.1.10",
+    "jest": "29.7.0",
+    "ts-jest": "29.3.2",
+    "typescript": "5.8.3"
+  }
+}

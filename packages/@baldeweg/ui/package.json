@@ -5,14 +5,15 @@
     "dev": "storybook dev -p 6006",
     "build": "vite build",
     "test": "vitest run --environment jsdom",
-    "components:list": "node ./scripts/components.js",
-    "generate-docu": "docu"
+    "generate-docu": "docu",
+    "list-components": "scan"
   },
   "dependencies": {
     "vue": "3.5.13"
   },
   "devDependencies": {
     "@baldeweg/docu": "workspace:*",
+    "@baldeweg/scan": "workspace:*",
     "@baldeweg/eslint-config": "0.14.3",
     "@rushstack/eslint-patch": "1.11.0",
     "@storybook/addon-a11y": "8.6.12",
