@@ -1,14 +1,11 @@
-import { defineAsyncComponent } from 'vue';
-import components from './components/components.json';
+import * as components from './components/index.ts'
 
 export const createUi = () => {
   const install = (app) => {
-    components.forEach((component) => {
-      const componentName = "B" + component.name;
-      const componentPath = `./components/B${component.directory}/B${component.name}.vue`;
-      app.component(componentName, defineAsyncComponent(() => import(componentPath)));
-    });
-  };
+    Object.entries(components).forEach(([name, component]) => {
+      app.component(name, component)
+    })
+  }
 
-  return { install };
-};
+  return { install }
+}
