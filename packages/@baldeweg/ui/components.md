@@ -192,26 +192,6 @@
 | ------- |
 | default |
 
-## BEditor
-
-### Props
-
-| Name       | Type    | Default        | Values | Required |
-| ---------- | ------- | -------------- | ------ | -------- |
-| modelValue | string  |                |        | No       |
-| name       | string  |                |        | Yes      |
-| id         | string  |                |        | Yes      |
-| label      | string  |                |        | No       |
-| hideLabel  | boolean | false          |        | No       |
-| help       | string  |                |        | No       |
-| language   | string  | &#39;json&#39; |        | No       |
-
-### Events
-
-| Name              |
-| ----------------- |
-| update:modelValue |
-
 ## BFieldset
 
 ### Props
