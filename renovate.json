@@ -8,7 +8,7 @@
       "updateTypes": ["patch"],
       "automerge": true,
       "requiredStatusChecks": ["ci/tests"],
-      "minimumAge": 24,
+      "schedule": ["after 24 hours"]
     }
   ]
 }
