@@ -8,7 +8,7 @@
       "updateTypes": ["patch"],
       "automerge": true,
       "requiredStatusChecks": ["ci/tests"],
-      "schedule": ["after 24 hours"]
+      "schedule": ["after 12 hours"]
     }
   ]
 }
