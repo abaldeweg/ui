@@ -55,7 +55,8 @@ const classes = computed(() => {
       <slot />
     </div>
 
-    <div class="badge_inline" :class="{ badge_positionLeft: props.position === 'left', badge_positionRight: props.position === 'right' }"
+    <div class="badge_inline"
+      :class="{ badge_positionLeft: props.position === 'left', badge_positionRight: props.position === 'right' }"
       v-if="props.variant === 'inline' && !isHidden">{{ content }}</div>
 
     <div class="badge_action" v-if="$slots.action">
@@ -70,6 +71,12 @@ const classes = computed(() => {
   border-radius: 20px;
   padding: 5px 10px;
   transition: background-color 0.3s;
+}
+
+.badge a,
+.badge a:hover {
+  color: var(--color-neutral-10);
+  text-decoration: none;
 }
 
 .badge:hover {

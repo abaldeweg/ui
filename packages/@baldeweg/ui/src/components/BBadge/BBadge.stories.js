@@ -46,6 +46,7 @@ const Template = (args) => ({
   template: `
     <BBadge v-bind="args">
       {{ args.default }}
+      <a href="#">Link</a>
       <template v-if="args.icon" #icon>
         <BMaterialIcon>{{ args.icon }}</BMaterialIcon>
       </template>

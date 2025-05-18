@@ -16,7 +16,7 @@ const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: '<BAlert v-bind="args">This is an alert message</BAlert>',
+  template: '<BAlert v-bind="args">This is an alert message. <a href="#">Link</a></BAlert>',
 });
 
 export const Neutral = Template.bind({});
