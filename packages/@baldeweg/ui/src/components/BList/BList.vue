@@ -91,6 +91,11 @@ defineProps({
   transition: background-color 0.3s ease;
 }
 
+.list a,
+.list a:hover {
+  text-decoration: none;
+}
+
 .list_hasHover:hover {
   background: var(--color-neutral-02);
   cursor: pointer;
