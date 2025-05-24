@@ -57,9 +57,10 @@ const positionClass = computed(() => {
 
 .tooltip_position_top,
 .tooltip_position_bottom {
-  width: 250px;
+  min-width: 120px;
+  max-width: 320px;
   left: 50%;
-  margin-left: -135px;
+  transform: translateX(-50%);
 }
 
 .tooltip_position_top {
@@ -74,10 +75,11 @@ const positionClass = computed(() => {
 
 .tooltip_position_left,
 .tooltip_position_right {
-  height: 30px;
-  min-width: 250px;
+  height: auto;
+  min-width: 120px;
+  max-width: 320px;
   bottom: 50%;
-  margin-bottom: -25px;
+  transform: translateY(50%);
 }
 
 .tooltip_position_left {
