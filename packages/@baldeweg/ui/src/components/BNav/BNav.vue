@@ -62,6 +62,11 @@ defineProps({
   display: block;
 }
 
+.nav a,
+.nav a:hover {
+  text-decoration: none;
+}
+
 .nav_icon {
   display: flex;
   justify-items: end;
