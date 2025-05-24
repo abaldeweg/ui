@@ -26,6 +26,7 @@ defineProps({
 <style>
 .switch {
   display: flex;
+  align-items: center;
 }
 .switch_label {
   display: block;
