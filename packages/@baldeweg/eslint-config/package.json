@@ -1,12 +1,12 @@
 {
   "name": "@baldeweg/eslint-config",
-  "version": "0.15.0-beta.0",
+  "version": "0.15.0-beta.1",
   "main": "index.js",
   "author": "André Baldeweg",
   "license": "MIT",
   "peerDependencies": {
     "@vue/eslint-config-prettier": "10.2.0",
-    "eslint": "9.26.0",
+    "eslint": "9.27.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-vue": "10.1.0"
   },
