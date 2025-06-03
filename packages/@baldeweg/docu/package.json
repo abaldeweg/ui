@@ -26,6 +26,6 @@
     "@types/ejs": "3.1.5",
     "@types/node": "22.15.29",
     "typescript": "5.8.3",
-    "vitest": "3.2.0"
+    "vitest": "3.2.1"
   }
 }
