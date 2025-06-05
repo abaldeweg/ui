@@ -1,7 +1,10 @@
 <script setup>
 defineProps({
   modelValue: String,
-  focus: Boolean,
+  focus: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 

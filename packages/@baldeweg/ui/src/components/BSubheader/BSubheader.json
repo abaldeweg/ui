@@ -1,9 +1,0 @@
-{
-  "$schema": "./../component.schema.json",
-  "name": "BSubheader",
-  "slots": [
-    {
-      "name": "default"
-    }
-  ]
-}

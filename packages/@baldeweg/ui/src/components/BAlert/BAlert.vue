@@ -4,19 +4,13 @@ import { ref, computed } from 'vue'
 const props = defineProps({
   type: {
     type: String,
-    validator: (value) => {
-      return ['neutral', 'error', 'warning', 'success', 'info'].includes(value)
-    },
+    validator: (value) =>  ['neutral', 'error', 'warning', 'success', 'info'].includes(value),
     default: 'neutral',
   },
   closable: {
     type: Boolean,
     default: false
   },
-  elevated: {
-    type: Boolean,
-    default: false
-  }
 })
 
 const showAlert = ref(false)
@@ -26,7 +20,6 @@ const alertClass = computed(() => {
     alert_type_warning: props.type === 'warning',
     alert_type_success: props.type === 'success',
     alert_type_info: props.type === 'info',
-    alert_isElevated: props.elevated
   }
 })
 </script>
@@ -62,9 +55,5 @@ const alertClass = computed(() => {
 
 .alert_type_info {
   border: 2px solid var(--color-accent-blue-10);
-}
-
-.alert_isElevated {
-  box-shadow: 3px 3px 3px var(--color-neutral-02), -3px -3px 3px var(--color-neutral-02);
 }
 </style>

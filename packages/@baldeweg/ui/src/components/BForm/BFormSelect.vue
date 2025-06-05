@@ -11,7 +11,10 @@ defineProps({
   },
   modelValue: [Number, String],
   focus: Boolean,
-  allowEmpty: Boolean,
+  allowEmpty: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 

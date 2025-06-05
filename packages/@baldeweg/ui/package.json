@@ -1,32 +1,42 @@
 {
   "name": "@baldeweg/ui",
-  "version": "0.14.3",
+  "version": "0.15.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "storybook dev -p 6006",
     "build": "vite build",
-    "test:unit": "vitest --environment jsdom",
-    "test:unit:ci": "vitest run --environment jsdom",
-    "components:list": "node ./scripts/components.js"
+    "test": "vitest run --environment jsdom",
+    "generate-docu": "docu",
+    "list-components": "scan"
   },
   "dependencies": {
-    "vue": "3.5.13"
+    "vue": "3.5.16"
   },
   "devDependencies": {
-    "@baldeweg/eslint-config": "0.11.0",
+    "@baldeweg/docu": "workspace:*",
+    "@baldeweg/scan": "workspace:*",
+    "@baldeweg/eslint-config": "0.15.0",
     "@rushstack/eslint-patch": "1.11.0",
-    "@unhead/vue": "1.11.20",
-    "@vitejs/plugin-vue": "5.2.3",
+    "@storybook/addon-a11y": "8.6.14",
+    "@storybook/addon-essentials": "8.6.14",
+    "@storybook/blocks": "8.6.14",
+    "@storybook/test": "8.6.14",
+    "@storybook/vue3": "8.6.14",
+    "@storybook/vue3-vite": "8.6.14",
+    "@vitejs/plugin-vue": "5.2.4",
     "@vue/eslint-config-prettier": "10.2.0",
-    "eslint": "9.23.0",
+    "@vue/test-utils": "2.4.6",
+    "eslint": "9.28.0",
     "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-vue": "10.0.0",
-    "jsdom": "26.0.0",
+    "eslint-plugin-storybook": "0.12.0",
+    "eslint-plugin-vue": "10.1.0",
+    "jsdom": "26.1.0",
+    "monaco-editor": "0.52.2",
     "prettier": "3.5.3",
-    "start-server-and-test": "2.0.11",
-    "vite": "6.2.3",
-    "vite-plugin-webfont-dl": "3.10.4",
-    "vitest": "3.0.9",
-    "vue-router": "4.5.0"
+    "start-server-and-test": "2.0.12",
+    "storybook": "8.6.14",
+    "vite": "6.3.5",
+    "vite-plugin-webfont-dl": "3.10.5",
+    "vitest": "3.2.1"
   },
   "files": [
     "dist"

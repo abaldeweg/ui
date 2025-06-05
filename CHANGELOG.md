@@ -4,6 +4,11 @@
 
 - Refactor `BList`
 - Remove reference font size, browser is now the reference
+- Remove `BDropdownDivider` component
+- Add `BFieldset` component
+- New components `BInput`, `BEditor`, `BTextarea` and `BSelect`
+- Remove the `elevated` prop from `BAlert`
+- Remove `BComment` component 
 
 ## v0.14.0
 

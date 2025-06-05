@@ -2,12 +2,9 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "release": "node scripts/tag.js packages/@baldeweg"
+    "release": "node scripts/tag.js"
   },
   "devDependencies": {},
-  "workspaces": [
-    "packages/@baldeweg/*"
-  ],
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
     "type": "git",

@@ -6,7 +6,4 @@ UI Components
 
 - [ui](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/README.md)
 - [eslint-config](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/eslint-config/README.md)
-
-## Release
-
-Run `yarn release` and after that set a git tag.
+- [docu](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/docu/README.md)

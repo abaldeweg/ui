@@ -1,9 +1,0 @@
-{
-  "$schema": "./../component.schema.json",
-  "name": "BFormItem",
-  "slots": [
-    {
-      "name": "default"
-    }
-  ]
-}

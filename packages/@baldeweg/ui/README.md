@@ -5,14 +5,14 @@ UI Components
 ## Requirements
 
 - NodeJS
-- Yarn
+- pnpm
 
 ## Get Started
 
 Install the package with the following command.
 
 ```shell
-yarn add @baldeweg/ui
+pnpm add @baldeweg/ui
 ```
 
 Download the Material Icons Font: <https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200>
@@ -78,19 +78,3 @@ html {
 ## Components
 
 [Components](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/docu/components.md)
-
-## Settings
-
-```js
-import { createUi } from './ui.js'
-
-const ui = createUi()
-
-app.use(ui, {})
-```
-
-```js
-import { inject } from 'vue'
-
-const options = inject("ui")
-```

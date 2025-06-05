@@ -1,67 +1,37 @@
 #!/usr/bin/env node
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const ejs_1 = __importDefault(require("ejs"));
+const doc_1 = require("./doc");
+const templates_1 = require("./template/templates");
 const fs_1 = require("fs");
-const path_1 = require("path");
-const componentsDir = './../ui/src/components';
-const template = "./component.ejs";
-const outputFilename = "./components.md";
+const commander_1 = require("commander");
+const program = new commander_1.Command();
+program
+    .option('-c, --componentsDir <path>', 'Path to the components directory', './src/components')
+    .option('-f, --filename <name>', 'Output filename for the documentation', './components.md')
+    .parse(process.argv);
+const options = program.opts();
 /**
- * Renders an EJS template file with data from a JSON object and writes the output to a file.
- *
- * @param {object} components - The JSON object containing the component data.
- * @returns {Promise<void>} A promise that resolves when the file is written successfully.
+ * Main function to extract component information and render documentation.
+ * @returns {Promise<void>}
  */
-const renderFile = (components) => {
-    return new Promise((resolve, reject) => {
-        ejs_1.default.renderFile(template, { components }, {}, (err, str) => {
-            if (err) {
-                reject(err);
-                return;
-            }
-            (0, fs_1.writeFile)(outputFilename, str, (err) => {
-                err ? reject(err) : resolve();
-            });
-        });
-    });
-};
-/**
- * Recursively reads all JSON files from a directory and its subdirectories.
- *
- * @param {string} dirPath - The path to the directory to read.
- * @returns {Component[]} An array of component objects parsed from the JSON files.
- */
-const readJsonFiles = (dirPath) => {
-    const components = [];
-    const files = (0, fs_1.readdirSync)(dirPath);
-    files.forEach((file) => {
-        const filePath = (0, path_1.join)(dirPath, file);
-        const stat = (0, fs_1.statSync)(filePath);
-        if (stat.isDirectory()) {
-            components.push(...readJsonFiles(filePath));
-        }
-        else if (file.endsWith('.json')) {
-            const jsonData = JSON.parse((0, fs_1.readFileSync)(filePath, 'utf8'));
-            components.push(jsonData);
-        }
-    });
-    return components;
-};
-/**
- * Generates component documentation from JSON files and renders it using EJS.
- */
-const generateDocumentation = () => {
-    renderFile(readJsonFiles(componentsDir))
-        .then(() => {
-        console.log('\x1b[32m%s\x1b[0m', 'Documentation was rendered');
-    })
-        .catch((err) => {
-        console.error('Error rendering documentation:', err);
-        process.exit(1);
-    });
-};
-generateDocumentation();
+const main = () => __awaiter(void 0, void 0, void 0, function* () {
+    const componentsInfo = yield (0, doc_1.extractComponentInfo)(options.componentsDir);
+    const md = yield (0, templates_1.renderMarkdown)(componentsInfo);
+    yield fs_1.promises.writeFile(options.filename, md);
+    console.log(`\x1b[32m✅ Successfully generated documentation for ${componentsInfo.length} components.\x1b[0m`);
+    process.exit(0);
+});
+main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+});

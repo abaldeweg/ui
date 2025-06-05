@@ -2,5 +2,12 @@
   "extends": [
     "config:base",
     ":disableDependencyDashboard"
+  ],
+  "packageRules": [
+    {
+      "updateTypes": ["patch"],
+      "automerge": true,
+      "requiredStatusChecks": ["ci/tests"],
+    }
   ]
 }

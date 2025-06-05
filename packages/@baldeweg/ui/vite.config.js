@@ -35,5 +35,7 @@ export default defineConfig({
       },
     },
   },
-  envPrefix: ['VITE_'],
+  test: {
+    environment: 'jsdom'
+  },
 })

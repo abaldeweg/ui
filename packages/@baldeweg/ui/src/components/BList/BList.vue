@@ -14,8 +14,14 @@ defineProps({
     type: String,
     default: '50px',
   },
-  divider: Boolean,
-  hover: Boolean,
+  divider: {
+    type: Boolean,
+    default: false,
+  },
+  hover: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
@@ -85,6 +91,11 @@ defineProps({
   transition: background-color 0.3s ease;
 }
 
+.list a,
+.list a:hover {
+  text-decoration: none;
+}
+
 .list_hasHover:hover {
   background: var(--color-neutral-02);
   cursor: pointer;
@@ -99,12 +110,10 @@ defineProps({
 
 .list_media {
   padding-right: 20px;
-  width: 90px;
-  flex-grow: 1;
 }
 
 .list_media.list_mediaSize_landscape {
-  width: 400px;
+  width: 200px;
 }
 
 .list_mediaSize_landscape img {
@@ -112,7 +121,7 @@ defineProps({
 }
 
 .list_mediaSize_portrait img {
-  width: 50px;
+  width: 100px;
 }
 
 .list_mediaSize_avatar img {
@@ -151,5 +160,6 @@ defineProps({
 
 .list_controls {
   padding-left: 20px;
+  text-align: right;
 }
 </style>

@@ -1,7 +1,13 @@
 <script setup>
 defineProps({
-  bold: Boolean,
-  noHover: Boolean,
+  bold: {
+    type: Boolean,
+    default: false,
+  },
+  noHover: {
+    type: Boolean,
+    default: false,
+  },
   icon: String,
 })
 </script>
