@@ -103,7 +103,7 @@ importers:
         specifier: 9.0.5
         version: 9.0.5(storybook@9.0.5(@testing-library/dom@10.4.0)(prettier@3.5.3))
       '@storybook/addon-docs':
-        specifier: ^9.0.5
+        specifier: 9.0.5
         version: 9.0.5(@types/react@19.1.6)(storybook@9.0.5(@testing-library/dom@10.4.0)(prettier@3.5.3))
       '@storybook/vue3-vite':
         specifier: 9.0.5
@@ -144,6 +144,9 @@ importers:
       storybook:
         specifier: 9.0.5
         version: 9.0.5(@testing-library/dom@10.4.0)(prettier@3.5.3)
+      storybook-addon-tag-badges:
+        specifier: 2.0.1
+        version: 2.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(storybook@9.0.5(@testing-library/dom@10.4.0)(prettier@3.5.3))
       vite:
         specifier: 6.3.5
         version: 6.3.5(@types/node@22.15.29)(jiti@2.4.2)(terser@5.39.0)
@@ -3331,6 +3334,12 @@ packages:
 
   std-env@3.9.0:
     resolution: {integrity: sha512-UGvjygr6F6tpH7o2qyqR6QYpwraIjKSdtzyBdyytFOHmPZY917kwdwLG0RbOjWOnKmnm3PeHjaoLLMie7kPLQw==}
+
+  storybook-addon-tag-badges@2.0.1:
+    resolution: {integrity: sha512-c1ZtKTzqk1Afz/FlNWuK+A4yvmRer6NRLTPFNusgl9sxMCll5qRfKY6+ya5HOEhP9U+tXBjsZk0Y2WLq3k5ylw==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      storybook: ^9.0.0
 
   storybook@9.0.5:
     resolution: {integrity: sha512-4RIyN7P6R6umcgAB6jv3GSIDA0qw9iRcm3KnIR6VhLKLKlbbmDsUs/JmjLobxL5W+LB4zbCbrBcFsW7AL2MSyA==}
@@ -7556,6 +7565,14 @@ snapshots:
     optional: true
 
   std-env@3.9.0: {}
+
+  storybook-addon-tag-badges@2.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(storybook@9.0.5(@testing-library/dom@10.4.0)(prettier@3.5.3)):
+    dependencies:
+      '@storybook/icons': 1.4.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      storybook: 9.0.5(@testing-library/dom@10.4.0)(prettier@3.5.3)
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   storybook@9.0.5(@testing-library/dom@10.4.0)(prettier@3.5.3):
     dependencies:
