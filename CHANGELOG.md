@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.16.0
+
+- Simplify `BForm` component structure and add button slo
+
 ## v0.15.0
 
 - Refactor `BList`
