@@ -11,8 +11,8 @@ const config = {
     '../src/**/*.stories.js'
   ],
   'addons': [
-    getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@storybook/addon-a11y')
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath("@storybook/addon-docs")
   ],
   'framework': {
     'name': getAbsolutePath('@storybook/vue3-vite'),

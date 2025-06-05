@@ -1,6 +1,6 @@
 import '../src/assets/styles/global.css';
 
-/** @type { import('@storybook/vue3').Preview } */
+/** @type { import('@storybook/vue3-vite').Preview } */
 const preview = {
   parameters: {
     controls: {
