@@ -225,17 +225,12 @@
 
 ## BForm
 
-### Props
-
-| Name     | Type    | Default | Values | Required |
-| -------- | ------- | ------- | ------ | -------- |
-| noMargin | boolean | false   |        | No       |
-
 ### Slots
 
 | Name    |
 | ------- |
 | default |
+| buttons |
 
 ## BFormFieldset
 
