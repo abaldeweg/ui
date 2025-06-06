@@ -48,7 +48,7 @@ const alertClass = computed(() => {
 <style>
 .alert {
   border-radius: 20px;
-  border: 2px solid var(--color-neutral-08);
+  border: 1px solid var(--color-neutral-08);
   background: var(--color-neutral-00);
   padding: 20px;
   margin: 20px 0;
@@ -57,19 +57,19 @@ const alertClass = computed(() => {
 
 /* Type */
 .alert_neutral {
-  border: 2px solid var(--color-neutral-08);
+  border-color: var(--color-neutral-08);
 }
 .alert_info {
-  border: 2px solid var(--color-accent-blue-10);
+  border-color: var(--color-accent-blue-10);
 }
 .alert_danger {
-  border: 2px solid var(--color-accent-red-10);
+  border-color: var(--color-accent-red-10);
 }
 .alert_warning {
-  border: 2px solid var(--color-accent-yellow-10);
+  border-color: var(--color-accent-yellow-10);
 }
 .alert_success {
-  border: 2px solid var(--color-accent-green-10);
+  border-color: var(--color-accent-green-10);
 }
 
 /* Position */
