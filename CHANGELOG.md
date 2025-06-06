@@ -4,6 +4,7 @@
 
 - Simplify `BForm` component structure and add button slot
 - Remove components `BFormFieldset`, `BFormGroup`, `BFormHelpline`, `BFormInput`, `BFormItem`, `BFormLabel`, `BFormLegend`, `BFormSelect` and `BFormTextarea`. Components for replacement do already exist.
+- `BAlert` component reworked, added position option ('block', 'top', 'bottom', 'topleft', 'topright', 'bottomleft', 'bottomright').
 
 ## v0.15.0
 

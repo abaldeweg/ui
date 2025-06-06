@@ -11,6 +11,11 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  position: {
+    type: String,
+    validator: (value) => ['block', 'top', 'bottom', 'left', 'right'].includes(value),
+    default: 'block',
+  },
 })
 
 const showAlert = ref(false)
@@ -21,6 +26,13 @@ const alertClass = computed(() => {
     alert_danger: props.type === 'danger',
     alert_warning: props.type === 'warning',
     alert_success: props.type === 'success',
+    alert_block: props.position === 'block',
+    alert_top: props.position === 'top' ,
+    alert_bottom: props.position === 'bottom' ,
+    alert_topleft: props.position === 'topleft' ,
+    alert_topright: props.position === 'topright' ,
+    alert_bottomleft: props.position === 'bottomleft',
+    alert_bottomright: props.position === 'bottomright',
   }
 })
 </script>
@@ -40,7 +52,10 @@ const alertClass = computed(() => {
   background: var(--color-neutral-00);
   padding: 20px;
   margin: 20px 0;
+  box-sizing: border-box;
 }
+
+/* Type */
 .alert_neutral {
   border: 2px solid var(--color-neutral-08);
 }
@@ -55,5 +70,52 @@ const alertClass = computed(() => {
 }
 .alert_success {
   border: 2px solid var(--color-accent-green-10);
+}
+
+/* Position */
+.alert_block {
+}
+.alert_top,
+.alert_bottom,
+.alert_topleft,
+.alert_topright,
+.alert_bottomleft,
+.alert_bottomright {
+   position: fixed;
+   border-radius: 20px;
+   width: 400px;
+   z-index: 2;
+}
+.alert_top {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.alert_bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.alert_topleft {
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+.alert_topright {
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+.alert_bottomleft {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+.alert_bottomright {
+  bottom: 0;
+  right: 0;
+  margin: 0;
 }
 </style>
