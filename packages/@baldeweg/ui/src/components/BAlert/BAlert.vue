@@ -4,7 +4,7 @@ import { ref, computed } from 'vue'
 const props = defineProps({
   type: {
     type: String,
-    validator: (value) =>  ['neutral', 'error', 'warning', 'success', 'info'].includes(value),
+    validator: (value) =>  ['neutral', 'info', 'danger', 'warning', 'success'].includes(value),
     default: 'neutral',
   },
   closable: {
@@ -16,10 +16,11 @@ const props = defineProps({
 const showAlert = ref(false)
 const alertClass = computed(() => {
   return {
-    alert_type_error: props.type === 'error',
-    alert_type_warning: props.type === 'warning',
-    alert_type_success: props.type === 'success',
-    alert_type_info: props.type === 'info',
+    alert_neutral: props.type === 'neutral',
+    alert_info: props.type === 'info',
+    alert_danger: props.type === 'danger',
+    alert_warning: props.type === 'warning',
+    alert_success: props.type === 'success',
   }
 })
 </script>
@@ -34,26 +35,25 @@ const alertClass = computed(() => {
 
 <style>
 .alert {
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid var(--color-neutral-08);
   background: var(--color-neutral-00);
   padding: 20px;
   margin: 20px 0;
 }
-
-.alert_type_error {
+.alert_neutral {
+  border: 2px solid var(--color-neutral-08);
+}
+.alert_info {
+  border: 2px solid var(--color-accent-blue-10);
+}
+.alert_danger {
   border: 2px solid var(--color-accent-red-10);
 }
-
-.alert_type_warning {
+.alert_warning {
   border: 2px solid var(--color-accent-yellow-10);
 }
-
-.alert_type_success {
+.alert_success {
   border: 2px solid var(--color-accent-green-10);
-}
-
-.alert_type_info {
-  border: 2px solid var(--color-accent-blue-10);
 }
 </style>

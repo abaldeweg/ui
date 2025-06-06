@@ -5,10 +5,12 @@ export default {
   component: BAlert,
   argTypes: {
     type: {
-      control: { type: 'select', options: ['neutral', 'error', 'warning', 'success', 'info'] },
+      control: { type: 'select', options: ['neutral', 'info', 'danger', 'warning', 'success'] },
     },
     closable: { control: 'boolean' },
   },
+  decorators: [() => ({ template: '<div style="padding: 3em; height: 300px; position: relative;"><story/></div>' })],
+
 };
 
 const Template = (args) => ({
@@ -25,9 +27,15 @@ Neutral.args = {
   closable: false,
 };
 
+export const Info = Template.bind({});
+Info.args = {
+  type: 'info',
+  closable: false,
+};
+
 export const Error = Template.bind({});
 Error.args = {
-  type: 'error',
+  type: 'danger',
   closable: true,
 };
 
@@ -43,8 +51,4 @@ Success.args = {
   closable: true,
 };
 
-export const Info = Template.bind({});
-Info.args = {
-  type: 'info',
-  closable: false,
-};
+
