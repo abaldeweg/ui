@@ -33,7 +33,6 @@ import BTable from './BTable/BTable.vue';
 import BTabs from './BTabs/BTabs.vue';
 import BTabsLink from './BTabs/BTabsLink.vue';
 import BTextarea from './BTextarea/BTextarea.vue';
-import BToast from './BToast/BToast.vue';
 import BTooltip from './BTooltip/BTooltip.vue';
 import BUpload from './BUpload/BUpload.vue';
 
@@ -73,7 +72,6 @@ export {
   BTabs,
   BTabsLink,
   BTextarea,
-  BToast,
   BTooltip,
   BUpload,
 };
