@@ -2,7 +2,8 @@
 
 ## v0.16.0
 
-- Simplify `BForm` component structure and add button slo
+- Simplify `BForm` component structure and add button slot
+- Remove components `BFormFieldset`, `BFormGroup`, `BFormHelpline`, `BFormInput`, `BFormItem`, `BFormLabel`, `BFormLegend`, `BFormSelect` and `BFormTextarea`. Components for replacement do already exist.
 
 ## v0.15.0
 
@@ -12,7 +13,7 @@
 - Add `BFieldset` component
 - New components `BInput`, `BEditor`, `BTextarea` and `BSelect`
 - Remove the `elevated` prop from `BAlert`
-- Remove `BComment` component 
+- Remove `BComment` component
 
 ## v0.14.0
 
