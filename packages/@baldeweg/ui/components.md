@@ -8,6 +8,7 @@
 | -------- | ------- | ----------------- | --------------------------------------- | -------- |
 | type     | string  | &#39;neutral&#39; | neutral, info, danger, warning, success | No       |
 | closable | boolean | false             |                                         | No       |
+| position | string  | &#39;block&#39;   | block, top, bottom, left, right         | No       |
 
 ### Slots
 
