@@ -526,21 +526,6 @@
 | ----------------- |
 | update:modelValue |
 
-## BToast
-
-### Props
-
-| Name    | Type    | Default           | Values                           | Required |
-| ------- | ------- | ----------------- | -------------------------------- | -------- |
-| type    | string  | &#39;neutral&#39; | neutral, error, warning, success | No       |
-| visible | boolean | false             |                                  | No       |
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
 ## BTooltip
 
 ### Props
