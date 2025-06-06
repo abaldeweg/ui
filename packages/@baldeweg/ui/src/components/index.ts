@@ -14,15 +14,6 @@ import BDropdownItem from './BDropdown/BDropdownItem.vue';
 import BFieldset from './BFieldset/BFieldset.vue';
 import BFlex from './BFlex/BFlex.vue';
 import BForm from './BForm/BForm.vue';
-import BFormFieldset from './BForm/BFormFieldset.vue';
-import BFormGroup from './BForm/BFormGroup.vue';
-import BFormHelpline from './BForm/BFormHelpline.vue';
-import BFormInput from './BForm/BFormInput.vue';
-import BFormItem from './BForm/BFormItem.vue';
-import BFormLabel from './BForm/BFormLabel.vue';
-import BFormLegend from './BForm/BFormLegend.vue';
-import BFormSelect from './BForm/BFormSelect.vue';
-import BFormTextarea from './BForm/BFormTextarea.vue';
 import BInput from './BInput/BInput.vue';
 import BList from './BList/BList.vue';
 import BMasthead from './BMasthead/BMasthead.vue';
@@ -63,15 +54,6 @@ export {
   BFieldset,
   BFlex,
   BForm,
-  BFormFieldset,
-  BFormGroup,
-  BFormHelpline,
-  BFormInput,
-  BFormItem,
-  BFormLabel,
-  BFormLegend,
-  BFormSelect,
-  BFormTextarea,
   BInput,
   BList,
   BMasthead,
