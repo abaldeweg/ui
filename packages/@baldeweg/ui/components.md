@@ -4,10 +4,10 @@
 
 ### Props
 
-| Name     | Type    | Default           | Values                                 | Required |
-| -------- | ------- | ----------------- | -------------------------------------- | -------- |
-| type     | string  | &#39;neutral&#39; | neutral, error, warning, success, info | No       |
-| closable | boolean | false             |                                        | No       |
+| Name     | Type    | Default           | Values                                  | Required |
+| -------- | ------- | ----------------- | --------------------------------------- | -------- |
+| type     | string  | &#39;neutral&#39; | neutral, info, danger, warning, success | No       |
+| closable | boolean | false             |                                         | No       |
 
 ### Slots
 
