@@ -30,10 +30,10 @@ export const WithCards = () => ({
       <a href="#" v-for="n in 8" :key="n">
         <BCard :style="{ width: '200px' }">
           <template #title>
-            <h4>Card {{ n }}</h4>
+            Card {{ n }}
           </template>
           <template #subtitle>
-            <p>This is a card component displayed inside a slider for horizontal scrolling.</p>
+            This is a card component displayed inside a slider for horizontal scrolling.
           </template>
         </BCard>
       </a>
