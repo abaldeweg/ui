@@ -1,4 +1,5 @@
 import BSlider from './BSlider.vue'
+import BCard from '../BCard/BCard.vue'
 
 export default {
   title: 'Components/BSlider',
@@ -12,7 +13,7 @@ const Template = (args) => ({
   },
   template: `
     <BSlider>
-      <div v-for="n in 10" :key="n" style="min-width: 200px; height: 150px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; scroll-snap-align: start;">
+      <div v-for="n in 10" :key="n" style="min-width: 200px; height: 150px; background-color:rgb(255, 255, 255); color:rgb(0, 0, 0); display: flex; justify-content: center; align-items: center; scroll-snap-align: start;">
         Slide {{ n }}
       </div>
     </BSlider>
@@ -23,13 +24,19 @@ export const Default = Template.bind({})
 Default.args = {}
 
 export const WithCards = () => ({
-  components: { BSlider },
+  components: { BSlider, BCard },
   template: `
     <BSlider>
-      <div v-for="n in 8" :key="n" style="min-width: 220px; height: 180px; background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 16px; scroll-snap-align: start;">
-        <h4>Card {{ n }}</h4>
-        <p style="color: #666;">This is a card component displayed inside a slider for horizontal scrolling.</p>
-      </div>
+      <a href="#" v-for="n in 8" :key="n">
+        <BCard :style="{ width: '200px' }">
+          <template #title>
+            <h4>Card {{ n }}</h4>
+          </template>
+          <template #subtitle>
+            <p>This is a card component displayed inside a slider for horizontal scrolling.</p>
+          </template>
+        </BCard>
+      </a>
     </BSlider>
   `,
 })
