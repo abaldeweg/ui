@@ -6,6 +6,7 @@
 - Remove components `BFormFieldset`, `BFormGroup`, `BFormHelpline`, `BFormInput`, `BFormItem`, `BFormLabel`, `BFormLegend`, `BFormSelect` and `BFormTextarea`. Components for replacement do already exist.
 - `BAlert` component reworked, added position option ('block', 'top', 'bottom', 'topleft', 'topright', 'bottomleft', 'bottomright').
 - Removed `BToast` component, use `BAlert` instead.
+- Enhanced `BSlider` with arrows
 
 ## v0.15.0
 
