@@ -56,7 +56,7 @@ export const WithCustomContent = (args) => ({
   },
   template: `
     <BSliderItem v-bind="args">
-      <div style="padding: 20px; background-color: #f0f0f0; border-radius: 4px; text-align: center;">
+      <div style="padding: 20px; background-color:rgb(0, 0, 0); border-radius: 4px; text-align: center;">
         <h3>Custom Content</h3>
         <p>You can place any content inside the slider item.</p>
       </div>
