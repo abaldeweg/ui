@@ -1,3 +1,12 @@
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+});
+</script>
+
 <template>
   <main class="content">
     <slot />
@@ -13,7 +22,7 @@
 </style>
 
 <style>
-html {
+body {
   /* Primary */
   --color-primary-10: #d7621d;
   --color-primary-05: #e9915d;
@@ -52,21 +61,21 @@ html {
   margin: 0;
   scrollbar-gutter: stable;
 }
-@media (prefers-color-scheme: dark) {
-  html {
-    /* Primary */
-    --color-primary-10: #d7621d;
-    --color-primary-05: #e9915d;
-    --color-primary-00: #f3c2a5;
-    /* Neutral */
-    --color-neutral-10: #ffffff;
-    --color-neutral-08: #d6d6d6;
-    --color-neutral-06: #a3a3a3;
-    --color-neutral-04: #858585;
-    --color-neutral-02: #525252;
-    --color-neutral-00: #292929;
-  }
+
+body[data-theme='dark'] {
+  /* Primary */
+  --color-primary-10: #d7621d;
+  --color-primary-05: #e9915d;
+  --color-primary-00: #f3c2a5;
+  /* Neutral */
+  --color-neutral-10: #ffffff;
+  --color-neutral-08: #d6d6d6;
+  --color-neutral-06: #a3a3a3;
+  --color-neutral-04: #858585;
+  --color-neutral-02: #525252;
+  --color-neutral-00: #292929;
 }
+
 body {
   background: var(--color-neutral-00);
   padding: 0;

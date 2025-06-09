@@ -17,8 +17,8 @@ const preview = {
     },
     backgrounds: {
       options: {
-        dark: { name: 'Dark', value: '#292929' },
         light: { name: 'Light', value: '#ffffff' },
+        dark: { name: 'Dark', value: '#292929' },
       }
     },
   },
@@ -30,6 +30,15 @@ export const decorators = [
     components: { story, BApp },
     template: '<BApp><story /></BApp>',
   }),
+  (story, context) => {
+    setTimeout(() => {
+      document.body.setAttribute('data-theme', 'light');
+      if (context.globals.backgrounds?.value === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+      }
+    }, 100);
+    return story();
+  },
 ];
 
 export default preview;
