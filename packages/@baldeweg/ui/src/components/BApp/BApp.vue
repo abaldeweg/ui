@@ -23,10 +23,6 @@ onMounted(() => {
 
 <style>
 body {
-  /* Primary */
-  --color-primary-10: #d7621d;
-  --color-primary-05: #e9915d;
-  --color-primary-00: #f3c2a5;
   /* Neutral */
   --color-neutral-10: #292929;
   --color-neutral-08: #525252;
@@ -34,19 +30,23 @@ body {
   --color-neutral-04: #a3a3a3;
   --color-neutral-02: #d6d6d6;
   --color-neutral-00: #ffffff;
+  /* Primary */
+  --color-primary-10: #C1571A;
+  --color-primary-05: #e9915d;
+  --color-primary-00: #F3C2A5;
   /* Accent */
-  --color-accent-red-10: #ff0000;
+  --color-accent-red-10: #ED0C0C;
   --color-accent-red-05: #ff7373;
-  --color-accent-red-00: #ffe7e7;
-  --color-accent-green-10: #00ff00;
+  --color-accent-red-00: #F65A5A;
+  --color-accent-green-10: #008A00;
   --color-accent-green-05: #8bff8b;
-  --color-accent-green-00: #e7ffe7;
-  --color-accent-yellow-10: #f1d302;
+  --color-accent-green-00: #60F060;
+  --color-accent-yellow-10: #774B06;
   --color-accent-yellow-05: #f8eb8c;
-  --color-accent-yellow-00: #fdfbe8;
-  --color-accent-blue-10: #1F75FF;
+  --color-accent-yellow-00: #CCCC00;
+  --color-accent-blue-10: #0074D9;
   --color-accent-blue-05: #85B4FF;
-  --color-accent-blue-00: #EBF2FF;
+  --color-accent-blue-00: #1793FF;
   /* Font */
   --font-sans: 'Open Sans', 'Liberation Sans', 'Helvetica Neue', Arial;
   --font-serif: Georgia, Constantia, 'DejaVu Serif', 'Times New Roman';
@@ -64,9 +64,9 @@ body {
 
 body[data-theme='dark'] {
   /* Primary */
-  --color-primary-10: #d7621d;
+  --color-primary-10: #F3C2A5;
   --color-primary-05: #e9915d;
-  --color-primary-00: #f3c2a5;
+  --color-primary-00: #C1571A;
   /* Neutral */
   --color-neutral-10: #ffffff;
   --color-neutral-08: #d6d6d6;

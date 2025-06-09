@@ -7,6 +7,7 @@
 - `BAlert` component reworked, added position option ('block', 'top', 'bottom', 'topleft', 'topright', 'bottomleft', 'bottomright').
 - Removed `BToast` component, use `BAlert` instead.
 - Enhanced `BSlider` with arrows
+- Improved color contrast
 
 ## v0.15.0
 
