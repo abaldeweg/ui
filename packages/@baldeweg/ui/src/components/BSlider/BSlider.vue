@@ -22,13 +22,15 @@ const scroll = (pixels) => {
 
 onMounted(() => {
   if (!slider.value || !slider.value.querySelector('.slider_body')) return
-  slider.value.querySelector('.slider_body').addEventListener('scroll', updateSliderEdges)
+  const body = slider.value.querySelector('.slider_body')
+  body.addEventListener('scroll', updateSliderEdges)
   updateSliderEdges()
 })
 
 onUnmounted(() => {
   if (!slider.value || !slider.value.querySelector('.slider_body')) return
-  slider.value.querySelector('.slider_body').removeEventListener('scroll', updateSliderEdges)
+  const body = slider.value.querySelector('.slider_body')
+  body.removeEventListener('scroll', updateSliderEdges)
 })
 </script>
 
@@ -68,8 +70,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  height: 80px;
   background: var(--color-neutral-08);
   z-index: 1;
   user-select: none;
@@ -83,14 +84,18 @@ onUnmounted(() => {
 
 .slider:hover .slider_arrow_left.isVisible {
   left: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .slider:hover .slider_arrow_right.isVisible {
   right: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .slider_arrow_left:focus,
 .slider_arrow_right:focus {
-  outline: 2px solid var(--color-accent-blue-10);
+  outline: 3px solid var(--color-accent-blue-10);
 }
 </style>
