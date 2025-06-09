@@ -1,4 +1,4 @@
-import '../src/assets/styles/global.css';
+import BApp from '../src/components/BApp/BApp.vue';
 
 /** @type { import('@storybook/vue3-vite').Preview } */
 const preview = {
@@ -24,5 +24,12 @@ const preview = {
   },
   tags: ['autodocs'],
 };
+
+export const decorators = [
+  (story) => ({
+    components: { story, BApp },
+    template: '<BApp><story /></BApp>',
+  }),
+];
 
 export default preview;
