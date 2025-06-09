@@ -15,6 +15,12 @@ const preview = {
     a11y: {
       test: 'todo',
     },
+    backgrounds: {
+      options: {
+        dark: { name: 'Dark', value: '#292929' },
+        light: { name: 'Light', value: '#ffffff' },
+      }
+    },
   },
   tags: ['autodocs'],
 };
