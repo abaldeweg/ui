@@ -1,36 +1,31 @@
-import BSpinner from './BSpinner.vue'
+import BSpinner from "./BSpinner.vue";
 
 export default {
   component: BSpinner,
+  tags: ["beta"],
   argTypes: {
     size: {
-      control: { type: 'select' },
-      options: ['s', 'm', 'l'],
-      description: 'Controls the size of the spinner'
-    }
+      control: { type: "select" },
+      options: ["s", "m", "l"],
+      description: "Controls the size of the spinner",
+    },
   },
-  tags: ['experimental'],
-}
+};
 
-const Template = (args) => ({
-  components: { BSpinner },
-  setup() {
-    return { args }
+export const Default = {
+  args: {
+    size: "l",
   },
-  template: '<b-spinner v-bind="args" />'
-})
+};
 
-export const Small = Template.bind({})
-Small.args = {
-  size: 's'
-}
+export const SizeM = {
+  args: {
+    size: "m",
+  },
+};
 
-export const Medium = Template.bind({})
-Medium.args = {
-  size: 'm'
-}
-
-export const Large = Template.bind({})
-Large.args = {
-  size: 'l'
-}
+export const SizeS = {
+  args: {
+    size: "s",
+  },
+};
