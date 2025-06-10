@@ -395,18 +395,18 @@
 
 ### Props
 
-| Name             | Type    | Default                | Values                   | Required |
-| ---------------- | ------- | ---------------------- | ------------------------ | -------- |
-| modelValue       | array   |                        |                          | No       |
-| type             | string  | &#39;checkbox&#39;     | checkbox, radio, options | No       |
-| name             | string  |                        |                          | Yes      |
-| id               | string  |                        |                          | Yes      |
-| help             | string  |                        |                          | No       |
-| options          | array   |                        |                          | No       |
-| optionsKeyName   | string  | &#39;optionsKey&#39;   |                          | No       |
-| optionsValueName | string  | &#39;optionsValue&#39; |                          | No       |
-| label            | string  |                        |                          | No       |
-| hideLabel        | boolean | false                  |                          | No       |
+| Name             | Type    | Default            | Values                   | Required |
+| ---------------- | ------- | ------------------ | ------------------------ | -------- |
+| modelValue       | array   |                    |                          | No       |
+| type             | string  | &#39;checkbox&#39; | checkbox, radio, options | No       |
+| name             | string  |                    |                          | Yes      |
+| id               | string  |                    |                          | Yes      |
+| help             | string  |                    |                          | No       |
+| options          | array   |                    |                          | No       |
+| optionsKeyName   | string  | &#39;key&#39;      |                          | No       |
+| optionsValueName | string  | &#39;value&#39;    |                          | No       |
+| label            | string  |                    |                          | No       |
+| hideLabel        | boolean | false              |                          | No       |
 
 ### Events
 
