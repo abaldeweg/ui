@@ -4,7 +4,7 @@ defineProps({
   type: {
     type: String,
     default: 'text',
-    validator: (value) => ['date', 'color', 'datetime-local', 'email', 'month', 'number', 'password', 'range', 'search', 'tel', 'text', 'time', 'url', 'week'].includes(value),
+    validator: (value) => ['date', 'color', 'datetime-local', 'email', 'month', 'number', 'password', 'range', 'search', 'tel', 'text', 'time', 'url', 'week', 'file'].includes(value),
   },
   name: {
     type: String,
