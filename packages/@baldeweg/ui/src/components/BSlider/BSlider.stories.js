@@ -4,6 +4,7 @@ import BCard from '../BCard/BCard.vue'
 export default {
   title: 'Components/BSlider',
   component: BSlider,
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

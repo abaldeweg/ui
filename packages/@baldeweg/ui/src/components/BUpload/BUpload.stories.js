@@ -10,6 +10,7 @@ export default {
       },
     },
   },
+  tags: ['beta'],
   argTypes: {
     id: {
       control: 'text',

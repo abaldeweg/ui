@@ -28,6 +28,7 @@ export default {
       },
     },
   },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

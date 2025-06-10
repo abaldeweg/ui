@@ -38,6 +38,7 @@ export default {
       description: 'Sets the gap between flex items (e.g. "10px", "1rem")',
     },
   },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

@@ -16,6 +16,7 @@ export default {
       description: 'Enables hover effect on table rows',
     },
   },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

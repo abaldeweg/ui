@@ -22,7 +22,8 @@ export default {
         component: "Not applicable to checkbox and radio. Additional attributes are passed to the underlying input element. For types refer to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes."
       }
     }
-  }
+  },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

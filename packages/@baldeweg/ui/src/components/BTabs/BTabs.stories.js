@@ -10,6 +10,7 @@ export default {
       options: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly'],
     },
   },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

@@ -8,7 +8,8 @@ export default {
       control: 'text',
       description: 'The content to be displayed inside the code block'
     }
-  }
+  },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

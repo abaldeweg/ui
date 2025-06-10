@@ -17,7 +17,8 @@ export default {
     onReset: { action: 'reset' },
     onFilter: { action: 'filter' },
     'update:modelValue': { action: 'update:modelValue' }
-  }
+  },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

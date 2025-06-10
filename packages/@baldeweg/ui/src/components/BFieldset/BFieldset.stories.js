@@ -5,7 +5,8 @@ export default {
   component: BFieldset,
   argTypes: {
     legend: { control: 'text' }
-  }
+  },
+  tags: ['beta'],
 }
 
 export const Default = {

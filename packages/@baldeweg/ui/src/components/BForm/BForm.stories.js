@@ -3,6 +3,7 @@ import BForm from './BForm.vue';
 export default {
   title: 'Components/BForm',
   component: BForm,
+  tags: ['beta'],
 };
 
 const Template = (args, { argTypes }) => ({

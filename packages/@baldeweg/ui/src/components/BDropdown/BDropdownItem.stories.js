@@ -18,6 +18,7 @@ export default {
       description: 'Material icon name to display',
     },
   },
+  tags: ['beta'],
 }
 
 export const Default = {

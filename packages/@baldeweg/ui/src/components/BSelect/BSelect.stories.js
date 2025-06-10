@@ -25,6 +25,7 @@ export default {
     optionsKeyName: { control: 'text' },
     optionsValueName: { control: 'text' },
   },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

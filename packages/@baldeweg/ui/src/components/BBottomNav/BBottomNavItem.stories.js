@@ -9,7 +9,8 @@ export default {
       control: 'text',
       description: 'The title text displayed below the icon'
     }
-  }
+  },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

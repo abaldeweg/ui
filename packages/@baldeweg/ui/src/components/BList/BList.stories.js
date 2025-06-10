@@ -25,6 +25,7 @@ export default {
       control: 'text',
     },
   },
+  tags: ['beta'],
 }
 
 export const Basic = {

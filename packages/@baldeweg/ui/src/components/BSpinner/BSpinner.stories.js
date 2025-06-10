@@ -9,7 +9,8 @@ export default {
       options: ['s', 'm', 'l'],
       description: 'Controls the size of the spinner'
     }
-  }
+  },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

@@ -9,6 +9,7 @@ export default {
     width: { control: { type: 'number', min: 200, max: 1000, step: 50 } },
     closeButton: { control: 'boolean' },
   },
+  tags: ['beta'],
 }
 
 export const Default = {

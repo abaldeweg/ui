@@ -7,6 +7,7 @@ export default {
     modelValue: { control: 'boolean' },
     label: { control: 'text' },
   },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

@@ -3,6 +3,7 @@ import BMasthead from './BMasthead.vue'
 export default {
   title: 'Components/BMasthead',
   component: BMasthead,
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

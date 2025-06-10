@@ -23,7 +23,8 @@ export default {
         component: 'A dialog component that can be toggled on/off and contain custom content and actions.'
       }
     }
-  }
+  },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({

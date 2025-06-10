@@ -12,6 +12,7 @@ export default {
     ripple: { control: { type: "boolean" } },
   },
   args: { onClick: fn() },
+  tags: ['beta'],
 };
 
 export const Primary = {

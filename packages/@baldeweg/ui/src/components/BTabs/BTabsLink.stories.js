@@ -9,6 +9,7 @@ export default {
       description: 'Default slot content',
     },
   },
+  tags: ['beta'],
 }
 
 const Template = (args) => ({
