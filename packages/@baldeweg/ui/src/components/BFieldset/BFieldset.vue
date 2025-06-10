@@ -8,7 +8,7 @@ defineProps({
 
 <template>
   <fieldset class="fieldset">
-    <legend class="legend">
+    <legend class="fieldset_legend">
       {{ legend }}
     </legend>
     <slot />
@@ -29,7 +29,7 @@ defineProps({
   margin-bottom: 0;
 }
 
-.legend {
+.fieldset_legend {
   padding: 0;
 }
 </style>

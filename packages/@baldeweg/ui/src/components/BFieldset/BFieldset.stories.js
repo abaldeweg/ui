@@ -1,26 +1,26 @@
-import BFieldset from './BFieldset.vue'
+import BFieldset from "./BFieldset.vue";
 
 export default {
   component: BFieldset,
   argTypes: {
-    legend: { control: 'text' }
+    legend: { control: "text" },
   },
-  tags: ['experimental'],
-}
+  tags: ["beta"],
+};
 
 export const Default = {
   args: {
-    legend: 'Label'
+    legend: "Label",
   },
   render: (args) => ({
     components: { BFieldset },
     setup() {
-      return { args }
+      return { args };
     },
     template: `
       <BFieldset v-bind="args">
         <button>Submit</button>
       </BFieldset>
-    `
-  })
-}
+    `,
+  }),
+};
