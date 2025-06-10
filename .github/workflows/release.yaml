@@ -28,7 +28,7 @@ jobs:
           sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/eslint-config/package.json
           sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/ui/package.json
       - name: Commit Version Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "chore: update version"
           file_pattern: packages/@baldeweg/**/*
