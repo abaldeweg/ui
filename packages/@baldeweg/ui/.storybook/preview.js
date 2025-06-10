@@ -1,4 +1,10 @@
+import { setup } from '@storybook/vue3-vite';
 import BApp from '../src/components/BApp/BApp.vue';
+import { registerPlugins } from '../src/plugins/index.js';
+
+setup((app) => {
+  registerPlugins(app);
+})
 
 /** @type { import('@storybook/vue3-vite').Preview } */
 const preview = {
