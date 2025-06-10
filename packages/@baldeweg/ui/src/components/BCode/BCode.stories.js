@@ -1,25 +1,18 @@
-import BCode from './BCode.vue'
+import BCode from "./BCode.vue";
 
 export default {
   component: BCode,
+  tags: ["beta"],
   argTypes: {
     default: {
-      control: 'text',
-      description: 'The content to be displayed inside the code block'
-    }
+      control: "text",
+      description: "The content to be displayed inside the code block",
+    },
   },
-  tags: ['experimental'],
-}
+};
 
-const Template = (args) => ({
-  components: { BCode },
-  setup() {
-    return { args }
+export const Default = {
+  args: {
+    default: 'const example = "test";\nconsole.log(example);',
   },
-  template: '<b-code>{{ args.default }}</b-code>'
-})
-
-export const Default = Template.bind({})
-Default.args = {
-  default: 'const example = "test";\nconsole.log(example);'
-}
+};
