@@ -155,12 +155,6 @@
 
 ## BDivider
 
-### Props
-
-| Name | Type   | Default     | Values      | Required |
-| ---- | ------ | ----------- | ----------- | -------- |
-| size | string | &#39;l&#39; | l, m, s, xs | No       |
-
 ## BDropdown
 
 ### Props
