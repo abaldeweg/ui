@@ -8,6 +8,7 @@
 - Removed `BToast` component, use `BAlert` instead.
 - Enhanced `BSlider` with arrows
 - Improved color contrast
+- Simplified `BDivider` component by removing size prop and related styles
 
 ## v0.15.0
 
