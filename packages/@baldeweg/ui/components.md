@@ -237,15 +237,15 @@
 
 ### Props
 
-| Name       | Type    | Default        | Values                                                                                                 | Required |
-| ---------- | ------- | -------------- | ------------------------------------------------------------------------------------------------------ | -------- |
-| modelValue | string  |                |                                                                                                        | No       |
-| type       | string  | &#39;text&#39; | date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week | No       |
-| name       | string  |                |                                                                                                        | Yes      |
-| id         | string  |                |                                                                                                        | Yes      |
-| label      | string  |                |                                                                                                        | No       |
-| help       | string  |                |                                                                                                        | No       |
-| hideLabel  | boolean | false          |                                                                                                        | No       |
+| Name       | Type    | Default        | Values                                                                                                       | Required |
+| ---------- | ------- | -------------- | ------------------------------------------------------------------------------------------------------------ | -------- |
+| modelValue | string  |                |                                                                                                              | No       |
+| type       | string  | &#39;text&#39; | date, color, datetime-local, email, month, number, password, range, search, tel, text, time, url, week, file | No       |
+| name       | string  |                |                                                                                                              | Yes      |
+| id         | string  |                |                                                                                                              | Yes      |
+| label      | string  |                |                                                                                                              | No       |
+| help       | string  |                |                                                                                                              | No       |
+| hideLabel  | boolean | false          |                                                                                                              | No       |
 
 ### Events
 
