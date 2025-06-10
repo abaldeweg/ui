@@ -11,7 +11,7 @@ export default {
       }
     }
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 export const Default = {

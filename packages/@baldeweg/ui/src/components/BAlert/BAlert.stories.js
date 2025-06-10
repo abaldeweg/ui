@@ -13,7 +13,7 @@ export default {
     },
   },
   decorators: [() => ({ template: '<div style="padding: 3em; height: 300px; position: relative;">This is same text.<story/></div>' })],
-  tags: ['beta'],
+  tags: ['experimental'],
 };
 
 const Template = (args) => ({

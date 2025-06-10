@@ -3,7 +3,7 @@ import BCard from '../BCard/BCard.vue'
 
 export default {
   component: BSlider,
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({

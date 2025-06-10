@@ -9,7 +9,7 @@ export default {
       },
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
   argTypes: {
     modelValue: { control: 'text' },
     name: { control: 'text' },

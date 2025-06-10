@@ -16,7 +16,7 @@ export default {
       description: 'Text content of the tooltip'
     }
   },
-  tags: ['beta']
+  tags: ['experimental']
 }
 
 const Template = (args) => ({

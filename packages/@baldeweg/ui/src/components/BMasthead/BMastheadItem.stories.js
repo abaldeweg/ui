@@ -9,7 +9,7 @@ export default {
       description: 'Position of the masthead item',
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 export const Start = {

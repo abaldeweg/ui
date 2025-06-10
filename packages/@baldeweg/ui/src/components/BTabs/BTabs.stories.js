@@ -9,7 +9,7 @@ export default {
       options: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly'],
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({

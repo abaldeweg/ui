@@ -9,7 +9,7 @@ export default {
       description: 'The title text displayed below the icon'
     }
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({

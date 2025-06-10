@@ -5,7 +5,7 @@ export default {
   argTypes: {
     legend: { control: 'text' }
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 export const Default = {

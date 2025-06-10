@@ -8,7 +8,7 @@ export default {
       options: ['xs', 's', 'm', 'l', 'xl'],
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({

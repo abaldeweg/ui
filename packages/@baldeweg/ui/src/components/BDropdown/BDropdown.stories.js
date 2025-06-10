@@ -11,7 +11,7 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({

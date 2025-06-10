@@ -16,7 +16,7 @@ export default {
       description: 'Enables hover effect',
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({

@@ -9,7 +9,7 @@ export default {
       description: 'Default slot content',
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({

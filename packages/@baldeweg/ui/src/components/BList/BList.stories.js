@@ -24,7 +24,7 @@ export default {
       control: 'text',
     },
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 export const Basic = {

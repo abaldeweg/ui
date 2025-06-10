@@ -8,7 +8,7 @@ export default {
       description: 'The content to be displayed inside the code block'
     }
   },
-  tags: ['beta'],
+  tags: ['experimental'],
 }
 
 const Template = (args) => ({
