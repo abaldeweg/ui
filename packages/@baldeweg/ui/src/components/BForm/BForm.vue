@@ -1,7 +1,6 @@
 <template>
   <form>
     <slot />
-
     <div class="form_buttons" v-if="$slots.buttons">
       <slot name="buttons" />
     </div>
