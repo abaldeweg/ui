@@ -2,7 +2,6 @@ import BBadge from './BBadge.vue'
 import BMaterialIcon from '../BMaterialIcon/BMaterialIcon.vue'
 
 export default {
-  title: 'Components/BBadge',
   component: BBadge,
   argTypes: {
     variant: {

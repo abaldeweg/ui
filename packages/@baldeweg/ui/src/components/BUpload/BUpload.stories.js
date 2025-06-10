@@ -1,7 +1,6 @@
 import BUpload from './BUpload.vue'
 
 export default {
-  title: 'Components/BUpload',
   component: BUpload,
   parameters: {
     docs: {

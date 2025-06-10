@@ -1,7 +1,6 @@
 import BSliderItem from './BSliderItem.vue'
 
 export default {
-  title: 'Components/BSlider/BSliderItem',
   component: BSliderItem,
   argTypes: {
     size: {

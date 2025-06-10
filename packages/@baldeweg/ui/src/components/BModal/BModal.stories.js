@@ -2,7 +2,6 @@ import BModal from './BModal.vue'
 import BMaterialIcon from '../BMaterialIcon/BMaterialIcon.vue'
 
 export default {
-  title: 'Components/BModal',
   component: BModal,
   argTypes: {
     modelValue: { control: 'boolean' },

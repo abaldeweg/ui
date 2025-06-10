@@ -1,7 +1,6 @@
 import BContainer from './BContainer.vue'
 
 export default {
-  title: 'Components/BContainer',
   component: BContainer,
   argTypes: {
     size: {

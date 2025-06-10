@@ -1,7 +1,6 @@
 import BSelect from './BSelect.vue'
 
 export default {
-  title: 'Components/BSelect',
   component: BSelect,
   parameters: {
     docs: {

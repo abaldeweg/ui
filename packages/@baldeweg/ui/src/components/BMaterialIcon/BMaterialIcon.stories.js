@@ -1,7 +1,6 @@
 import BMaterialIcon from './BMaterialIcon.vue'
 
 export default {
-  title: 'Components/BMaterialIcon',
   component: BMaterialIcon,
   argTypes: {
     size: {

@@ -2,7 +2,6 @@ import BCard from './BCard.vue'
 import placeholderImage from '../../assets/placeholder_16x9.jpg'
 
 export default {
-  title: 'Components/BCard',
   component: BCard,
   argTypes: {
     outlined: {

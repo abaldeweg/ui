@@ -1,7 +1,6 @@
 import BDialog from './BDialog.vue'
 
 export default {
-  title: 'Components/BDialog',
   component: BDialog,
   argTypes: {
     modelValue: {

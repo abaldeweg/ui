@@ -1,7 +1,6 @@
 import BTooltip from './BTooltip.vue'
 
 export default {
-  title: 'Components/BTooltip',
   component: BTooltip,
   argTypes: {
     position: {

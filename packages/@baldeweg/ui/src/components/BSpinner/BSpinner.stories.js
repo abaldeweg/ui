@@ -1,7 +1,6 @@
 import BSpinner from './BSpinner.vue'
 
 export default {
-  title: 'Components/BSpinner',
   component: BSpinner,
   argTypes: {
     size: {

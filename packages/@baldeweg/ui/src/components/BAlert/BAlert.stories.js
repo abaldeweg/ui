@@ -1,7 +1,6 @@
 import BAlert from './BAlert.vue';
 
 export default {
-  title: 'Components/BAlert',
   component: BAlert,
   argTypes: {
     type: {

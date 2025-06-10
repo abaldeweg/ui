@@ -1,7 +1,6 @@
 import BDropdown from './BDropdown.vue'
 
 export default {
-  title: 'Components/BDropdown',
   component: BDropdown,
   argTypes: {
     position: {

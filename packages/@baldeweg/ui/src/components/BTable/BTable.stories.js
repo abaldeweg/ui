@@ -1,7 +1,6 @@
 import BTable from './BTable.vue'
 
 export default {
-  title: 'Components/BTable',
   component: BTable,
   parameters: {
     docs: {

@@ -1,7 +1,6 @@
 import BCode from './BCode.vue'
 
 export default {
-  title: 'Components/BCode',
   component: BCode,
   argTypes: {
     default: {

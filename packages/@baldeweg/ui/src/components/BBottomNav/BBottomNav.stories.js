@@ -2,7 +2,6 @@ import BBottomNav from './BBottomNav.vue'
 import BMaterialIcon from '../BMaterialIcon/BMaterialIcon.vue'
 
 export default {
-  title: 'Components/BBottomNav',
   component: BBottomNav,
   tags: ['beta'],
 }

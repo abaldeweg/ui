@@ -1,7 +1,6 @@
 import BSubheader from './BSubheader.vue'
 
 export default {
-  title: 'Components/BSubheader',
   component: BSubheader,
   argTypes: {
     default: {

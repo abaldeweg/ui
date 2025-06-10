@@ -1,7 +1,6 @@
 import BPanel from './BPanel.vue'
 
 export default {
-  title: 'Components/BPanel',
   component: BPanel,
   argTypes: {
     position: {

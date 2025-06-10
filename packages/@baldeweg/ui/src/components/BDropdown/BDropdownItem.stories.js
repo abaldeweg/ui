@@ -2,7 +2,6 @@ import BDropdownItem from './BDropdownItem.vue'
 import BMaterialIcon from '../BMaterialIcon/BMaterialIcon.vue'
 
 export default {
-  title: 'Components/BDropdown/BDropdownItem',
   component: BDropdownItem,
   argTypes: {
     bold: {

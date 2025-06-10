@@ -1,7 +1,6 @@
 import BTextarea from './BTextarea.vue'
 
 export default {
-  title: 'Components/BTextarea',
   component: BTextarea,
   parameters: {
     docs: {

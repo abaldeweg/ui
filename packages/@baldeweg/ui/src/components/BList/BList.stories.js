@@ -2,7 +2,6 @@ import BList from './BList.vue'
 import placeholderImage from '../../assets/placeholder_16x9.jpg'
 
 export default {
-  title: 'Components/BList',
   component: BList,
   argTypes: {
     mediaSize: {

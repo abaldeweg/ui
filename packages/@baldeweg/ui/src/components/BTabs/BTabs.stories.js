@@ -2,7 +2,6 @@ import BTabs from './BTabs.vue'
 import BTabsLink from './BTabsLink.vue'
 
 export default {
-  title: 'Components/BTabs',
   component: BTabs,
   argTypes: {
     justify: {

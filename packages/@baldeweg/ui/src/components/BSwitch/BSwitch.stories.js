@@ -1,7 +1,6 @@
 import BSwitch from './BSwitch.vue'
 
 export default {
-  title: 'Components/BSwitch',
   component: BSwitch,
   argTypes: {
     modelValue: { control: 'boolean' },

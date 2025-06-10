@@ -1,7 +1,6 @@
 import BSearch from './BSearch.vue'
 
 export default {
-  title: 'Components/BSearch',
   component: BSearch,
   argTypes: {
     placeholder: { control: 'text' },

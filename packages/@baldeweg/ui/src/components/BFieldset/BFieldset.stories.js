@@ -1,7 +1,6 @@
 import BFieldset from './BFieldset.vue'
 
 export default {
-  title: 'Components/BFieldset',
   component: BFieldset,
   argTypes: {
     legend: { control: 'text' }

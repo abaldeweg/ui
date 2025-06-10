@@ -1,7 +1,6 @@
 import BDivider from './BDivider.vue'
 
 export default {
-  title: 'Components/BDivider',
   component: BDivider,
   argTypes: {
     size: {

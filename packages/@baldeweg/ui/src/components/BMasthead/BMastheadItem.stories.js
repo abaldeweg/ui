@@ -1,7 +1,6 @@
 import BMastheadItem from './BMastheadItem.vue'
 
 export default {
-  title: 'Components/BMasthead/BMastheadItem',
   component: BMastheadItem,
   argTypes: {
     position: {

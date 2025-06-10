@@ -1,7 +1,6 @@
 import BFlex from './BFlex.vue'
 
 export default {
-  title: 'Components/BFlex',
   component: BFlex,
   parameters: {
     docs: {
