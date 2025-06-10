@@ -36,20 +36,20 @@ export const Default = {
     type: "options",
     options: [
       {
-        optionsKey: "option1",
-        optionsValue: "Option 1",
+        key: "option1",
+        value: "Option 1",
       },
       {
-        optionsKey: "option2",
-        optionsValue: "Option 2",
+        key: "option2",
+        value: "Option 2",
       },
       {
-        optionsKey: "option3",
-        optionsValue: "Option 3",
+        key: "option3",
+        value: "Option 3",
       },
       {
-        optionsKey: "option4",
-        optionsValue: "Option 4",
+        key: "option4",
+        value: "Option 4",
       },
     ],
     label: "Label",
@@ -64,10 +64,10 @@ export const Checkbox = {
     id: "checkbox",
     type: "checkbox",
     options: [
-      { optionsKey: "option1", optionsValue: "Option 1" },
-      { optionsKey: "option2", optionsValue: "Option 2" },
-      { optionsKey: "option3", optionsValue: "Option 3" },
-      { optionsKey: "option4", optionsValue: "Option 4" },
+      { key: "option1", value: "Option 1" },
+      { key: "option2", value: "Option 2" },
+      { key: "option3", value: "Option 3" },
+      { key: "option4", value: "Option 4" },
     ],
   },
 };
@@ -80,20 +80,20 @@ export const Radio = {
     type: "radio",
     options: [
       {
-        optionsKey: "option1",
-        optionsValue: "Option 1",
+        key: "option1",
+        value: "Option 1",
       },
       {
-        optionsKey: "option2",
-        optionsValue: "Option 2",
+        key: "option2",
+        value: "Option 2",
       },
       {
-        optionsKey: "option3",
-        optionsValue: "Option 3",
+        key: "option3",
+        value: "Option 3",
       },
       {
-        optionsKey: "option4",
-        optionsValue: "Option 4",
+        key: "option4",
+        value: "Option 4",
       },
     ],
   },
@@ -107,20 +107,20 @@ export const WithHelpline = {
     type: "checkbox",
     options: [
       {
-        optionsKey: "option1",
-        optionsValue: "Option 1",
+        key: "option1",
+        value: "Option 1",
       },
       {
-        optionsKey: "option2",
-        optionsValue: "Option 2",
+        key: "option2",
+        value: "Option 2",
       },
       {
-        optionsKey: "option3",
-        optionsValue: "Option 3",
+        key: "option3",
+        value: "Option 3",
       },
       {
-        optionsKey: "option4",
-        optionsValue: "Option 4",
+        key: "option4",
+        value: "Option 4",
       },
     ],
     help: "Select one option",

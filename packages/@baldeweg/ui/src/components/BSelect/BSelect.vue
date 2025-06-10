@@ -24,11 +24,11 @@ const props = defineProps({
   },
   optionsKeyName: {
     type: String,
-    default: 'optionsKey',
+    default: 'key',
   },
   optionsValueName: {
     type: String,
-    default: 'optionsValue',
+    default: 'value',
   },
   label: String,
   hideLabel: {
@@ -37,11 +37,11 @@ const props = defineProps({
   },
 })
 
+const emit = defineEmits(['update:modelValue'])
+
 defineOptions({
   inheritAttrs: false,
 })
-
-const emit = defineEmits(['update:modelValue'])
 
 const selected = ref(props.modelValue)
 
@@ -55,9 +55,9 @@ watch(selected, (newValue) => {
     <div :class="['select_item', { visuallyHidden: hideLabel }]" v-if="type === 'options'">
       <label :for=id>{{ label }}</label>
     </div>
+
     <div class="select_item">
-      <div v-if="type === 'checkbox'" v-for="(option, index) in options" :key="option[optionsKeyName]"
-        class="select_option">
+      <div v-if="type === 'checkbox'" v-for="(option) in options" :key="option[optionsKeyName]" class="select_option">
         <input v-model="selected" type="checkbox" :value="option[optionsKeyName]"
           :name="`${name}-${option[optionsKeyName]}`" :id="`${name}-${option[optionsKeyName]}`" />
         <label :for="`${name}-${option[optionsKeyName]}`">
@@ -65,8 +65,7 @@ watch(selected, (newValue) => {
         </label>
       </div>
 
-      <div v-if="type === 'radio'" v-for="(option, index) in options" :key="option[optionsKeyName]"
-        class="select_option">
+      <div v-if="type === 'radio'" v-for="(option) in options" :key="option[optionsKeyName]" class="select_option">
         <input v-model="selected" type="radio" :value="option[optionsKeyName]" :name="name"
           :id="option[optionsKeyName]" />
         <label :for="option[optionsKeyName]">
@@ -76,13 +75,13 @@ watch(selected, (newValue) => {
 
       <div v-if="type === 'options'">
         <select v-model="selected" class="select_input" :id="id" :name="name">
-          <option v-for="(option, index) in options" :key="option[optionsKeyName]" :value="option[optionsKeyName]">
+          <option v-for="(option) in options" :key="option[optionsKeyName]" :value="option[optionsKeyName]">
             {{ option[optionsValueName] }}
           </option>
         </select>
       </div>
-
     </div>
+
     <p v-if="help" class="select_helpline">
       {{ help }}
     </p>
