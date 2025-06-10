@@ -23,7 +23,7 @@ jobs:
       - name: Generate Documentation
         run: pnpm -F @baldeweg/ui generate-docu
       - name: Commit Documentation Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "docs: update documentation"
           file_pattern: packages/@baldeweg/ui/*
