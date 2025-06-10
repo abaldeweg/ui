@@ -12,7 +12,7 @@ export default {
       },
     },
   },
-  tags: ['experimental'],
+  tags: ['deprecated'],
 }
 
 const Template = (args) => ({

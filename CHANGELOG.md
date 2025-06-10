@@ -9,6 +9,7 @@
 - Enhanced `BSlider` with arrows
 - Improved color contrast
 - Simplified `BDivider` component by removing size prop and related styles
+- `BSubheader` component is deprecated
 
 ## v0.15.0
 
