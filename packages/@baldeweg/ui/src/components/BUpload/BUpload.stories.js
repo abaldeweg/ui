@@ -2,6 +2,7 @@ import BUpload from "./BUpload.vue";
 
 export default {
   component: BUpload,
+  tags: ["beta"],
   parameters: {
     docs: {
       description: {
@@ -10,7 +11,6 @@ export default {
       },
     },
   },
-  tags: ["beta"],
   argTypes: {
     id: {
       control: "text",
