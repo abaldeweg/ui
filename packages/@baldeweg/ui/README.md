@@ -2,11 +2,6 @@
 
 UI Components
 
-## Requirements
-
-- NodeJS
-- pnpm
-
 ## Get Started
 
 Install the package with the following command.
