@@ -70,10 +70,9 @@
 
 ### Props
 
-| Name   | Type    | Default           | Values                                                                                          | Required |
-| ------ | ------- | ----------------- | ----------------------------------------------------------------------------------------------- | -------- |
-| design | string  | &#39;primary&#39; | primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger | No       |
-| ripple | boolean | false             |                                                                                                 | No       |
+| Name   | Type   | Default           | Values                                                                                          | Required |
+| ------ | ------ | ----------------- | ----------------------------------------------------------------------------------------------- | -------- |
+| design | string | &#39;primary&#39; | primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger | No       |
 
 ### Slots
 
