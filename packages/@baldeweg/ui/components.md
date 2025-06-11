@@ -458,8 +458,8 @@
 
 | Name       | Type    | Default | Values | Required |
 | ---------- | ------- | ------- | ------ | -------- |
-| label      | string  |         |        | No       |
 | modelValue | boolean | false   |        | No       |
+| label      | string  |         |        | Yes      |
 
 ### Events
 
