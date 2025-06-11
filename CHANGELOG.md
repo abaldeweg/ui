@@ -11,6 +11,7 @@
 - Simplified `BDivider` component by removing size prop and related styles
 - `BSubheader` component is deprecated
 - `BFlex` component is deprecated
+- The label property in `BSwitch` is now a required.
 
 ## v0.15.0
 
