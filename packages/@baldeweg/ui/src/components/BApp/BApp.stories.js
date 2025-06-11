@@ -1,8 +1,8 @@
 import BApp from './BApp.vue'
 
 export default {
-  title: 'Components/BApp',
   component: BApp,
+  tags: ['beta'],
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -11,7 +11,6 @@ export default {
       }
     }
   },
-  tags: ['experimental'],
 }
 
 export const Default = {
