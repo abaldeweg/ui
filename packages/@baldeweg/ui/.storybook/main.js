@@ -11,9 +11,9 @@ const config = {
     '../src/**/*.stories.js'
   ],
   'addons': [
-    getAbsolutePath('@storybook/addon-a11y'),
-    getAbsolutePath("@storybook/addon-docs"),
-    getAbsolutePath('storybook-addon-tag-badges')
+    '@storybook/addon-a11y',
+    '@storybook/addon-docs',
+    'storybook-addon-tag-badges'
   ],
   'framework': {
     'name': getAbsolutePath('@storybook/vue3-vite'),
