@@ -86,6 +86,6 @@ input[type="range"].input_input {
 
 .input_helpline {
   font-size: 0.8rem;
-  color: var(--color-neutral-06);
+  color: var(--color-neutral-08);
 }
 </style>

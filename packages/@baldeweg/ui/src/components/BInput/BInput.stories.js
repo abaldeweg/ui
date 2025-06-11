@@ -1,182 +1,219 @@
-import BInput from './BInput.vue'
+import BInput from "./BInput.vue";
 
 export default {
-  title: 'Components/BInput',
+  title: "Components/BInput",
   component: BInput,
-  argTypes: {
-    modelValue: { control: 'text' },
-    type: {
-      control: 'select',
-      options: ['date', 'color', 'datetime-local', 'email', 'month', 'number', 'password', 'range', 'search', 'tel', 'text', 'time', 'url', 'week'],
-    },
-    name: { control: 'text' },
-    id: { control: 'text' },
-    label: { control: 'text' },
-    help: { control: 'text' },
-    hideLabel: { control: 'boolean' },
-    'update:modelValue': { action: 'updated' },
-  },
+  tags: ["beta"],
   parameters: {
     docs: {
       description: {
-        component: "Not applicable to checkbox and radio. Additional attributes are passed to the underlying input element. For types refer to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes."
-      }
-    }
+        component:
+          "Not applicable to checkbox and radio. Additional attributes are passed to the underlying input element. For types refer to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes.",
+      },
+    },
   },
-  tags: ['experimental'],
-}
-
-const Template = (args) => ({
-  components: { BInput },
-  setup() {
-    return { args }
+  argTypes: {
+    modelValue: { control: "text" },
+    type: {
+      control: "select",
+      options: [
+        "date",
+        "color",
+        "datetime-local",
+        "email",
+        "month",
+        "number",
+        "password",
+        "range",
+        "search",
+        "tel",
+        "text",
+        "time",
+        "url",
+        "week",
+      ],
+    },
+    name: { control: "text" },
+    id: { control: "text" },
+    label: { control: "text" },
+    help: { control: "text" },
+    hideLabel: { control: "boolean" },
+    "update:modelValue": { action: "updated" },
   },
-  template: '<BInput v-bind="args" />',
-})
+};
 
-export const Default = Template.bind({})
-Default.args = {
-  modelValue: '',
-  type: 'text',
-  name: 'default-input',
-  id: 'default-input',
-  label: 'Input Label',
-  help: 'This is a help text',
-  hideLabel: false,
-}
+export const Default = {
+  args: {
+    type: "text",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const TextInput = Template.bind({})
-TextInput.args = {
-  modelValue: 'Test',
-  type: 'text',
-  name: 'text-input',
-  id: 'text-input',
-  label: 'Text Input',
-}
+export const Date = {
+  args: {
+    type: "date",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const PasswordInput = Template.bind({})
-PasswordInput.args = {
-  modelValue: '',
-  type: 'password',
-  name: 'password-input',
-  id: 'password-input',
-  label: 'Password',
-}
+export const Color = {
+  args: {
+    type: "color",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const NumberInput = Template.bind({})
-NumberInput.args = {
-  modelValue: '42',
-  type: 'number',
-  name: 'number-input',
-  id: 'number-input',
-  label: 'Number Input',
-}
+export const Datetime = {
+  args: {
+    type: "datetime-local",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const ColorInput = Template.bind({})
-ColorInput.args = {
-  modelValue: '#ff0000',
-  type: 'color',
-  name: 'color-input',
-  id: 'color-input',
-  label: 'Color Input',
-}
+export const Email = {
+  args: {
+    type: "email",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const DateInput = Template.bind({})
-DateInput.args = {
-  modelValue: '2025-01-01',
-  type: 'date',
-  name: 'date-input',
-  id: 'date-input',
-  label: 'Date Input',
-}
+export const Month = {
+  args: {
+    type: "month",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const EmailInput = Template.bind({})
-EmailInput.args = {
-  modelValue: 'user@localhost',
-  type: 'email',
-  name: 'email-input',
-  id: 'email-input',
-  label: 'Email Input',
-}
+export const Number = {
+  args: {
+    type: "number",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const MonthInput = Template.bind({})
-MonthInput.args = {
-  modelValue: '2025-01',
-  type: 'month',
-  name: 'month-input',
-  id: 'month-input',
-  label: 'Month Input',
-}
+export const Password = {
+  args: {
+    type: "password",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const RangeInput = Template.bind({})
-RangeInput.args = {
-  modelValue: '50',
-  type: 'range',
-  name: 'range-input',
-  id: 'range-input',
-  label: 'Range Input',
-}
+export const Range = {
+  args: {
+    type: "range",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const SearchInput = Template.bind({})
-SearchInput.args = {
-  modelValue: 'Query',
-  type: 'search',
-  name: 'search-input',
-  id: 'search-input',
-  label: 'Search Input',
-}
+export const Search = {
+  args: {
+    type: "search",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const TelInput = Template.bind({})
-TelInput.args = {
-  modelValue: '+1234567890',
-  type: 'tel',
-  name: 'tel-input',
-  id: 'tel-input',
-  label: 'Telephone Input',
-}
+export const Tel = {
+  args: {
+    type: "tel",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const TimeInput = Template.bind({})
-TimeInput.args = {
-  modelValue: '13:30',
-  type: 'time',
-  name: 'time-input',
-  id: 'time-input',
-  label: 'Time Input',
-}
+export const Time = {
+  args: {
+    type: "time",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const UrlInput = Template.bind({})
-UrlInput.args = {
-  modelValue: 'http://localhost',
-  type: 'url',
-  name: 'url-input',
-  id: 'url-input',
-  label: 'URL Input',
-}
+export const URL = {
+  args: {
+    type: "url",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const WeekInput = Template.bind({})
-WeekInput.args = {
-  modelValue: '2025-W01',
-  type: 'week',
-  name: 'week-input',
-  id: 'week-input',
-  label: 'Week Input',
-}
+export const Week = {
+  args: {
+    type: "week",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: false,
+  },
+};
 
-export const DatetimeLocalInput = Template.bind({})
-DatetimeLocalInput.args = {
-  modelValue: '2025-01-01T13:30',
-  type: 'datetime-local',
-  name: 'datetime-local-input',
-  id: 'datetime-local-input',
-  label: 'Datetime Local Input',
-}
+export const HiddenLabel = {
+  args: {
+    type: "text",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "This is a help text",
+    hideLabel: true,
+  },
+};
 
-export const HiddenLabel = Template.bind({})
-HiddenLabel.args = {
-  modelValue: '',
-  type: 'text',
-  name: 'hidden-label-input',
-  id: 'hidden-label-input',
-  label: 'This label is hidden',
-  hideLabel: true,
-}
+export const WithoutHelpline = {
+  args: {
+    type: "text",
+    name: "input",
+    id: "input",
+    label: "Label",
+    help: "",
+    hideLabel: false,
+  },
+};
