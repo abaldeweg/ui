@@ -4,15 +4,14 @@ import BButton from "./BButton.vue";
 
 export default {
   component: BButton,
+  tags: ['alpha'],
   argTypes: {
     design: {
       control: { type: "select" },
       options: ["primary", "primary_danger", "primary_wide"],
     },
-    ripple: { control: { type: "boolean" } },
   },
   args: { onClick: fn() },
-  tags: ['experimental'],
 };
 
 export const Primary = {

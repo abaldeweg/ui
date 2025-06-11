@@ -12,6 +12,7 @@
 - `BSubheader` component is deprecated
 - `BFlex` component is deprecated
 - The label property in `BSwitch` is now a required.
+- Removed ripple effect from `BButton`
 
 ## v0.15.0
 
