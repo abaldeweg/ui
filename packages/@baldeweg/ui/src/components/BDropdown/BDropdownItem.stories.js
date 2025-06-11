@@ -3,6 +3,7 @@ import BMaterialIcon from '../BMaterialIcon/BMaterialIcon.vue'
 
 export default {
   component: BDropdownItem,
+  tags: ['experimental'],
   argTypes: {
     bold: {
       control: 'boolean',
@@ -17,7 +18,6 @@ export default {
       description: 'Material icon name to display',
     },
   },
-  tags: ['experimental'],
 }
 
 export const Default = {

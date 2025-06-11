@@ -2,6 +2,7 @@ import BDropdown from './BDropdown.vue'
 
 export default {
   component: BDropdown,
+  tags: ['experimental'],
   argTypes: {
     position: {
       control: { type: 'select' },
@@ -11,7 +12,6 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['experimental'],
 }
 
 const Template = (args) => ({
