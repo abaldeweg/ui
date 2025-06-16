@@ -1,6 +1,5 @@
 <script setup>
 import { ref, computed } from 'vue'
-import BMaterialIcon from '../BMaterialIcon/BMaterialIcon.vue'
 
 const props = defineProps({
   type: {
