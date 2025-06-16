@@ -4,6 +4,7 @@
 
 - Rework `BAlert` component, remove position args
 - Remove `BFlex` component
+- Remove `BSubheader` component
 
 ## v0.16.0
 

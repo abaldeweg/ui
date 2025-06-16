@@ -26,7 +26,6 @@ import BSelect from './BSelect/BSelect.vue';
 import BSlider from './BSlider/BSlider.vue';
 import BSliderItem from './BSlider/BSliderItem.vue';
 import BSpinner from './BSpinner/BSpinner.vue';
-import BSubheader from './BSubheader/BSubheader.vue';
 import BSwitch from './BSwitch/BSwitch.vue';
 import BTable from './BTable/BTable.vue';
 import BTabs from './BTabs/BTabs.vue';
@@ -64,7 +63,6 @@ export {
   BSlider,
   BSliderItem,
   BSpinner,
-  BSubheader,
   BSwitch,
   BTable,
   BTabs,
