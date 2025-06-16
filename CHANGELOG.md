@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.17.0
+
+- Rework `BAlert`, remove position args
+
 ## v0.16.0
 
 - Simplify `BForm` component structure and add button slot
