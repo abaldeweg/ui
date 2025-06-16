@@ -12,7 +12,6 @@ import BDivider from './BDivider/BDivider.vue';
 import BDropdown from './BDropdown/BDropdown.vue';
 import BDropdownItem from './BDropdown/BDropdownItem.vue';
 import BFieldset from './BFieldset/BFieldset.vue';
-import BFlex from './BFlex/BFlex.vue';
 import BForm from './BForm/BForm.vue';
 import BInput from './BInput/BInput.vue';
 import BList from './BList/BList.vue';
@@ -51,7 +50,6 @@ export {
   BDropdown,
   BDropdownItem,
   BFieldset,
-  BFlex,
   BForm,
   BInput,
   BList,

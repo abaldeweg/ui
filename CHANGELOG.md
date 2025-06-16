@@ -2,7 +2,8 @@
 
 ## v0.17.0
 
-- Rework `BAlert`, remove position args
+- Rework `BAlert` component, remove position args
+- Remove `BFlex` component
 
 ## v0.16.0
 
