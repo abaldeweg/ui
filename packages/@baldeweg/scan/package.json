@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@types/ejs": "3.1.5",
-    "@types/jest": "29.5.14",
+    "@types/jest": "30.0.0",
     "@types/node": "22.15.31",
     "commander": "14.0.0",
     "ejs": "3.1.10",
