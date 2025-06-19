@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@baldeweg/docu": "workspace:*",
-    "@baldeweg/eslint-config": "0.15.0",
+    "@baldeweg/eslint-config": "0.16.0",
     "@baldeweg/scan": "workspace:*",
     "@rushstack/eslint-patch": "1.11.0",
     "@storybook/addon-a11y": "9.0.12",
