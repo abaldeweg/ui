@@ -12,7 +12,6 @@ import BDivider from './BDivider/BDivider.vue';
 import BDropdown from './BDropdown/BDropdown.vue';
 import BDropdownItem from './BDropdown/BDropdownItem.vue';
 import BFieldset from './BFieldset/BFieldset.vue';
-import BFlex from './BFlex/BFlex.vue';
 import BForm from './BForm/BForm.vue';
 import BInput from './BInput/BInput.vue';
 import BList from './BList/BList.vue';
@@ -27,7 +26,6 @@ import BSelect from './BSelect/BSelect.vue';
 import BSlider from './BSlider/BSlider.vue';
 import BSliderItem from './BSlider/BSliderItem.vue';
 import BSpinner from './BSpinner/BSpinner.vue';
-import BSubheader from './BSubheader/BSubheader.vue';
 import BSwitch from './BSwitch/BSwitch.vue';
 import BTable from './BTable/BTable.vue';
 import BTabs from './BTabs/BTabs.vue';
@@ -51,7 +49,6 @@ export {
   BDropdown,
   BDropdownItem,
   BFieldset,
-  BFlex,
   BForm,
   BInput,
   BList,
@@ -66,7 +63,6 @@ export {
   BSlider,
   BSliderItem,
   BSpinner,
-  BSubheader,
   BSwitch,
   BTable,
   BTabs,

@@ -17,6 +17,7 @@ defineProps({
 .table {
   overflow: auto;
 }
+
 .table.canHover tbody tr:hover {
   background: var(--color-neutral-02);
 }
