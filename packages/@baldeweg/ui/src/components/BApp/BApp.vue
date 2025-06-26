@@ -59,6 +59,19 @@ body[data-theme='dark'] {
   --color-primary-10: #F3C2A5;
   --color-primary-05: #e9915d;
   --color-primary-00: #C1571A;
+  /* Accent */
+  --color-accent-red-10: #F65A5A;
+  --color-accent-red-05: #ff7373;
+  --color-accent-red-00: #ED0C0C;
+  --color-accent-green-10: #60F060;
+  --color-accent-green-05: #8bff8b;
+  --color-accent-green-00: #008A00;
+  --color-accent-yellow-10: #CCCC00;
+  --color-accent-yellow-05: #f8eb8c;
+  --color-accent-yellow-00: #774B06;
+  --color-accent-blue-10: #1793FF;
+  --color-accent-blue-05: #85B4FF;
+  --color-accent-blue-00: #0074D9;
   /* Neutral */
   --color-neutral-10: #ffffff;
   --color-neutral-08: #d6d6d6;
@@ -120,14 +133,14 @@ video {
 
 a,
 a:hover {
-  color: var(--color-primary-10);
-  text-decoration: none;
+  color: var(--color-neutral-10);
+  text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-color: var(--color-primary-10);
 }
 
 a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--color-primary-05);
+  text-decoration: none;
 }
 
 p {

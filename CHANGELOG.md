@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.17.0
+
+- Rework `BAlert` component, remove position args
+- Remove `BFlex` component
+- Remove `BSubheader` component
+
 ## v0.16.0
 
 - Simplify `BForm` component structure and add button slot
