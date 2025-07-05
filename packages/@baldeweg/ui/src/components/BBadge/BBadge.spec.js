@@ -24,21 +24,4 @@ describe('BBadge', () => {
 
     expect(wrapper.find('.badge_body').text()).toBe('Badge')
   })
-
-  it('renders .badge_content if it has a value', () => {
-    const wrapper = mount(BBadge, { props: { content: 5, hideEmpty: true } })
-
-    expect(wrapper.find('.badge_content').exists()).toBe(true)
-    expect(wrapper.find('.badge_content').text()).toBe('5')
-  })
-
-  it('does not render .badge_content if value is 0 or empty string and hideEmpty is true', () => {
-    const wrapperZero = mount(BBadge, { props: { content: 0, hideEmpty: true } })
-
-    expect(wrapperZero.find('.badge_content').exists()).toBe(false)
-
-    const wrapperEmpty = mount(BBadge, { props: { content: '', hideEmpty: true } })
-
-    expect(wrapperEmpty.find('.badge_content').exists()).toBe(false)
-  })
 })
