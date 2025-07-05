@@ -4,11 +4,10 @@
 
 ### Props
 
-| Name     | Type    | Default           | Values                                  | Required |
-| -------- | ------- | ----------------- | --------------------------------------- | -------- |
-| type     | string  | &#39;neutral&#39; | neutral, info, danger, warning, success | No       |
-| closable | boolean | false             |                                         | No       |
-| position | string  | &#39;block&#39;   | block, top, bottom, left, right         | No       |
+| Name     | Type    | Default        | Values                         | Required |
+| -------- | ------- | -------------- | ------------------------------ | -------- |
+| type     | string  | &#39;info&#39; | info, danger, warning, success | No       |
+| closable | boolean | false          |                                | No       |
 
 ### Slots
 
@@ -190,23 +189,6 @@
 | Name   | Type   | Default | Values | Required |
 | ------ | ------ | ------- | ------ | -------- |
 | legend | string |         |        | No       |
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
-## BFlex
-
-### Props
-
-| Name      | Type   | Default              | Values                                                                  | Required |
-| --------- | ------ | -------------------- | ----------------------------------------------------------------------- | -------- |
-| direction | string | &#39;row&#39;        | row, column, row-reverse, column-reverse                                | No       |
-| justify   | string | &#39;flex-start&#39; | flex-start, flex-end, center, space-between, space-around, space-evenly | No       |
-| align     | string | &#39;stretch&#39;    | stretch, flex-start, flex-end, center, baseline                         | No       |
-| gap       | string | undefined            |                                                                         | No       |
 
 ### Slots
 
@@ -439,14 +421,6 @@
 | Name | Type   | Default     | Values  | Required |
 | ---- | ------ | ----------- | ------- | -------- |
 | size | string | &#39;l&#39; | l, m, s | No       |
-
-## BSubheader
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
 
 ## BSwitch
 
