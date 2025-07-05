@@ -27,11 +27,9 @@
 
 ### Props
 
-| Name      | Type           | Default           | Values           | Required |
-| --------- | -------------- | ----------------- | ---------------- | -------- |
-| border    | string         | &#39;neutral&#39; | neutral, primary | No       |
-| content   | string, number |                   |                  | No       |
-| hideEmpty | boolean        | false             |                  | No       |
+| Name   | Type   | Default           | Values           | Required |
+| ------ | ------ | ----------------- | ---------------- | -------- |
+| border | string | &#39;neutral&#39; | neutral, primary | No       |
 
 ### Slots
 
