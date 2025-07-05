@@ -28,13 +28,11 @@
 
 ### Props
 
-| Name       | Type           | Default         | Values                    | Required |
-| ---------- | -------------- | --------------- | ------------------------- | -------- |
-| variant    | string         | &#34;none&#34;  | none, inline, superscript | No       |
-| position   | string         | &#39;right&#39; | left, right               | No       |
-| background | string         | &#34;none&#34;  | none, primary, neutral    | No       |
-| content    | string, number |                 |                           | No       |
-| hideEmpty  | boolean        | false           |                           | No       |
+| Name      | Type           | Default           | Values           | Required |
+| --------- | -------------- | ----------------- | ---------------- | -------- |
+| border    | string         | &#39;neutral&#39; | neutral, primary | No       |
+| content   | string, number |                   |                  | No       |
+| hideEmpty | boolean        | false             |                  | No       |
 
 ### Slots
 
@@ -42,7 +40,6 @@
 | ------- |
 | icon    |
 | default |
-| action  |
 
 ## BBottomNav
 

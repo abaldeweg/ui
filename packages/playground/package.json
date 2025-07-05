@@ -15,20 +15,20 @@
   "devDependencies": {
     "@baldeweg/ui": "workspace:*",
     "@tsconfig/node22": "22.0.2",
-    "@types/node": "22.15.32",
-    "@vitejs/plugin-vue": "5.2.4",
+    "@types/node": "22.16.0",
+    "@vitejs/plugin-vue": "6.0.0",
     "@vue/eslint-config-prettier": "10.2.0",
-    "@vue/eslint-config-typescript": "14.5.1",
+    "@vue/eslint-config-typescript": "14.6.0",
     "@vue/tsconfig": "0.7.0",
     "axios": "1.10.0",
-    "eslint": "9.29.0",
-    "eslint-plugin-vue": "10.2.0",
+    "eslint": "9.30.1",
+    "eslint-plugin-vue": "10.3.0",
     "jiti": "2.4.2",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "typescript": "5.8.3",
-    "vite": "6.3.5",
+    "vite": "7.0.2",
     "vite-plugin-webfont-dl": "3.10.5",
-    "vue-tsc": "2.2.10"
+    "vue-tsc": "3.0.1"
   },
   "license": "MIT"
 }
