@@ -45,7 +45,7 @@ const isHidden = computed(() => {
   gap: 10px;
   border: 1px solid var(--color-neutral-10);
   border-radius: 20px;
-  padding: 10px;
+  padding: 1px 10px;
   color: var(--color-neutral-10);
   transition: border 0.3s;
 }
