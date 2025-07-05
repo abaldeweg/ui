@@ -1,26 +1,10 @@
 <script setup>
-import { computed } from 'vue'
-
 const props = defineProps({
   border: {
     type: String,
     default: 'neutral',
     validator: (value) => ['neutral', 'primary'].includes(value)
   },
-  content: {
-    type: [String, Number]
-  },
-  hideEmpty: {
-    type: Boolean,
-    default: false
-  }
-})
-
-const isHidden = computed(() => {
-  if ([0, '0', ''].includes(props.content) && props.hideEmpty) {
-    return true
-  }
-  return false
 })
 </script>
 
@@ -33,8 +17,6 @@ const isHidden = computed(() => {
     <div class="badge_body">
       <slot />
     </div>
-
-    <div class="badge_content" v-if="!isHidden">{{ content }}</div>
   </div>
 </template>
 
@@ -69,8 +51,7 @@ const isHidden = computed(() => {
 }
 
 .badge_icon,
-.badge_body,
-.badge_content {
+.badge_body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,21 +60,6 @@ const isHidden = computed(() => {
 .badge_icon {
   width: 17px;
   height: 17px;
-}
-
-.badge_content {
-  border: 1px solid var(--color-neutral-10);
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-}
-
-.badge_neutral .badge_content {
-  border-color: var(--color-neutral-10);
-}
-
-.badge_primary .badge_content {
-  border-color: var(--color-primary-10);
 }
 
 .badge a,

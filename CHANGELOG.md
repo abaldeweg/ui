@@ -5,6 +5,7 @@
 - Rework `BAlert` component, remove position args
 - Remove `BFlex` component
 - Remove `BSubheader` component
+- Remove `content` and `hideEmpty` properties from `BBadge`
 
 ## v0.16.0
 

@@ -8,14 +8,6 @@ export default {
       control: "select",
       options: ["neutral", "primary"],
     },
-    content: {
-      control: "text",
-      description: "The content to display in the badge",
-    },
-    hideEmpty: {
-      control: "boolean",
-      description: "Whether to hide the badge when empty",
-    },
     default: {
       control: "text",
       description: "Default slot content",
@@ -38,11 +30,9 @@ export default {
 
 export const Neutral = {
   args: {
-    default: "Badge",
+    default: "Badge (2)",
     icon: "star",
     border: "neutral",
-    content: "2",
-    hideEmpty: false,
   },
   render: (args) => ({
     components: { BBadge, BMaterialIcon },
@@ -64,41 +54,9 @@ export const Neutral = {
 
 export const Primary = {
   args: {
-    default: "Badge",
+    default: "Badge (2)",
     icon: "star",
     border: "primary",
-    content: "2",
-    hideEmpty: false,
-  },
-  render: (args) => ({
-    components: {
-      BBadge,
-      BMaterialIcon,
-    },
-
-    setup() {
-      return { args };
-    },
-    template: `
-    <a href="#">
-      <BBadge v-bind="args">
-        {{ args.default }}
-        <template v-if="args.icon" #icon>
-          <BMaterialIcon>{{ args.icon }}</BMaterialIcon>
-        </template>
-      </BBadge>
-    </a>
-    `,
-  }),
-};
-
-export const HideEmpty = {
-  args: {
-    default: "Badge",
-    icon: "star",
-    border: "neutral",
-    content: "0",
-    hideEmpty: true,
   },
   render: (args) => ({
     components: {
