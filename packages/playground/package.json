@@ -27,7 +27,7 @@
     "prettier": "3.6.2",
     "typescript": "5.8.3",
     "vite": "7.0.2",
-    "vite-plugin-webfont-dl": "3.10.5",
+    "vite-plugin-webfont-dl": "3.11.0",
     "vue-tsc": "3.0.1"
   },
   "license": "MIT"
