@@ -148,8 +148,8 @@ importers:
         specifier: 7.0.5
         version: 7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0)
       vite-plugin-webfont-dl:
-        specifier: 3.11.0
-        version: 3.11.0(vite@7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0))
+        specifier: 3.11.1
+        version: 3.11.1(vite@7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0))
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.16.4)(jiti@2.4.2)(jsdom@26.1.0)(msw@2.7.3(@types/node@22.16.4)(typescript@5.8.3))(terser@5.39.0)
@@ -206,8 +206,8 @@ importers:
         specifier: 7.0.5
         version: 7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0)
       vite-plugin-webfont-dl:
-        specifier: 3.11.0
-        version: 3.11.0(vite@7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0))
+        specifier: 3.11.1
+        version: 3.11.1(vite@7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0))
       vue-tsc:
         specifier: 3.0.2
         version: 3.0.2(typescript@5.8.3)
@@ -3814,8 +3814,8 @@ packages:
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
 
-  vite-plugin-webfont-dl@3.11.0:
-    resolution: {integrity: sha512-OMXdT7bmUnm/TasvHoICkyK2HCOwLuCVpdhWxMWrE67Uvr6SZ2mKy2I+p4WKxTjzR0e5juQCn1/HYLvAhdGeaQ==}
+  vite-plugin-webfont-dl@3.11.1:
+    resolution: {integrity: sha512-5eQaMn3mJ0qNnL64R6wZouh0I4zkvK8aS+GsoCDLY4WYfWCYvNpf6TyauxEsMlbwwfznkKjXTd1DNBGs4fKAhQ==}
     peerDependencies:
       vite: ^2 || ^3 || ^4 || ^5 || ^6 || ^7
 
@@ -3948,8 +3948,8 @@ packages:
   vue-component-type-helpers@2.2.8:
     resolution: {integrity: sha512-4bjIsC284coDO9om4HPA62M7wfsTvcmZyzdfR0aUlFXqq4tXxM1APyXpNVxPC8QazKw9OhmZNHBVDA6ODaZsrA==}
 
-  vue-component-type-helpers@3.0.2:
-    resolution: {integrity: sha512-pbzPt5TlLZijRXt+/uhYRxTkIQkY09Ylx9t9lSk2ZjCv+bqyDRWH0RDUso7kOYQhG7m6SHXPhXEjD27LxKFryA==}
+  vue-component-type-helpers@3.0.3:
+    resolution: {integrity: sha512-koiBu7lO8e6w/UlbZAAIW11qcFQocYIl7Nh/SVwGZ804ej5KrncU32bRxi2zfU2Kyf6HWuk1CeeVP2rhIL+vyQ==}
 
   vue-docgen-api@4.79.2:
     resolution: {integrity: sha512-n9ENAcs+40awPZMsas7STqjkZiVlIjxIKgiJr5rSohDP0/JCrD9VtlzNojafsA1MChm/hz2h3PDtUedx3lbgfA==}
@@ -5043,7 +5043,7 @@ snapshots:
       storybook: 9.0.17(@testing-library/dom@10.4.0)(prettier@3.6.2)
       type-fest: 2.19.0
       vue: 3.5.17(typescript@5.8.3)
-      vue-component-type-helpers: 3.0.2
+      vue-component-type-helpers: 3.0.3
 
   '@testing-library/dom@10.4.0':
     dependencies:
@@ -8369,7 +8369,7 @@ snapshots:
       - tsx
       - yaml
 
-  vite-plugin-webfont-dl@3.11.0(vite@7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0)):
+  vite-plugin-webfont-dl@3.11.1(vite@7.0.5(@types/node@22.16.4)(jiti@2.4.2)(terser@5.39.0)):
     dependencies:
       axios: 1.10.0(debug@4.4.1)
       clean-css: 5.3.3
@@ -8466,7 +8466,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.8: {}
 
-  vue-component-type-helpers@3.0.2: {}
+  vue-component-type-helpers@3.0.3: {}
 
   vue-docgen-api@4.79.2(vue@3.5.17(typescript@5.8.3)):
     dependencies:
