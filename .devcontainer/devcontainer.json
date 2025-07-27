@@ -1,5 +1,5 @@
 {
-  "name": "Ubuntu",
+  "name": "@baldeweg/ui",
   "image": "mcr.microsoft.com/devcontainers/base:noble",
   "features": {
     "ghcr.io/devcontainers/features/node:1.6.3": {},
