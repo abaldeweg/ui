@@ -12,8 +12,6 @@
         "EditorConfig.EditorConfig",
         "Vue.volar",
         "mikestead.dotenv",
-        "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-german",
         "donjayamanne.githistory",
         "DavidAnson.vscode-markdownlint",
         "christian-kohler.npm-intellisense",
