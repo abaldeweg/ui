@@ -1,9 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "scripts": {
-    "release": "node scripts/tag.js"
-  },
   "devDependencies": {},
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
