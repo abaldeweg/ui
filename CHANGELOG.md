@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.18.0
+
+- Remove `eslint-config`
+
 ## v0.17.0
 
 - Rework `BAlert` component, remove position args
