@@ -12,7 +12,6 @@
         "EditorConfig.EditorConfig",
         "Vue.volar",
         "mikestead.dotenv",
-        "donjayamanne.githistory",
         "DavidAnson.vscode-markdownlint",
         "christian-kohler.npm-intellisense",
         "vitest.explorer"
