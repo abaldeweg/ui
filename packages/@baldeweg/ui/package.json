@@ -5,7 +5,7 @@
     "dev": "storybook dev -p 6006",
     "build": "vite build",
     "test": "vitest run --environment jsdom",
-    "generate-docu": "docu",
+    "docu": "storybook build --disable-telemetry",
     "list-components": "scan"
   },
   "dependencies": {
