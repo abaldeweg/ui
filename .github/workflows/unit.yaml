@@ -12,7 +12,7 @@ jobs:
   test-ui:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Use Node.js 22.x
@@ -26,7 +26,7 @@ jobs:
   test-docu:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Use Node.js 22.x
