@@ -15,6 +15,10 @@ export default {
       control: { type: 'boolean' },
       description: 'Controls the visibility of the panel',
     },
+    permanent: {
+      control: { type: 'boolean' },
+      description: 'If true, panel is always shown, no overlay, and margin is added',
+    },
     'update:modelValue': {
       action: 'update:modelValue',
       description: 'Event emitted when the panel is closed',
@@ -36,27 +40,30 @@ const Template = (args) => ({
     return { args }
   },
   template: `
-    <div>
-      <button @click="args.modelValue = true">Open Panel</button>
-      <BPanel v-bind="args">
-        <template #header v-if="args.showHeader">
-          <div style="padding: 1rem;">
-            <h2>Panel Header</h2>
-          </div>
-        </template>
-
-        <div style="padding: 1rem;">
-          <h3>Panel Content</h3>
-          <p>This is the main content of the panel.</p>
-        </div>
-
-        <template #footer v-if="args.showFooter">
-          <div style="padding: 1rem;">
-            <button @click="args.modelValue = false">Close</button>
-          </div>
-        </template>
-      </BPanel>
+    <div :style="args.modelValue && args.permanent ? { marginLeft: args.position === 'left' ? args.width : undefined, marginRight: args.position === 'right' ? args.width : undefined } : {}">
+      <div :style="{margin: 'auto', width: '500px'}">
+        <p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </p>
+        <button @click="args.modelValue = true">Open Panel</button>
+      </div>
     </div>
+    <BPanel v-bind="args">
+      <template #header v-if="args.showHeader">
+        <div style="padding: 1rem;">
+          <h2>Panel Header</h2>
+        </div>
+      </template>
+
+      <div style="padding: 1rem;">
+        <h3>Panel Content</h3>
+        <p>This is the main content of the panel.</p>
+      </div>
+
+      <template #footer v-if="args.showFooter">
+        <div style="padding: 1rem;">
+          <button @click="args.modelValue = false">Close</button>
+        </div>
+      </template>
+    </BPanel>
   `,
 })
 
@@ -67,6 +74,7 @@ LeftPanel.args = {
   width: '300px',
   showHeader: true,
   showFooter: true,
+  permanent: false,
 }
 
 export const RightPanel = Template.bind({})
@@ -76,6 +84,7 @@ RightPanel.args = {
   width: '300px',
   showHeader: true,
   showFooter: true,
+  permanent: false,
 }
 
 export const WithoutHeader = Template.bind({})
@@ -85,6 +94,7 @@ WithoutHeader.args = {
   width: '300px',
   showHeader: false,
   showFooter: true,
+  permanent: false,
 }
 
 export const WithoutFooter = Template.bind({})
@@ -94,6 +104,7 @@ WithoutFooter.args = {
   width: '300px',
   showHeader: true,
   showFooter: false,
+  permanent: false,
 }
 
 export const CustomWidth = Template.bind({})
@@ -103,4 +114,15 @@ CustomWidth.args = {
   width: '500px',
   showHeader: true,
   showFooter: true,
+  permanent: false,
+}
+
+export const PermanentPanel = Template.bind({})
+PermanentPanel.args = {
+  modelValue: true,
+  position: 'left',
+  width: '300px',
+  showHeader: true,
+  showFooter: true,
+  permanent: true,
 }

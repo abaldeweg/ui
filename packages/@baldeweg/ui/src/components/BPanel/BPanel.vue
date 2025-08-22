@@ -16,6 +16,10 @@ const props = defineProps({
   width: {
     type: String,
     default: '300px'
+  },
+  permanent: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -29,7 +33,7 @@ const close = () => {
 </script>
 
 <template>
-  <Transition name="panel_overlay">
+  <Transition name="panel_overlay" v-if="!props.permanent">
     <div class="panel_overlay" @click="close" v-if="modelValue" />
   </Transition>
 
@@ -37,7 +41,10 @@ const close = () => {
     <div class="panel_container" :class="{
       panel_position_left: position === 'left',
       panel_position_right: position === 'right',
-    }" v-if="modelValue" :style="{ maxWidth: width }">
+      panel_permanent: permanent,
+    }" v-if="modelValue" :style="{
+      maxWidth: width
+    }">
       <div class="panel_header" v-if="slots.header">
         <slot name="header" />
       </div>
@@ -134,6 +141,7 @@ const close = () => {
 }
 
 @media print {
+
   .panel_overlay,
   .panel_container {
     display: none;

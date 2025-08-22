@@ -3,6 +3,7 @@
 ## v0.18.0
 
 - Remove `eslint-config`
+- Added `permanent` prop in `BPanel`
 
 ## v0.17.0
 
