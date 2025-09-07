@@ -19,7 +19,7 @@ jobs:
           git config --global user.email "a@baldeweg.org"
           git config --global user.name "André Baldeweg"
       - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22.x
       - name: Set version in package.json
@@ -48,7 +48,7 @@ jobs:
       - name: Pull latest changes
         run: git pull origin HEAD
       - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22.x
           registry-url: "https://registry.npmjs.org"
@@ -69,7 +69,7 @@ jobs:
       - name: Pull latest changes
         run: git pull origin HEAD
       - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22.x
           registry-url: "https://registry.npmjs.org"
