@@ -15,7 +15,7 @@
     "@baldeweg/docu": "workspace:*",
     "@baldeweg/eslint-config": "0.17.0",
     "@baldeweg/scan": "workspace:*",
-    "@rushstack/eslint-patch": "1.13.0",
+    "@rushstack/eslint-patch": "1.14.0",
     "@storybook/addon-a11y": "9.1.13",
     "@storybook/addon-docs": "9.1.13",
     "@storybook/vue3-vite": "9.1.13",
