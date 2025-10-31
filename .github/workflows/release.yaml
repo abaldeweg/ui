@@ -21,7 +21,7 @@ jobs:
       - name: Use Node.js 22.x
         uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
       - name: Set version in package.json
         run: |
           sed -i 's/"version": "[^"]*"/"version": "${{ inputs.tag_name }}"/g' packages/@baldeweg/docu/package.json
@@ -50,7 +50,7 @@ jobs:
       - name: Use Node.js 22.x
         uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
           registry-url: "https://registry.npmjs.org"
       - name: Install pnpm
         run: npm install -g pnpm
@@ -71,7 +71,7 @@ jobs:
       - name: Use Node.js 22.x
         uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
           registry-url: "https://registry.npmjs.org"
       - name: Install pnpm
         run: npm install -g pnpm
