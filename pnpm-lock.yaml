@@ -82,8 +82,8 @@ importers:
         specifier: workspace:*
         version: link:../scan
       '@rushstack/eslint-patch':
-        specifier: 1.14.1
-        version: 1.14.1
+        specifier: 1.15.0
+        version: 1.15.0
       '@storybook/addon-a11y':
         specifier: 9.1.16
         version: 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.0)(msw@2.7.3(@types/node@24.10.0)(typescript@5.9.3))(prettier@3.6.2)(vite@7.2.2(@types/node@24.10.0)(jiti@2.5.1)(terser@5.39.0)))
@@ -984,8 +984,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@rushstack/eslint-patch@1.14.1':
-    resolution: {integrity: sha512-jGTk8UD/RdjsNZW8qq10r0RBvxL8OWtoT+kImlzPDFilmozzM+9QmIJsmze9UiSBrFU45ZxhTYBypn9q9z/VfQ==}
+  '@rushstack/eslint-patch@1.15.0':
+    resolution: {integrity: sha512-ojSshQPKwVvSMR8yT2L/QtUkV5SXi/IfDiJ4/8d6UbTPjiHVmxZzUAzGD8Tzks1b9+qQkZa0isUOvYObedITaw==}
 
   '@sinclair/typebox@0.34.33':
     resolution: {integrity: sha512-5HAV9exOMcXRUxo+9iYB5n09XxzCXnfy4VTNW4xnDv+FgjzAGY989C28BIdljKqmF+ZltUwujE3aossvcVtq6g==}
@@ -4869,7 +4869,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@rushstack/eslint-patch@1.14.1': {}
+  '@rushstack/eslint-patch@1.15.0': {}
 
   '@sinclair/typebox@0.34.33': {}
 
