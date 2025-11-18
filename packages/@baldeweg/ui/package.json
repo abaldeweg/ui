@@ -33,7 +33,7 @@
     "storybook-addon-tag-badges": "2.0.4",
     "vite": "7.2.2",
     "vite-plugin-webfont-dl": "3.11.1",
-    "vitest": "4.0.9"
+    "vitest": "4.0.10"
   },
   "files": [
     "dist"
