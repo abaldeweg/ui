@@ -13,7 +13,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Set up Git user
         run: |
           git config --global user.email "a@baldeweg.org"
@@ -44,7 +44,7 @@ jobs:
     needs: tag
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Pull latest changes
         run: git pull origin HEAD
       - name: Use Node.js 22.x
@@ -65,7 +65,7 @@ jobs:
     needs: tag
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Pull latest changes
         run: git pull origin HEAD
       - name: Use Node.js 22.x
