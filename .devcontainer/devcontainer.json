@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:noble",
   "features": {
     "ghcr.io/devcontainers/features/node:1.6.3": {},
-    "ghcr.io/abaldeweg/devcontainer_features/bash:3.0.0": {}
+    "ghcr.io/abaldeweg/devcontainer_features/bash:4.0.0": {}
   },
   "customizations": {
     "vscode": {
