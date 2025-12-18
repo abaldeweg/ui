@@ -9,7 +9,7 @@
     "list-components": "scan"
   },
   "dependencies": {
-    "vue": "3.5.25"
+    "vue": "3.5.26"
   },
   "devDependencies": {
     "@baldeweg/docu": "workspace:*",
