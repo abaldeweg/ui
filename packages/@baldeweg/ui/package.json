@@ -25,7 +25,7 @@
     "eslint": "9.39.2",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-storybook": "9.1.17",
-    "eslint-plugin-vue": "10.6.2",
+    "eslint-plugin-vue": "10.7.0",
     "jsdom": "27.4.0",
     "prettier": "3.7.4",
     "start-server-and-test": "2.1.3",

@@ -77,7 +77,7 @@ importers:
         version: link:../docu
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.39.2(jiti@2.5.1))(prettier@3.7.4))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1)))(eslint-plugin-vue@10.6.2(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1))))(eslint@9.39.2(jiti@2.5.1))
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.39.2(jiti@2.5.1))(prettier@3.7.4))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1)))(eslint-plugin-vue@10.7.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1))))(eslint@9.39.2(jiti@2.5.1))
       '@baldeweg/scan':
         specifier: workspace:*
         version: link:../scan
@@ -112,8 +112,8 @@ importers:
         specifier: 9.1.17
         version: 9.1.17(eslint@9.39.2(jiti@2.5.1))(storybook@9.1.17(@testing-library/dom@10.4.0)(msw@2.7.3(@types/node@24.10.9)(typescript@5.9.3))(prettier@3.7.4)(vite@7.3.1(@types/node@24.10.9)(jiti@2.5.1)(terser@5.39.0)))(typescript@5.9.3)
       eslint-plugin-vue:
-        specifier: 10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1)))
+        specifier: 10.7.0
+        version: 10.7.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1)))
       jsdom:
         specifier: 27.4.0
         version: 27.4.0(postcss@8.5.6)
@@ -2207,8 +2207,8 @@ packages:
       eslint: '>=8'
       storybook: ^9.1.17
 
-  eslint-plugin-vue@10.6.2:
-    resolution: {integrity: sha512-nA5yUs/B1KmKzvC42fyD0+l9Yd+LtEpVhWRbXuDj0e+ZURcTtyRbMDWUeJmTAh2wC6jC83raS63anNM2YT3NPw==}
+  eslint-plugin-vue@10.7.0:
+    resolution: {integrity: sha512-r2XFCK4qlo1sxEoAMIoTTX0PZAdla0JJDt1fmYiworZUX67WeEGqm+JbyAg3M+pGiJ5U6Mp5WQbontXWtIW7TA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@stylistic/eslint-plugin': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -4406,12 +4406,12 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.39.2(jiti@2.5.1))(prettier@3.7.4))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1)))(eslint-plugin-vue@10.6.2(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1))))(eslint@9.39.2(jiti@2.5.1))':
+  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.39.2(jiti@2.5.1))(prettier@3.7.4))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1)))(eslint-plugin-vue@10.7.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1))))(eslint@9.39.2(jiti@2.5.1))':
     dependencies:
       '@vue/eslint-config-prettier': 10.2.0(eslint@9.39.2(jiti@2.5.1))(prettier@3.7.4)
       eslint: 9.39.2(jiti@2.5.1)
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))
-      eslint-plugin-vue: 10.6.2(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1)))
+      eslint-plugin-vue: 10.7.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1)))
 
   '@bcoe/v8-coverage@0.2.3': {}
 
@@ -6435,7 +6435,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-vue@10.6.2(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1))):
+  eslint-plugin-vue@10.7.0(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.5.1))):
     dependencies:
       '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.2(jiti@2.5.1))
       eslint: 9.39.2(jiti@2.5.1)
