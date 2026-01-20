@@ -25,7 +25,7 @@ export default {
       },
     },
   },
-  tags: ["beta"],
+  tags: ["deprecated"],
 };
 
 export const Neutral = {
