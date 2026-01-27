@@ -2,7 +2,7 @@
   "name": "@baldeweg/ui",
   "image": "mcr.microsoft.com/devcontainers/base:noble",
   "features": {
-    "ghcr.io/devcontainers/features/node:1.6.3": {},
+    "ghcr.io/devcontainers/features/node:1.6.4": {},
     "ghcr.io/abaldeweg/services/bash:0.2.0": {}
   },
   "customizations": {
