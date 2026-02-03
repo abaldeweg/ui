@@ -6,7 +6,6 @@
     "build": "vite build",
     "test": "vitest run --environment jsdom",
     "docu": "storybook build --disable-telemetry",
-    "list-components": "scan",
     "generate-docu": "docu"
   },
   "dependencies": {
@@ -15,7 +14,6 @@
   "devDependencies": {
     "@baldeweg/docu": "workspace:*",
     "@baldeweg/eslint-config": "0.17.0",
-    "@baldeweg/scan": "workspace:*",
     "@rushstack/eslint-patch": "1.15.0",
     "@storybook/addon-a11y": "9.1.17",
     "@storybook/addon-docs": "9.1.17",
