@@ -6,7 +6,8 @@
     "build": "vite build",
     "test": "vitest run --environment jsdom",
     "docu": "storybook build --disable-telemetry",
-    "list-components": "scan"
+    "list-components": "scan",
+    "generate-docu": "docu"
   },
   "dependencies": {
     "vue": "3.5.27"
