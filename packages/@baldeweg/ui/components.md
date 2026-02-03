@@ -326,6 +326,7 @@
 | modelValue | boolean | false           |             | No       |
 | position   | string  | &#39;left&#39;  | left, right | No       |
 | width      | string  | &#39;300px&#39; |             | No       |
+| permanent  | boolean | false           |             | No       |
 
 ### Slots
 
