@@ -103,8 +103,8 @@ importers:
         specifier: 7.3.1
         version: 7.3.1(@types/node@24.10.13)(jiti@2.5.1)(terser@5.39.0)
       vite-plugin-webfont-dl:
-        specifier: 3.11.1
-        version: 3.11.1(vite@7.3.1(@types/node@24.10.13)(jiti@2.5.1)(terser@5.39.0))
+        specifier: 3.12.0
+        version: 3.12.0(vite@7.3.1(@types/node@24.10.13)(jiti@2.5.1)(terser@5.39.0))
       vitest:
         specifier: 4.0.18
         version: 4.0.18(@types/node@24.10.13)(jiti@2.5.1)(jsdom@28.1.0)(msw@2.7.3(@types/node@24.10.13)(typescript@5.9.3))(terser@5.39.0)
@@ -1264,9 +1264,6 @@ packages:
     resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
     engines: {node: '>=4'}
 
-  axios@1.10.0:
-    resolution: {integrity: sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==}
-
   axios@1.13.2:
     resolution: {integrity: sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==}
 
@@ -1830,10 +1827,6 @@ packages:
   foreground-child@3.3.1:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
-
-  form-data@4.0.2:
-    resolution: {integrity: sha512-hGfm/slu0ZabnNt4oaRZ6uREyfCj6P4fT/n6A1rGV+Z0VdGXjfOhVUpkn6qVQONHGIFwmveGXyDs75+nr6FM8w==}
-    engines: {node: '>= 6'}
 
   form-data@4.0.4:
     resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
@@ -2920,10 +2913,10 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  vite-plugin-webfont-dl@3.11.1:
-    resolution: {integrity: sha512-5eQaMn3mJ0qNnL64R6wZouh0I4zkvK8aS+GsoCDLY4WYfWCYvNpf6TyauxEsMlbwwfznkKjXTd1DNBGs4fKAhQ==}
+  vite-plugin-webfont-dl@3.12.0:
+    resolution: {integrity: sha512-0jxsr8ycuoK/uV5Y3ytttTRhgvfZo8v3O4JZBlVc4C7QWIws/vCLVR4B3ag+TGVkLNQya6hXfY3UnZge3M8vmA==}
     peerDependencies:
-      vite: ^2 || ^3 || ^4 || ^5 || ^6 || ^7
+      vite: ^2 || ^3 || ^4 || ^5 || ^6 || ^7 || ^8
 
   vite@7.3.1:
     resolution: {integrity: sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==}
@@ -4206,14 +4199,6 @@ snapshots:
 
   axe-core@4.10.3: {}
 
-  axios@1.10.0:
-    dependencies:
-      follow-redirects: 1.15.9(debug@4.4.3)
-      form-data: 4.0.2
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-
   axios@1.13.2(debug@4.4.3):
     dependencies:
       follow-redirects: 1.15.9(debug@4.4.3)
@@ -4962,13 +4947,6 @@ snapshots:
     dependencies:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
-
-  form-data@4.0.2:
-    dependencies:
-      asynckit: 0.4.0
-      combined-stream: 1.0.8
-      es-set-tostringtag: 2.1.0
-      mime-types: 2.1.35
 
   form-data@4.0.4:
     dependencies:
@@ -6196,9 +6174,9 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-plugin-webfont-dl@3.11.1(vite@7.3.1(@types/node@24.10.13)(jiti@2.5.1)(terser@5.39.0)):
+  vite-plugin-webfont-dl@3.12.0(vite@7.3.1(@types/node@24.10.13)(jiti@2.5.1)(terser@5.39.0)):
     dependencies:
-      axios: 1.10.0
+      axios: 1.13.2(debug@4.4.3)
       clean-css: 5.3.3
       flat-cache: 6.1.7
       picocolors: 1.1.1
