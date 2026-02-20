@@ -14,7 +14,7 @@
   "devDependencies": {
     "@baldeweg/docu": "workspace:*",
     "@baldeweg/eslint-config": "0.17.0",
-    "@rushstack/eslint-patch": "1.16.0",
+    "@rushstack/eslint-patch": "1.16.1",
     "@storybook/addon-a11y": "9.1.19",
     "@storybook/addon-docs": "9.1.19",
     "@storybook/vue3-vite": "9.1.19",
