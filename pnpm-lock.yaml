@@ -52,8 +52,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.0(jiti@2.5.1))(prettier@3.8.1))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.35.1(eslint@10.0.0(jiti@2.5.1))(typescript@5.9.3))(eslint@10.0.0(jiti@2.5.1)))(eslint-plugin-vue@10.8.0(@typescript-eslint/parser@8.35.1(eslint@10.0.0(jiti@2.5.1))(typescript@5.9.3))(eslint@10.0.0(jiti@2.5.1))(vue-eslint-parser@10.2.0(eslint@10.0.0(jiti@2.5.1))))(eslint@10.0.0(jiti@2.5.1))
       '@rushstack/eslint-patch':
-        specifier: 1.16.0
-        version: 1.16.0
+        specifier: 1.16.1
+        version: 1.16.1
       '@storybook/addon-a11y':
         specifier: 9.1.19
         version: 9.1.19(storybook@9.1.19(@testing-library/dom@10.4.0)(msw@2.7.3(@types/node@24.10.13)(typescript@5.9.3))(prettier@3.8.1)(vite@7.3.1(@types/node@24.10.13)(jiti@2.5.1)(terser@5.39.0)))
@@ -854,8 +854,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@rushstack/eslint-patch@1.16.0':
-    resolution: {integrity: sha512-TMAArRcXZE6ckNI98mXuWv24yXs3bxXT0yGnySY9fpN7y+VkNcyZPiXeV7Dyr3cNdes9JxjM6KzbsZ+JMpVNNA==}
+  '@rushstack/eslint-patch@1.16.1':
+    resolution: {integrity: sha512-TvZbIpeKqGQQ7X0zSCvPH9riMSFQFSggnfBjFZ1mEoILW+UuXCKwOoPcgjMwiUtRqFZ8jWhPJc4um14vC6I4ag==}
 
   '@standard-schema/spec@1.0.0':
     resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
@@ -3676,7 +3676,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@rushstack/eslint-patch@1.16.0': {}
+  '@rushstack/eslint-patch@1.16.1': {}
 
   '@standard-schema/spec@1.0.0': {}
 
