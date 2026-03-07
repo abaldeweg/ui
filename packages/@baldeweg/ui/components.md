@@ -23,21 +23,6 @@
 | ------- |
 | default |
 
-## BBadge
-
-### Props
-
-| Name   | Type   | Default           | Values           | Required |
-| ------ | ------ | ----------------- | ---------------- | -------- |
-| border | string | &#39;neutral&#39; | neutral, primary | No       |
-
-### Slots
-
-| Name    |
-| ------- |
-| icon    |
-| default |
-
 ## BBottomNav
 
 ### Slots
