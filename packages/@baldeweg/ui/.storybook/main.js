@@ -1,8 +1,7 @@
-import { join, dirname } from 'path'
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
 
-function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, 'package.json')))
-}
+const getAbsolutePath = value => dirname(fileURLToPath(import.meta.resolve(join(value, 'package.json'))))
 
 /** @type { import('@storybook/vue3-vite').StorybookConfig } */
 const config = {
