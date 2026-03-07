@@ -1,6 +1,5 @@
 import BAlert from './BAlert/BAlert.vue';
 import BApp from './BApp/BApp.vue';
-import BBadge from './BBadge/BBadge.vue';
 import BBottomNav from './BBottomNav/BBottomNav.vue';
 import BBottomNavItem from './BBottomNav/BBottomNavItem.vue';
 import BButton from './BButton/BButton.vue';
@@ -37,7 +36,6 @@ import BUpload from './BUpload/BUpload.vue';
 export {
   BAlert,
   BApp,
-  BBadge,
   BBottomNav,
   BBottomNavItem,
   BButton,

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.19.0
+
+- Remove `BBadge` component, no replacemnt
+
 ## v0.18.0
 
 - Remove `eslint-config`
