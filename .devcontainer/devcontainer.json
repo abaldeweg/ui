@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/ui",
-  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "features": {
     "ghcr.io/devcontainers/features/node:1.7.1": {},
     "ghcr.io/abaldeweg/services/bash:0.2.0": {}
