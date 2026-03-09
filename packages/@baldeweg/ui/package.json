@@ -9,7 +9,7 @@
     "generate-docu": "docu"
   },
   "dependencies": {
-    "vue": "3.5.29"
+    "vue": "3.5.30"
   },
   "devDependencies": {
     "@baldeweg/docu": "workspace:*",
