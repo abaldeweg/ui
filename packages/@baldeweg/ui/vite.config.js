@@ -6,13 +6,17 @@ import { defineConfig } from 'vite'
 import { ViteWebfontDownload } from 'vite-plugin-webfont-dl'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
     vue(),
-    ViteWebfontDownload([
-      'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
-      'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
-    ]),
+    ...(command === 'serve'
+      ? [
+        ViteWebfontDownload([
+          'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
+          'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
+        ]),
+      ]
+      : []),
   ],
   resolve: {
     alias: {
