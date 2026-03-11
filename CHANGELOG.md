@@ -7,6 +7,7 @@
 - Deprecated `BBottomNav`, `BottomNavItem`, `BMasthead`, `BMastheadItem`, `BNav`, `BTabs`, `BTabsLink`, use `BNavigation` instead
 - Removed UMD build output from `@baldeweg/ui`; package is now ESM-only
 - Changed docu regarding fonts, for the icon font it's sufficient to include the url `https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&display=swap`.
+- Reduced build size
 
 ## v0.18.0
 
