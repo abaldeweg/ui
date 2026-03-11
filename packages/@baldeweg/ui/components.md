@@ -302,6 +302,41 @@
 | ---- | ----- | ------- | ------ | -------- |
 | nav  | array |         |        | No       |
 
+## BNavigation
+
+### Props
+
+| Name       | Type   | Default            | Values                 | Required |
+| ---------- | ------ | ------------------ | ---------------------- | -------- |
+| border     | string | &#39;none&#39;     | none, primary, neutral | No       |
+| background | string | &#39;none&#39;     | none, primary, neutral | No       |
+| direction  | string | &#39;vertical&#39; | horizontal, vertical   | No       |
+
+### Slots
+
+| Name    |
+| ------- |
+| default |
+
+## BNavigationItem
+
+### Props
+
+| Name       | Type           | Default              | Values                 | Required |
+| ---------- | -------------- | -------------------- | ---------------------- | -------- |
+| border     | string         | &#39;none&#39;       | none, primary, neutral | No       |
+| background | string         | &#39;none&#39;       | none, primary, neutral | No       |
+| direction  | string         | &#39;horizontal&#39; | horizontal, vertical   | No       |
+| route      | string, object | undefined            |                        | No       |
+| icon       | string         | undefined            |                        | No       |
+| badge      | string         | undefined            |                        | No       |
+
+### Slots
+
+| Name    |
+| ------- |
+| default |
+
 ## BPanel
 
 ### Props
