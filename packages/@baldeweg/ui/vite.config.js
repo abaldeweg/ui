@@ -25,6 +25,7 @@ export default defineConfig(({ command }) => ({
     dedupe: ['vue'],
   },
   build: {
+    copyPublicDir: false,
     lib: {
       entry: path.resolve(__dirname, 'src/ui.js'),
       name: 'ui',
