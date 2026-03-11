@@ -2,7 +2,7 @@
   "name": "@baldeweg/ui",
   "version": "0.18.1",
   "scripts": {
-    "dev": "storybook dev -p 6006",
+    "dev": "storybook dev -p 6006 --disable-telemetry",
     "build": "vite build",
     "test": "vitest run --environment jsdom",
     "docu": "storybook build --disable-telemetry",
