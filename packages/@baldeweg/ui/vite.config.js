@@ -28,6 +28,7 @@ export default defineConfig(({ command }) => ({
     lib: {
       entry: path.resolve(__dirname, 'src/ui.js'),
       name: 'ui',
+      formats: ['es'],
       fileName: (format) => `ui.${format}.js`,
     },
     rollupOptions: {
@@ -42,4 +43,4 @@ export default defineConfig(({ command }) => ({
   test: {
     environment: 'jsdom'
   },
-})
+}))

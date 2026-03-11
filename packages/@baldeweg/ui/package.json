@@ -38,13 +38,10 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/ui.umd.js",
+  "main": "./dist/ui.es.js",
   "module": "./dist/ui.es.js",
   "exports": {
-    ".": {
-      "import": "./dist/ui.es.js",
-      "require": "./dist/ui.umd.js"
-    },
+    ".": "./dist/ui.es.js",
     "./styles": "./dist/ui.css"
   },
   "author": "André Baldeweg <a@baldeweg.org>",

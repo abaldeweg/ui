@@ -5,6 +5,7 @@
 - Removed `BBadge` component, no replacement
 - Added `BNavigation` component, replaces `BBottomNav`, `BottomNavItem`, `BNav`, `BTabs` and `BTabsLink`
 - Deprecated `BBottomNav`, `BottomNavItem`, `BMasthead`, `BMastheadItem`, `BNav`, `BTabs`, `BTabsLink`, use `BNavigation` instead
+- Removed UMD build output from `@baldeweg/ui`; package is now ESM-only
 
 ## v0.18.0
 
