@@ -10,9 +10,9 @@ Install the package with the following command.
 pnpm add @baldeweg/ui
 ```
 
-Download the Material Icons Font: <https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200>
+Download the Material Icons Font: <https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&display=swap>
 
-Find all icons on <https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200>.
+Find all icons on <https://fonts.google.com/icons>.
 
 Then you can add this to your `main.js`.
 
