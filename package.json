@@ -7,5 +7,10 @@
     "type": "git",
     "url": "https://github.com/abaldeweg/ui.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "pnpm@10.27.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  }
 }
