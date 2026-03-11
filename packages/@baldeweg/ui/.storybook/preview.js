@@ -1,9 +1,16 @@
 import { setup } from '@storybook/vue3-vite';
+import { createRouter, createMemoryHistory } from 'vue-router';
 import BApp from '../src/components/BApp/BApp.vue';
 import { registerPlugins } from '../src/plugins/index.js';
 
+const mockRouter = createRouter({
+  history: createMemoryHistory(),
+  routes: [{ path: '/:pathMatch(.*)*', component: { template: '<div />' } }],
+})
+
 setup((app) => {
   registerPlugins(app);
+  app.use(mockRouter);
 })
 
 /** @type { import('@storybook/vue3-vite').Preview } */

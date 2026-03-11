@@ -2,7 +2,9 @@
 
 ## v0.19.0
 
-- Remove `BBadge` component, no replacemnt
+- Removed `BBadge` component, no replacement
+- Added `BNavigation` component, replaces `BBottomNav`, `BottomNavItem`, `BNav`, `BTabs` and `BTabsLink`
+- Deprecated `BBottomNav`, `BottomNavItem`, `BMasthead`, `BMastheadItem`, `BNav`, `BTabs`, `BTabsLink`, use `BNavigation` instead
 
 ## v0.18.0
 

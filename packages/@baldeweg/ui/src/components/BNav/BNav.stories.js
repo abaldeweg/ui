@@ -9,7 +9,7 @@ export default {
       description: 'Navigation items array',
     },
   },
-  tags: ['experimental'],
+  tags: ['deprecated'],
 }
 
 const Template = (args) => ({

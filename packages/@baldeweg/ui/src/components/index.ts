@@ -19,6 +19,8 @@ import BMastheadItem from './BMasthead/BMastheadItem.vue';
 import BMaterialIcon from './BMaterialIcon/BMaterialIcon.vue';
 import BModal from './BModal/BModal.vue';
 import BNav from './BNav/BNav.vue';
+import BNavigation from './BNavigation/BNavigation.vue';
+import BNavigationItem from './BNavigation/BNavigationItem.vue';
 import BPanel from './BPanel/BPanel.vue';
 import BSearch from './BSearch/BSearch.vue';
 import BSelect from './BSelect/BSelect.vue';
@@ -55,6 +57,8 @@ export {
   BMaterialIcon,
   BModal,
   BNav,
+  BNavigation,
+  BNavigationItem,
   BPanel,
   BSearch,
   BSelect,
