@@ -90,7 +90,7 @@ All Tailwind utility classes are prefixed with `u:`.
 
 ### Colors
 
-- `u:text-primary`, `u:bg-primary`, `u:border-primary`
+- `u:text-primary-100`, `u:bg-primary-100`, `u:border-primary-100`
 
 ### Typography
 
