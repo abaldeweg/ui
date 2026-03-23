@@ -239,22 +239,6 @@ td:nth-last-child(1) {
   padding-right: 0;
 }
 
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-.visuallyHidden {
-  position: absolute;
-  border: 0;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
-
 @media all and (min-width: 600px) {
   h1 {
     font-size: 2.1rem;
