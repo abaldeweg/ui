@@ -14,6 +14,40 @@ onMounted(() => {
 </template>
 
 <style>
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(u);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(u);
+
+@theme {
+  --*: initial;
+
+  --color-primary: #C1571A;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --spacing-0: 0px;
+  --spacing-5: 5px;
+  --spacing-10: 10px;
+  --spacing-20: 20px;
+  --spacing-40: 40px;
+
+  --radius-xs: 2px;
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 8px;
+  --radius-xl: 10px;
+  --radius-full: 9999px;
+
+  --text-xs: 0.8rem;
+  --text-s: 0.9rem;
+  --text-m: 1rem;
+  --text-l: 1.3rem;
+  --text-xl: 1.6rem;
+}
+
 body {
   /* Neutral */
   --color-neutral-10: #292929;

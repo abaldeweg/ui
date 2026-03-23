@@ -73,3 +73,95 @@ html {
 ## Components
 
 [Components](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/components.md)
+
+## Utility Classes
+
+Add the plugin to your Vite config:
+
+```js
+import tailwindcss from '@tailwindcss/vite'
+
+plugins: [
+  tailwindcss(),
+]
+```
+
+All Tailwind utility classes are prefixed with `u:`.
+
+### Colors
+
+- `u:text-primary`, `u:bg-primary`, `u:border-primary`
+
+### Typography
+
+- `u:text-xs`, `u:text-s`, `u:text-m`, `u:text-l`, `u:text-xl`
+- `u:font-normal`, `u:font-medium`, `u:font-semibold`, `u:font-bold`
+
+### Border
+
+- `u:border`, `u:border-number`, `u:border-t`, `u:border-b`, `u:border-l`, `u:border-r`
+
+Use any number for the border width, e.g. `u:border-1` for a 1px border.
+
+### Border Radius
+
+- `u:rounded-xs`, `u:rounded-s`, `u:rounded-m`, `u:rounded-l`, `u:rounded-xl`, `u:rounded-full`
+
+### Spacing — Margin
+
+- `u:m-0`, `u:m-5`, `u:m-10`, `u:m-20`, `u:m-40`, `u:m-auto`
+
+Direction variants for margin:
+
+- `m` — all sides
+- `mx` — horizontal (left + right)
+- `my` — vertical (top + bottom)
+- `mt` / `mr` / `mb` / `ml` — top / right / bottom / left respectively
+
+Examples:
+
+`u:mx-10` — sets left and right margins to the `10` size
+`u:my-5` — sets top and bottom margins to the `5` size
+`u:mt-20` — sets top margin only to the `20` size
+
+### Spacing — Padding (px, py, pt, pr, pb, pl)
+
+- `u:p-0`, `u:p-5`, `u:p-10`, `u:p-20`, `u:p-40`
+
+Direction variants for padding:
+
+- `p` — all sides
+- `px` — horizontal (left + right)
+- `py` — vertical (top + bottom)
+- `pt` / `pr` / `pb` / `pl` — top / right / bottom / left respectively
+
+Examples:
+
+`u:px-10` — sets left and right padding to the `10` size
+`u:py-5` — sets top and bottom padding to the `5` size
+`u:pt-20` — sets top padding only to the `20` size
+
+### Spacing — Gap
+
+- `u:gap-0`, `u:gap-5`, `u:gap-10`, `u:gap-20`, `u:gap-40`
+
+### Display
+
+- `u:block`, `u:inline-block`, `u:inline`, `u:hidden`, `u:flex`, `u:inline-flex`, `u:grid`
+
+### Flexbox
+
+- `u:flex-row`, `u:flex-col`, `u:flex-wrap`, `u:flex-nowrap`, `u:items-start`, `u:items-center`, `u:items-end`,`u:items-stretch`, `u:justify-start`, `u:justify-center`, `u:justify-end`, `u:justify-between`
+
+### Grid
+
+- `u:grid-cols-1`, `u:grid-cols-2`, `u:grid-cols-3`, `u:grid-cols-4`, `u:grid-cols-6`, `u:grid-cols-12`
+
+### Size
+
+- `u:w-full`, `u:w-auto`
+- `u:h-full`, `u:h-auto`, `u:h-screen`
+
+### Misc
+
+- `u:opacity-0`, `u:opacity-50`, `u:opacity-100`
