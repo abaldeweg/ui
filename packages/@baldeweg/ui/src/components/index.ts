@@ -14,8 +14,6 @@ import BFieldset from './BFieldset/BFieldset.vue';
 import BForm from './BForm/BForm.vue';
 import BInput from './BInput/BInput.vue';
 import BList from './BList/BList.vue';
-import BMasthead from './BMasthead/BMasthead.vue';
-import BMastheadItem from './BMasthead/BMastheadItem.vue';
 import BMaterialIcon from './BMaterialIcon/BMaterialIcon.vue';
 import BModal from './BModal/BModal.vue';
 import BNav from './BNav/BNav.vue';
@@ -52,8 +50,6 @@ export {
   BForm,
   BInput,
   BList,
-  BMasthead,
-  BMastheadItem,
   BMaterialIcon,
   BModal,
   BNav,
