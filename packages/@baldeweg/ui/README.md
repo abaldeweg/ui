@@ -92,6 +92,8 @@ All Tailwind utility classes are prefixed with `u:`.
 
 ### Sizes
 
+- Colors: `neutral` with the shades `950`, `800`, `600`, `400`, `200`, `100` and `primary`, `red`, `green`, `yellow`, `blue`, with the shades `900`, `500` and `100`
+- Fonts: `sans`, `serif`, `mono`
 - Font Weight: `normal`, `bold`
 - Spacing: `none`, `s`, `m`, `l`, `xl`, `2xl`
 - Radius: `xs`, `s`, `m`, `l`, `xl`, `full`

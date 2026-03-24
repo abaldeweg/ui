@@ -88,7 +88,29 @@ body[data-theme='dark'] {
 @theme inline {
   --*: initial;
 
-  --color-primary-100: var(--color-primary-10);
+  --color-neutral-950: var(--color-neutral-10);
+  --color-neutral-800: var(--color-neutral-08);
+  --color-neutral-600: var(--color-neutral-06);
+  --color-neutral-400: var(--color-neutral-04);
+  --color-neutral-200: var(--color-neutral-02);
+  --color-neutral-100: var(--color-neutral-00);
+
+  --color-primary-900: var(--color-primary-10);
+  --color-primary-500: var(--color-primary-05);
+  --color-primary-100: var(--color-primary-00);
+
+  --color-red-900: var(--color-accent-red-10);
+  --color-red-500: var(--color-accent-red-05);
+  --color-red-100: var(--color-accent-red-00);
+  --color-green-900: var(--color-accent-green-10);
+  --color-green-500: var(--color-accent-green-05);
+  --color-green-100: var(--color-accent-green-00);
+  --color-yellow-900: var(--color-accent-yellow-10);
+  --color-yellow-500: var(--color-accent-yellow-05);
+  --color-yellow-100: var(--color-accent-yellow-00);
+  --color-blue-900: var(--color-accent-blue-10);
+  --color-blue-500: var(--color-accent-blue-05);
+  --color-blue-100: var(--color-accent-blue-00);
 
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
