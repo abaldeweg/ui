@@ -26,7 +26,7 @@ const emit = defineEmits(['update:modelValue'])
 
 <template>
   <div class="textarea_group">
-    <div :class="['textarea_item', { visuallyHidden: hideLabel }]">
+    <div :class="['textarea_item', { 'u:sr-only': hideLabel }]">
       <label :for=id>{{ label }}</label>
     </div>
     <div class="textarea_item">

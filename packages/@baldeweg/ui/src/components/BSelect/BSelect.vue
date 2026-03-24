@@ -52,7 +52,7 @@ watch(selected, (newValue) => {
 
 <template>
   <div class="select_group">
-    <div :class="['select_item', { visuallyHidden: hideLabel }]" v-if="type === 'options'">
+    <div :class="['select_item', { 'u:sr-only': hideLabel }]" v-if="type === 'options'">
       <label :for=id>{{ label }}</label>
     </div>
 

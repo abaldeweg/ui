@@ -31,7 +31,7 @@ const emit = defineEmits(['update:modelValue'])
 
 <template>
   <div class="input_group">
-    <div :class="['input_item', { visuallyHidden: hideLabel }]">
+    <div :class="['input_item', { 'u:sr-only': hideLabel }]">
       <label :for=id>{{ label }}</label>
     </div>
     <div class="input_item">
