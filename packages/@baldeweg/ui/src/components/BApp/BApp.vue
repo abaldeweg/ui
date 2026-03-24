@@ -90,16 +90,21 @@ body[data-theme='dark'] {
 
   --color-primary-100: var(--color-primary-10);
 
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+  --spacing-none: 0px;
+  --spacing-s: 3px;
+  --spacing-m: 5px;
+  --spacing-l: 10px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 40px;
 
-  --spacing-0: 0px;
-  --spacing-5: 5px;
-  --spacing-10: 10px;
-  --spacing-20: 20px;
-  --spacing-40: 40px;
+  --text-xs: 0.8rem;
+  --text-s: 0.9rem;
+  --text-m: 1rem;
+  --text-l: 1.3rem;
+  --text-xl: 1.6rem;
+
+  --font-weight-normal: 500;
+  --font-weight-bold: 900;
 
   --radius-xs: 2px;
   --radius-s: 4px;
@@ -108,11 +113,27 @@ body[data-theme='dark'] {
   --radius-xl: 10px;
   --radius-full: 9999px;
 
-  --text-xs: 0.8rem;
-  --text-s: 0.9rem;
-  --text-m: 1rem;
-  --text-l: 1.3rem;
-  --text-xl: 1.6rem;
+  --shadow-s: 0 2px 2px 1px rgb(0 0 0 / 0.3);
+  --shadow-m: 0 5px 5px 2px rgb(0 0 0 / 0.3);
+  --shadow-l: 0 10px 10px 4px rgb(0 0 0 / 0.3);
+
+  --inset-shadow-xs: inset 0 1px 2px rgb(0 0 0 / 0.3);
+  --inset-shadow-s: inset 0 2px 4px rgb(0 0 0 / 0.3);
+  --inset-shadow-m: inset 0 4px 8px rgb(0 0 0 / 0.3);
+
+  --drop-shadow-xs: 0 2px 2px rgb(0 0 0 / 0.5);
+  --drop-shadow-s: 0 4px 4px rgb(0 0 0 / 0.5);
+  --drop-shadow-m: 0 6px 6px rgb(0 0 0 / 0.5);
+  --drop-shadow-l: 0 8px 8px rgb(0 0 0 / 0.5);
+  --drop-shadow-xl: 0 10px 10px rgb(0 0 0 / 0.5);
+
+  --text-shadow-s: 0px 1px 1px rgb(0 0 0 / 0.5);
+  --text-shadow-m: 0px 2px 2px rgb(0 0 0 / 0.5);
+  --text-shadow-l: 0px 3px 3px rgb(0 0 0 / 0.5);
+
+  --blur-s: 5px;
+  --blur-m: 10px;
+  --blur-l: 20px;
 }
 
 body {

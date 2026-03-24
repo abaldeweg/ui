@@ -86,13 +86,17 @@ plugins: [
 ]
 ```
 
-Most of the [Tailwind utility classes](https://tailwindcss.com/docs/) are available.
+Most of the [Tailwind utility classes](https://tailwindcss.com/docs/) are available, except for break points, container queries, tracking, leading, transition, animation.
 
 All Tailwind utility classes are prefixed with `u:`.
 
 ### Sizes
 
-- Font Weight: `normal`, `medium`, `semibold`, `bold`
-- Spacing: `0`, `5`, `10`, `20`, `40`
+- Font Weight: `normal`, `bold`
+- Spacing: `none`, `s`, `m`, `l`, `xl`, `2xl`
 - Radius: `xs`, `s`, `m`, `l`, `xl`, `full`
 - Text: `xs`, `s`, `m`, `l`, `xl`
+- Shadow: `s`, `m`, `l`
+- Inset Shadow: `xs`, `s`, `m`
+- Drop Shadow: `xs`, `s`, `m`, `l`, `xl`
+- Text Shadow: `s`, `m`, `l`
