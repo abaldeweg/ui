@@ -21,7 +21,7 @@ const emit = defineEmits(['click'])
 </script>
 
 <template>
-  <button class="btn" :class="{
+  <button class="u:inline-block u:relative u:rounded-xl u:font-sans u:text-m u:m-0 u:text-center u:no-underline u:cursor-pointer u:overflow-hidden" :class="{
     btn_primary:
       design === 'primary' ||
       design === 'primary_danger' ||
@@ -42,20 +42,6 @@ const emit = defineEmits(['click'])
 </template>
 
 <style>
-.btn {
-  display: inline-block;
-  position: relative;
-  border-radius: 10px;
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  margin: 0;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-/* Primary */
 .btn_primary {
   outline: 0;
   border: 0;

@@ -25,12 +25,12 @@ const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
-  <div class="textarea_group">
-    <div :class="['textarea_item', { 'u:sr-only': hideLabel }]">
+  <div class="textarea_group u:mb-xl">
+    <div :class="['u:py-m textarea_item', { 'u:sr-only': hideLabel }]">
       <label :for=id>{{ label }}</label>
     </div>
-    <div class="textarea_item">
-      <textarea class="textarea_input" v-bind="$attrs" :value="modelValue" :name="name" :id="id"
+    <div class="u:py-m">
+      <textarea class="u:border u:border-neutral-04 u:bg-neutral-00 u:box-border u:rounded-xl u:w-full u:px-m u:py-m u:m-0 u:text-m u:text-neutral-10 textarea_input" v-bind="$attrs" :value="modelValue" :name="name" :id="id"
         @input="emit('update:modelValue', $event.target.value)"></textarea>
     </div>
     <p v-if="help" class="textarea_helpline">
@@ -40,29 +40,11 @@ const emit = defineEmits(['update:modelValue'])
 </template>
 
 <style>
-.textarea_group {
-  margin-bottom: 20px;
-}
-
 .textarea_group:last-child {
   margin-bottom: 0;
 }
 
-.textarea_item {
-  padding: 5px 0;
-}
-
 .textarea_input {
-  border: 1px solid var(--color-neutral-04);
-  background: var(--color-neutral-00);
-  box-sizing: border-box;
-  border-radius: 10px;
-  width: 100%;
-  padding: 5px 10px;
-  margin: 0;
-  font-size: 1rem;
-  color: var(--color-neutral-10);
-  min-height: 100px;
   resize: vertical;
 }
 

@@ -8,7 +8,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="content">
+  <main class="content u:block u:clear-both">
     <slot />
   </main>
 </template>
@@ -89,6 +89,10 @@ body[data-theme='dark'] {
   --*: initial;
 
   --color-primary-100: var(--color-primary-10);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 
   --spacing-none: 0px;
   --spacing-s: 3px;
@@ -173,8 +177,6 @@ body {
 }
 
 .content {
-  display: block;
-  clear: both;
   z-index: 1;
 }
 

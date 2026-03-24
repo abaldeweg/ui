@@ -30,12 +30,12 @@ const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
-  <div class="input_group">
-    <div :class="['input_item', { 'u:sr-only': hideLabel }]">
+  <div class="input_group u:mb-xl">
+    <div :class="['u:py-m input_item', { 'u:sr-only': hideLabel }]">
       <label :for=id>{{ label }}</label>
     </div>
-    <div class="input_item">
-      <input class="input_input" v-bind="$attrs" :type="type" :value="modelValue" :name="name" :id="id"
+    <div class="u:py-m">
+      <input class="u:border u:border-neutral-04 u:bg-neutral-00 u:box-border u:rounded-xl u:w-full u:px-m u:py-m u:m-0 u:text-m u:text-neutral-10 input_input" v-bind="$attrs" :type="type" :value="modelValue" :name="name" :id="id"
         @input="emit('update:modelValue', $event.target.value)" />
     </div>
     <p v-if="help" class="input_helpline">
@@ -45,28 +45,8 @@ const emit = defineEmits(['update:modelValue'])
 </template>
 
 <style>
-.input_group {
-  margin-bottom: 20px;
-}
-
 .input_group:last-child {
   margin-bottom: 0;
-}
-
-.input_item {
-  padding: 5px 0;
-}
-
-.input_input {
-  border: 1px solid var(--color-neutral-04);
-  background: var(--color-neutral-00);
-  box-sizing: border-box;
-  border-radius: 10px;
-  width: 100%;
-  padding: 5px 10px;
-  margin: 0;
-  font-size: 1rem;
-  color: var(--color-neutral-10);
 }
 
 .input_input:hover,
