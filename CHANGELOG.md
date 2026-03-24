@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.20.0
+
+- Removed `BNav` component, use `BNavigation` instead
+
 ## v0.19.0
 
 - Removed `BBadge` component, no replacement
