@@ -30,7 +30,7 @@ const emit = defineEmits(['update:modelValue'])
       <label :for=id>{{ label }}</label>
     </div>
     <div class="u:py-m">
-      <textarea class="u:border u:border-neutral-04 u:bg-neutral-00 u:box-border u:rounded-xl u:w-full u:px-m u:py-m u:m-0 u:text-m u:text-neutral-10 textarea_input" v-bind="$attrs" :value="modelValue" :name="name" :id="id"
+      <textarea class="u:border u:border-neutral-400 u:bg-neutral-100 u:box-border u:rounded-xl u:w-full u:px-m u:py-m u:m-0 u:text-m u:text-neutral-950 textarea_input" v-bind="$attrs" :value="modelValue" :name="name" :id="id"
         @input="emit('update:modelValue', $event.target.value)"></textarea>
     </div>
     <p v-if="help" class="textarea_helpline">

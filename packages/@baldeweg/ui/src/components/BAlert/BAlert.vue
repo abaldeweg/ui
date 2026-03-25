@@ -25,7 +25,7 @@ const alertClass = computed(() => {
 </script>
 
 <template>
-  <div class="alert u:flex u:gap-xl u:rounded-xl u:border u:border-neutral-08 u:bg-neutral-00 u:p-xl u:my-l u:box-border" :class="alertClass" v-if="!showAlert">
+  <div class="alert u:flex u:gap-xl u:rounded-xl u:border u:border-neutral-800 u:bg-neutral-100 u:p-xl u:my-l u:box-border" :class="alertClass" v-if="!showAlert">
     <BMaterialIcon :size="20" class="alert_icon">info</BMaterialIcon>
     <div class="alert-content u:flex-1">
       <slot />
