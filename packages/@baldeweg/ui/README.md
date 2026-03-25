@@ -86,6 +86,8 @@ plugins: [
 ]
 ```
 
+Install [recommended extensions](https://tailwindcss.com/docs/editor-setup).
+
 Most of the [Tailwind utility classes](https://tailwindcss.com/docs/) are available, except for break points, container queries, tracking, leading, transition, animation.
 
 All Tailwind utility classes are prefixed with `u:`.
