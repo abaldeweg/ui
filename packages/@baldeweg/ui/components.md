@@ -210,28 +210,6 @@
 | text     |
 | controls |
 
-## BMasthead
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
-## BMastheadItem
-
-### Props
-
-| Name     | Type   | Default         | Values             | Required |
-| -------- | ------ | --------------- | ------------------ | -------- |
-| position | string | &#39;start&#39; | start, center, end | No       |
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
 ## BMaterialIcon
 
 ### Props
