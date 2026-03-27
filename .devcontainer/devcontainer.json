@@ -14,7 +14,8 @@
         "mikestead.dotenv",
         "DavidAnson.vscode-markdownlint",
         "christian-kohler.npm-intellisense",
-        "vitest.explorer"
+        "vitest.explorer",
+        "bradlc.vscode-tailwindcss"
       ]
     }
   },

@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.20.0
+
+- Added Tailwind utility classes
+- Removed class `hidden`, use `u:hidden` instead
+- Removed class `visuallyHidden`, use `u:sr-only` instead
+
 ## v0.19.0
 
 - Removed `BBadge` component, no replacement
