@@ -418,28 +418,6 @@
 | ------- |
 | default |
 
-## BTabs
-
-### Props
-
-| Name    | Type   | Default              | Values                                                                  | Required |
-| ------- | ------ | -------------------- | ----------------------------------------------------------------------- | -------- |
-| justify | string | &#39;flex-start&#39; | flex-start, flex-end, center, space-between, space-around, space-evenly | No       |
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
-## BTabsLink
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
 ## BTextarea
 
 ### Props
