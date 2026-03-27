@@ -6,6 +6,7 @@
 - Removed class `hidden`, use `u:hidden` instead
 - Removed class `visuallyHidden`, use `u:sr-only` instead
 - Removed `BBottomNav` component, use `BNavigation` instead
+- Removed `BNav` component, use `BNavigation` instead
 
 ## v0.19.0
 
