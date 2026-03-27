@@ -14,7 +14,7 @@ defineProps({
 
 <template>
   <article
-    class="card"
+    class="u:clear-both card"
     :class="{
       card_outlined: outlined,
       card_filled: filled,
@@ -42,7 +42,7 @@ defineProps({
         <slot name="subtitle" v-else />
       </div>
 
-      <div class="card_text" v-if="$slots.text">
+      <div class="card_text u:mt-l" v-if="$slots.text">
         <RouterLink :to="route" v-if="route">
           <slot name="text" />
         </RouterLink>
@@ -50,16 +50,13 @@ defineProps({
       </div>
     </div>
 
-    <div class="card_actions" v-if="$slots.actions">
+    <div class="card_actions u:mt-xl" v-if="$slots.actions">
       <slot name="actions" />
     </div>
   </article>
 </template>
 
 <style scoped>
-.card {
-  clear: both;
-}
 .card_outlined {
   border: 2px solid var(--color-neutral-02);
 }
@@ -95,10 +92,8 @@ defineProps({
 .card_text a,
 .card_text a:hover {
   color: var(--color-neutral-10);
-  margin-top: 10px;
 }
 .card_actions {
   text-align: right;
-  margin-top: 20px;
 }
 </style>

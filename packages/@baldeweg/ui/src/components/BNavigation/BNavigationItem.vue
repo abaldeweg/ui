@@ -38,7 +38,7 @@ const router = useRouter()
 const currentRoute = useRoute()
 
 const href = computed(() => {
-  if (typeof props.route === 'string' && (props.route.startsWith('http') || props.route.startsWith('//'))) return props.route
+  if (typeof props.route === 'string') return props.route
   if (typeof props.route === 'object') return router.resolve(props.route).href
   return undefined
 })
