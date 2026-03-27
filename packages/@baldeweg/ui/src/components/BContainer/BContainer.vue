@@ -22,7 +22,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="container" :class="{
+  <section class="container u:clear-both u:px-xl u:mx-auto u:box-border" :class="{
     container_size_l: size === 'l',
     container_size_m: size === 'm',
     container_size_s: size === 's',
@@ -36,11 +36,7 @@ defineProps({
 
 <style>
 .container {
-  clear: both;
   letter-spacing: 0.3px;
-  padding: 20px;
-  margin: auto;
-  box-sizing: border-box;
 }
 
 .container::after {

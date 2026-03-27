@@ -25,9 +25,9 @@ const alertClass = computed(() => {
 </script>
 
 <template>
-  <div class="alert" :class="alertClass" v-if="!showAlert">
+  <div class="alert u:flex u:gap-xl u:rounded-xl u:border u:border-neutral-800 u:bg-neutral-100 u:p-xl u:my-l u:box-border" :class="alertClass" v-if="!showAlert">
     <BMaterialIcon :size="20" class="alert_icon">info</BMaterialIcon>
-    <div class="alert-content">
+    <div class="alert-content u:flex-1">
       <slot />
     </div>
     <BMaterialIcon :size="20" @click="showAlert = true" hover class="alert_close" v-if="closable">close</BMaterialIcon>
@@ -35,23 +35,8 @@ const alertClass = computed(() => {
 </template>
 
 <style>
-.alert {
-  display: flex;
-  gap: 20px;
-  border-radius: 20px;
-  border: 1px solid var(--color-neutral-08);
-  background: var(--color-neutral-00);
-  padding: 20px;
-  margin: 20px 0;
-  box-sizing: border-box;
-}
-
 .alert_icon {
   user-select: none;
-}
-
-.alert-content {
-  flex: 1;
 }
 
 /* Type */

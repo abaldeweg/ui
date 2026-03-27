@@ -10,8 +10,8 @@ const createTestRouter = async (initialPath = '/') => {
   const router = createRouter({
     history: createMemoryHistory(),
     routes: [
-      { path: '/', component: { template: '<div />' } },
-      { path: '/inbox', component: { template: '<div />' } },
+      { name: 'home', path: '/', component: { template: '<div />' } },
+      { name: 'inbox', path: '/inbox', component: { template: '<div />' } },
     ],
   })
   await router.push(initialPath)

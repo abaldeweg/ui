@@ -73,3 +73,34 @@ html {
 ## Components
 
 [Components](https://github.com/abaldeweg/ui/blob/main/packages/%40baldeweg/ui/components.md)
+
+## Utility Classes
+
+Add the plugin to your Vite config:
+
+```js
+import tailwindcss from '@tailwindcss/vite'
+
+plugins: [
+  tailwindcss(),
+]
+```
+
+Install [recommended extensions](https://tailwindcss.com/docs/editor-setup).
+
+Most of the [Tailwind utility classes](https://tailwindcss.com/docs/) are available, except for break points, container queries, tracking, leading, transition, animation.
+
+All Tailwind utility classes are prefixed with `u:`.
+
+### Sizes
+
+- Colors: `neutral` with the shades `950`, `800`, `600`, `400`, `200`, `100` and `primary`, `red`, `green`, `yellow`, `blue`, with the shades `900`, `500` and `100`
+- Fonts: `sans`, `serif`, `mono`
+- Font Weight: `normal`, `bold`
+- Spacing: `none`, `s`, `m`, `l`, `xl`, `2xl`
+- Radius: `xs`, `s`, `m`, `l`, `xl`, `full`
+- Text: `xs`, `s`, `m`, `l`, `xl`
+- Shadow: `s`, `m`, `l`
+- Inset Shadow: `xs`, `s`, `m`
+- Drop Shadow: `xs`, `s`, `m`, `l`, `xl`
+- Text Shadow: `s`, `m`, `l`

@@ -1,10 +1,3 @@
 <template>
-  <hr class="divider" />
+  <hr class="divider u:border-0 u:border-t u:border-neutral-200" />
 </template>
-
-<style>
-.divider {
-  border: 0 hidden;
-  border-top: 1px solid var(--color-neutral-02);
-}
-</style>
