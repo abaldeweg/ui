@@ -23,28 +23,6 @@
 | ------- |
 | default |
 
-## BBottomNav
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
-## BBottomNavItem
-
-### Props
-
-| Name  | Type   | Default | Values | Required |
-| ----- | ------ | ------- | ------ | -------- |
-| title | string |         |        | No       |
-
-### Slots
-
-| Name    |
-| ------- |
-| default |
-
 ## BButton
 
 ### Props
@@ -293,14 +271,6 @@
 | Name              |
 | ----------------- |
 | update:modelValue |
-
-## BNav
-
-### Props
-
-| Name | Type  | Default | Values | Required |
-| ---- | ----- | ------- | ------ | -------- |
-| nav  | array |         |        | No       |
 
 ## BNavigation
 

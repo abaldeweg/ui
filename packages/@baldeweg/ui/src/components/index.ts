@@ -1,7 +1,5 @@
 import BAlert from './BAlert/BAlert.vue';
 import BApp from './BApp/BApp.vue';
-import BBottomNav from './BBottomNav/BBottomNav.vue';
-import BBottomNavItem from './BBottomNav/BBottomNavItem.vue';
 import BButton from './BButton/BButton.vue';
 import BCard from './BCard/BCard.vue';
 import BCode from './BCode/BCode.vue';
@@ -16,7 +14,6 @@ import BInput from './BInput/BInput.vue';
 import BList from './BList/BList.vue';
 import BMaterialIcon from './BMaterialIcon/BMaterialIcon.vue';
 import BModal from './BModal/BModal.vue';
-import BNav from './BNav/BNav.vue';
 import BNavigation from './BNavigation/BNavigation.vue';
 import BNavigationItem from './BNavigation/BNavigationItem.vue';
 import BPanel from './BPanel/BPanel.vue';
@@ -36,8 +33,6 @@ import BUpload from './BUpload/BUpload.vue';
 export {
   BAlert,
   BApp,
-  BBottomNav,
-  BBottomNavItem,
   BButton,
   BCard,
   BCode,
@@ -52,7 +47,6 @@ export {
   BList,
   BMaterialIcon,
   BModal,
-  BNav,
   BNavigation,
   BNavigationItem,
   BPanel,

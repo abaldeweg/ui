@@ -19,6 +19,7 @@ const props = defineProps({
 const iconClasses = computed(() => [
   'icon',
   'material-symbols-outlined',
+  'u:align-middle',
   { canHover: props.hover },
 ])
 
@@ -36,7 +37,6 @@ const iconStyle = computed(() => ({
 
 <style>
 .icon {
-  vertical-align: middle;
   opacity: 1;
   transition: opacity 0.2s;
 }

@@ -4,6 +4,7 @@ import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import { ViteWebfontDownload } from 'vite-plugin-webfont-dl'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
@@ -17,6 +18,7 @@ export default defineConfig(({ command }) => ({
         ]),
       ]
       : []),
+    tailwindcss(),
   ],
   resolve: {
     alias: {
@@ -33,7 +35,7 @@ export default defineConfig(({ command }) => ({
       fileName: (format) => `ui.${format}.js`,
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-router'],
       output: {
         globals: {
           vue: 'Vue',

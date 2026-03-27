@@ -62,7 +62,7 @@ export default {
 
 export const Default = {
   args: {
-    route: { path: "/inbox" },
+    route: { name: "home" },
     default: "Inbox",
   },
   render: (args) => ({

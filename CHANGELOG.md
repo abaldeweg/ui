@@ -2,7 +2,12 @@
 
 ## v0.20.0
 
-- Removed `BMasthaed`, no replacement
+- Added Tailwind utility classes
+- Removed class `hidden`, use `u:hidden` instead
+- Removed class `visuallyHidden`, use `u:sr-only` instead
+- Removed `BBottomNav` component, use `BNavigation` instead
+- Removed `BNav` component, use `BNavigation` instead
+- Removed `BMasthead` component, no replacement
 
 ## v0.19.0
 
