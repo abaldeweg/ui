@@ -8,6 +8,7 @@
 - Removed `BBottomNav` component, use `BNavigation` instead
 - Removed `BNav` component, use `BNavigation` instead
 - Removed `BMasthead` component, no replacement
+- Removed `BTabs` component, use `BNavigation` instead
 
 ## v0.19.0
 
