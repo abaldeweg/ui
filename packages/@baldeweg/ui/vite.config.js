@@ -24,7 +24,6 @@ export default defineConfig(({ command }) => ({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-    dedupe: ['vue'],
   },
   build: {
     copyPublicDir: false,
@@ -36,11 +35,6 @@ export default defineConfig(({ command }) => ({
     },
     rollupOptions: {
       external: ['vue', 'vue-router'],
-      output: {
-        globals: {
-          vue: 'Vue',
-        },
-      },
     },
   },
   test: {
