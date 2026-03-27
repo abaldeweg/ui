@@ -272,14 +272,6 @@
 | ----------------- |
 | update:modelValue |
 
-## BNav
-
-### Props
-
-| Name | Type  | Default | Values | Required |
-| ---- | ----- | ------- | ------ | -------- |
-| nav  | array |         |        | No       |
-
 ## BNavigation
 
 ### Props
