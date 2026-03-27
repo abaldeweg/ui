@@ -8,12 +8,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="content">
+  <main class="content u:block u:clear-both">
     <slot />
   </main>
 </template>
 
 <style>
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(u);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(u);
+
 body {
   /* Neutral */
   --color-neutral-10: #292929;
@@ -81,6 +85,83 @@ body[data-theme='dark'] {
   --color-neutral-00: #292929;
 }
 
+@theme inline {
+  --*: initial;
+
+  --color-neutral-950: var(--color-neutral-10);
+  --color-neutral-800: var(--color-neutral-08);
+  --color-neutral-600: var(--color-neutral-06);
+  --color-neutral-400: var(--color-neutral-04);
+  --color-neutral-200: var(--color-neutral-02);
+  --color-neutral-100: var(--color-neutral-00);
+
+  --color-primary-900: var(--color-primary-10);
+  --color-primary-500: var(--color-primary-05);
+  --color-primary-100: var(--color-primary-00);
+
+  --color-red-900: var(--color-accent-red-10);
+  --color-red-500: var(--color-accent-red-05);
+  --color-red-100: var(--color-accent-red-00);
+  --color-green-900: var(--color-accent-green-10);
+  --color-green-500: var(--color-accent-green-05);
+  --color-green-100: var(--color-accent-green-00);
+  --color-yellow-900: var(--color-accent-yellow-10);
+  --color-yellow-500: var(--color-accent-yellow-05);
+  --color-yellow-100: var(--color-accent-yellow-00);
+  --color-blue-900: var(--color-accent-blue-10);
+  --color-blue-500: var(--color-accent-blue-05);
+  --color-blue-100: var(--color-accent-blue-00);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  --spacing-none: 0px;
+  --spacing-s: 3px;
+  --spacing-m: 5px;
+  --spacing-l: 10px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 40px;
+
+  --text-xs: 0.8rem;
+  --text-s: 0.9rem;
+  --text-m: 1rem;
+  --text-l: 1.3rem;
+  --text-xl: 1.6rem;
+
+  --font-weight-normal: 500;
+  --font-weight-bold: 900;
+
+  --radius-xs: 2px;
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 8px;
+  --radius-xl: 10px;
+  --radius-full: 9999px;
+
+  --shadow-s: 0 2px 2px 1px rgb(0 0 0 / 0.3);
+  --shadow-m: 0 5px 5px 2px rgb(0 0 0 / 0.3);
+  --shadow-l: 0 10px 10px 4px rgb(0 0 0 / 0.3);
+
+  --inset-shadow-xs: inset 0 1px 2px rgb(0 0 0 / 0.3);
+  --inset-shadow-s: inset 0 2px 4px rgb(0 0 0 / 0.3);
+  --inset-shadow-m: inset 0 4px 8px rgb(0 0 0 / 0.3);
+
+  --drop-shadow-xs: 0 2px 2px rgb(0 0 0 / 0.5);
+  --drop-shadow-s: 0 4px 4px rgb(0 0 0 / 0.5);
+  --drop-shadow-m: 0 6px 6px rgb(0 0 0 / 0.5);
+  --drop-shadow-l: 0 8px 8px rgb(0 0 0 / 0.5);
+  --drop-shadow-xl: 0 10px 10px rgb(0 0 0 / 0.5);
+
+  --text-shadow-s: 0px 1px 1px rgb(0 0 0 / 0.5);
+  --text-shadow-m: 0px 2px 2px rgb(0 0 0 / 0.5);
+  --text-shadow-l: 0px 3px 3px rgb(0 0 0 / 0.5);
+
+  --blur-s: 5px;
+  --blur-m: 10px;
+  --blur-l: 20px;
+}
+
 body {
   background: var(--color-neutral-00);
   padding: 0;
@@ -118,8 +199,6 @@ body {
 }
 
 .content {
-  display: block;
-  clear: both;
   z-index: 1;
 }
 
@@ -203,22 +282,6 @@ td:nth-child(1) {
 th:nth-last-child(1),
 td:nth-last-child(1) {
   padding-right: 0;
-}
-
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-.visuallyHidden {
-  position: absolute;
-  border: 0;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
 }
 
 @media all and (min-width: 600px) {

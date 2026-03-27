@@ -19,7 +19,7 @@ defineProps({
 </script>
 
 <template>
-  <ul class="navigation" :class="[
+  <ul class="navigation u:rounded-xl u:flex u:flex-col u:gap-s u:list-none u:p-xl u:m-0" :class="[
     border !== 'none' && `navigation_border_${border}`,
     background !== 'none' && `navigation_background_${background}`,
     direction === 'horizontal' && 'navigation_horizontal',
@@ -29,16 +29,6 @@ defineProps({
 </template>
 
 <style>
-.navigation {
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  list-style: none;
-  padding: 20px;
-  margin: 0;
-}
-
 .navigation_border_primary {
   border: 1px solid var(--color-primary-00);
 }
