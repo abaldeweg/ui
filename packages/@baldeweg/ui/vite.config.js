@@ -35,7 +35,7 @@ export default defineConfig(({ command }) => ({
       fileName: (format) => `ui.${format}.js`,
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-router'],
       output: {
         globals: {
           vue: 'Vue',

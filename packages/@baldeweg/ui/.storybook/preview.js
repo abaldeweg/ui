@@ -5,7 +5,10 @@ import { registerPlugins } from '../src/plugins/index.js';
 
 const mockRouter = createRouter({
   history: createMemoryHistory(),
-  routes: [{ path: '/:pathMatch(.*)*', component: { template: '<div />' } }],
+  routes: [
+    { name: 'home', path: '/home', component: { template: '<div />' } },
+    { path: '/:pathMatch(.*)*', component: { template: '<div />' } },
+  ],
 })
 
 setup((app) => {
