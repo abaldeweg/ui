@@ -1,3 +1,5 @@
+**This repo was moved to <https://github.com/abaldeweg/services>.**
+
 # @baldeweg/ui
 
 UI Components
